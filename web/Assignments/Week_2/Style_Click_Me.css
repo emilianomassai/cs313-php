@@ -48,9 +48,9 @@ h1 {
 }
 
 #first_div {
-  padding-top: 30px;
   margin: 0 auto;
   width: 1030px;
+  margin-top: 30px;
 }
 
 #second_div {

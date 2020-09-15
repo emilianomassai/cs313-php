@@ -1,10 +1,19 @@
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
+    <meta charset="UTF-8" />
+
     <!--To use jQuery for the stretch challenge I need to add the following script.-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-    <meta charset="UTF-8" />
+    <!--To use Bootstrap framework for the stretch challenge I need to add the following script.-->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+
     <!--Title in the browser title bar.-->
     <title>Click Me!</title>
     <!-- heading of the web page -->
@@ -18,18 +27,22 @@
     <!-- Welcome section  -->
 
     <section id="welcome">
-      <div class="divs_text" id="first_div">
-        Click the button "Change color" to change the font color of this
-        paragraph using vanilla JavaScript.
+      <div class="row">
+        <div class="col-md-3" id="first_div">
+          Click the button "Change color" to change the font color of this
+          paragraph using vanilla JavaScript.
+        </div>
+
+        <div class="col-md-3" id="second_div">
+          Click the button "Change color" to change the background color of this
+          paragraph using jQuery.
+        </div>
+        <div class="col-md-3" id="third_div">
+          Click the button "Fade In/Out" to fade in or fade out this paragraph
+          using jQuery.
+        </div>
       </div>
-      <div class="divs_text" id="second_div">
-        Click the button "Change color" to change the background color of this
-        paragraph using jQuery.
-      </div>
-      <div class="divs_text" id="third_div">
-        Click the button "Fade In/Out" to fade in or fade out this paragraph
-        using jQuery.
-      </div>
+
       <br />
 
       <p id="select_message">
