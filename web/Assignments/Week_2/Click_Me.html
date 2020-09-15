@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
+    <!--To use jQuery for the stretch challenge I need to add the following script.-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
     <meta charset="UTF-8" />
     <!--Title in the browser title bar.-->
     <title>Click Me!</title>
@@ -10,25 +13,28 @@
   </head>
 
   <body>
-    <h1>This is the Assignment of week 2</h1>
+    <h1>CS 313: Assignment Week 2</h1>
 
     <!-- Welcome section  -->
 
     <section id="welcome">
       <div class="divs_text" id="first_div">
-        This is the first div section of the page.
+        Click the button "Change color" to change the font color of this
+        paragraph using vanilla JavaScript.
       </div>
       <div class="divs_text" id="second_div">
-        This is the second div section of the page.
+        Click the button "Change color" to change the background color of this
+        paragraph using jQuery.
       </div>
       <div class="divs_text" id="third_div">
-        This is the third div section of the page.
+        Click the button "Fade In/Out" to fade in or fade out this paragraph
+        using jQuery.
       </div>
+      <br />
 
       <p id="select_message">
         Please enter the color you want to use to change the first div.
       </p>
-
       <form>
         <input type="text" id="input_color" name="input_color" /><br /><br />
       </form>
@@ -42,8 +48,13 @@
       </button>
 
       <br /><br />
-      <button name="click_me" id="click_me_btn_id" onclick="clikedAllert()">
+      <button name="click_me" id="click_me_btn_id" onclick="clickedAlert()">
         Click Me
+      </button>
+
+      <br /><br />
+      <button name="fade_in_out" id="fade_in_out_btn_id" onclick="fadeInOut()">
+        Fade In/Out
       </button>
     </section>
 

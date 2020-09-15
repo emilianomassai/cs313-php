@@ -50,23 +50,23 @@ h1 {
 #first_div {
   padding-top: 30px;
   margin: 0 auto;
-  width: 450px;
+  width: 1030px;
 }
 
 #second_div {
   margin: 0 auto;
-  width: 450px;
+  width: 1000px;
   margin-top: 30px;
 }
 
 #third_div {
   margin: 0 auto;
-  width: 450px;
+  width: 1000px;
   margin-top: 30px;
 }
 
-#click_me_btn_id {
-  margin-bottom: 30px;
+button {
+  margin-bottom: 8px;
   background-image: linear-gradient(rgb(248, 236, 204), rgb(233, 195, 97));
   border: 1px solid rgb(128, 106, 52);
   padding: 8px;
@@ -77,16 +77,12 @@ h1 {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
+#fade_in_out_btn_id {
+  margin-bottom: 50px;
+}
+
 #change_color_btn_id {
-  margin-top: 10px;
-  background-image: linear-gradient(rgb(248, 236, 204), rgb(233, 195, 97));
-  border: 1px solid rgb(128, 106, 52);
-  padding: 8px;
-  width: 190px;
-  border-radius: 4px;
-  font-size: 13px;
-  cursor: pointer;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  margin-top: 15px;
 }
 
 input {
