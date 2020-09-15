@@ -26,15 +26,21 @@
       </div>
 
       <p id="select_message">
-        Please select which color you want to use to set the color of the first
-        div.
+        Please enter the color you want to use to change the first div.
       </p>
 
-      <form><input type="text" id="fname" name="fname" /><br /><br /></form>
+      <form>
+        <input type="text" id="input_color" name="input_color" /><br /><br />
+      </form>
 
-      <button name="change_color" id="change_color_btn_id" onclick="">
+      <button
+        name="change_color"
+        id="change_color_btn_id"
+        onclick="colorValidating()"
+      >
         Change color
       </button>
+
       <br /><br />
       <button name="click_me" id="click_me_btn_id" onclick="clikedAllert()">
         Click Me
