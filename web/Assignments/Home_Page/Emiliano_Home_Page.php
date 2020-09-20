@@ -27,8 +27,6 @@
 echo $today = date("D, j F Y | G:i");
 ?>
     </div>
-
-    <br>
     <br>
 
     <div>
