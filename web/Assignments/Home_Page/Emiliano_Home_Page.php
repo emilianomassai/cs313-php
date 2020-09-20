@@ -72,7 +72,7 @@ echo $today = date("D, j F Y | G:i");
     <br />
     <br />
     <div>
-        <a href="../Home_Page/assignments.html" id="CS313_assignments_btn_id">
+        <a href="../Home_Page/assignments.php" id="CS313_assignments_btn_id">
             Go to the CS313 Assignment's page
         </a>
     </div>
