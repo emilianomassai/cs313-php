@@ -25,6 +25,8 @@
 //$today = date("H:i:s");                         // 17:16:18
 
 echo $today = date("D, j F Y | G:i");
+header("refresh: 3;");
+
 ?>
     </section>
     <br>
