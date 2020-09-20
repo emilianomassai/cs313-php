@@ -73,17 +73,30 @@ body {
 }
 
 h1 {
+  color: rgba(255, 255, 255, 0.808);
   font-family: "Helvetica";
+  text-shadow: black 0.1em 0.1em 0.2em;
 }
 
 h2 {
+  color: rgba(255, 255, 255, 0.808);
   font-family: Georgia, "Times New Roman", Times, serif;
+  text-shadow: black 0.1em 0.1em 0.2em;
+}
+
+i {
+  color: rgba(255, 255, 255, 0.808);
 }
 
 p {
+  color: rgba(255, 255, 255, 0.808);
   font-family: "Helvetica";
   margin-bottom: 50px;
-  padding: 5ch;
+  padding: 3ch;
+  text-align: justify;
+  border: 2px solid white;
+  border-radius: 15px;
+  box-shadow: 3px 6px 6px black;
 }
 
 a {

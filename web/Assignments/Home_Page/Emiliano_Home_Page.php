@@ -22,7 +22,8 @@
 
     <h2>Emiliano Massai</h2>
     <i> Software Engineering Major </i>
-
+    <br />
+    <br />
     <p>
       Hi there! <br />
       Welcome to my home page. I'm Emiliano and I'm from Italy. I lived in
@@ -43,6 +44,7 @@
     </p>
 
     <h2>Here are some pictures of the hotel where I'm working:</h2>
+    <br />
 
     <div>
       <img
@@ -61,6 +63,7 @@
       />
     </div>
 
+    <br />
     <br />
     <div>
       <a href="../Home_Page/assignments.html" id="CS313_assignments_btn_id">
