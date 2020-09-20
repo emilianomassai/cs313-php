@@ -72,6 +72,10 @@ body {
   border-radius: 5px;
 }
 
+#time {
+  color: rgba(255, 255, 255, 0.808);
+}
+
 h1 {
   color: rgba(255, 255, 255, 0.808);
   font-family: "Helvetica";

@@ -12,7 +12,7 @@
 <body>
     <h1>Welcome to Emiliano Massai's Home Page</h1>
 
-    <div>
+    <section id="time">
         <?php
 //$today = date("F j, Y, g:i a");                 // March 10, 2001, 5:16 pm
 //$today = date("m.d.y");                         // 03.10.01
@@ -26,7 +26,7 @@
 
 echo $today = date("D, j F Y | G:i");
 ?>
-    </div>
+    </section>
     <br>
 
     <div>
