@@ -26,6 +26,7 @@
 echo $today = date("D, j F Y | G:i");
 ?>
 
+    <br>
     <div>
         <img src="../Home_Page/images/me.jpg" alt="Emiliano's Profile
                 Picture" id="myPhoto" />
