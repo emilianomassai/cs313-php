@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <h1>Welcome to Emiliano Massai's Home Page</h1>
+    <h1>- Welcome to Emiliano Massai's Home Page</h1>
 
     <div>
         <img src="../Home_Page/images/me.jpg" alt="Emiliano's Profile
