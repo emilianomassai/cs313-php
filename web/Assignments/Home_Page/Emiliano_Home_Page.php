@@ -23,7 +23,7 @@
 //$today = date('H:m:s \m \i\s\ \m\o\n\t\h');     // 17:03:18 m is month
 //$today = date("H:i:s");                         // 17:16:18
 
-echo $today = date("F j, Y, g:i a");
+echo $today = date("D M j G:i:s T Y");
 ?>
 
     <div>
