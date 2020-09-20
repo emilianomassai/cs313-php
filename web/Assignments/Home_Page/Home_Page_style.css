@@ -73,7 +73,7 @@ body {
 }
 
 h1 {
-  color: rgba(255, 255, 255, 0.808);
+  color: white;
   font-family: "Helvetica";
   text-shadow: black 0.1em 0.1em 0.2em;
 }
