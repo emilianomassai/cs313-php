@@ -79,6 +79,7 @@ body {
 
 #time:hover {
   text-shadow: black 0.1em 0.1em 0.2em;
+  cursor: pointer;
 }
 
 h1 {
