@@ -77,6 +77,10 @@ body {
   color: rgba(255, 255, 255, 0.808);
 }
 
+#time:hover {
+  text-shadow: black 0.1em 0.1em 0.2em;
+}
+
 h1 {
   color: rgba(255, 255, 255, 0.808);
   font-family: "Helvetica";
