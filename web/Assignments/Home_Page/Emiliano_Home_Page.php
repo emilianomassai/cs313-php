@@ -7,6 +7,7 @@
 
     <!-- heading of the web page -->
     <title>Emiliano Massai's Home Page</title>
+    <link rel="icon" type="image/ico" href="./images/BYU_favicon.ico">
 </head>
 
 <body>
