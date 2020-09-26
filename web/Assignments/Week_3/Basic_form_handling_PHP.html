@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <!--Title in the browser title bar.-->
+    <title>Week 3</title>
+    <!-- heading of the web page -->
+  </head>
+  <body>
+    <h1>Basic form handling in PHP</h1>
+    <br />
+    <h2>Please enter the following information:</h2>
+    <form action="Result_page.php" method="post">
+      <p id="full_name_msg">Full name:</p>
+      <input type="text" id="full_name_id" name="full_name" />
+
+      <p id="email_msg">Email:</p>
+      <input type="text" id="email_id" name="email" /> <br />
+      <br />
+
+      <p>Please select your major:</p>
+      <input
+        type="radio"
+        id="Computer_Science_id"
+        name="major"
+        value="Computer Science"
+      />
+      <label for="Computer_Science_id">Computer Science</label><br />
+
+      <input
+        type="radio"
+        id="Web_Design_id"
+        name="major"
+        value="Web Design and Development"
+      />
+      <label for="Web_Design_id">Web Design and Development</label><br />
+
+      <input
+        type="radio"
+        id="Computer_information_Technology_id"
+        name="major"
+        value="Computer information Technology"
+      />
+      <label for="Computer_information_Technology_id"
+        >Computer information Technology</label
+      ><br />
+
+      <input
+        type="radio"
+        id="Computer_Engineering_id"
+        name="major"
+        value="Computer Engineering"
+      />
+      <label for="Computer_Engineering_id">Computer Engineering</label><br />
+
+      <br />
+      <label for="comments_id">Comments:</label><br />
+      <textarea id="comments_id" name="comments" rows="4" cols="50"> </textarea>
+    </form>
+  </body>
+</html>
