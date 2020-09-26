@@ -31,8 +31,13 @@ header("refresh: 30;");
 ?>
     </section>
     <br>
-    <p>Coming soon....</p>
-
+    <a href="../Week_2/Click_Me.html" id="Click_Me_btn_id">
+        Week 2: Click Me
+    </a>
+    <a href="../Week_3/" id="Team_activity_btn_id">
+        Week 3: Team Activity
+    </a>
+    <br>
     <div>
         <a href="../Home_Page/Emiliano_Home_Page.php" id="Emiliano_Home_Page_btn_id">
             Go to Emiliano's Homepage
