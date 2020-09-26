@@ -3,7 +3,7 @@
 <body>
     <?php $email = $_POST["email"]?>
     Welcome <?php echo $_POST["full_name"]; ?><br>
-    Your email address is: <?php echo "mailto:" . $email; ?><br>
+    Your email address is: <?php echo "<a href= mailto:" . $email;">"; ?><br>
 
 
 
