@@ -18,6 +18,9 @@ if (!empty($continents_Array)) {
         switch ($selected) {
             case NA:
                 echo "North America";
+                if(end($continents_Array)){
+                    echo".";
+                }
                 break;
             case SA:
                 echo "South America";
@@ -38,9 +41,6 @@ if (!empty($continents_Array)) {
                 echo "Antarctica";
                 break;
         }
-        if (end($continents_Array)) {
-            echo ".";
-        } else {
             echo ", ";
         }
 
