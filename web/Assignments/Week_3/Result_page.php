@@ -17,7 +17,7 @@ if (!empty($continents_Array)) {
 
         // if the checked value is the last, add a period instead of a comma.
 
-        switch ($selected) {
+        switch ($element) {
             case NA:
                 $element = "North America";
                 break;
