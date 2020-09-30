@@ -43,31 +43,8 @@ if (!empty($continents_Array)) {
             }
             echo $element . '.';
         } else {
-            switch ($selected) {
-                case NA:
-                    $element = "North America";
-                    break;
-                case SA:
-                    $element = "South America";
-                    break;
-                case EU:
-                    $element = "Europe";
-                    break;
-                case AI:
-                    $element = "Asia";
-                    break;
-                case AU:
-                    $element = "Australia";
-                    break;
-                case AF:
-                    $element = "Africa";
-                    break;
-                case AN:
-                    $element = "Antarctica";
-                    break;
-            }
-            echo $element . ', ';
         }
+        echo $element . ', ';
     }
 }
 
