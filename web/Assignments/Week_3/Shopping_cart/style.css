@@ -1,0 +1,239 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 900px;
+}
+
+.topBar {
+  background-color: rgb(37, 47, 61);
+  margin-top: -10px;
+  margin-left: -8px;
+  margin-right: -10px;
+  margin-bottom: 25px;
+  display: grid;
+  text-align: center;
+}
+
+.topBar a {
+  color: rgb(204, 204, 204);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar {
+  margin-top: 12px;
+  margin-left: -4px;
+  margin-bottom: 6px;
+  display: grid;
+  text-align: center;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0px;
+  background-color: rgb(37, 47, 61);
+}
+
+.navbar a {
+  color: rgb(204, 204, 204);
+  text-decoration: none;
+  padding: 5px;
+}
+
+.navbar a:hover {
+  color: rgb(37, 47, 61);
+  text-decoration: none;
+  background-color: rgb(204, 204, 204);
+  border-radius: 4px;
+}
+
+#mastercard {
+  margin-left: 30px;
+}
+
+#americanExpress {
+  margin-left: 30px;
+}
+
+form.userInfo button {
+  background-image: linear-gradient(rgb(248, 236, 204), rgb(233, 195, 97));
+  border: 1px solid rgb(128, 106, 52);
+  padding: 8px;
+  width: 190px;
+  border-radius: 4px;
+  font-size: 13px;
+  cursor: pointer;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+form.userInfo button:hover {
+  background-image: linear-gradient(rgb(248, 236, 204), rgb(247, 187, 36));
+}
+
+.required-field::after {
+  content: "*";
+  display: block;
+  position: absolute;
+  margin-top: -38px;
+  margin-left: -12px;
+}
+
+span {
+  color: red;
+}
+
+.bestProductsBox {
+  margin-top: 250px;
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  size: cover;
+}
+
+.bestProductsBox h2 {
+  position: absolute;
+  margin-top: -50px;
+  color: rgb(27, 69, 79);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.bestProductsBox #deal_1 {
+  background-color: white;
+  padding: 40px;
+  border-radius: 80px;
+}
+
+.bestProductsBox #deal_1:hover {
+  opacity: 1;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  transform: scale(1.2);
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  box-shadow: -3px 15px 10px rgba(0, 0, 0, 0.5);
+}
+
+.bestProductsBox #deal_2 {
+  background-color: white;
+  padding: 40px;
+  margin-bottom: 30px;
+  border-radius: 80px;
+}
+
+.bestProductsBox #deal_2:hover {
+  opacity: 1;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  transform: scale(1.2);
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  box-shadow: -3px 15px 10px rgba(0, 0, 0, 0.5);
+}
+
+.bestProductsBox #deal_3 {
+  background-color: white;
+  padding: 40px;
+  margin-bottom: 35px;
+  border-radius: 80px;
+}
+
+.bestProductsBox #deal_3:hover {
+  opacity: 1;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  transform: scale(1.2);
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  box-shadow: -3px 15px 10px rgba(0, 0, 0, 0.5);
+}
+
+.productPrice {
+  margin: auto;
+  display: block;
+}
+
+#welcome {
+  background-image: url("../Shopping_cart/images/welcome_image.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+#initialMessage {
+  display: block;
+  background-color: white;
+}
+
+table {
+  font-size: 18px;
+  color: rgb(27, 69, 79);
+  display: block;
+  min-width: 1000px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: white;
+  margin-left: -8px;
+  margin-right: -8px;
+  border-collapse: collapse;
+}
+
+table img {
+  border-radius: 30px;
+}
+hr {
+  display: block;
+}
+
+th {
+  padding: 12px;
+  background-color: rgb(37, 47, 61);
+  color: rgb(204, 204, 204);
+}
+
+td {
+  padding: 8px;
+  text-align: justify;
+  border-bottom: 2px solid rgb(37, 47, 61);
+  background-color: whitesmoke;
+}
+
+p,
+.category {
+  font-size: 14px;
+}
+
+h4,
+h3 {
+  border-bottom: 1px solid rgb(204, 204, 204);
+}
+
+input {
+  border-radius: 4px;
+  height: 15px;
+  padding: 10px;
+}
+
+textarea {
+  border-radius: 4px;
+  padding: 10px;
+}
+
+#userInfoForm {
+  background-color: rgb(37, 47, 61);
+  padding: 20px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  color: rgb(204, 204, 204);
+}
+
+footer {
+  display: block;
+  background-color: black;
+  padding: 10px;
+}
