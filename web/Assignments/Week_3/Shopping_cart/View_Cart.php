@@ -90,6 +90,12 @@ if (!empty($array_items)) {
     }
 }
 
+if (empty($array_items)) {
+    echo 'No item in the cart yet!';
+    echo "<br>";
+    echo "<br>";
+}
+
 ?>
         </h4>
     </section>
