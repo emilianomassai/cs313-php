@@ -18,7 +18,7 @@ if (!empty($continents_Array)) {
         switch ($selected) {
             case NA:
                 echo "North America";
-                if (end($continents_Array)) {
+                if (end($selected)) {
                     echo ".";
                 }
                 break;
