@@ -42,7 +42,7 @@ if (!empty($continents_Array)) {
         if (end($continents_Array)) {
             echo ".";
         } else {
-            echo "., ";
+            echo ", ";
         }
 
     }
