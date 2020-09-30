@@ -25,5 +25,4 @@ if (array_key_last($_POST['cont_list'])) {
 ?>
 
 </body>
-
 </html>
