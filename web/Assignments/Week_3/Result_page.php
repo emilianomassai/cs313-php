@@ -37,14 +37,14 @@ if (!empty($continents_Array)) {
             case AN:
                 $element = "Antarctica";
                 break;
-        }
 
-        // if the checked value is the last, add a period instead of a comma.
+                // if the checked value is the last, add a period instead of a comma.
 
-        if ($selected === array_key_last($continents_Array)) {
-            echo $element . '.';
-        } else {
-            echo $element . ', ';
+                if ($selected === array_key_last($continents_Array)) {
+                    echo $element . '.';
+                } else {
+                    echo $element . ', ';
+                }
         }
     }
 }
