@@ -40,7 +40,7 @@ if (!empty($_POST['cont_list'])) {
 
         // if the checked value is the last, add a period instead of a comma.
         if (array_key_last($_POST['cont_list'])) {
-            echo $selected . ".";
+            echo ".";
 
         } else {echo ", ";}
     }
