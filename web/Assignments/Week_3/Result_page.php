@@ -18,6 +18,9 @@ if (!empty($continents_Array)) {
         switch ($selected) {
             case NA:
                 echo "North America";
+                if (end($continents_Array)) {
+                    echo ".";
+                }
                 break;
             case SA:
                 echo "South America";
@@ -38,14 +41,12 @@ if (!empty($continents_Array)) {
                 echo "Antarctica";
                 break;
         }
-            echo ", ";
-        }
-
+        echo ", ";
     }
 
-    // if the checked value is the last, add a period instead of a comma.
-
 }
+
+// if the checked value is the last, add a period instead of a comma.
 
 ?>
 
