@@ -15,15 +15,12 @@ if (!empty($_POST['cont_list'])) {
 
         $last_key = end(array_keys($selected));
 
-        foreach ($selected as $key => $value) {
-            if ($key == $last_key) {
-                echo $selected . ". ";
-            } else {
-                echo $selected . ", ";
-            }
+        if ($last_key) {
+            echo $selected . ". ";
+        } else {
+            echo $selected . ", ";
         }
     }
-
 }
 
 ?>
