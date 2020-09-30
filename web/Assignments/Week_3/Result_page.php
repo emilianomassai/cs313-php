@@ -19,32 +19,32 @@ if (!empty($continents_Array)) {
 
         switch ($selected) {
             case NA:
-                $selected = "North America";
+                $element = "North America";
                 break;
             case SA:
-                $selected = "South America";
+                $element = "South America";
                 break;
             case EU:
-                $selected = "Europe";
+                $element = "Europe";
                 break;
             case AI:
-                $selected = "Asia";
+                $element = "Asia";
                 break;
             case AU:
-                $selected = "Australia";
+                $element = "Australia";
                 break;
             case AF:
-                $selected = "Africa";
+                $element = "Africa";
                 break;
             case AN:
-                $selected = "Antarctica";
+                $element = "Antarctica";
                 break;
         }
 
         if ($selected === array_key_last($continents_Array)) {
-            echo $selected . '.';
+            echo $element . '.';
         } else {
-            echo $selected . ', ';
+            echo $element . ', ';
         }
     }
 }
