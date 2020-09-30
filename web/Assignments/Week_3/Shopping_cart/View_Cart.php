@@ -41,12 +41,11 @@
                 <img src="../Shopping_cart/images/cart.png" alt="cart" />
 
             </a> -->
-            $array_items = $_POST['list_items'];
-            if (!empty($array_items)) { echo '<a href="../Shopping_cart/Checkout.html" id="checkout_btn_id"
+            <?php
+$array_items = $_POST['list_items'];
+if (!empty($array_items)) {echo '< href="../Shopping_cart/Checkout.html" id="checkout_btn_id"
                 style="display: normal">Checkout
-                <img src="../Shopping_cart/images/cart.png" alt="cart" />
-
-            </a>'} ?>
+                <img src="../Shopping_cart/images/cart.png" alt="cart" />';.}?>
         </div>
     </div>
 
