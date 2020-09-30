@@ -13,7 +13,7 @@ $continents_Array = $_POST['cont_list'];
 if (!empty($continents_Array)) {
 // Loop to store and display values of individual checked checkbox.
 
-    foreach ($continents_Array as $selected) {
+    foreach ($continents_Array as $selected => $element) {
 
         switch ($selected) {
             case NA:
