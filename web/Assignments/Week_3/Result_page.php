@@ -42,9 +42,9 @@ if (!empty($continents_Array)) {
         // if the checked value is the last, add a period instead of a comma.
 
         if ($selected === array_key_last($continents_Array)) {
-            echo $selected . '.';
+            echo $element . '.';
         } else {
-            echo $selected . ', ';
+            echo $element . ', ';
         }
     }
 }
