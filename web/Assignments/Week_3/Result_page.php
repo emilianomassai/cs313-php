@@ -9,10 +9,11 @@
     Your comments are: <?php echo $_POST["comments"]; ?><br>
 
     You visited: <?php
-if (!empty($_POST['cont_list'])) {
+$continents_Array = $_POST['cont_list'];
+if (!empty($continents_Array)) {
 // Loop to store and display values of individual checked checkbox.
 
-    foreach ($_POST['cont_list'] as $selected) {
+    foreach ($continents_Array as $selected) {
 
         switch ($selected) {
             case NA:
@@ -38,10 +39,10 @@ if (!empty($_POST['cont_list'])) {
                 break;
         }
 
-        if (!array_key_last($selected)) {
-            echo ", ";
-        } else {
+        if (end($continents_Array)) {
             echo ".";
+        } else {
+            echo "., ";
         }
 
     }
