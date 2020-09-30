@@ -11,8 +11,32 @@
     You visited: <?php
 if (!empty($_POST['cont_list'])) {
 // Loop to store and display values of individual checked checkbox.
-    foreach ($_POST['cont_list'] as $selected) {
 
+    foreach ($_POST['cont_list'] as $selected) {
+       
+        switch ($selected) {
+            case NA:
+                echo "North America";
+                break;
+            case SA:
+                echo "South America";
+                break;
+            case EU:
+                echo "Europe";
+                break;
+            case AI:
+                echo "Asia";
+                break;
+            case AU:
+                echo "Australia";
+                break;
+            case AF:
+                echo "Africa";
+                break;
+            case AN:
+                echo "Antarctica";
+                break;
+                
         echo $selected . ", ";
     }
 }
@@ -25,4 +49,5 @@ if (array_key_last($_POST['cont_list'])) {
 ?>
 
 </body>
+
 </html>
