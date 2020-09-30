@@ -43,7 +43,12 @@
         </div>
     </div>
 
-    <?php
+    <p id="msg"></p>
+    <section id="userInfoForm">
+        <h2>The following is the list of items in your cart:</h2>
+        <br />
+        <h4>
+            <?php
 $array_items = $_POST['list_items'];
 if (!empty($array_items)) {
 // Loop to store and display values of individual checked checkbox.
@@ -83,6 +88,9 @@ if (!empty($array_items)) {
 }
 
 ?>
+        </h4>
+    </section>
+
 
     <footer>
         <p style="text-align: center; color: white">
