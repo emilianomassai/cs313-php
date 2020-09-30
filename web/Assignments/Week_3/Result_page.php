@@ -16,8 +16,9 @@ if (!empty($_POST['cont_list'])) {
         echo $selected . ", ";
     }
 
-} else {
-    echo $selected . ". ";
+}
+if (array_key_last($_POST['cont_list'])) {
+    echo $selected . ".";
 }
 
 ?>
