@@ -38,7 +38,7 @@ if (!empty($_POST['cont_list'])) {
                 break;
         }
 
-        if (end($_POST['cont_list'])) {
+        if (array_key_last($_POST['cont_list'])) {
             echo ".";
         } else {
             echo ", ";
