@@ -52,7 +52,7 @@
 $array_items = $_POST['list_items'];
 if (!empty($array_items)) {
 // Loop to store and display values of individual checked checkbox.
-    echo '<a href="../Shopping_cart/Checkout.html" id="checkout_btn" style="display: none">Checkout
+    echo '<a href="../Shopping_cart/Checkout.html" id="checkout_btn" style="display: normal">Checkout
 <img src="../Shopping_cart/images/cart.png" alt="cart" />
 </a>';
     foreach ($array_items as $selected => $element) {
