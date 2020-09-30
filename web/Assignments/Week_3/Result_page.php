@@ -8,6 +8,7 @@
     Your major is: <?php echo $_POST["major"]; ?><br>
     Your comments are: <?php echo $_POST["comments"]; ?><br>
 
+    You visited <?php echo $_POST["cont"]; ?>
 
 </body>
 
