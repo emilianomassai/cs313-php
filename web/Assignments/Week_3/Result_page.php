@@ -13,38 +13,38 @@ $continents_Array = $_POST['cont_list'];
 if (!empty($continents_Array)) {
 // Loop to store and display values of individual checked checkbox.
 
-    foreach ($continents_Array as $selected => $element) {
+    foreach ($continents_Array as $selected) {
 
         switch ($selected) {
             case NA:
-                $element = "North America";
+                echo "North America";
                 break;
             case SA:
-                $element = "South America";
+                echo "South America";
                 break;
             case EU:
-                $element = "Europe";
+                echo "Europe";
                 break;
             case AI:
-                $element = "Asia";
+                echo "Asia";
                 break;
             case AU:
-                $element = "Australia";
+                echo "Australia";
                 break;
             case AF:
-                $element = "Africa";
+                echo "Africa";
                 break;
             case AN:
-                $element = "Antarctica";
+                echo "Antarctica";
                 break;
         }
 
         // if the checked value is the last, add a period instead of a comma.
 
         if ($selected === array_key_last($continents_Array)) {
-            echo $element . '.';
+            echo '.';
         } else {
-            echo $element . ', ';
+            echo ', ';
         }
     }
 }
