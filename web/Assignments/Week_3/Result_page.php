@@ -38,15 +38,17 @@ if (!empty($_POST['cont_list'])) {
                 break;
         }
 
-        echo ", ";
+        if (!array_key_last($selected)) {
+            echo ", ";
+        } else {
+            echo ".";
+        }
 
     }
 
     // if the checked value is the last, add a period instead of a comma.
 
 }
-if (array_key_last($selected)) {
-    echo ".";}
 
 ?>
 
