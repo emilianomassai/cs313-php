@@ -54,7 +54,14 @@
       </div>
     </div>
 
-    <form>
+    <form
+      class="userInfo"
+      name="userInfo"
+      action="#"
+      onreset="resetAllMessages();
+          document.getElementById('firstName').focus();"
+      onsubmit="return checkForm();"
+    >
       <p id="msg"></p>
       <section id="userInfoForm">
         <h2>To finish your purchases, please enter your information:</h2>
