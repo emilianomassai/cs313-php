@@ -82,7 +82,8 @@ if (!empty($array_items)) {
         if ($selected === array_key_last($continents_Array)) {
             echo $element . '.';
         } else {
-            echo $element . ', ';
+            echo $element . ';';
+            echo "<br>";
         }
     }
 }
@@ -90,6 +91,8 @@ if (!empty($array_items)) {
 ?>
         </h4>
     </section>
+
+    <br>
 
 
     <footer>
