@@ -12,7 +12,7 @@
 if (!empty($_POST['cont_list'])) {
 // Loop to store and display values of individual checked checkbox.
     foreach ($_POST['cont_list'] as $selected) {
-        if ($selected == $lastElement) {
+        if ($selected == end($selected)) {
             echo $selected . ".";
         } else {
             echo $selected . ", ";
