@@ -15,35 +15,57 @@ if (!empty($continents_Array)) {
 
     foreach ($continents_Array as $selected => $element) {
 
-        switch ($selected) {
-            case NA:
-                $element = "North America";
-                break;
-            case SA:
-                $element = "South America";
-                break;
-            case EU:
-                $element = "Europe";
-                break;
-            case AI:
-                $element = "Asia";
-                break;
-            case AU:
-                $element = "Australia";
-                break;
-            case AF:
-                $element = "Africa";
-                break;
-            case AN:
-                $element = "Antarctica";
-                break;
-        }
-
         // if the checked value is the last, add a period instead of a comma.
 
         if ($selected === array_key_last($continents_Array)) {
+            switch ($selected) {
+                case NA:
+                    $element = "North America";
+                    break;
+                case SA:
+                    $element = "South America";
+                    break;
+                case EU:
+                    $element = "Europe";
+                    break;
+                case AI:
+                    $element = "Asia";
+                    break;
+                case AU:
+                    $element = "Australia";
+                    break;
+                case AF:
+                    $element = "Africa";
+                    break;
+                case AN:
+                    $element = "Antarctica";
+                    break;
+            }
             echo $element . '.';
         } else {
+            switch ($selected) {
+                case NA:
+                    $element = "North America";
+                    break;
+                case SA:
+                    $element = "South America";
+                    break;
+                case EU:
+                    $element = "Europe";
+                    break;
+                case AI:
+                    $element = "Asia";
+                    break;
+                case AU:
+                    $element = "Australia";
+                    break;
+                case AF:
+                    $element = "Africa";
+                    break;
+                case AN:
+                    $element = "Antarctica";
+                    break;
+            }
             echo $element . ', ';
         }
     }
