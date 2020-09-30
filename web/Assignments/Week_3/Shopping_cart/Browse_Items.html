@@ -46,7 +46,7 @@
         <a href="../../Home_Page/assignments.php">CS 313 Assignments</a>
         <a href="#products">See All Products</a>
 
-        <a href="../Shopping_cart/View_Cart.html"
+        <a href="../Shopping_cart/View_Cart.php"
           >View Cart
           <img src="../Shopping_cart/images/cart.png" alt="cart" />
         </a>
@@ -136,7 +136,7 @@
             <input
               class="productPrice"
               type="checkbox"
-              name="item_0"
+              name="list_items[]"
               value="139.99"
               onclick="addToTotal();"
             />
@@ -173,7 +173,7 @@
             <input
               class="productPrice"
               type="checkbox"
-              name="item_1"
+              name="list_items[]"
               value="14.88"
               onclick="addToTotal();"
             />
@@ -210,7 +210,7 @@
             <input
               class="productPrice"
               type="checkbox"
-              name="item_2"
+              name="list_items[]"
               value="199.00"
               onclick="addToTotal();"
             />
@@ -246,7 +246,7 @@
             <input
               class="productPrice"
               type="checkbox"
-              name="item_3"
+              name="list_items[]"
               value="31.99"
               onclick="addToTotal();"
             />
@@ -288,7 +288,7 @@
             <input
               class="productPrice"
               type="checkbox"
-              name="item_4"
+              name="list_items[]"
               value="1495.00"
               onclick="addToTotal();"
             />
@@ -330,7 +330,7 @@
             <input
               class="productPrice"
               type="checkbox"
-              name="item_5"
+              name="list_items[]"
               value="16.99"
               onclick="addToTotal();"
             />
@@ -339,7 +339,7 @@
       </table>
 
       <br />
-      <!-- RESET AND SUBMIT AREA -->
+      <!-- SUBMIT AREA -->
       <div class="bottomBar">
         <button type="submit" name="validate" id="calculate">
           Add Items to Cart
