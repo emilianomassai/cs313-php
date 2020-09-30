@@ -43,8 +43,8 @@ if (!empty($continents_Array)) {
             }
             echo $element . '.';
         } else {
+            echo $element . ', ';
         }
-        echo $element . ', ';
     }
 }
 
