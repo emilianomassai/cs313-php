@@ -37,9 +37,16 @@
         <div class="navbar">
             <a href="../Shopping_cart/Browse_Items.html">Return to browse items page</a>
             <p></p>
-            <a href="../Shopping_cart/Checkout.html" id="checkout_btn_id" style="display: none">Checkout
+            <!-- <a href="../Shopping_cart/Checkout.html" id="checkout_btn_id" style="display: none">Checkout
                 <img src="../Shopping_cart/images/cart.png" alt="cart" />
-            </a>
+
+            </a> -->
+            $array_items = $_POST['list_items'];
+            if (!empty($array_items)) { echo '<a href="../Shopping_cart/Checkout.html" id="checkout_btn_id"
+                style="display: normal">Checkout
+                <img src="../Shopping_cart/images/cart.png" alt="cart" />
+
+            </a>'} ?>
         </div>
     </div>
 
@@ -52,7 +59,6 @@
 $array_items = $_POST['list_items'];
 if (!empty($array_items)) {
 // Loop to store and display values of individual checked checkbox.
-    echo '$("checkout_btn_id").style="display: normal"';
     foreach ($array_items as $selected => $element) {
 
         // if the checked value is the last, add a period instead of a comma.
