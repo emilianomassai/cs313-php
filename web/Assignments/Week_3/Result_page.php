@@ -17,32 +17,32 @@ if (!empty($continents_Array)) {
 
         switch ($selected) {
             case NA:
-                echo "North America";
+                $selected = "North America";
                 break;
             case SA:
-                echo "South America";
+                $selected = "South America";
                 break;
             case EU:
-                echo "Europe";
+                $selected = "Europe";
                 break;
             case AI:
-                echo "Asia";
+                $selected = "Asia";
                 break;
             case AU:
-                echo "Australia";
+                $selected = "Australia";
                 break;
             case AF:
-                echo "Africa";
+                $selected = "Africa";
                 break;
             case AN:
-                echo "Antarctica";
+                $selected = "Antarctica";
                 break;
         }
 
         if (end($continents_Array)) {
-            echo ".";
+            echo $selected . ".";
         } else {
-            echo ", ";
+            echo $selected . ", ";
         }
 
     }
