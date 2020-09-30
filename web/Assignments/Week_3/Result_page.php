@@ -13,7 +13,7 @@ $continents_Array = $_POST['cont_list'];
 if (!empty($continents_Array)) {
 // Loop to store and display values of individual checked checkbox.
 
-    foreach ($continents_Array as $selected) {
+    foreach ($continents_Array as $selected => $element) {
 
         switch ($selected) {
             case NA:
@@ -38,12 +38,16 @@ if (!empty($continents_Array)) {
                 echo "Antarctica";
                 break;
         }
-        echo "br /";
+
+        // if the checked value is the last, add a period instead of a comma.
+
+        if ($selected === array_key_last($continents_Array)) {
+            echo '.';
+        } else {
+            echo ', ';
+        }
     }
-
 }
-
-// if the checked value is the last, add a period instead of a comma.
 
 ?>
 
