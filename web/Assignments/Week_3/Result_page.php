@@ -20,30 +20,30 @@ if (!empty($continents_Array)) {
         if ($selected === array_key_last($continents_Array)) {
             switch ($selected) {
                 case NA:
-                    $element = "North America";
+                    echo "North America";
                     break;
                 case SA:
-                    $element = "South America";
+                    echo "South America";
                     break;
                 case EU:
-                    $element = "Europe";
+                    echo "Europe";
                     break;
                 case AI:
-                    $element = "Asia";
+                    echo "Asia";
                     break;
                 case AU:
-                    $element = "Australia";
+                    echo "Australia";
                     break;
                 case AF:
-                    $element = "Africa";
+                    echo "Africa";
                     break;
                 case AN:
-                    $element = "Antarctica";
+                    echo "Antarctica";
                     break;
             }
-            echo $element . '.';
+            echo '.';
         } else {
-            echo $element . ', ';
+            echo ', ';
         }
     }
 }
