@@ -37,7 +37,7 @@
         <div class="navbar">
             <a href="../Shopping_cart/Browse_Items.html">Return to browse items page</a>
             <p></p>
-            <a href="../Shopping_cart/Checkout.html">Checkout
+            <a href="../Shopping_cart/Checkout.html" id="checkout_btn" style="display: none">Checkout
                 <img src="../Shopping_cart/images/cart.png" alt="cart" />
             </a>
         </div>
@@ -94,6 +94,7 @@ if (empty($array_items)) {
     echo 'No item in the cart yet!';
     echo "<br>";
     echo "<br>";
+
 }
 
 ?>
