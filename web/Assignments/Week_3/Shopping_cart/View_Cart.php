@@ -45,7 +45,7 @@
 $array_items = $_POST['list_items'];
 if (!empty($array_items)) {echo '< href="../Shopping_cart/Checkout.html" id="checkout_btn_id"
                 style="display: normal">Checkout
-                <img src="../Shopping_cart/images/cart.png" alt="cart" />';.}?>
+                <img src="../Shopping_cart/images/cart.png" alt="cart" />';}?>
         </div>
     </div>
 
