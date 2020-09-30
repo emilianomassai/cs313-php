@@ -13,7 +13,7 @@ if (!empty($_POST['cont_list'])) {
 // Loop to store and display values of individual checked checkbox.
 
     foreach ($_POST['cont_list'] as $selected) {
-       
+
         switch ($selected) {
             case NA:
                 echo "North America";
@@ -36,11 +36,11 @@ if (!empty($_POST['cont_list'])) {
             case AN:
                 echo "Antarctica";
                 break;
-                
-        echo $selected . ", ";
+
+                echo $selected . ", ";
+        }
     }
 }
-
 // if the checked value is the last, add a period instead of a comma.
 if (array_key_last($_POST['cont_list'])) {
     echo $selected . ".";
