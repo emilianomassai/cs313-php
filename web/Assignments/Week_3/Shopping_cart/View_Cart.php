@@ -79,11 +79,13 @@ if (!empty($array_items)) {
 
         }
 
-        if ($selected === array_key_last($continents_Array)) {
-            echo $element . '.';
+        if ($selected === array_key_last($array_items)) {
+            echo '<li>' . $element . '.';
         } else {
-            echo $element . ';';
+            echo '<li>' . $element . ';';
             echo "<br>";
+            echo "<br>";
+
         }
     }
 }
