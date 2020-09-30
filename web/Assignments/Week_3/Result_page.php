@@ -37,7 +37,7 @@ if (!empty($_POST['cont_list'])) {
                 echo "Antarctica";
                 break;
         }
-        echo $selected . ", ";
+        echo ", ";
     }
 }
 // if the checked value is the last, add a period instead of a comma.
