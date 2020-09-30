@@ -8,11 +8,16 @@
     Your major is: <?php echo $_POST["major"]; ?><br>
     Your comments are: <?php echo $_POST["comments"]; ?><br>
 
-    You visited <?php
+    You visited: <?php
 if (!empty($_POST['cont_list'])) {
 // Loop to store and display values of individual checked checkbox.
     foreach ($_POST['cont_list'] as $selected) {
-        echo $selected . "</br>";
+        if ($selected == $lastElement) {
+            echo $selected . ".";
+        } else {
+            echo $selected . ", ";
+        }
+
     }
 }
 ?>
