@@ -38,8 +38,11 @@ if (!empty($continents_Array)) {
                 echo "Antarctica";
                 break;
         }
-
-        echo " ";
+        if (end($continents_Array)) {
+            echo ".";
+        } else {
+            echo ", ";
+        }
 
     }
 
