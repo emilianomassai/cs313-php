@@ -118,7 +118,9 @@ if (!empty($array_items)) {
     echo "<br>";
     echo "<br>";
     echo "<br>";
-    echo 'The total of your shopping is $' . $sum . ' at the moment. To proceed your purchase, continue to the checkout page.';
+    echo 'The total of your shopping is $' . $sum . '. ';
+    echo "<br>";
+    echo 'To proceed your purchase, continue to the checkout page.';
     echo "<br>";
     echo "<br>";
 
