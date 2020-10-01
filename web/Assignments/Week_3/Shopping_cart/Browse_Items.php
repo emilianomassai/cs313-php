@@ -112,6 +112,8 @@ foreach ($_SESSION['cart'] as $key => $value) {
 
     echo $value;
     echo '<br>';
+    echo '<br>';
+
 }
 
 // switch ($value) {
