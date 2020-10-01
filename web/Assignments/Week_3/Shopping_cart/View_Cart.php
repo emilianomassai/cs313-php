@@ -63,7 +63,6 @@ if (!empty($array_items)) {
         // if the checked value is the last, add a period instead of a comma.
 
         $cartArray = array("");
-        array_push($cartArray, $element);
 
         switch ($element) {
             case "139.99":
@@ -93,6 +92,8 @@ if (!empty($array_items)) {
             echo '<li>' . $element . ';';
             echo "<br>";
             echo "<br>";
+
+            array_push($cartArray, $element);
 
         }
     }
