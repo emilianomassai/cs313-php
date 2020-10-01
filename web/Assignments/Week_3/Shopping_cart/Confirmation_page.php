@@ -52,7 +52,7 @@ session_start();
         <h4>
 
             <?php
-$array_items = $_POST['list_items'];
+$array_items = $_SESSION['cart'];
 
 if (!empty($array_items)) {
 
