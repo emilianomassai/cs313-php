@@ -1,3 +1,8 @@
+<?php
+// start session
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -49,10 +54,11 @@
         <br />
         <h4>
             <?php
-$array_items = $_POST['list_items'];
-if (!empty($array_items)) {
+// $array_items = $_POST['list_items'];
+$_SESSION["list_items"] = $_POST["list_items"];
+if (!empty($_SESSION["list_items"])) {
 // Loop to store and display values of individual checked checkbox.
-    foreach ($array_items as $selected => $element) {
+    foreach ($_SESSION["list_items"] as $selected => $element) {
 
         // if the checked value is the last, add a period instead of a comma.
 
@@ -78,7 +84,7 @@ if (!empty($array_items)) {
 
         }
 
-        if ($selected === array_key_last($array_items)) {
+        if ($selected === array_key_last($_SESSION["list_items"])) {
             echo '<li>' . $element . '.';
         } else {
             echo '<li>' . $element . ';';
@@ -89,7 +95,7 @@ if (!empty($array_items)) {
     }
 }
 
-if (empty($array_items)) {
+if (empty($_SESSION["list_items"])) {
     echo 'No item in the cart yet!';
     echo "<br>";
     echo "<br>";
