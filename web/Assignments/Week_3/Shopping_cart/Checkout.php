@@ -143,7 +143,7 @@ session_start();
             <h2>Total:</h2>
 
             <?php
-
+echo "DISPLAY SOMETHING!!!!";
 //Make sure that the session variable actually exists!
 // if (isset($_SESSION['list_items'])) {
 //Loop through it like any other array.
