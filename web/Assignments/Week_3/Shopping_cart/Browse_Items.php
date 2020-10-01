@@ -39,7 +39,7 @@ session_start();
         ////
         var item_status = $("#item_0").prop('checked'); // at the time of page load
 
-        if (item_status == true) {
+        if (item_status) {
             <?php $item_0_selected = "checked='checked'"?>
 
         } else {
