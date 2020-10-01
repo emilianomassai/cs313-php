@@ -49,7 +49,7 @@ session_start();
     <section id="userInfoForm">
         <h1>Thank you for your purchase!</h1>
         <br />
-        <h2>The following is the list of the items you purchased:</h2>
+        <h4>The following is the list of the items you purchased:</h4>
 
         <?php
 $array_items = $_SESSION['cart'];
