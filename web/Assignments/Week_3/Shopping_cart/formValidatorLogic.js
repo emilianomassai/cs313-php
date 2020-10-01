@@ -180,6 +180,23 @@ function expirationDateValidating() {
 }
 
 /*************************************************************************
+ * IS SELECTED:
+ * Check if a checkbox is selected.
+ * **********************************************************************/
+function isSelected() {
+  let input = document.getElementsByClassName("productPrice");
+  for (let i = 0; i < input.length; i++) {
+    if (input[i].checked) {
+      return true;
+    } else return false;
+  }
+  // document.getElementById("total").value = "$" + total.toFixed(2);
+  // if (total != 0) {
+  //   return true;
+  // } else false;
+}
+
+/*************************************************************************
  * RESET ALL MESSAGES:
  * This function will reset all the error messages and turn on all the
  * asterisks again.

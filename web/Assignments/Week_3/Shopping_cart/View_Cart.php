@@ -103,12 +103,6 @@ if (empty($array_items)) {
     echo "<br>";
     echo "<br>";
 
-    $item_0_selected = '';
-    $item_1_selected = '';
-    $item_2_selected = '';
-    $item_3_selected = '';
-    $item_4_selected = '';
-    $item_5_selected = '';
 }
 
 ?>
