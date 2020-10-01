@@ -112,6 +112,10 @@ if (!empty($array_items)) {
         //     //sum up the total of all the items in the cart
         //     $sum += $productPrice;
         // }
+        echo "<br>";
+        echo "<br>";
+        echo "<br>";
+        echo "<br>";
         echo 'The total of your shopping is $' . $sum . ' at the moment. To proceed your purchase, continue to the checkout page.';
 
     }
