@@ -147,9 +147,9 @@ session_start();
 //Make sure that the session variable actually exists!
 if (isset($_SESSION['list_items'])) {
     //Loop through it like any other array.
-    foreach ($_SESSION['list_items'] as $productId) {
+    foreach ($_SESSION['list_items'] as $selected => $element) {
         //Print out the product ID.
-        echo $productId, '<br>';
+        echo $element, '<br>';
     }
 }
 
