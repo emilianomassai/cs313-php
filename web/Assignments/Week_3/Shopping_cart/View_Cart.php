@@ -42,7 +42,7 @@ session_start();
         <!-- TOP MENU -->
 
         <div class="navbar">
-            <a href="../Shopping_cart/Browse_Items.html">Return to browse items page</a>
+            <a href="../Shopping_cart/Browse_Items.php">Return to browse items page</a>
             <p></p>
             <a href="../Shopping_cart/Checkout.html" id="checkout_btn_id">Checkout
                 <img src="../Shopping_cart/images/cart.png" alt="cart" />
