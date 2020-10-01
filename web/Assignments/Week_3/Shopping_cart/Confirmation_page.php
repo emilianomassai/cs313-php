@@ -113,7 +113,7 @@ if (!empty($filter_result)) {
     echo "<br>";
     echo "<br>";
     echo "<br>";
-    echo "<h3>'You spent $' . $sum . ' for this purchase. '</h3>";
+    echo "<h2>You spent $ $sum for this purchase. </h2>";
     echo "<br>";
     echo "<br>";
 
