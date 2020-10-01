@@ -72,12 +72,12 @@ session_start();
 
 foreach ($_SESSION['cart'] as $key => $value) {
 
-    $item_0_selected = "";
-    $item_1_selected = "";
-    $item_2_selected = "";
-    $item_3_selected = "";
-    $item_4_selected = "";
-    $item_5_selected = "";
+    $item_0_selected = "unchecked";
+    $item_1_selected = "unchecked";
+    $item_2_selected = "unchecked";
+    $item_3_selected = "unchecked";
+    $item_4_selected = "unchecked";
+    $item_5_selected = "unchecked";
 
     echo $value;
     echo '<br>';
