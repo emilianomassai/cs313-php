@@ -208,6 +208,14 @@ if (!empty($array_items)) {
     $_SESSION['cart'] = $cartArray;
 }
 
+if (empty($array_items)) {
+    echo '<i style="color:red;font-size:18px;font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;">
+    Select items before purchase something! </i> ';
+    echo "<br>";
+    echo "<br>";
+
+}
+
 ?>
             <?php
 //store the total of the items in a variable
@@ -219,13 +227,6 @@ if (isset($_SESSION['cart'])) {
     foreach ($_SESSION['cart'] as $productPrice) {
         //sum up the total of all the items in the cart
         $sum += $productPrice;
-
-    }
-    if ($sum == 0) {
-        echo '<i style="color:red;font-size:18px;font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;">
-      Select items before purchase something! </i> ';
-        echo "<br>";
-        echo "<br>";
     }
 
 }
