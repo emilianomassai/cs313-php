@@ -181,6 +181,6 @@ if (isset($_SESSION['cart'])) {
 
 <?php
 // end session
-session_destroy();
+// session_destroy();
 
 ?>
