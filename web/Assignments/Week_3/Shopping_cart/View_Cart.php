@@ -54,7 +54,7 @@ session_start();
         <h4>
 
             <?php
-$array_items = $_SESSION['cart'];
+$array_items = $_POST['list_items'];
 
 if (!empty($array_items)) {
 
@@ -124,6 +124,7 @@ if (!empty($array_items)) {
     echo "<br>";
     echo "<br>";
 
+    $_SESSION['cart'] = $cartArray;
 }
 
 if (empty($array_items)) {
