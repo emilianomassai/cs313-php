@@ -1,6 +1,7 @@
 <?php
 // start session
 session_start();
+$sum = 0;
 
 ?>
 
