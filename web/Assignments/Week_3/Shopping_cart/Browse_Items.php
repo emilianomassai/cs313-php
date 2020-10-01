@@ -38,7 +38,7 @@ session_start();
             $('#calculate').html(" <b>Status :</b> " + item_status);
         });
         ////
-        var item_status = $("#ckb").prop('checked'); // at the time of page load
+        var item_status = $("#item_0").prop('checked'); // at the time of page load
         <?php $item_0_selected = ""?>
         $('#calculate').html(" <b>Status :</b> " + item_status);
         /////
