@@ -158,6 +158,7 @@ if (isset($_SESSION['cart'])) {
         //sum up the total of all the items in the cart
         $sum += $productPrice;
     }
+    $_SESSION['address'] = $address;
 
 }
 ?>
