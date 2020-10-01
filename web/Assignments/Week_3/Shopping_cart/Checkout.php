@@ -144,6 +144,79 @@ session_start();
             <h2>Total:</h2>
 
             <?php
+$array_items = $_POST['list_items'];
+
+if (!empty($array_items)) {
+
+    $sum = 0;
+
+    $cartArray = array("");
+// Loop to store and display values of individual checked checkbox.
+    foreach ($array_items as $selected => $element) {
+        // if the checked value is the last, add a period instead of a comma.
+        array_push($cartArray, $element);
+
+        switch ($element) {
+            case "139.99":
+                $sum += $element;
+                $element = "Christmas tree with lights - $" . $element;
+                break;
+            case "14.88":
+                $sum += $element;
+                $element = "Harry Potter Quidditch Ornament - $" . $element;
+                break;
+            case "199.00":
+                $sum += $element;
+                $element = "Bose Home Speaker - $" . $element;
+                break;
+            case "31.99":
+                $sum += $element;
+                $element = "Christmas Stockings, 4 Pcs - $" . $element;
+                break;
+            case "1495.00":
+                $sum += $element;
+                $element = "Apple iPhone 11 Pro Max, 256GB - $" . $element;
+                break;
+            case "16.99":
+                $sum += $element;
+                $element = "Decorative Square Throw Pillow, Pack of 2 - $" . $element;
+                break;
+
+        }
+
+        if ($selected === array_key_last($array_items)) {
+            echo '<li>' . $element . '.';
+        } else {
+            echo '<li>' . $element . ';';
+            echo "<br>";
+            echo "<br>";
+
+        }
+
+        // // //store the total of the items in a variable
+        // // //Make sure that the session variable actually exists!
+        // // $sum = 0;
+
+        // //Loop through it like any other array.
+        // foreach ($_SESSION['cart'] as $productPrice) {
+        //     //sum up the total of all the items in the cart
+        //     $sum += $productPrice;
+        // }
+
+    }
+
+    $_SESSION['cart'] = $cartArray;
+}
+
+if (empty($array_items)) {
+    echo 'Select items before purchase something!';
+    echo "<br>";
+    echo "<br>";
+
+}
+
+?>
+            <?php
 //store the total of the items in a variable
 //Make sure that the session variable actually exists!
 $sum = 0;
