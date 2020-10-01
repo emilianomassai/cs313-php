@@ -82,7 +82,9 @@ session_start();
             <textarea placeholder="street address, city, state, and zip" name="address" id="address" cols="50" rows="5"
                 onchange="addressValidating();"></textarea>
             <br />
-            <?php $_SESSION['address'] = $address;?>
+
+            <?php
+$_SESSION['address'] = "Pirlottino dei pirlottini.";?>
 
             <span id="addressError"></span>
 
