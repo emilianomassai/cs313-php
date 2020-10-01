@@ -150,12 +150,9 @@ if (isset($_SESSION['cart'])) {
 
     //Loop through it like any other array.
     foreach ($_SESSION['cart'] as $productPrice) {
+        //sum up the total of all the items in the cart
         $sum += $productPrice;
-        //Print out the product ID.
-        echo $productId, '<br>';
     }
-    echo '<br>';
-    echo "The total of your purchase is: $" . $sum;
 }
 
 ?>
