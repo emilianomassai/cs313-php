@@ -1,6 +1,4 @@
 <?php
-include "Vew_Cart.php";
-
 // start session
 session_start();
 ?>
