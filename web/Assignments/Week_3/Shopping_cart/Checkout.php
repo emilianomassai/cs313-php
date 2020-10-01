@@ -82,6 +82,7 @@ session_start();
             <textarea placeholder="street address, city, state, and zip" name="address" id="address" cols="50" rows="5"
                 onchange="addressValidating();"></textarea>
             <br />
+            <?php $_SESSION['address'] = $address;?>
 
             <span id="addressError"></span>
 
@@ -158,7 +159,6 @@ if (isset($_SESSION['cart'])) {
         //sum up the total of all the items in the cart
         $sum += $productPrice;
     }
-    $_SESSION['address'] = $address;
 
 }
 ?>
