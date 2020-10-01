@@ -323,7 +323,7 @@ foreach ($_SESSION['cart'] as $key => $value) {
 
         <div class="bottomBar">
             <button type="submit" name="validate" id="calculate">
-                + Add Items to Cart
+                View Cart
             </button>
         </div>
     </form>
