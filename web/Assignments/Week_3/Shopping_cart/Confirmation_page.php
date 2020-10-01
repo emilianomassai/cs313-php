@@ -53,7 +53,6 @@ session_start();
 
         <?php
 
-unset($array_items[0]);
 $array_items = $_SESSION['cart'];
 
 $address = $_POST['address'];
@@ -97,6 +96,8 @@ if (!empty($array_items)) {
         if ($selected === array_key_last($array_items)) {
             echo '<li>' . $element . '.';
         } else {
+
+            unset($array_items[0]);
             echo '<li>' . $element . ';';
             echo "<br>";
             echo "<br>";
