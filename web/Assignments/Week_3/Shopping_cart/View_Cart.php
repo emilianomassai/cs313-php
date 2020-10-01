@@ -57,30 +57,38 @@ session_start();
 $array_items = $_POST['list_items'];
 
 if (!empty($array_items)) {
+
+    $sum = 0;
+
     $cartArray = array("");
 // Loop to store and display values of individual checked checkbox.
     foreach ($array_items as $selected => $element) {
         // if the checked value is the last, add a period instead of a comma.
-
         array_push($cartArray, $element);
 
         switch ($element) {
             case "139.99":
+                $sum += $element;
                 $element = "Christmas tree with lights - $" . $element;
                 break;
             case "14.88":
+                $sum += $element;
                 $element = "Harry Potter Quidditch Ornament - $" . $element;
                 break;
             case "199.00":
+                $sum += $element;
                 $element = "Bose Home Speaker - $" . $element;
                 break;
             case "31.99":
+                $sum += $element;
                 $element = "Christmas Stockings, 4 Pcs - $" . $element;
                 break;
             case "1495.00":
+                $sum += $element;
                 $element = "Apple iPhone 11 Pro Max, 256GB - $" . $element;
                 break;
             case "16.99":
+                $sum += $element;
                 $element = "Decorative Square Throw Pillow, Pack of 2 - $" . $element;
                 break;
 
@@ -95,15 +103,15 @@ if (!empty($array_items)) {
 
         }
 
-        //store the total of the items in a variable
-        //Make sure that the session variable actually exists!
-        $sum = 0;
+        // // //store the total of the items in a variable
+        // // //Make sure that the session variable actually exists!
+        // // $sum = 0;
 
-        //Loop through it like any other array.
-        foreach ($_SESSION['cart'] as $productPrice) {
-            //sum up the total of all the items in the cart
-            $sum += $productPrice;
-        }
+        // //Loop through it like any other array.
+        // foreach ($_SESSION['cart'] as $productPrice) {
+        //     //sum up the total of all the items in the cart
+        //     $sum += $productPrice;
+        // }
         echo 'The total of your shopping is $' . $sum . ' at the moment. To proceed your purchase, continue to the checkout page.';
 
     }
