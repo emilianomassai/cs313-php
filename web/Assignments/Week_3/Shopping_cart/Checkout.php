@@ -1,6 +1,5 @@
 <?php
 // start session
-$_SESSION['cart'] = array();
 session_start();
 
 ?>
@@ -179,3 +178,9 @@ if (isset($_SESSION['cart'])) {
 </body>
 
 </html>
+
+<?php
+// end session
+session_destroy();
+
+?>
