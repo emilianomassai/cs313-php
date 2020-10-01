@@ -70,12 +70,6 @@ session_start();
 
         <?php
 
-$item_0_selected = 'checked="unchecked"';
-$item_1_selected = 'checked="unchecked"';
-$item_2_selected = 'checked="unchecked"';
-$item_3_selected = 'checked="unchecked"';
-$item_4_selected = 'checked="unchecked"';
-$item_5_selected = 'checked="unchecked"';
 foreach ($_SESSION['cart'] as $key => $value) {
 
     echo $value;
@@ -102,6 +96,13 @@ foreach ($_SESSION['cart'] as $key => $value) {
             break;
     }
 }
+
+$item_0_selected = '';
+$item_1_selected = '';
+$item_2_selected = '';
+$item_3_selected = '';
+$item_4_selected = '';
+$item_5_selected = '';
 ?>
 
         <!-- TABLE WITH PRODUCT CHECKBOXES -->
