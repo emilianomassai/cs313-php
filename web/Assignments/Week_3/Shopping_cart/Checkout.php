@@ -188,3 +188,9 @@ if (isset($_SESSION['cart'])) {
 </body>
 
 </html>
+
+<?php
+// start session
+session_destroy();
+
+?>
