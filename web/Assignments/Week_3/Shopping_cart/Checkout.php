@@ -145,13 +145,13 @@ session_start();
 
             <?php
 //Make sure that the session variable actually exists!
-if(isset($_SESSION['cart'])){
-  //Loop through it like any other array.
-  foreach($_SESSION['cart'] as $productId){
-      //Print out the product ID.
-      echo $productId, '<br>';
-  }
-  
+if (isset($_SESSION['cart'])) {
+    //Loop through it like any other array.
+    foreach ($_SESSION['cart'] as $productId) {
+        //Print out the product ID.
+        echo $productId, '<br>';
+    }
+}
 
 ?>
 
