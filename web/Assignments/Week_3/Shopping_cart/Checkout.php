@@ -159,13 +159,6 @@ if (isset($_SESSION['cart'])) {
         $sum += $productPrice;
     }
 
-    if ($sum == 0) {
-        echo '<i style="color:red;font-size:18px;font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;">
-      Select items before purchase something! </i> ';
-        echo "<br>";
-        echo "<br>";
-
-    }
 }
 ?>
 
