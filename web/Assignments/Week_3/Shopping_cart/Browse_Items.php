@@ -77,25 +77,24 @@ foreach ($_SESSION['cart'] as $key => $value) {
     echo '<br>';
 
     switch ($value) {
-        case "139.99":
-            echo '<input type="checkbox" name="list[]" value="139.99" checked="checked >';
-            break;
-        case "14.88":
-            $element = "Harry Potter Quidditch Ornament";
-            break;
-        case "199.00":
-            $element = "Bose Home Speaker";
-            break;
-        case "31.99":
-            $element = "Christmas Stockings, 4 Pcs";
-            break;
-        case "1495.00":
-            $element = "Apple iPhone 11 Pro Max, 256GB";
-            break;
-        case "16.99":
-            $element = "Decorative Square Throw Pillow, Pack of 2";
-            break;
-    }
+      case "139.99":
+          $element = "Christmas tree with lights";
+          break;
+      case "14.88":
+          $element = "Harry Potter Quidditch Ornament";
+          break;
+      case "199.00":
+          $element = "Bose Home Speaker";
+          break;
+      case "31.99":
+          $element = "Christmas Stockings, 4 Pcs";
+          break;
+      case "1495.00":
+          $element = "Apple iPhone 11 Pro Max, 256GB";
+          break;
+      case "16.99":
+          $element = "Decorative Square Throw Pillow, Pack of 2";
+          break;
 }
 ?>
 
