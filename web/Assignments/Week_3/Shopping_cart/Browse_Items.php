@@ -85,7 +85,41 @@ session_start();
             </tr>
 
             <?php
-$checkedItem0 = "checked: 'checked'"?>
+
+foreach ($_SESSION['cart'] as $key => $value) {
+
+  $item_0_selected = "";
+  $item_1_selected = "";
+  $item_2_selected = "";
+  $item_3_selected = "";
+  $item_4_selected = "";
+  $item_5_selected = "";
+
+    echo $value;
+    echo '<br>';
+
+    switch ($value) {
+      case "139.99":
+        $item_0_selected = "checked: 'checked'";
+          break;
+      case "14.88":
+        $item_1_selected = "checked: 'checked'";
+          break;
+      case "199.00":
+        $item_2_selected = "checked: 'checked'";
+          break;
+      case "31.99":
+        $item_3_selected = "checked: 'checked'";
+          break;
+      case "1495.00":
+        $item_4_selected = "checked: 'checked'";
+          break;
+      case "16.99":
+        $item_5_selected = "checked: 'checked'";
+          break;
+}
+?>
+
 
             <!-- FIRST PRODUCT -->
             <tr>
@@ -109,7 +143,7 @@ $checkedItem0 = "checked: 'checked'"?>
                 <td>$139.99</td>
                 <td>
                     <input class="productPrice" type="checkbox" name="list_items[]" value="139.99"
-                        <?php $checkedItem0?> />
+                        <?php echo $item_0_selected ?> />
                 </td>
             </tr>
 
