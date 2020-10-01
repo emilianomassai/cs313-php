@@ -110,7 +110,7 @@ foreach ($_SESSION['cart'] as $key => $value) {
                 <td class="category">Seasonal Décor</td>
                 <td>$139.99</td>
                 <td>
-                    <input class="productPrice" type="checkbox" name="list_items[]" value="139.99" />
+                    <input class="productPrice" type="checkbox" checked="checked" name="list_items[]" value="139.99" />
                 </td>
             </tr>
 
