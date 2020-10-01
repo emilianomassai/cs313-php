@@ -34,7 +34,7 @@ session_start();
         $("#item_0").change(function() {
             var item_status = $("#item_0").prop('checked');
             //alert(ckb_status);
-            $('#calculate').html(" <b>Status :</b> " + item_status);
+            $('#calculate').html(" <b>Status :</b> " + $item_0_selected);
         });
         ////
         var item_status = $("#item_0").prop('checked'); // at the time of page load
@@ -46,7 +46,7 @@ session_start();
             <?php $item_0_selected = ""?>
         }
 
-        $('#calculate').html(" <b>Status :</b> " + item_status);
+        $('#calculate').html(" <b>Status :</b> " + $item_0_selected);
         /////
     });
     </script>
