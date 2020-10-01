@@ -209,7 +209,8 @@ if (!empty($array_items)) {
 }
 
 if (empty($array_items)) {
-    echo 'Select items before purchase something!';
+    echo '<i style="color:red;font-size:30px;">
+    Select items before purchase something! </i> ';
     echo "<br>";
     echo "<br>";
 
