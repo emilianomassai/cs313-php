@@ -1,6 +1,7 @@
 <?php
 // start session
 session_start();
+$SESSION['list_items'] = $_POST["list_items"];
 ?>
 
 <!DOCTYPE html>
@@ -258,6 +259,8 @@ session_start();
 
         <br />
         <!-- SUBMIT AREA -->
+
+
         <div class="bottomBar">
             <button type="submit" name="validate" id="calculate">
                 + Add Items to Cart
