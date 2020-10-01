@@ -66,22 +66,22 @@ if (!empty($array_items)) {
 
         switch ($element) {
             case "139.99":
-                $element = "Christmas tree with lights";
+                $element = "Christmas tree with lights - $" . $element;
                 break;
             case "14.88":
-                $element = "Harry Potter Quidditch Ornament";
+                $element = "Harry Potter Quidditch Ornament - $" . $element;
                 break;
             case "199.00":
-                $element = "Bose Home Speaker";
+                $element = "Bose Home Speaker - $" . $element;
                 break;
             case "31.99":
-                $element = "Christmas Stockings, 4 Pcs";
+                $element = "Christmas Stockings, 4 Pcs - $" . $element;
                 break;
             case "1495.00":
-                $element = "Apple iPhone 11 Pro Max, 256GB";
+                $element = "Apple iPhone 11 Pro Max, 256GB - $" . $element;
                 break;
             case "16.99":
-                $element = "Decorative Square Throw Pillow, Pack of 2";
+                $element = "Decorative Square Throw Pillow, Pack of 2 - $" . $element;
                 break;
 
         }
