@@ -38,10 +38,9 @@ session_start();
 
         <div class="navbar">
             <a href="../../Home_Page/assignments.php">CS 313 Assignments</a>
+            <p></p>
             <a href="#products">See All Products</a>
 
-            <a href="../Shopping_cart/View_Cart.php">View Cart
-                <img src="../Shopping_cart/images/cart.png" alt="cart" />
             </a>
         </div>
 
