@@ -39,11 +39,11 @@ session_start();
         <!-- TOP MENU -->
 
         <div class="navbar">
-            <a href="../Shopping_cart/Browse_Items.php">Return to browse items page</a>
+            <a href="../Shopping_cart/Browse_Items.php">Edit your cart <img src="../Shopping_cart/images/cart.png"
+                    alt="cart" /></a>
             <p></p>
-            <a href="../Shopping_cart/View_Cart.php">Return to the cart
-                <img src="../Shopping_cart/images/cart.png" alt="cart" />
-            </a>
+            <p></p>
+
         </div>
     </div>
 
