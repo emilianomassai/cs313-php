@@ -146,7 +146,7 @@ session_start();
             <?php
 //Make sure that the session variable actually exists!
 if (isset($_SESSION['cart'])) {
-    $sum = 0;
+    $sum = 0.00;
     //Loop through it like any other array.
     foreach ($_SESSION['cart'] as $productPrice) {
         $sum += $productPrice;
@@ -161,7 +161,7 @@ if (isset($_SESSION['cart'])) {
 ?>
 
 
-            <input value="$0.00" readonly="readonly" type="text" id="total" name="total" />
+            <input value="<?PHP echo $sum; ?>" readonly="readonly" type="text" id="total" name="total" />
             <br />
             <br />
             <!-- RESET AND SUBMIT AREA -->
