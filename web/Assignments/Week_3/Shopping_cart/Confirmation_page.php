@@ -29,12 +29,30 @@ session_start();
 
 <body>
 
+    <!-- TOP BAR OF THE PAGE  -->
+
+    <div class="topBar">
+        <img src="../Shopping_cart/images/logo.png" alt="logo"
+            style="margin-top: 17px; margin-left: 45px; float: left; width: 165px" />
+
+
+        <!-- TOP MENU -->
+
+        <div class="navbar">
+            <a href="../../../Assignments/Home_Page/assignments.php">Return to CS 313 Assignments</a>
+
+            </a>
+        </div>
+    </div>
+
     <p id="msg"></p>
     <section id="userInfoForm">
-        <h2>Thanks for your purchase! The following is the list of the items you have bought:</h2>
+        <h2>The following is the list of items in your cart:</h2>
         <br />
+        <h4>
 
-        <?php
+            <?php
+$array_items = $_POST['list_items'];
 
 if (!empty($array_items)) {
 
@@ -98,8 +116,9 @@ if (!empty($array_items)) {
     echo "<br>";
     echo "<br>";
     echo "<br>";
-    echo 'For a total of $' . $sum . '. ';
+    echo 'The total of your shopping is $' . $sum . '. ';
     echo "<br>";
+    echo 'To proceed your purchase, continue to the checkout page.';
     echo "<br>";
     echo "<br>";
 
@@ -114,12 +133,17 @@ if (empty($array_items)) {
 }
 
 ?>
+        </h4>
+    </section>
 
-        <footer>
-            <p style="text-align: center; color: white">
-                Copyright © 2020 emiDev Inc. All rights reserved.
-            </p>
-        </footer>
+    <br>
+
+
+    <footer>
+        <p style="text-align: center; color: white">
+            Copyright © 2020 emiDev Inc. All rights reserved.
+        </p>
+    </footer>
 </body>
 
 </html>
