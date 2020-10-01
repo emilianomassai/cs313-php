@@ -9,8 +9,6 @@ session_start();
 <head>
     <meta charset="UTF-8" />
 
-    <!--Use jQuery library for modify the checkbox status-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
@@ -29,30 +27,10 @@ session_start();
 
     <link rel="icon" type="image/ico" href="../Shopping_cart/images/favicon_amazon.png" />
 
-    <script>
-    $(document).ready(function() {
-        $("#item_0").change(function() {
-            var item_status = $("#item_0").prop('checked');
-            //alert(ckb_status);
-            $('#calculate').html(" <b>Status :</b> " + $item_0_selected);
-        });
-        ////
-        var item_status = $("#item_0").prop('checked'); // at the time of page load
 
-        if (item_status) {
-            <?php $item_0_selected = "checked='checked'"?>
-
-        } else {
-            <?php $item_0_selected = ""?>
-        }
-
-        $('#calculate').html(" <b>Status :</b> " + $item_0_selected);
-        /////
-    });
-    </script>
 </head>
 
-<body onload="resetAllMessages();">
+<body>
     <!-- TOP BAR OF THE PAGE  -->
 
     <div class="topBar">
@@ -127,8 +105,7 @@ session_start();
                 <td class="category">Seasonal Décor</td>
                 <td>$139.99</td>
                 <td>
-                    <input class="productPrice" type="checkbox" name="list_items[]" value="139.99" id="item_0"
-                        <?php echo $item_0_selected ?> />
+                    <input class="productPrice" type="checkbox" name="list_items[]" value="139.99" />
                 </td>
             </tr>
 
@@ -155,8 +132,7 @@ session_start();
                 <td class="category">Seasonal Décor</td>
                 <td>$14.88</td>
                 <td>
-                    <input class="productPrice" type="checkbox" name="list_items[]" value="14.88"
-                        <?php echo $item_1_selected ?> />
+                    <input class="productPrice" type="checkbox" name="list_items[]" value="14.88" />
                 </td>
             </tr>
 
@@ -183,8 +159,7 @@ session_start();
                 <td class="category">Technology</td>
                 <td>$199.00</td>
                 <td>
-                    <input class="productPrice" type="checkbox" name="list_items[]" value="199.00"
-                        <?php echo $item_2_selected ?> />
+                    <input class="productPrice" type="checkbox" name="list_items[]" value="199.00" />
                 </td>
             </tr>
 
@@ -211,8 +186,7 @@ session_start();
                 <td class="category">Seasonal Décor</td>
                 <td>$31.99</td>
                 <td>
-                    <input class="productPrice" type="checkbox" name="list_items[]" value="31.99"
-                        <?php echo $item_3_selected ?> />
+                    <input class="productPrice" type="checkbox" name="list_items[]" value="31.99" />
                 </td>
             </tr>
 
@@ -244,8 +218,7 @@ session_start();
                 <td class="category">Technology</td>
                 <td>$1495.00</td>
                 <td>
-                    <input class="productPrice" type="checkbox" name="list_items[]" value="1495.00"
-                        <?php echo $item_4_selected ?> />
+                    <input class="productPrice" type="checkbox" name="list_items[]" value="1495.00" />
                 </td>
             </tr>
 
@@ -277,8 +250,7 @@ session_start();
                 <td class="category">Bedding</td>
                 <td>$16.99</td>
                 <td>
-                    <input class="productPrice" type="checkbox" name="list_items[]" value="16.99"
-                        <?php echo $item_5_selected ?> />
+                    <input class="productPrice" type="checkbox" name="list_items[]" value="16.99" />
                 </td>
             </tr>
         </table>
