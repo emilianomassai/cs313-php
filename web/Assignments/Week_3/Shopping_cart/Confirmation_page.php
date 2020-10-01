@@ -54,6 +54,7 @@ session_start();
         <?php
 
 $array_items = $_SESSION['cart'];
+array_filter($array_items);
 
 $address = $_POST['address'];
 
@@ -93,7 +94,6 @@ if (!empty($array_items)) {
 
         }
 
-        array_filter($array_items);
         if ($selected === array_key_last($array_items)) {
             echo '<li>' . $element . '.';
         } else {
