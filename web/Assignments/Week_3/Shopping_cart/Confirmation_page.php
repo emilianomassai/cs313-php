@@ -147,3 +147,7 @@ if (empty($array_items)) {
 </body>
 
 </html>
+
+<?php
+session_destroy();
+?>
