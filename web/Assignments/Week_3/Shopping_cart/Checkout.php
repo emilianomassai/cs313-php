@@ -161,7 +161,7 @@ if (isset($_SESSION['cart'])) {
 ?>
 
 
-            <input value="<?PHP echo $sum; ?>" readonly="readonly" type="text" id="total" name="total" />
+            <input value="$<?PHP echo $sum; ?>" readonly="readonly" type="text" id="total" name="total" />
             <br />
             <br />
             <!-- RESET AND SUBMIT AREA -->
