@@ -315,3 +315,10 @@ foreach ($_SESSION['cart'] as $key => $value) {
 </body>
 
 </html>
+
+
+<?php
+// end session
+session_destroy();
+
+?>
