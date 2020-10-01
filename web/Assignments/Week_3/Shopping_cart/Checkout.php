@@ -146,8 +146,8 @@ $sum = 0;
 
             <?php
 //store the total of the items in a variable
-$sum = 0;
 //Make sure that the session variable actually exists!
+$sum = 0;
 
 if (isset($_SESSION['cart'])) {
 
@@ -156,6 +156,7 @@ if (isset($_SESSION['cart'])) {
         //sum up the total of all the items in the cart
         $sum += $productPrice;
     }
+    session_reset();
 }
 ?>
 
