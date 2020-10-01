@@ -37,7 +37,7 @@ header("refresh: 30;");
     <a href="../Week_3/Team_activity/Basic_form_handling_PHP.html" id="Team_activity_btn_id">
         Week 3: Team Activity
     </a>
-    <a href="../Week_3/Shopping_cart/Browse_Items.html" id="Shopping_cart_btn_id">
+    <a href="../Week_3/Shopping_cart/Browse_Items.php" id="Shopping_cart_btn_id">
         Week 3: Shopping Cart
     </a>
     <br>
