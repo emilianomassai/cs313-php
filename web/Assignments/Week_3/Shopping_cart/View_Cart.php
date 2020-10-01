@@ -1,6 +1,7 @@
 <?php
 // start session
 session_start();
+$SESSION['list_items'] = $_POST["list_items"];
 
 ?>
 
@@ -55,7 +56,6 @@ session_start();
         <h4>
             <?php
 // $array_items = $_POST['list_items'];
-$SESSION['list_items'] = $_POST["list_items"];
 
 if (!empty($_SESSION["list_items"])) {
 // Loop to store and display values of individual checked checkbox.
