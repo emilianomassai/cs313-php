@@ -41,7 +41,7 @@ session_start();
         <div class="navbar">
             <a href="../Shopping_cart/Browse_Items.html">Return to browse items page</a>
             <p></p>
-            <a href="../Shopping_cart/View_Cart.php">Return to the cart
+            <a action="View_Cart.php">Return to the cart
                 <img src="../Shopping_cart/images/cart.png" alt="cart" />
             </a>
         </div>
