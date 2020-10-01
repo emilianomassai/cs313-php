@@ -99,8 +99,7 @@ session_start();
                 <td class="category">Seasonal Décor</td>
                 <td>$139.99</td>
                 <td>
-                    <input class="productPrice" type="checkbox" name="list_items[]" value="139.99"
-                        onclick="addToTotal();" />
+                    <input class="productPrice" type="checkbox" name="list_items[]" value="139.99" />
                 </td>
             </tr>
 
@@ -127,8 +126,7 @@ session_start();
                 <td class="category">Seasonal Décor</td>
                 <td>$14.88</td>
                 <td>
-                    <input class="productPrice" type="checkbox" name="list_items[]" value="14.88"
-                        onclick="addToTotal();" />
+                    <input class="productPrice" type="checkbox" name="list_items[]" value="14.88" />
                 </td>
             </tr>
 
@@ -155,8 +153,7 @@ session_start();
                 <td class="category">Technology</td>
                 <td>$199.00</td>
                 <td>
-                    <input class="productPrice" type="checkbox" name="list_items[]" value="199.00"
-                        onclick="addToTotal();" />
+                    <input class="productPrice" type="checkbox" name="list_items[]" value="199.00" />
                 </td>
             </tr>
 
@@ -183,8 +180,7 @@ session_start();
                 <td class="category">Seasonal Décor</td>
                 <td>$31.99</td>
                 <td>
-                    <input class="productPrice" type="checkbox" name="list_items[]" value="31.99"
-                        onclick="addToTotal();" />
+                    <input class="productPrice" type="checkbox" name="list_items[]" value="31.99" />
                 </td>
             </tr>
 
@@ -216,8 +212,7 @@ session_start();
                 <td class="category">Technology</td>
                 <td>$1495.00</td>
                 <td>
-                    <input class="productPrice" type="checkbox" name="list_items[]" value="1495.00"
-                        onclick="addToTotal();" />
+                    <input class="productPrice" type="checkbox" name="list_items[]" value="1495.00" />
                 </td>
             </tr>
 
@@ -249,8 +244,7 @@ session_start();
                 <td class="category">Bedding</td>
                 <td>$16.99</td>
                 <td>
-                    <input class="productPrice" type="checkbox" name="list_items[]" value="16.99"
-                        onclick="addToTotal();" />
+                    <input class="productPrice" type="checkbox" name="list_items[]" value="16.99" />
                 </td>
             </tr>
         </table>
