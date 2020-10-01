@@ -1,6 +1,7 @@
 <?php
 // start session
 session_start();
+$_SESSION["list_items"] = $_POST["list_items"];
 ?>
 
 <!DOCTYPE html>
@@ -41,7 +42,7 @@ session_start();
         <div class="navbar">
             <a href="../Shopping_cart/Browse_Items.html">Return to browse items page</a>
             <p></p>
-            <a action="View_Cart.php">Return to the cart
+            <a href="../Shopping_cart/View_Cart.php">Return to the cart
                 <img src="../Shopping_cart/images/cart.png" alt="cart" />
             </a>
         </div>
@@ -143,8 +144,25 @@ session_start();
             <!-- TOTAL FIELD -->
             <h2>Total:</h2>
 
-            <?php $_SESSION["list_items"] = $_POST["list_items"];
-echo $_SESSION["list_items"];
+            <?php
+
+if (!empty($_SESSION["list_items"])) {
+    // Loop to store and display values of individual checked checkbox.
+    foreach ($_SESSION["list_items"] as $selected => $element) {
+
+        // if the checked value is the last, add a period instead of a comma.
+
+    }
+
+    if ($selected === array_key_last($_SESSION["list_items"])) {
+        echo '<li>' . $element . '.';
+    } else {
+        echo '<li>' . $element . ';';
+        echo "<br>";
+        echo "<br>";
+
+    }
+}
 ?>
 
 
