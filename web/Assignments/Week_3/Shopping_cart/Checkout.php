@@ -145,8 +145,9 @@ session_start();
 
             <?php
 //Make sure that the session variable actually exists!
+$sum = 0.00;
 if (isset($_SESSION['cart'])) {
-    $sum = "0.00";
+
     //Loop through it like any other array.
     foreach ($_SESSION['cart'] as $productPrice) {
         $sum += $productPrice;
@@ -155,7 +156,6 @@ if (isset($_SESSION['cart'])) {
     }
     echo '<br>';
     echo "The total of your purchase is: $" . $sum;
-
 }
 
 ?>
