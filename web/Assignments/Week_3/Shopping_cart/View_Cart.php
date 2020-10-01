@@ -1,7 +1,8 @@
 <?php
 // start session
 session_start();
-$array_items = $_POST['list_items'];
+// $array_items = $_POST['list_items'];
+$array_items = $_SESSION['cart']
 ?>
 
 <!DOCTYPE html>
