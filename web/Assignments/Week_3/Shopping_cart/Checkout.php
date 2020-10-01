@@ -146,11 +146,16 @@ session_start();
             <?php
 //Make sure that the session variable actually exists!
 if (isset($_SESSION['cart'])) {
+    $sum = 0;
     //Loop through it like any other array.
-    foreach ($_SESSION['cart'] as $productId) {
+    foreach ($_SESSION['cart'] as $productPrice) {
+        $sum += $productPrice;
         //Print out the product ID.
         echo $productId, '<br>';
     }
+    echo '<br>';
+    echo "The total of your purchase is: $" . $sum;
+
 }
 
 ?>
