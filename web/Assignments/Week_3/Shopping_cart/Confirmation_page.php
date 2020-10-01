@@ -47,11 +47,11 @@ session_start();
 
     <p id="msg"></p>
     <section id="userInfoForm">
-        <h2>The following is the list of items in your cart:</h2>
+        <h1>Thank you for your purchase!</h1>
         <br />
-        <h4>
+        <h2>The following is the list of the items you purchased:</h2>
 
-            <?php
+        <?php
 $array_items = $_SESSION['cart'];
 
 if (!empty($array_items)) {
@@ -101,39 +101,25 @@ if (!empty($array_items)) {
 
         }
 
-        // // //store the total of the items in a variable
-        // // //Make sure that the session variable actually exists!
-        // // $sum = 0;
-
-        // //Loop through it like any other array.
-        // foreach ($_SESSION['cart'] as $productPrice) {
-        //     //sum up the total of all the items in the cart
-        //     $sum += $productPrice;
-        // }
-
     }
     echo "<br>";
     echo "<br>";
     echo "<br>";
     echo "<br>";
-    echo 'The total of your shopping is $' . $sum . '. ';
+    echo 'You spent $' . $sum . ' for this purchase. ';
     echo "<br>";
-    echo 'To proceed your purchase, continue to the checkout page.';
+    echo "<br>";
+
+    echo 'The address to which the items will be shipped is: ';
+    // retrieve address!!!
     echo "<br>";
     echo "<br>";
 
     $_SESSION['cart'] = $cartArray;
 }
 
-if (empty($array_items)) {
-    echo 'No item in the cart yet!';
-    echo "<br>";
-    echo "<br>";
-
-}
-
 ?>
-        </h4>
+        </h2>
     </section>
 
     <br>
