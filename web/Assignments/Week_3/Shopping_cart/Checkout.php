@@ -144,16 +144,14 @@ session_start();
             <h2>Total:</h2>
 
             <?php
-$array_items = $_POST['list_items'];
-echo "DISPLAY SOMETHING!!!!";
 //Make sure that the session variable actually exists!
-// if (isset($_SESSION['list_items'])) {
-//Loop through it like any other array.
-foreach ($array_items as $selected => $element) {
-    //Print out the product ID.
-    echo $element, '<br>';
+if (isset($_SESSION['cart'])) {
+    //Loop through it like any other array.
+    foreach ($_SESSION['cart'] as $productId) {
+        //Print out the product ID.
+        echo $productId, '<br>';
+    }
 }
-// }
 
 ?>
 

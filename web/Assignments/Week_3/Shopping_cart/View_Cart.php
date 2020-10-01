@@ -62,6 +62,9 @@ if (!empty($array_items)) {
     foreach ($array_items as $selected => $element) {
         // if the checked value is the last, add a period instead of a comma.
 
+        $cartArray = array("");
+        array_push($cartArray, $element);
+
         switch ($element) {
             case "139.99":
                 $element = "Christmas tree with lights";
@@ -93,7 +96,7 @@ if (!empty($array_items)) {
 
         }
     }
-}
+    $_SESSION['cart'] = $cartArray;}
 
 if (empty($array_items)) {
     echo 'No item in the cart yet!';
