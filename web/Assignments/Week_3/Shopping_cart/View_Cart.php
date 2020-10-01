@@ -102,7 +102,7 @@ if (empty($array_items)) {
     echo 'No item in the cart yet!';
     echo "<br>";
     echo "<br>";
-
+    session_reset();
 }
 
 ?>
