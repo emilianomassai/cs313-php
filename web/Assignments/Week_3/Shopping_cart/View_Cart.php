@@ -52,9 +52,9 @@ session_start();
         <h2>The following is the list of items in your cart:</h2>
         <br />
         <h4>
+
             <?php
 $array_items = $_POST['list_items'];
-// $SESSION['list_items'] = $_POST["list_items"];
 
 if (!empty($array_items)) {
     $cartArray = array("");
@@ -95,7 +95,8 @@ if (!empty($array_items)) {
 
         }
     }
-    $_SESSION['cart'] = $cartArray;}
+    $_SESSION['cart'] = $cartArray;
+}
 
 if (empty($array_items)) {
     echo 'No item in the cart yet!';

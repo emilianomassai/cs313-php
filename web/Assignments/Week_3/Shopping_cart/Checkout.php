@@ -144,8 +144,10 @@ session_start();
             <h2>Total:</h2>
 
             <?php
-//Make sure that the session variable actually exists!
+//store the total of the items in a variable
 $sum = 0;
+//Make sure that the session variable actually exists!
+
 if (isset($_SESSION['cart'])) {
 
     //Loop through it like any other array.
@@ -154,7 +156,6 @@ if (isset($_SESSION['cart'])) {
         $sum += $productPrice;
     }
 }
-
 ?>
 
 

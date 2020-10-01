@@ -207,25 +207,6 @@ function switchOffAsterisks() {
 }
 
 /*************************************************************************
- * ADD TO TOTAL:
- * If a checkbox is selected, the price of that product will be added
- * to total.
- * **********************************************************************/
-function addToTotal() {
-  let input = document.getElementsByClassName("productPrice");
-  let total = 0;
-  for (let i = 0; i < input.length; i++) {
-    if (input[i].checked) {
-      total += parseFloat(input[i].value);
-    }
-  }
-  document.getElementById("total").value = "$" + total.toFixed(2);
-  if (total != 0) {
-    return true;
-  } else false;
-}
-
-/*************************************************************************
  * CHECK FORM:
  * This function will check if all the required fields are filled correctly.
  * It will be called on the "onsubmit" event.
