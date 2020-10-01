@@ -98,15 +98,13 @@ if (!empty($array_items)) {
         //store the total of the items in a variable
         //Make sure that the session variable actually exists!
         $sum = 0;
-        if (isset($_SESSION['cart'])) {
 
-            //Loop through it like any other array.
-            foreach ($_SESSION['cart'] as $productPrice) {
-                //sum up the total of all the items in the cart
-                $sum += $productPrice;
-            }
-            echo 'The total of your shopping is $' . $sum . ' at the moment. To proceed your purchase, continue to the checkout page.';
+        //Loop through it like any other array.
+        foreach ($_SESSION['cart'] as $productPrice) {
+            //sum up the total of all the items in the cart
+            $sum += $productPrice;
         }
+        echo 'The total of your shopping is $' . $sum . ' at the moment. To proceed your purchase, continue to the checkout page.';
 
     }
     $_SESSION['cart'] = $cartArray;
