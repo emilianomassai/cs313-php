@@ -98,16 +98,21 @@ foreach ($_SESSION['cart'] as $key => $value) {
 
     if ($value = "139.99") {
 
-        $item_0_selected = "checked='checked'";} else if ($value = "14.88") {
-        $item_1_selected = "checked='checked'";} else if ($value = "199.00") {
-        $item_2_selected = "checked='checked'";} else if ($value = "31.99") {
-        $item_3_selected = "checked='checked'";} else if ($value = "1495.00") {
-        $item_4_selected = "checked='checked'";} else if ($value = "16.99") {
+        $item_0_selected = "checked='checked'";}
+    if ($value = "14.88") {
+        $item_1_selected = "checked='checked'";}
+    if ($value = "199.00") {
+        $item_2_selected = "checked='checked'";}
+    if ($value = "31.99") {
+        $item_3_selected = "checked='checked'";}
+    if ($value = "1495.00") {
+        $item_4_selected = "checked='checked'";}
+    if ($value = "16.99") {
         $item_5_selected = "checked='checked'";}
-}
 
-echo $value;
-echo '<br>';
+    echo $value;
+    echo '<br>';
+}
 
 // switch ($value) {
 //     case "139.99":
