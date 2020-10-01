@@ -29,31 +29,12 @@ session_start();
 
 <body>
 
-    <!-- TOP BAR OF THE PAGE  -->
-
-    <div class="topBar">
-        <img src="../Shopping_cart/images/logo.png" alt="logo"
-            style="margin-top: 17px; margin-left: 45px; float: left; width: 165px" />
-
-
-        <!-- TOP MENU -->
-
-        <div class="navbar">
-            <a href="../Shopping_cart/Browse_Items.php">Return to browse items page</a>
-            <p></p>
-            <a href="../Shopping_cart/Checkout.php" id="checkout_btn_id">Checkout
-                <img src="../Shopping_cart/images/cart.png" alt="cart" />
-            </a>
-        </div>
-    </div>
-
     <p id="msg"></p>
     <section id="userInfoForm">
-        <h2>The following is the list of items in your cart:</h2>
+        <h2>Thanks for your purchase! The following is the list of the items you have bought:</h2>
         <br />
-        <h4>
 
-            <?php
+        <?php
 $array_items = $_POST['list_items'];
 
 if (!empty($array_items)) {
@@ -118,9 +99,8 @@ if (!empty($array_items)) {
     echo "<br>";
     echo "<br>";
     echo "<br>";
-    echo 'The total of your shopping is $' . $sum . '. ';
+    echo 'For a total of $' . $sum . '. ';
     echo "<br>";
-    echo 'To proceed your purchase, continue to the checkout page.';
     echo "<br>";
     echo "<br>";
 
@@ -135,17 +115,12 @@ if (empty($array_items)) {
 }
 
 ?>
-        </h4>
-    </section>
 
-    <br>
-
-
-    <footer>
-        <p style="text-align: center; color: white">
-            Copyright © 2020 emiDev Inc. All rights reserved.
-        </p>
-    </footer>
+        <footer>
+            <p style="text-align: center; color: white">
+                Copyright © 2020 emiDev Inc. All rights reserved.
+            </p>
+        </footer>
 </body>
 
 </html>
