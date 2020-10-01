@@ -41,9 +41,11 @@ session_start();
         <div class="navbar">
             <a href="../Shopping_cart/Browse_Items.php">Return to browse items page</a>
             <p></p>
-            <a href="../Shopping_cart/View_Cart.php">Return to the cart
+
+            <form class="userInfo" name="userInfo" action="View_Cart.php" method="post">Return to the cart
                 <img src="../Shopping_cart/images/cart.png" alt="cart" />
-            </a>
+            </form>
+
         </div>
     </div>
 
@@ -188,9 +190,3 @@ if (isset($_SESSION['cart'])) {
 </body>
 
 </html>
-
-<?php
-// start session
-session_destroy();
-
-?>
