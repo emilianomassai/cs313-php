@@ -35,7 +35,6 @@ session_start();
         <br />
 
         <?php
-$array_items = $_POST['list_items'];
 
 if (!empty($array_items)) {
 
