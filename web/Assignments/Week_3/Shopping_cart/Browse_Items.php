@@ -34,9 +34,9 @@ session_start();
     <!-- TOP BAR OF THE PAGE  -->
 
     <div class="topBar">
-        <a href="../Shopping_cart/Browse_Items.php" style="margin-top: -4px"><img src="../Shopping_cart/images/logo.png"
-                alt="logo" style="margin-top: 17px; margin-left: 45px; float: left; width: 165px" />
-        </a>
+        <img src="../Shopping_cart/images/logo.png" alt="logo"
+            style="margin-top: 17px; margin-left: 45px; float: left; width: 165px" />
+
 
         <!-- TOP MENU -->
 
