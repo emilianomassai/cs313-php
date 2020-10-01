@@ -1,5 +1,6 @@
 <?php
 // start session
+$_SESSION['cart'] = array();
 session_start();
 
 ?>
@@ -146,7 +147,6 @@ session_start();
             <?php
 //store the total of the items in a variable
 //Make sure that the session variable actually exists!
-session_abort();
 $sum = 0;
 if (isset($_SESSION['cart'])) {
 
@@ -158,7 +158,6 @@ if (isset($_SESSION['cart'])) {
 
 }
 ?>
-
 
             <input value="$<?PHP echo $sum; ?>" readonly="readonly" type="text" id="total" name="total" />
             <br />
