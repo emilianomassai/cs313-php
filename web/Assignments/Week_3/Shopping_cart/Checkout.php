@@ -149,7 +149,7 @@ echo "DISPLAY SOMETHING!!!!";
 //Make sure that the session variable actually exists!
 // if (isset($_SESSION['list_items'])) {
 //Loop through it like any other array.
-foreach ($_SESSION['list_items'] as $selected => $element) {
+foreach ($array_items as $selected => $element) {
     //Print out the product ID.
     echo $element, '<br>';
 }
