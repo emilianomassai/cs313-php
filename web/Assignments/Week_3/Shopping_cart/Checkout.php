@@ -1,7 +1,6 @@
 <?php
 // start session
 session_start();
-$_SESSION["list_items"] = $_POST["list_items"];
 ?>
 
 <!DOCTYPE html>
@@ -145,23 +144,15 @@ $_SESSION["list_items"] = $_POST["list_items"];
 
             <?php
 
-if (!empty($_SESSION["list_items"])) {
-    // Loop to store and display values of individual checked checkbox.
-    foreach ($_SESSION["list_items"] as $selected => $element) {
-
-        // if the checked value is the last, add a period instead of a comma.
-
-    }
-
-    if ($selected === array_key_last($_SESSION["list_items"])) {
-        echo '<li>' . $element . '.';
-    } else {
-        echo '<li>' . $element . ';';
-        echo "<br>";
-        echo "<br>";
-
+//Make sure that the session variable actually exists!
+if (isset($_SESSION['list_items'])) {
+    //Loop through it like any other array.
+    foreach ($_SESSION['list_items'] as $productId) {
+        //Print out the product ID.
+        echo $productId, '<br>';
     }
 }
+
 ?>
 
 

@@ -59,7 +59,7 @@ $array_items = $_POST['list_items'];
 if (!empty($array_items)) {
 // Loop to store and display values of individual checked checkbox.
     foreach ($array_items as $selected => $element) {
-
+        $SESSION['list_items'] = $array_items;
         // if the checked value is the last, add a period instead of a comma.
 
         switch ($element) {
