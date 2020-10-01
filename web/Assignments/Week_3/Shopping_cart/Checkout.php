@@ -1,6 +1,7 @@
 <?php
 // start session
 session_start();
+
 ?>
 
 <!DOCTYPE html>
@@ -143,15 +144,54 @@ session_start();
             <h2>Total:</h2>
 
             <?php
-echo "DISPLAY SOMETHING!!!!";
-//Make sure that the session variable actually exists!
-// if (isset($_SESSION['list_items'])) {
-//Loop through it like any other array.
-foreach ($_SESSION['list_items'] as $selected => $element) {
-    //Print out the product ID.
-    echo $element, '<br>';
+$array_items = $_POST['list_items'];
+// $SESSION['list_items'] = $_POST["list_items"];
+
+if (!empty($array_items)) {
+
+// Loop to store and display values of individual checked checkbox.
+    foreach ($array_items as $selected => $element) {
+        // if the checked value is the last, add a period instead of a comma.
+
+        switch ($element) {
+            case "139.99":
+                $element = "Christmas tree with lights";
+                break;
+            case "14.88":
+                $element = "Harry Potter Quidditch Ornament";
+                break;
+            case "199.00":
+                $element = "Bose Home Speaker";
+                break;
+            case "31.99":
+                $element = "Christmas Stockings, 4 Pcs";
+                break;
+            case "1495.00":
+                $element = "Apple iPhone 11 Pro Max, 256GB";
+                break;
+            case "16.99":
+                $element = "Decorative Square Throw Pillow, Pack of 2";
+                break;
+
+        }
+
+        if ($selected === array_key_last($array_items)) {
+            echo '<li>' . $element . '.';
+        } else {
+            echo '<li>' . $element . ';';
+            echo "<br>";
+            echo "<br>";
+
+        }
+    }
 }
-// }
+
+if (empty($array_items)) {
+    echo 'No item in the cart yet!';
+    echo "<br>";
+    echo "<br>";
+
+}
 
 ?>
 

@@ -57,7 +57,6 @@ $array_items = $_POST['list_items'];
 // $SESSION['list_items'] = $_POST["list_items"];
 
 if (!empty($array_items)) {
-    $SESSION['list_items'] = $array_items;
 
 // Loop to store and display values of individual checked checkbox.
     foreach ($array_items as $selected => $element) {
