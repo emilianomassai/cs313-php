@@ -42,8 +42,9 @@ session_start();
             <a href="../Shopping_cart/Browse_Items.php">Return to browse items page</a>
             <p></p>
 
-            <form class="userInfo" name="userInfo" action="View_Cart.php" method="post">Return to the cart
-                <img src="../Shopping_cart/images/cart.png" alt="cart" />
+            <form class="userInfo" name="userInfo" action="View_Cart.php" method="post">
+                <button type="submit" name="validate" id="calculate">Buy now</button>Return to the cart
+                <img src="../Shopping_cart/images/cart.png" alt="cart" /></button>
             </form>
 
         </div>
