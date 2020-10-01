@@ -47,7 +47,7 @@ session_start();
         </div>
     </div>
 
-    <form class="userInfo" name="userInfo" action="Confirmation_page.php" onreset="resetAllMessages();
+    <form class="userInfo" name="userInfo" action="Confirmation_page.php" method="post" onreset="resetAllMessages();
           document.getElementById('firstName').focus();" onsubmit="return checkForm();">
         <p id="msg"></p>
         <section id="userInfoForm">
@@ -83,8 +83,7 @@ session_start();
                 onchange="addressValidating();"></textarea>
             <br />
 
-            <?php
-$_SESSION['address'] = "Pirlottino dei pirlottini.";?>
+
 
             <span id="addressError"></span>
 

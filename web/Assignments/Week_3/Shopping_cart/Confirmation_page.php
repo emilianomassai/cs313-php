@@ -53,6 +53,7 @@ session_start();
 
         <?php
 $array_items = $_SESSION['cart'];
+$address = $_POST['address'];
 
 if (!empty($array_items)) {
 
@@ -110,8 +111,7 @@ if (!empty($array_items)) {
     echo "<br>";
 
     echo 'The address to which the items will be shipped is: ';
-    echo $_SESSION['address'];
-
+    echo $address;
     echo "<br>";
     echo "<br>";
 
