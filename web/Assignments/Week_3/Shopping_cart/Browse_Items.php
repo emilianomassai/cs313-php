@@ -73,27 +73,34 @@ session_start();
 
 foreach ($_SESSION['cart'] as $key => $value) {
 
+  $item_0_selected = "";
+  $item_1_selected = "";
+  $item_2_selected = "";
+  $item_3_selected = "";
+  $item_4_selected = "";
+  $item_5_selected = "";
+
     echo $value;
     echo '<br>';
 
     switch ($value) {
       case "139.99":
-          $element = "Christmas tree with lights";
+        $item_0_selected = 'checked';
           break;
       case "14.88":
-          $element = "Harry Potter Quidditch Ornament";
+        $item_1_selected = 'checked';
           break;
       case "199.00":
-          $element = "Bose Home Speaker";
+        $item_2_selected = 'checked';
           break;
       case "31.99":
-          $element = "Christmas Stockings, 4 Pcs";
+        $item_3_selected = 'checked';
           break;
       case "1495.00":
-          $element = "Apple iPhone 11 Pro Max, 256GB";
+        $item_4_selected = 'checked';
           break;
       case "16.99":
-          $element = "Decorative Square Throw Pillow, Pack of 2";
+        $item_5_selected = 'checked';
           break;
 }
 ?>
@@ -130,7 +137,8 @@ foreach ($_SESSION['cart'] as $key => $value) {
                 <td class="category">Seasonal Décor</td>
                 <td>$139.99</td>
                 <td>
-                    <input class="productPrice" type="checkbox" name="list_items[]" value="139.99" />
+                    <input class="productPrice" type="checkbox" name="list_items[]" value="139.99"
+                        checked="<?php echo $item_0_selected ?>" />
                 </td>
             </tr>
 
