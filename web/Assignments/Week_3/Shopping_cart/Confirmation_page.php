@@ -51,8 +51,9 @@ session_start();
         <br />
         <h4>The following is the list of the items you purchased:</h4>
 
+
         <?php
-$array_items = $_SESSION['cart'];
+$array_items = $_POST['list_items'];
 $address = $_POST['address'];
 
 if (!empty($array_items)) {
