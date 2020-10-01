@@ -39,6 +39,7 @@ session_start();
         });
         ////
         var item_status = $("#ckb").prop('checked'); // at the time of page load
+        <?php $item_0_selected = ""?>
         $('#calculate').html(" <b>Status :</b> " + item_status);
         /////
     });
