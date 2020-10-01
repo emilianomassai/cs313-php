@@ -178,9 +178,3 @@ if (isset($_SESSION['cart'])) {
 </body>
 
 </html>
-
-<?php
-// end session
-session_destroy();
-
-?>
