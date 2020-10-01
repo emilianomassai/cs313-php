@@ -1,4 +1,6 @@
 <?php
+include "Browse_Items.php";
+
 // start session
 session_start();
 ?>
