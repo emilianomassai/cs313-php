@@ -148,8 +148,13 @@ session_start();
 if (isset($_SESSION['cart'])) {
     //Loop through it like any other array.
     foreach ($_SESSION['cart'] as $productId) {
+        $total = 0;
+
+        $total += parseFloat($productId);
+
+        round($total, 2);
         //Print out the product ID.
-        echo $productId, '<br>';
+        echo $total . '<br>';
     }
 }
 
