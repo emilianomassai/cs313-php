@@ -54,16 +54,16 @@ session_start();
         <?php
 
 $array_items = $_SESSION['cart'];
-array_filter($array_items);
+$filter_result = array_filter($array_items);
 
 $address = $_POST['address'];
 
-if (!empty($array_items)) {
+if (!empty($filter_result)) {
 
     $sum = 0;
 
 // Loop to store and display values of individual checked checkbox.
-    foreach ($array_items as $selected => $element) {
+    foreach ($filter_result as $selected => $element) {
         // if the checked value is the last, add a period instead of a comma.
 
         switch ($element) {
@@ -94,7 +94,7 @@ if (!empty($array_items)) {
 
         }
 
-        if ($selected === array_key_last($array_items)) {
+        if ($selected === array_key_last($filter_result)) {
             echo '<li>' . $element . '.';
         } else {
 
