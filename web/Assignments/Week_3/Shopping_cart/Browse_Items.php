@@ -8,6 +8,10 @@ session_start();
 
 <head>
     <meta charset="UTF-8" />
+
+    <!--Use jQuery library for modify the checkbox status-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="style.css" />
@@ -24,6 +28,20 @@ session_start();
             anything else." />
 
     <link rel="icon" type="image/ico" href="../Shopping_cart/images/favicon_amazon.png" />
+
+    <script>
+    $(document).ready(function() {
+        $("#item_0").change(function() {
+            var item_status = $("#item_0").prop('checked');
+            //alert(ckb_status);
+            $('#calculate').html(" <b>Status :</b> " + item_status);
+        });
+        ////
+        var item_status = $("#ckb").prop('checked'); // at the time of page load
+        $('#calculate').html(" <b>Status :</b> " + item_status);
+        /////
+    });
+    </script>
 </head>
 
 <body onload="resetAllMessages();">
@@ -68,36 +86,6 @@ session_start();
     <form action="View_Cart.php" method="post" class="userInfo" name="userInfo">
 
 
-        <?php
-
-foreach ($_SESSION['cart'] as $key => $value) {
-
-    echo $value;
-    echo '<br>';
-
-    switch ($value) {
-        case "139.99":
-            $item_0_selected = 'checked="checked"';
-            break;
-        case "14.88":
-            $item_1_selected = 'checked="checked"';
-            break;
-        case "199.00":
-            $item_2_selected = 'checked="checked"';
-            break;
-        case "31.99":
-            $item_3_selected = 'checked="checked"';
-            break;
-        case "1495.00":
-            $item_4_selected = 'checked="checked"';
-            break;
-        case "16.99":
-            $item_5_selected = 'checked="checked"';
-            break;
-    }
-}
-
-?>
 
         <!-- TABLE WITH PRODUCT CHECKBOXES -->
 
@@ -131,7 +119,7 @@ foreach ($_SESSION['cart'] as $key => $value) {
                 <td class="category">Seasonal Décor</td>
                 <td>$139.99</td>
                 <td>
-                    <input class="productPrice" type="checkbox" name="list_items[]" value="139.99"
+                    <input class="productPrice" type="checkbox" name="list_items[]" value="139.99" id="item_0"
                         <?php echo $item_0_selected ?> />
                 </td>
             </tr>
