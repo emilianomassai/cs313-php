@@ -49,11 +49,14 @@ session_start();
     <section id="userInfoForm">
         <h1>Thank you for your purchase!</h1>
         <br />
-        <h4>The following is the list of the items you purchased:</h4>
+        <h3>The following is the list of the items you purchased:</h3>
 
         <?php
 
 $array_items = $_SESSION['cart'];
+
+// I have to use the filter before use the array because it got some rubbish inside
+
 $filter_result = array_filter($array_items);
 
 $address = $_POST['address'];
@@ -110,7 +113,7 @@ if (!empty($filter_result)) {
     echo "<br>";
     echo "<br>";
     echo "<br>";
-    echo 'You spent $' . $sum . ' for this purchase. ';
+    echo "<h3>'You spent $' . $sum . ' for this purchase. '</h3>";
     echo "<br>";
     echo "<br>";
 
