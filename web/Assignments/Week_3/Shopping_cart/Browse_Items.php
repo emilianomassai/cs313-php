@@ -70,14 +70,13 @@ session_start();
 
         <?php
 
+$item_0_selected = "";
+$item_1_selected = "";
+$item_2_selected = "";
+$item_3_selected = "";
+$item_4_selected = "";
+$item_5_selected = "";
 foreach ($_SESSION['cart'] as $key => $value) {
-
-    $item_0_selected = "";
-    $item_1_selected = "";
-    $item_2_selected = "";
-    $item_3_selected = "";
-    $item_4_selected = "";
-    $item_5_selected = "";
 
     echo $value;
     echo '<br>';
