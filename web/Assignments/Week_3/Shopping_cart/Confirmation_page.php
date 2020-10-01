@@ -93,11 +93,11 @@ if (!empty($array_items)) {
 
         }
 
+        array_filter($array_items);
         if ($selected === array_key_last($array_items)) {
             echo '<li>' . $element . '.';
         } else {
 
-            unset($array_items[0]);
             echo '<li>' . $element . ';';
             echo "<br>";
             echo "<br>";
