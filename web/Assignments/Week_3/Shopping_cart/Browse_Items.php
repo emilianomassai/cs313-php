@@ -101,7 +101,7 @@ foreach ($_SESSION['cart'] as $key => $value) {
 
     switch ($value) {
         case "139.99":
-            $item_0_selected = 'checked';
+            $item_0_selected = "checked='checked'";
             break;
         case "14.88":
             $item_1_selected = 'checked';
@@ -145,7 +145,7 @@ foreach ($_SESSION['cart'] as $key => $value) {
                 <td>$139.99</td>
                 <td>
                     <input class="productPrice" type="checkbox" name="list_items[]" value="139.99"
-                        checked="<?php echo $item_0_selected ?>" />
+                        <?php echo $item_0_selected ?> />
                 </td>
             </tr>
 
