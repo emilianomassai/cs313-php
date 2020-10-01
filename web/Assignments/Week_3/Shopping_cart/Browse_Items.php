@@ -67,6 +67,17 @@ session_start();
     <!-- FORM INCLUDING PRODUCTS TABLE-->
 
     <form action="View_Cart.php" method="post" class="userInfo" name="userInfo">
+
+
+        <?php
+
+foreach ($_SESSION['cart'] as $key => $value) {
+
+    echo $value;
+    echo '<br>';
+}
+?>
+
         <!-- TABLE WITH PRODUCT CHECKBOXES -->
 
         <table id="products">
