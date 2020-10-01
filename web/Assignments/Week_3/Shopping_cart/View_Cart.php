@@ -61,6 +61,7 @@ if (!empty($array_items)) {
 
     $sum = 0;
 
+    $cartArray = array("");
 // Loop to store and display values of individual checked checkbox.
     foreach ($array_items as $selected => $element) {
         // if the checked value is the last, add a period instead of a comma.
@@ -124,6 +125,7 @@ if (!empty($array_items)) {
     echo "<br>";
     echo "<br>";
 
+    $_SESSION['cart'] = $cartArray;
 }
 
 if (empty($array_items)) {
