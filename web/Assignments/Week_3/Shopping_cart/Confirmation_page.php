@@ -51,7 +51,7 @@ $last_name = $_POST['last_name'];
     <p id="msg"></p>
     <section id="userInfoForm">
         <h1>Thank you </h1>
-        <?php "<h1> $first_name $last_name</h1>"?>
+        <?php echo "<h1> $first_name $last_name</h1>" ?>
         <h1> for your purchase!</h1>
         <br />
         <h3>The following is the list of the items you purchased:</h3>
