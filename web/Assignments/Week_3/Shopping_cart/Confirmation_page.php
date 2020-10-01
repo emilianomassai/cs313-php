@@ -1,6 +1,9 @@
 <?php
 // start session
 session_start();
+$address = $_POST['address'];
+$first_name = $_POST['first_name'];
+$last_name = $_POST['last_name'];
 ?>
 
 <!DOCTYPE html>
@@ -47,7 +50,9 @@ session_start();
 
     <p id="msg"></p>
     <section id="userInfoForm">
-        <h1>Thank you for your purchase!</h1>
+        <h1>Thank you </h1>
+        <?php "<h1> $first_name $last_name</h1>"?>
+        <h1> for your purchase!</h1>
         <br />
         <h3>The following is the list of the items you purchased:</h3>
 
@@ -58,8 +63,6 @@ $array_items = $_SESSION['cart'];
 // I have to use the filter before use the array because it got some rubbish inside
 
 $filter_result = array_filter($array_items);
-
-$address = $_POST['address'];
 
 if (!empty($filter_result)) {
 
