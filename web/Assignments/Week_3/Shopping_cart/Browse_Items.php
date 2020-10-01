@@ -84,6 +84,9 @@ session_start();
                 <th>Buy</th>
             </tr>
 
+            <?php
+$checkedItem0 = "checked: 'checked'"?>
+
             <!-- FIRST PRODUCT -->
             <tr>
                 <td>
@@ -105,7 +108,8 @@ session_start();
                 <td class="category">Seasonal Décor</td>
                 <td>$139.99</td>
                 <td>
-                    <input class="productPrice" type="checkbox" name="list_items[]" value="139.99" />
+                    <input class="productPrice" type="checkbox" name="list_items[]" value="139.99"
+                        <?php $checkedItem0?> />
                 </td>
             </tr>
 
