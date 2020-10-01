@@ -1,6 +1,7 @@
 <?php
 // start session
 session_start();
+$array_items = $_POST['list_items'];
 ?>
 
 <!DOCTYPE html>
@@ -54,7 +55,6 @@ session_start();
         <h4>
 
             <?php
-$array_items = $_POST['list_items'];
 
 if (!empty($array_items)) {
 
