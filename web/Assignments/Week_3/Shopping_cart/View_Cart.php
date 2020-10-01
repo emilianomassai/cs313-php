@@ -102,7 +102,13 @@ if (empty($array_items)) {
     echo 'No item in the cart yet!';
     echo "<br>";
     echo "<br>";
-    session_reset();
+
+    $item_0_selected = '';
+    $item_1_selected = '';
+    $item_2_selected = '';
+    $item_3_selected = '';
+    $item_4_selected = '';
+    $item_5_selected = '';
 }
 
 ?>
