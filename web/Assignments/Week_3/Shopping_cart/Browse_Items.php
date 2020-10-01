@@ -104,19 +104,19 @@ foreach ($_SESSION['cart'] as $key => $value) {
             $item_0_selected = "checked='checked'";
             break;
         case "14.88":
-            $item_1_selected = 'checked';
+            $item_1_selected = "checked='checked'";
             break;
         case "199.00":
-            $item_2_selected = 'checked';
+            $item_2_selected = "checked='checked'";
             break;
         case "31.99":
-            $item_3_selected = 'checked';
+            $item_3_selected = "checked='checked'";
             break;
         case "1495.00":
-            $item_4_selected = 'checked';
+            $item_4_selected = "checked='checked'";
             break;
         case "16.99":
-            $item_5_selected = 'checked';
+            $item_5_selected = "checked='checked'";
             break;
     }
 }
@@ -172,7 +172,8 @@ foreach ($_SESSION['cart'] as $key => $value) {
                 <td class="category">Seasonal Décor</td>
                 <td>$14.88</td>
                 <td>
-                    <input class="productPrice" type="checkbox" name="list_items[]" value="14.88" />
+                    <input class="productPrice" type="checkbox" name="list_items[]" value="14.88"
+                        <?php echo $item_0_selected ?> />
                 </td>
             </tr>
 
@@ -199,7 +200,8 @@ foreach ($_SESSION['cart'] as $key => $value) {
                 <td class="category">Technology</td>
                 <td>$199.00</td>
                 <td>
-                    <input class="productPrice" type="checkbox" name="list_items[]" value="199.00" />
+                    <input class="productPrice" type="checkbox" name="list_items[]" value="199.00"
+                        <?php echo $item_0_selected ?> />
                 </td>
             </tr>
 
@@ -226,7 +228,8 @@ foreach ($_SESSION['cart'] as $key => $value) {
                 <td class="category">Seasonal Décor</td>
                 <td>$31.99</td>
                 <td>
-                    <input class="productPrice" type="checkbox" name="list_items[]" value="31.99" />
+                    <input class="productPrice" type="checkbox" name="list_items[]" value="31.99"
+                        <?php echo $item_0_selected ?> />
                 </td>
             </tr>
 
@@ -258,7 +261,8 @@ foreach ($_SESSION['cart'] as $key => $value) {
                 <td class="category">Technology</td>
                 <td>$1495.00</td>
                 <td>
-                    <input class="productPrice" type="checkbox" name="list_items[]" value="1495.00" />
+                    <input class="productPrice" type="checkbox" name="list_items[]" value="1495.00"
+                        <?php echo $item_0_selected ?> />
                 </td>
             </tr>
 
@@ -290,7 +294,8 @@ foreach ($_SESSION['cart'] as $key => $value) {
                 <td class="category">Bedding</td>
                 <td>$16.99</td>
                 <td>
-                    <input class="productPrice" type="checkbox" name="list_items[]" value="16.99" />
+                    <input class="productPrice" type="checkbox" name="list_items[]" value="16.99"
+                        <?php echo $item_0_selected ?> />
                 </td>
             </tr>
         </table>
