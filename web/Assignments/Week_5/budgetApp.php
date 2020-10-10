@@ -56,30 +56,9 @@ foreach ($db->query('SELECT display_name FROM budgetUser') as $row) {
 
     $users[] = [
         'display_name' => $row['display_name'],
-    ];
-
-    // echo $row['display_name'];
-    // echo '<br/>';
-    // foreach ($db->query('SELECT amount, notes, category, date FROM transaction') as $row) {
-    //     echo $row['amount'];
-    //     echo '<br/>';
-    //     echo $row['notes'];
-    //     echo '<br/>';
-    //     echo $row['category'];
-    //     echo '<br/>';
-    //     echo $row['date'];
-    //     echo '<br/>';
-    // }
-}
-echo '<br/>';
-
-foreach ($db->query('SELECT amount, notes, category, date FROM transaction') as $row) {
-
-    $transaction[] = [
-        'amount' => $row['amount'],
-        'notes' => $row['notes'],
-        'category' => $row['category'],
-        'date' => $row['date'],
+        'user_name' => $row['user_name'],
+        'user_id' => $row['user_id'],
+        'password' => $row['password'],
     ];
 
     // echo $row['display_name'];
@@ -98,9 +77,6 @@ foreach ($db->query('SELECT amount, notes, category, date FROM transaction') as 
 echo '<br/>';
 
 ?>
-    ?>
-
-
 
     <div class="container">
         <h1>User List</h1>
@@ -116,11 +92,8 @@ echo '<br/>';
                 <?php foreach ($users as $user): ?>
                 <tr>
                     <td><?php echo htmlspecialchars($user['display_name']) ?></td>
-
-
-                    <?php foreach ($transactions as $transaction): ?>
-                <tr>
-                    <td><?php echo htmlspecialchars($transaction['amount']) ?></td>
+                    <td><?php echo htmlspecialchars($user['user_name']); ?></td>
+                    <td><?php echo htmlspecialchars($user['password']); ?></td>
                 </tr>
                 <?php endforeach;?>
             </tbody>
