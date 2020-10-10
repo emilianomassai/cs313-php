@@ -49,18 +49,11 @@ echo "<br>";
 echo "<br>";
 echo "<br>";
 
-foreach ($db->query('budgetUser.user_id,
-budgetUser.display_name,
-transaction.transaction_id,
-transaction.amount,
-transaction.notes,
-transaction.category,
-transaction.date FROM budgetUser') as $row) {
-    echo 'Name user: ' . $row['budgetUser.display_name '];
-    echo '<br/>';
-    echo 'Transaction: ' . $row['transaction.amount'];
-    echo '<br/>';
-}
+echo 'Name user: ' . $row['budgetUser.display_name '];
+echo '<br/>';
+echo 'Transaction: ' . $row['transaction.amount'];
+echo '<br/>';
+
 ?>
 
 </body>
