@@ -49,9 +49,10 @@ echo "<br>";
 echo "<br>";
 echo "<br>";
 
-echo 'Name user: ' . $row['budgetUser.display_name '];
-echo '<br/>';
-echo 'Transaction: ' . $row['transaction.amount'];
+foreach ($db->query('SELECT display_name, password FROM budgetUser') as $row) {
+    echo 'user: ' . $row['display_name'];
+    echo '<br/>';
+}
 echo '<br/>';
 
 ?>
