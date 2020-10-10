@@ -40,6 +40,7 @@ echo "<br>";
 echo "User: " . $dbUser;
 echo "<br>";
 echo "Password: " . $dbPassword;
+echo "<br>";
 echo "Database Name: " . $dbName;
 echo "<br>";
 echo "Database URL: " . $dbUrl;
