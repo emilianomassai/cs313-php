@@ -52,17 +52,13 @@ echo "<br>";
 echo "The following is  the list of all the users:";
 echo "<br>";
 
-foreach ($db->query('SELECT display_name FROM budgetUser') as $row) {
-    $budget_USER = $db->query('SELECT user_id FROM budgetUser');
-    $transaction_USER = $db->query('SELECT user_id FROM transaction');
+foreach ($db->query('SELECT user_id, display_name FROM budgetUser') as $row) {
+
     echo $row['display_name'];
     echo '<br/>';
-    echo $budget_USER;
-    echo '<br/>';
-    echo $transaction_USER;
-    echo '<br/>';
-    foreach ($db->query('SELECT amount, notes, category, date FROM transaction') as $row) {
-        if ($budget_USER == $transaction_USER) {
+
+    foreach ($db->query('SELECT user_id, amount, notes, category, date FROM transaction') as $row) {
+        if ($db->query('SELECT user_id FROM budgetUser') == $db->query('SELECT user_id FROM transaction')) {
             echo $row['amount'];
             echo '<br/>';
             echo $row['notes'];
