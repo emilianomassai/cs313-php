@@ -71,7 +71,7 @@ foreach ($db->query('SELECT display_name FROM budgetUser') as $row) {
 
     }
 
-    echo htmlspecialchars($user['user_name']);
+    echo $row['user_name'];
     // echo $row['display_name'];
     // echo '<br />';
     // foreach ($db->query('SELECT amount, notes, category, date FROM transaction') as $row) {
