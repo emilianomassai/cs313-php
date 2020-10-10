@@ -61,6 +61,15 @@ foreach ($db->query('SELECT display_name FROM budgetUser') as $row) {
         'password' => $row['password'],
     ];
 
+    foreach ($db->query('SELECT amount, notes, category, date FROM transaction') as $row) {
+        $transactions[] = [
+            'amount' => $row['amount'],
+            'trans_user_id' => $row['user_id'],
+            'notes' => $row['notes'],
+            'category' => $row['category'],
+        ];
+
+    }
     // echo $row['display_name'];
     // echo '<br/>';
     // foreach ($db->query('SELECT amount, notes, category, date FROM transaction') as $row) {
@@ -90,10 +99,13 @@ echo '<br/>';
             </thead>
             <tbody>
                 <?php foreach ($users as $user): ?>
+                <?php foreach ($transactions as $transaction): ?>
+
                 <tr>
-                    <td><?php echo htmlspecialchars($user['display_name']) ?></td>
-                    <td><?php echo htmlspecialchars($user['user_name']); ?></td>
-                    <td><?php echo htmlspecialchars($user['password']); ?></td>
+                    <td><?php echo htmlspecialchars($user['display_name']) ?>
+                    <td>
+                        <?php if (htmlspecialchars($user['user_id']) == htmlspecialchars($transaction['user_id']))
+                    echo htmlspecialchars($transaction['amount']);?>
                 </tr>
                 <?php endforeach;?>
             </tbody>
