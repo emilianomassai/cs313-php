@@ -49,14 +49,12 @@ echo "<br>";
 echo "<br>";
 echo "<br>";
 
-$budget_USER = $db->query('SELECT user_id FROM budgetUser');
-
-$transaction_USER = $db->query('SELECT user_id FROM transaction');
-
 echo "The following is  the list of all the users:";
 echo "<br>";
 
 foreach ($db->query('SELECT display_name FROM budgetUser') as $row) {
+    $budget_USER = $db->query('SELECT user_id FROM budgetUser');
+    $transaction_USER = $db->query('SELECT user_id FROM transaction');
     echo $row['display_name'];
     echo '<br/>';
     echo $budget_USER;
