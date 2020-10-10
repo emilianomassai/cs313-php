@@ -50,7 +50,8 @@ echo "<br>";
 echo "<br>";
 
 foreach ($db->query('SELECT display_name, password FROM budgetUser') as $row) {
-    echo 'user: ' . $row['display_name'];
+    echo '<h2>The following is  the list of all the users:<\h2>';
+    echo $row['display_name'];
     echo '<br/>';
 }
 echo '<br/>';
