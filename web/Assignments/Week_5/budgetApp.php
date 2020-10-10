@@ -49,8 +49,9 @@ echo "<br>";
 echo "<br>";
 echo "<br>";
 
-$budget_USER = "SELECT user_id FROM budgetUser";
-$transaction_USER = "SELECT user_id FROM transaction";
+$budget_USER = $db->query('SELECT user_id FROM budgetUser');
+
+$transaction_USER = $db->query('SELECT user_id FROM transaction');
 
 echo "The following is  the list of all the users:";
 echo "<br>";
