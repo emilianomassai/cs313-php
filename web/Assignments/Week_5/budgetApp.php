@@ -99,13 +99,15 @@ echo '<br/>';
             </thead>
             <tbody>
                 <?php foreach ($users as $user): ?>
-                <?php foreach ($transactions as $transaction): ?>
-
                 <tr>
                     <td><?php echo htmlspecialchars($user['display_name']) ?>
                     <td>
-                        <?php if (htmlspecialchars($user['user_id']) == htmlspecialchars($transaction['user_id']))
-                    echo htmlspecialchars($transaction['amount']);?>
+                </tr>
+
+                <?php foreach ($transactions as $transaction): ?>
+                <tr>
+                    <td><?php echo htmlspecialchars($transaction['amount']);?>
+                    <td>
                 </tr>
                 <?php endforeach;?>
             </tbody>
