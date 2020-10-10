@@ -33,13 +33,17 @@ try
     die();
 }
 
-echo $dbHost;
-echo $dbOpts;
-echo $dbPort;
-echo $dbPassword;
-echo '<br>';
-echo $db;
-
+echo "Host: " . $dbHost;
+echo "<br>";
+echo "Port: " . $dbPort;
+echo "<br>";
+echo "User: " . $dbUser;
+echo "<br>";
+echo "Password: " . $dbPassword;
+echo "Database Name: " . $dbName;
+echo "<br>";
+echo "Database URL: " . $dbUrl;
+echo "<br>";
 ?>
 
 </body>
