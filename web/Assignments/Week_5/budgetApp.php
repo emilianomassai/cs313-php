@@ -56,14 +56,16 @@ foreach ($db->query('SELECT display_name FROM budgetUser') as $row) {
     echo $row['display_name'];
     echo '<br/>';
     foreach ($db->query('SELECT amount, notes, category, date FROM transaction') as $row) {
-        echo $row['amount'];
-        echo '<br/>';
-        echo $row['notes'];
-        echo '<br/>';
-        echo $row['category'];
-        echo '<br/>';
-        echo $row['date'];
-        echo '<br/>';
+        if (budgetUser . user_id == transaction . user_id) {
+            echo $row['amount'];
+            echo '<br/>';
+            echo $row['notes'];
+            echo '<br/>';
+            echo $row['category'];
+            echo '<br/>';
+            echo $row['date'];
+            echo '<br/>';
+        }
     }
 }
 echo '<br/>';
