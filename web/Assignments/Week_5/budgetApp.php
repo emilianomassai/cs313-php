@@ -53,23 +53,52 @@ echo "The following is  the list of all the users:";
 echo "<br>";
 
 foreach ($db->query('SELECT display_name FROM budgetUser') as $row) {
-    echo $row['display_name'];
-    echo '<br/>';
-    foreach ($db->query('SELECT amount, notes, category, date FROM transaction') as $row) {
-        echo $row['amount'];
-        echo '<br/>';
-        echo $row['notes'];
-        echo '<br/>';
-        echo $row['category'];
-        echo '<br/>';
-        echo $row['date'];
-        echo '<br/>';
-    }
+
+    $users[] = [
+        'display_name' => $row['display_name'],
+        'user_name' => $row['user_name'],
+        'user_id' => $row['user_id'],
+        'password' => $row['password'],
+    ];
+
+    // echo $row['display_name'];
+    // echo '<br/>';
+    // foreach ($db->query('SELECT amount, notes, category, date FROM transaction') as $row) {
+    //     echo $row['amount'];
+    //     echo '<br/>';
+    //     echo $row['notes'];
+    //     echo '<br/>';
+    //     echo $row['category'];
+    //     echo '<br/>';
+    //     echo $row['date'];
+    //     echo '<br/>';
+    // }
 }
 echo '<br/>';
 
 ?>
 
+    <div class="container">
+        <h1>User List</h1>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Username</th>
+                    <th>Password</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php foreach ($users as $user): ?>
+                <tr>
+                    <td><?php echo htmlspecialchars($user['display_name']) ?></td>
+                    <td><?php echo htmlspecialchars($user['user_name']); ?></td>
+                    <td><?php echo htmlspecialchars($user['password']); ?></td>
+                </tr>
+                <?php endforeach;?>
+            </tbody>
+        </table>
+    </div>
 </body>
 
 </html>
