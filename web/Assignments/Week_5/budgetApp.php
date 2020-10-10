@@ -49,8 +49,10 @@ echo "<br>";
 echo "<br>";
 echo "<br>";
 
-foreach ($db->query('SELECT display_name, password FROM budgetUser') as $row) {
-    echo '<h2>The following is  the list of all the users:<\h2>';
+echo "The following is  the list of all the users:";
+echo "<br>";
+
+foreach ($db->query('SELECT display_name FROM budgetUser') as $row) {
     echo $row['display_name'];
     echo '<br/>';
 }
