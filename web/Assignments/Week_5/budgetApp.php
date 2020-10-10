@@ -52,10 +52,10 @@ echo "<br>";
 echo "The following is  the list of all the users:";
 echo "<br>";
 
-foreach ($db->query('SELECT display_name FROM budgetUser') as $row) {
+foreach ($db->query('SELECT user_id, display_name FROM budgetUser') as $row) {
     echo $row['display_name'];
     echo '<br/>';
-    foreach ($db->query('SELECT amount, notes, category, date FROM transaction') as $row) {
+    foreach ($db->query('SELECT user_id, amount, notes, category, date FROM transaction') as $row) {
         if (budgetUser . user_id == transaction . user_id) {
             echo $row['amount'];
             echo '<br/>';
