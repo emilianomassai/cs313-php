@@ -40,6 +40,9 @@ header("refresh: 30;");
     <a href="../Week_3/Shopping_cart/Browse_Items.php" id="Shopping_cart_btn_id">
         Week 3: Shopping Cart
     </a>
+    <a href="../Week_5/budgetApp.php" id="Budget_App_btn_id">
+        Week 5: BETA: Budget App
+    </a>
     <br>
     <div>
         <a href="../Home_Page/Emiliano_Home_Page.php" id="Emiliano_Home_Page_btn_id">
