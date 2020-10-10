@@ -101,17 +101,13 @@ echo '<br/>';
                 <?php foreach ($users as $user): ?>
                 <tr>
                     <td><?php echo htmlspecialchars($user['display_name']) ?>
+                    <td><?php echo htmlspecialchars($user['user_name']) ?>
+                    <td><?php echo htmlspecialchars($user['password']) ?>
                     <td>
                 </tr>
                 <?php endforeach;?>
 
-                <?php if ($user['user_id'] == $transaction['trans_user_id']) {?>
-                <?php foreach ($transactions as $transaction): ?>
-                <tr>
-                    <td><?php echo htmlspecialchars($transaction['amount']); ?>
-                    <td>
-                </tr>
-                <?php endforeach;}?>
+
 
             </tbody>
         </table>
