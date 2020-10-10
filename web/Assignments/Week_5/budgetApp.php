@@ -105,12 +105,13 @@ echo '<br/>';
                 </tr>
                 <?php endforeach;?>
 
+                <?php if ($user['user_id'] == $transaction['user_id']) {?>
                 <?php foreach ($transactions as $transaction): ?>
                 <tr>
                     <td><?php echo htmlspecialchars($transaction['amount']); ?>
                     <td>
                 </tr>
-                <?php endforeach;?>
+                <?php endforeach;}?>
 
             </tbody>
         </table>
