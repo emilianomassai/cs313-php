@@ -103,13 +103,15 @@ echo '<br/>';
                     <td><?php echo htmlspecialchars($user['display_name']) ?>
                     <td>
                 </tr>
+                <?php endforeach;?>
 
                 <?php foreach ($transactions as $transaction): ?>
                 <tr>
-                    <td><?php echo htmlspecialchars($transaction['amount']);?>
+                    <td><?php echo htmlspecialchars($transaction['amount']); ?>
                     <td>
                 </tr>
                 <?php endforeach;?>
+
             </tbody>
         </table>
     </div>
