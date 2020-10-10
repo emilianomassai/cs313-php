@@ -52,8 +52,9 @@ echo "<br>";
 echo "The following is  the list of all the users:";
 echo "<br>";
 
-foreach ($db->query('SELECT display_name FROM budgetUser') as $row) {
+foreach ($db->query('SELECT display_name, transaction.amount, transaction.notes, transaction.category,transaction.date FROM budgetUser') as $row) {
     echo $row['display_name'];
+    echo $row['amount'];
     echo '<br/>';
 }
 echo '<br/>';
