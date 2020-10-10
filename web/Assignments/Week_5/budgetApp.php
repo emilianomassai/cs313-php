@@ -58,6 +58,10 @@ echo "<br>";
 foreach ($db->query('SELECT display_name FROM budgetUser') as $row) {
     echo $row['display_name'];
     echo '<br/>';
+    echo $budget_USER;
+    echo '<br/>';
+    echo $transaction_USER;
+    echo '<br/>';
     foreach ($db->query('SELECT amount, notes, category, date FROM transaction') as $row) {
         if ($budget_USER == $transaction_USER) {
             echo $row['amount'];
