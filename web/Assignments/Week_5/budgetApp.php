@@ -53,14 +53,14 @@ echo "The following is  the list of all the users:";
 echo "<br>";
 
 foreach ($db->query('SELECT display_name FROM budgetUser') as $row) {
-
-    $users[] = [
-        'display_name' => $row['display_name'],
-        'user_name' => $row['user_name'],
-        'user_id' => $row['user_id'],
-        'password' => $row['password'],
-    ];
-
+    foreach ($db->query('SELECT amount, notes, category, date FROM transaction') as $row) {
+        $users[] = [
+            'display_name' => $row['display_name'],
+            'user_name' => $row['user_name'],
+            'user_id' => $row['user_id'],
+            'password' => $row['password'],
+        ];
+    }
     // echo $row['display_name'];
     // echo '<br/>';
     // foreach ($db->query('SELECT amount, notes, category, date FROM transaction') as $row) {
