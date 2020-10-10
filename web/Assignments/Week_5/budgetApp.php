@@ -70,20 +70,22 @@ foreach ($db->query('SELECT display_name FROM budgetUser') as $row) {
         ];
 
     }
+
+    echo htmlspecialchars($user['user_name']);
     // echo $row['display_name'];
-    // echo '<br/>';
+    // echo '<br />';
     // foreach ($db->query('SELECT amount, notes, category, date FROM transaction') as $row) {
-    //     echo $row['amount'];
-    //     echo '<br/>';
-    //     echo $row['notes'];
-    //     echo '<br/>';
-    //     echo $row['category'];
-    //     echo '<br/>';
-    //     echo $row['date'];
-    //     echo '<br/>';
+    // echo $row['amount'];
+    // echo '<br />';
+    // echo $row['notes'];
+    // echo '<br />';
+    // echo $row['category'];
+    // echo '<br />';
+    // echo $row['date'];
+    // echo '<br />';
     // }
 }
-echo '<br/>';
+echo '<br />';
 
 ?>
 
