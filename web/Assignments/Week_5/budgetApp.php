@@ -33,18 +33,18 @@ try
     die();
 }
 
-echo "Host: " . $dbHost;
-echo "<br>";
-echo "Port: " . $dbPort;
-echo "<br>";
-echo "User: " . $dbUser;
-echo "<br>";
-echo "Password: " . $dbPassword;
-echo "<br>";
-echo "Database Name: " . $dbName;
-echo "<br>";
-echo "Database URL: " . $dbUrl;
-echo "<br>";
+// echo "Host: " . $dbHost;
+// echo "<br>";
+// echo "Port: " . $dbPort;
+// echo "<br>";
+// echo "User: " . $dbUser;
+// echo "<br>";
+// echo "Password: " . $dbPassword;
+// echo "<br>";
+// echo "Database Name: " . $dbName;
+// echo "<br>";
+// echo "Database URL: " . $dbUrl;
+// echo "<br>";
 
 echo "<br>";
 echo "<br>";
@@ -52,22 +52,18 @@ echo "<br>";
 echo "The following is  the list of all the users:";
 echo "<br>";
 
-foreach ($db->query('SELECT user_id, display_name FROM budgetUser') as $row) {
-
+foreach ($db->query('SELECT display_name FROM budgetUser') as $row) {
     echo $row['display_name'];
     echo '<br/>';
-
-    foreach ($db->query('SELECT user_id, amount, notes, category, date FROM transaction') as $row) {
-        if ($db->query('SELECT user_id FROM budgetUser') == $db->query('SELECT user_id FROM transaction')) {
-            echo $row['amount'];
-            echo '<br/>';
-            echo $row['notes'];
-            echo '<br/>';
-            echo $row['category'];
-            echo '<br/>';
-            echo $row['date'];
-            echo '<br/>';
-        }
+    foreach ($db->query('SELECT amount, notes, category, date FROM transaction') as $row) {
+        echo $row['amount'];
+        echo '<br/>';
+        echo $row['notes'];
+        echo '<br/>';
+        echo $row['category'];
+        echo '<br/>';
+        echo $row['date'];
+        echo '<br/>';
     }
 }
 echo '<br/>';
