@@ -117,39 +117,7 @@ echo '<br />';
     </div>
 
 
-    <div class="container">
-        <h2>Transactions from Users:</h2>
-        <table class="table table-bordered">
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Amount</th>
-                    <th>Category</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php foreach ($users as $user): ?>
-                <tr>
-                    <td><?php echo htmlspecialchars($user['display_name']) ?>
-                        <?php endforeach;?>
-                </tr>
-
-
-                <?php foreach ($transactions as $transaction): ?>
-                <tr>
-
-                    <td><?php
-if (htmlspecialchars($transaction['user_id']) == htmlspecialchars($user['user_id'])) {
-    echo htmlspecialchars($transaction['amount'])
-    ;
-}
-?>
-                        <?php endforeach;?>
-                </tr>
-
-
-            </tbody>
-        </table>
+    </table>
     </div>
 </body>
 
