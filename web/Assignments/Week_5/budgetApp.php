@@ -3,6 +3,10 @@
 
 <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+
     <!--Title in the browser title bar.-->
     <title>CS:313 - Week 5</title>
     <!-- heading of the web page -->
@@ -47,10 +51,6 @@ try
 // echo "<br>";
 
 echo "<br>";
-echo "<br>";
-
-echo "The following is  the list of all the users:";
-echo "<br>";
 
 foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budgetUser') as $row) {
 
@@ -89,7 +89,7 @@ echo '<br />';
 ?>
 
     <div class="container">
-        <h1>User List</h1>
+        <h2>User List</h2>
         <table class="table table-bordered">
             <thead>
                 <tr>
@@ -110,6 +110,42 @@ echo '<br />';
                 </tr>
                 <?php endforeach;?>
 
+
+
+            </tbody>
+        </table>
+    </div>
+
+
+    <div class="container">
+        <h2>Transactions from Users:</h2>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Amount</th>
+                    <th>Category</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php foreach ($users as $user): ?>
+                <tr>
+                    <td><?php echo htmlspecialchars($user['display_name']) ?>
+                        <?php endforeach;?>
+                </tr>
+
+
+                <?php foreach ($transactions as $transaction): ?>
+                <tr>
+
+                    <td><?php
+if (htmlspecialchars($transaction['user_id']) == htmlspecialchars($user['user_id'])) {
+    echo htmlspecialchars($transaction['amount'])
+    ;
+}
+?>
+                        <?php endforeach;?>
+                </tr>
 
 
             </tbody>
