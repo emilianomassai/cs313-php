@@ -109,26 +109,38 @@ echo '<br />';
                     </td>
                 </tr>
                 <?php endforeach;?>
-
-                <?php foreach ($users as $user): ?>
-                <tr>
-                    <td><?php echo htmlspecialchars($user['display_name']) ?>
-                    </td>
-                    <td><?php echo htmlspecialchars($user['user_name']) ?>
-                    </td>
-                    <td><?php echo htmlspecialchars($user['password']) ?>
-                    </td>
-                </tr>
-                <?php endforeach;?>
-
-
             </tbody>
         </table>
     </div>
 
-
-    </table>
+    <div class="container">
+        <h2>Transactions List:</h2>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>User_Id</th>
+                    <th>Amount</th>
+                    <th>Notes</th>
+                    <th>Category</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php foreach ($transactions as $transaction): ?>
+                <tr>
+                    <td><?php echo htmlspecialchars($transaction['user_id']) ?>
+                    </td>
+                    <td><?php echo htmlspecialchars($transaction['amount']) ?>
+                    </td>
+                    <td><?php echo htmlspecialchars($transaction['notes']) ?>
+                    </td>
+                    <td><?php echo htmlspecialchars($transaction['category']) ?>
+                    </td>
+                </tr>
+                <?php endforeach;?>
+            </tbody>
+        </table>
     </div>
+
 </body>
 
 </html>
