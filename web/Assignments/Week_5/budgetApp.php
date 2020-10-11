@@ -52,7 +52,7 @@ echo "<br>";
 echo "The following is  the list of all the users:";
 echo "<br>";
 
-foreach ($db->query('SELECT display_name FROM budgetUser') as $row) {
+foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budgetUser') as $row) {
 
     $users[] = [
         'display_name' => $row['display_name'],
@@ -61,7 +61,7 @@ foreach ($db->query('SELECT display_name FROM budgetUser') as $row) {
         'password' => $row['password'],
     ];
 
-    foreach ($db->query('SELECT amount, notes, category, date FROM transaction') as $row) {
+    foreach ($db->query('SELECT amount, user_id, notes, category, date FROM transaction') as $row) {
         $transactions[] = [
             'amount' => $row['amount'],
             'trans_user_id' => $row['user_id'],
@@ -71,7 +71,6 @@ foreach ($db->query('SELECT display_name FROM budgetUser') as $row) {
 
     }
 
-    echo 'user_name';
     // echo $row['display_name'];
     // echo '<br />';
     // foreach ($db->query('SELECT amount, notes, category, date FROM transaction') as $row) {
@@ -103,7 +102,9 @@ echo '<br />';
                 <?php foreach ($users as $user): ?>
                 <tr>
                     <td><?php echo htmlspecialchars($user['display_name']) ?>
+                    <td>
                     <td><?php echo htmlspecialchars($user['user_name']) ?>
+                    <td>
                     <td><?php echo htmlspecialchars($user['password']) ?>
                     <td>
                 </tr>
