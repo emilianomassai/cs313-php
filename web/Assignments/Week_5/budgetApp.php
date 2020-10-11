@@ -66,7 +66,7 @@ foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budg
 foreach ($db->query('SELECT amount, user_id, notes, category, date FROM transaction') as $row) {
     $transactions[] = [
         'amount' => $row['amount'],
-        'trans_user_id' => $row['user_id'],
+        'user_id' => $row['user_id'],
         'notes' => $row['notes'],
         'category' => $row['category'],
     ];
@@ -109,7 +109,7 @@ echo '<br />';
         <table class="table table-bordered">
             <thead>
                 <tr>
-                    <th>User_Id</th>
+                    <th>User ID</th>
                     <th>Amount</th>
                     <th>Notes</th>
                     <th>Category</th>
