@@ -81,6 +81,7 @@ echo '<br />';
         <table class="table table-bordered">
             <thead>
                 <tr>
+                    <th>User ID</th>
                     <th>Name</th>
                     <th>Username</th>
                     <th>Password</th>
@@ -89,6 +90,8 @@ echo '<br />';
             <tbody>
                 <?php foreach ($users as $user): ?>
                 <tr>
+                    <td><?php echo htmlspecialchars($user['user_id']) ?>
+                    </td>
                     <td><?php echo htmlspecialchars($user['display_name']) ?>
                     </td>
                     <td><?php echo htmlspecialchars($user['user_name']) ?>
