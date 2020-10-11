@@ -102,11 +102,11 @@ echo '<br />';
                 <?php foreach ($users as $user): ?>
                 <tr>
                     <td><?php echo htmlspecialchars($user['display_name']) ?>
-                    <td>
+                    </td>
                     <td><?php echo htmlspecialchars($user['user_name']) ?>
-                    <td>
+                    </td>
                     <td><?php echo htmlspecialchars($user['password']) ?>
-                    <td>
+                    </td>
                 </tr>
                 <?php endforeach;?>
 
