@@ -51,25 +51,21 @@ try
 // echo "<br>";
 
 echo "<br>";
+?>
 
-foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budgetUser') as $row) {
+
+    <?php
+
+    foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budgetUser') as $row) {
 
     $users[] = [
-        'display_name' => $row['display_name'],
-        'user_name' => $row['user_name'],
-        'user_id' => $row['user_id'],
-        'password' => $row['password'],
+    'display_name' => $row['display_name'],
+    'user_name' => $row['user_name'],
+    'user_id' => $row['user_id'],
+    'password' => $row['password'],
     ];
 
-    foreach ($db->query('SELECT amount, user_id, notes, category, date FROM transaction') as $row) {
-        $transactions[] = [
-            'amount' => $row['amount'],
-            'trans_user_id' => $row['user_id'],
-            'notes' => $row['notes'],
-            'category' => $row['category'],
-        ];
 
-    }
 
     // echo $row['display_name'];
     // echo '<br />';
@@ -83,9 +79,21 @@ foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budg
     // echo $row['date'];
     // echo '<br />';
     // }
-}
-echo '<br />';
 
+    echo '<br />';
+
+    ?>
+
+    <?php
+foreach ($db->query('SELECT amount, user_id, notes, category, date FROM transaction') as $row) {
+    $transactions[] = [
+        'amount' => $row['amount'],
+        'trans_user_id' => $row['user_id'],
+        'notes' => $row['notes'],
+        'category' => $row['category'],
+    ];
+
+}
 ?>
 
     <div class="container">
