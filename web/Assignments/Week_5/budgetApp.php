@@ -83,9 +83,9 @@ foreach ($db->query('SELECT amount, user_id, notes, category, date FROM transact
                 </tr>
             </thead>
             <tbody>
-                <?php
-$name = htmlspecialchars($user['display_name']);
-foreach ($users as $user): ?>
+                <?php foreach ($users as $user): ?>
+                <?php $name = htmlspecialchars($user['display_name']);?>
+
                 <tr>
                     <td><?php echo htmlspecialchars($user['user_id']) ?>
                     </td>
