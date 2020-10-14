@@ -1,3 +1,8 @@
+<?php
+// start session
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en-US">
 
@@ -12,7 +17,16 @@
     <!-- heading of the web page -->
 </head>
 
-<h1>BETA: Budget App</h1>
+<h1>Project Title: Budget App </h1>
+<br>
+<h2>List of all the users of the app:</h2>
+<br>
+<h2>User search:</h2>
+<br>
+<h2>User details:</h2>
+<br>
+<h2>New user form:</h2>
+<br>
 
 <body>
 
