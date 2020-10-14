@@ -103,6 +103,13 @@ foreach ($db->query('SELECT amount, user_id, notes, category, date FROM transact
 
     <!-- A simple form that allows for a last name to be entered, then the user list will be shown for all users that match the last name.  -->
     <h2>User search:</h2>
+    <form class="userSearch" name="userSearch" action="../Week_5/user_search.php" method="post">
+
+        <div class="bottomBar">
+            <button type="submit" name="search" id="searchUser">Search</button>
+        </div>
+        </section>
+    </form>
     <br>
 
     <!-- A view of a single user, showing all the  income, expenses, notes, category of the transaction, date of the transaction etc.  -->
