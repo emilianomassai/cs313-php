@@ -105,6 +105,11 @@ foreach ($db->query('SELECT amount, user_id, notes, category, date FROM transact
     <h2>User search:</h2>
     <form class="userSearch" name="userSearch" action="../Week_5/user_search.php" method="post">
 
+        <h4>Please enter the name of the user you are looking for:</h4>
+        <span class="required-field"></span>
+
+        <input placeholder="e.g.: Emiliano Massai" type="text" name="user_name" id="userName">
+        <br />
         <div class="bottomBar">
             <button type="submit" name="search" id="searchUser">Search</button>
         </div>
