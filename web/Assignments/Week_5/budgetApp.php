@@ -71,7 +71,6 @@ foreach ($db->query('SELECT amount, user_id, notes, category, date FROM transact
     <div class="container">
 
         <!-- A list of all users in the system, each one is a link that leads to a user details page.  -->
-        <a href="../Week_5/users_list.php"></a>
 
         <h2>User List</h2>
         <table class="table table-bordered">
