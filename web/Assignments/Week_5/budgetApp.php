@@ -42,8 +42,6 @@ try
     die();
 }
 
-echo "<br>";
-
 foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budgetUser') as $row) {
 
     $users[] = [
@@ -64,7 +62,6 @@ foreach ($db->query('SELECT amount, user_id, notes, category, date FROM transact
     ];
 
 }
-echo '<br />';
 
 ?>
 
@@ -72,6 +69,10 @@ echo '<br />';
     <br>
     <h2>List of all the users of the app:</h2>
     <div class="container">
+
+        <!-- A list of all users in the system, each one is a link that leads to a user details page.  -->
+        <a href="../Week_5/users_list.php"></a>
+
         <h2>User List</h2>
         <table class="table table-bordered">
             <thead>
@@ -82,11 +83,13 @@ echo '<br />';
                 </tr>
             </thead>
             <tbody>
-                <?php foreach ($users as $user): ?>
+                <?php
+$name = htmlspecialchars($user['display_name']);
+foreach ($users as $user): ?>
                 <tr>
                     <td><?php echo htmlspecialchars($user['user_id']) ?>
                     </td>
-                    <td><?php echo htmlspecialchars($user['display_name']) ?>
+                    <td><?php echo "<a href='../Week_5/users_list.php'> $name </a>" ?>
                     </td>
                     <td><?php echo htmlspecialchars($user['user_name']) ?>
                     </td>
@@ -96,18 +99,20 @@ echo '<br />';
         </table>
     </div>
 
-    <a href="../Week_5/users_list.php"></a>
     <br>
+
+
+    <!-- A simple form that allows for a last name to be entered, then the user list will be shown for all users that match the last name.  -->
     <h2>User search:</h2>
     <br>
+
+    <!-- A view of a single user, showing all the  income, expenses, notes, category of the transaction, date of the transaction etc.  -->
     <h2>User details:</h2>
     <br>
+
+    <!-- This will be submitted and handled in the next assignment, but for this week, checkboxes are dynamically created based upon what is in the database.  -->
     <h2>New user form:</h2>
     <br>
-
-
-
-
 
     <div class="container">
         <h2>Transactions List:</h2>
