@@ -17,16 +17,7 @@ session_start();
     <!-- heading of the web page -->
 </head>
 
-<h1>Project Title: Budget App </h1>
-<br>
-<h2>List of all the users of the app:</h2>
-<br>
-<h2>User search:</h2>
-<br>
-<h2>User details:</h2>
-<br>
-<h2>New user form:</h2>
-<br>
+
 
 <body>
 
@@ -50,19 +41,6 @@ try
     echo 'Error!: ' . $ex->getMessage();
     die();
 }
-
-// echo "Host: " . $dbHost;
-// echo "<br>";
-// echo "Port: " . $dbPort;
-// echo "<br>";
-// echo "User: " . $dbUser;
-// echo "<br>";
-// echo "Password: " . $dbPassword;
-// echo "<br>";
-// echo "Database Name: " . $dbName;
-// echo "<br>";
-// echo "Database URL: " . $dbUrl;
-// echo "<br>";
 
 echo "<br>";
 
@@ -90,6 +68,9 @@ echo '<br />';
 
 ?>
 
+    <h1>Project Title: Budget App </h1>
+    <br>
+    <h2>List of all the users of the app:</h2>
     <div class="container">
         <h2>User List</h2>
         <table class="table table-bordered">
@@ -98,7 +79,6 @@ echo '<br />';
                     <th>User ID</th>
                     <th>Name</th>
                     <th>Username</th>
-                    <th>Password</th>
                 </tr>
             </thead>
             <tbody>
@@ -116,35 +96,73 @@ echo '<br />';
                 <?php endforeach;?>
             </tbody>
         </table>
-    </div>
 
-    <div class="container">
-        <h2>Transactions List:</h2>
-        <table class="table table-bordered">
-            <thead>
-                <tr>
-                    <th>User ID</th>
-                    <th>Amount</th>
-                    <th>Notes</th>
-                    <th>Category</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php foreach ($transactions as $transaction): ?>
-                <tr>
-                    <td><?php echo htmlspecialchars($transaction['user_id']) ?>
-                    </td>
-                    <td><?php echo htmlspecialchars($transaction['amount']) ?>
-                    </td>
-                    <td><?php echo htmlspecialchars($transaction['notes']) ?>
-                    </td>
-                    <td><?php echo htmlspecialchars($transaction['category']) ?>
-                    </td>
-                </tr>
-                <?php endforeach;?>
-            </tbody>
-        </table>
-    </div>
+        <a href="../Week_5/users_list.php"></a>
+        <br>
+        <h2>User search:</h2>
+        <br>
+        <h2>User details:</h2>
+        <br>
+        <h2>New user form:</h2>
+        <br>
+
+
+
+        <div class="container">
+            <h2>User List</h2>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>User ID</th>
+                        <th>Name</th>
+                        <th>Username</th>
+                        <th>Password</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php foreach ($users as $user): ?>
+                    <tr>
+                        <td><?php echo htmlspecialchars($user['user_id']) ?>
+                        </td>
+                        <td><?php echo htmlspecialchars($user['display_name']) ?>
+                        </td>
+                        <td><?php echo htmlspecialchars($user['user_name']) ?>
+                        </td>
+                        <td><?php echo htmlspecialchars($user['password']) ?>
+                        </td>
+                    </tr>
+                    <?php endforeach;?>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="container">
+            <h2>Transactions List:</h2>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>User ID</th>
+                        <th>Amount</th>
+                        <th>Notes</th>
+                        <th>Category</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php foreach ($transactions as $transaction): ?>
+                    <tr>
+                        <td><?php echo htmlspecialchars($transaction['user_id']) ?>
+                        </td>
+                        <td><?php echo htmlspecialchars($transaction['amount']) ?>
+                        </td>
+                        <td><?php echo htmlspecialchars($transaction['notes']) ?>
+                        </td>
+                        <td><?php echo htmlspecialchars($transaction['category']) ?>
+                        </td>
+                    </tr>
+                    <?php endforeach;?>
+                </tbody>
+            </table>
+        </div>
 
 </body>
 
