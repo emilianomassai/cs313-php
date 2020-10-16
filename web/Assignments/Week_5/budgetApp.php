@@ -156,9 +156,9 @@ foreach ($db->query('SELECT amount, user_id, notes, category, date FROM transact
 
                     <h4>Enter all the data for the new user:</h4>
 
-                    <p>Prova:</p>
-                    <input type="text" name="name_user" id="nameUser">
-                    <br />
+                    Prova:
+                    <label for="fname">First name: </label>
+                    <input type="text" id="fname" name="fname"><br><br>
                     <div class="bottomBar">
                         <button type="submit" name="search" id="searchUser">Add User</button>
                     </div>
