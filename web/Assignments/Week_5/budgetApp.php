@@ -166,7 +166,8 @@ $total_column = $select->columnCount();
 for ($counter = 0; $counter < $total_column; $counter++) {
     $meta = $select->getColumnMeta($counter);
     $column[] = $meta['name'];?>
-                    <label for="<?php echo $column[$counter] ?>"> <?php echo $column[$counter] ?></label>
+                    <label for="<?php echo $column[$counter] ?>"> <?php echo $column[$counter] ?></label> <br>
+
                     <input type="text" id="<?php echo $column[$counter] ?>" name="<?php echo $column[$counter] ?>"> <br>
                     <?php }?>
 
@@ -177,7 +178,9 @@ for ($counter = 0; $counter < $total_column; $counter++) {
                 </form>
 
 
-
+                <br>
+                <br>
+                <br>
                 <br>
 
                 <div>
