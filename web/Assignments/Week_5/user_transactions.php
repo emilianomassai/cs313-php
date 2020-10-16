@@ -57,7 +57,6 @@ foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budg
     <div class="container">
         <h2>Transactions List:</h2>
         <?php $totalAmount = 0;?>
-
         <table border="1" class="table table-bordered">
             <thead>
                 <tr>
