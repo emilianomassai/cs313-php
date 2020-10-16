@@ -4,7 +4,7 @@ function validateForm() {
     alert("Please enter a name!");
     return false;
   }
-  if (!isNaN) {
+  if (!isNaN(x)) {
     alert("Please enter only letters!");
     return false;
   }
