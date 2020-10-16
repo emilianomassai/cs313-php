@@ -22,15 +22,12 @@ session_start();
     <h2>List of users:</h2>
     <?php
 
-$count = 0;
+foreach ($_SESSION['users'] as $key => $value) {
+}
 
 // loop through the session array with foreach
-foreach ($_SESSION['users'] as $key => $user['display_name']): ?>
-
-    <?php
-// and print out the values
-echo 'The value of $_SESSION[' . "'" . $key . "'" . '] is ' . "'" . $user[$count]['display_name'] . "'" . ' <br />'; ?>
-    <?php endforeach;?>
+echo 'USERS ARRAY: ' . $users_array[$key][$value];
+?>
 
 
 
