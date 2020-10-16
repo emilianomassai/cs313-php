@@ -76,11 +76,7 @@ foreach ($db->query('SELECT amount, user_id, notes, category, date FROM transact
 
         <h2>User List</h2>
         <table class="table table-bordered">
-            <thead>
-                <tr>
-                    <th>Name</th>
-                </tr>
-            </thead>
+
             <tbody>
                 <?php foreach ($users_array as $user): ?>
                 <?php $name = htmlspecialchars($user['display_name']);?>
@@ -90,7 +86,7 @@ foreach ($db->query('SELECT amount, user_id, notes, category, date FROM transact
                         <input type="radio" name="name_user" value="<?php $name?>">
                         <label for="name_user"><?php echo $name ?> </label><br>
                         <?php endforeach;?>
-                        <input type="submit" name="See user details" />
+                        <input type="submit" name="submit" />
 
                     </form>
 
