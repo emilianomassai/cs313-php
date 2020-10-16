@@ -168,7 +168,7 @@ for ($counter = 0; $counter < $total_column; $counter++) {
     $column[] = $meta['name'];?>
                     <label for="<?php echo $column[$counter] ?>"> <?php echo $column[$counter] ?></label>
                     <input type="text" id="<?php echo $column[$counter] ?>" name="<?php echo $column[$counter] ?>"
-                        style="margin-right: 150px;"> <br>
+                        style="margin-left: 500px;"> <br>
                     <?php }?>
 
 
