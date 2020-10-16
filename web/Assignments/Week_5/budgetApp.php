@@ -69,12 +69,15 @@ foreach ($db->query('SELECT amount, user_id, notes, category, date FROM transact
 
     <h1>Project Title: Budget App </h1>
     <br>
-    <h2>List of all the users of the app:</h2>
+    <p>Welcome to this budget app! Please read between the different options from the following list:</p>
     <div class="container">
 
         <!-- A list of all users in the system, each one is a link that leads to a user details page.  -->
 
-        <h2>User List</h2>
+        <h2>1) User List</h2>
+        <br>
+
+        <p>Choose one user from the database and click the submit button to see more details about him or her.</p>
         <table class="table table-bordered">
 
             <tbody>
