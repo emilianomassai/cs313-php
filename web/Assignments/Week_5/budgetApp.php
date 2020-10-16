@@ -51,7 +51,6 @@ foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budg
         'password' => $row['password'],
     ];
     $_SESSION['users'] = $users_array;
-    echo 'USERS ARRAY: ' . $users_array[$count]['display_name'];
     $count++;
 }
 
@@ -68,15 +67,12 @@ foreach ($db->query('SELECT amount, user_id, notes, category, date FROM transact
 ?>
 
     <h1>Project Title: Budget App </h1>
-    <br>
     <p>Welcome to this budget app! Please read between the different options from the following list:</p>
     <div class="container">
 
         <!-- A list of all users in the system, each one is a link that leads to a user details page.  -->
 
-        <h2>1) User List</h2>
-        <br>
-
+        <h2>User List</h2>
         <p>Choose one user from the database and click the submit button to see more details about him or her.</p>
         <table class="table table-bordered">
 
@@ -90,7 +86,7 @@ foreach ($db->query('SELECT amount, user_id, notes, category, date FROM transact
                             <?php $name = htmlspecialchars($user['display_name']);?>
                             <?php $user_id = htmlspecialchars($user['user_id']);?>
 
-                            <option value="<?php echo $user_id ?>"><?php echo 'USER ' . $name . ' ID ' . $user_id ?>
+                            <option value="<?php echo $user_id ?>"><?php echo $name ?>
                             </option>
                             <?php endforeach;?>
                             <br>
