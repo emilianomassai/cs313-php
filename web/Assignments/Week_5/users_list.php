@@ -16,6 +16,8 @@ session_start();
 </head>
 
 <body>
+    <h1>User details </h1>
+    <p>The following is the list of all the details of the selected user:</p>
 
     <?php
 try
@@ -51,10 +53,14 @@ foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budg
 
     if ($_POST["name_user"] == $users_array[$count]['user_id']) {
 
-        echo 'Welcome ' . $users_array[$count]['display_name'] . '!';
+        echo 'Name: ' . $users_array[$count]['display_name'] . ';';
         echo '<br>';
-        echo 'Your user id is: ' . $users_array[$count]['user_id'] . '. <br>';
-        echo 'Your username is: ' . $users_array[$count]['user_name'] . '. <br>';
+        echo 'User ID: ' . $users_array[$count]['user_id'] . ';';
+        echo '<br>';
+        echo 'Username: ' . $users_array[$count]['user_name'] . ';';
+        echo '<br>';
+        echo 'Password: ' . $users_array[$count]['password'] . ';';
+        echo '<br>';
 
     }
     $count++;
