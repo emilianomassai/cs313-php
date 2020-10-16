@@ -45,25 +45,24 @@ foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budg
 
     $users_array[] = [
         'display_name' => $row['display_name'],
-        'user_name' => $row['user_name'],
-        'user_id' => $row['user_id'],
-        'password' => $row['password'],
+
     ];
     $_SESSION['users'] = $users_array;
 
-    if ($_POST["name_user"] == $users_array[$count]['display_name']) {
-
-        echo 'Name: ' . $users_array[$count]['display_name'] . ';';
-        echo '<br>';
-        echo 'User ID: ' . $users_array[$count]['user_id'] . ';';
-        echo '<br>';
-        echo 'Username: ' . $users_array[$count]['user_name'] . ';';
-        echo '<br>';
-        echo 'Password: ' . $users_array[$count]['password'] . '.';
-        echo '<br>';
-
-    }
     $count++;
+
+}
+
+if ($_POST["name_user"] == $users_array[$count]['display_name']) {
+
+    echo 'Name: ' . $users_array[$count]['display_name'] . ';';
+
+    echo '<br>';
+
+} else {
+    echo 'No user found with that name. Try again!';
+
+    echo '<br>';
 
 }
 
