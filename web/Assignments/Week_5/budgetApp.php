@@ -93,7 +93,9 @@ foreach ($db->query('SELECT amount, user_id, notes, category, date FROM transact
                             <br>
                             <br>
                             <br>
-                            <button type="submit" name="See user details" id="userDetails">See user details</button>
+
+                            <input type="submit" name="Submit" />
+
                     </form>
 
             </tbody>
