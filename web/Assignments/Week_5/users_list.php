@@ -21,7 +21,7 @@ session_start();
 
     <h2>List of users:</h2>
     <?php
-
+echo $_SESSION['users'][1];
 // loop through the session array with foreach
 foreach ($_SESSION['users'] as $key => $value) {
     // and print out the values
