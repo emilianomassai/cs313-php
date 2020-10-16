@@ -91,6 +91,8 @@ foreach ($db->query('SELECT amount, user_id, notes, category, date FROM transact
                             <option value="<?php $user_id?>"><?php echo $name ?></option>
                             <?php endforeach;?>
                             <br>
+                            <br>
+                            <br>
 
                             <input type="submit" name="submit" />
 
