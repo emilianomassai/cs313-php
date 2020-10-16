@@ -98,7 +98,7 @@ foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budg
             </tbody>
         </table>
     </div>
-    <h2>The total amount of all the transactions is: <?php echo '$' . $totalAmount ?></h2>
+    <h2>The total amount of all the transactions is: <?php echo '<br>' ?> <?php echo '$' . $totalAmount ?></h2>
     <br>
 
 
