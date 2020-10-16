@@ -83,7 +83,6 @@ foreach ($db->query('SELECT amount, user_id, notes, category, date FROM transact
                 <tr>
                     <form action="users_list.php" method="post">
                         <select name="name_user">
-                            <option value="">Select an user:</option>
                             <?php foreach ($users_array as $user): ?>
                             <?php $name = htmlspecialchars($user['display_name']);?>
                             <?php $user_id = htmlspecialchars($user['user_id']);?>
