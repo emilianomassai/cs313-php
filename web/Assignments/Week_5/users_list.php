@@ -59,15 +59,8 @@ foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budg
     }
     $count++;
 }
-echo '<br>';
-echo '<br>';
-echo '<br>';
-
-echo 'Prova:';
-echo '<br>';
-
-// Storing Selected User In Variable
-echo 'Welcome ' . $_POST["name_user"];?><br>
+?>
+    <br>
 
 
 

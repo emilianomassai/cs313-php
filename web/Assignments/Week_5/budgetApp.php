@@ -157,6 +157,11 @@ foreach ($db->query('SELECT amount, user_id, notes, category, date FROM transact
         </table>
     </div>
 
+    <div>
+        <a href="../Week_5/budgetApp.php" id="budget_app_home_btn_id">
+            Go back to the budget app home page
+        </a>
+    </div>
     <footer>
         <p style="text-align: center;">
             Copyright © 2020 emiDev Inc. All rights reserved.
