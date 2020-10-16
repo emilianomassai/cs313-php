@@ -176,8 +176,8 @@ for ($counter = 0; $counter < $total_column; $counter++) {
     $meta = $select->getColumnMeta($counter);
     $column[] = $meta['name'];?>
 
-                    <label for="<?php print_r($column)?>"> <?php print_r($column)?></label>
-                    <input type="text" id="<?php print_r($column)?>" name="<?php print_r($column)?>">
+                    <label for="<?php print_r($column[counter])?>"> <?php print_r($column[counter])?></label>
+                    <input type="text" id="<?php print_r($column[counter])?>" name="<?php print_r($column[counter])?>">
                     <?php }?>
 
                     <div class="bottomBar">
