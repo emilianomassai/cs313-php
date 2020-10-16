@@ -41,9 +41,9 @@ try
     echo 'Error!: ' . $ex->getMessage();
     die();
 }
-
+$count = 0;
 foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budgetUser') as $row) {
-    $count = 0;
+
     $users_array[] = [
         'display_name' => $row['display_name'],
         'user_name' => $row['user_name'],
