@@ -87,13 +87,14 @@ foreach ($db->query('SELECT amount, user_id, notes, category, date FROM transact
 
                 <tr>
                     <form action="user_list.php" method="post">
-                        <input type="checkbox" name="name_user" value="<?php $name?>">
+                        <input type="radio" name="name_user" value="<?php $name?>">
                         <label for="name_user"><?php echo $name ?> </label><br>
+                        <?php endforeach;?>
                         <input type="submit" name="See user details" />
+
                     </form>
 
 
-                    <?php endforeach;?>
             </tbody>
         </table>
     </div>
