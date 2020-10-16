@@ -39,7 +39,7 @@ try
 }
 
 $count = 0;
-if ($_POST["name_user"] == $users_array[$count]['display_name']) {
+if ($_POST["name_user"] == $users_array[$count]['display_name'] && $_POST["name_user"] != null) {
 
     foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budgetUser') as $row) {
 
