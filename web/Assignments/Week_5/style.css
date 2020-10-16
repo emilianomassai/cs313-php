@@ -31,15 +31,15 @@ h2 {
   text-shadow: black 0.1em 0.1em 0.2em;
 }
 
-h6 {
-  color: rgba(255, 255, 255, 0.808);
-  font-family: Georgia, "Times New Roman", Times, serif;
-}
-
 h4 {
   color: rgba(255, 255, 255, 0.808);
   font-family: Georgia, "Times New Roman", Times, serif;
   text-shadow: black 0.1em 0.1em 0.2em;
+}
+
+h5 {
+  color: rgba(255, 255, 255, 0.808);
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 p {
