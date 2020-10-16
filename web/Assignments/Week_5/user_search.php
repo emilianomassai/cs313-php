@@ -40,6 +40,7 @@ try
 }
 
 $count = 0;
+$isUser = false;
 foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budgetUser') as $row) {
 
     $users_array[] = [
@@ -51,7 +52,7 @@ foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budg
     if ($_POST["name_user"] == $users_array[$count]['display_name']) {
 
         echo 'We found one user in our database corresponding to ' . $users_array[$count]['display_name'] . '.';
-
+        $isUser = true;
         echo '<br>';
 
     }
@@ -59,6 +60,9 @@ foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budg
 
 }
 
+if($isUser == false){
+    echo 'No user found in our database. Please try again!' 
+}
 ?>
 
 
