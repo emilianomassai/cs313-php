@@ -11,6 +11,8 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/ico" href="./BudgetAppImages/budgetAppIcon.png">
+
     <script src="../Week_5/javaScript.js"></script>
 
     <!--Title in the browser title bar.-->
