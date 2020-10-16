@@ -102,7 +102,7 @@ foreach ($db->query('SELECT amount, user_id, notes, category, date FROM transact
     </div>
 
     <br>
-    <br>
+    <hr>
 
 
     <!-- A simple form that allows for a last name to be entered, then the user list will be shown for all users that match the last name.  -->
@@ -120,7 +120,7 @@ foreach ($db->query('SELECT amount, user_id, notes, category, date FROM transact
         </section>
     </form>
     <br>
-    <br>
+    <hr>
 
     <!-- A view of a single user, showing all the  income, expenses, notes, category of the transaction, date of the transaction etc.  -->
     <h2>User transactions:</h2>
@@ -150,7 +150,7 @@ foreach ($db->query('SELECT amount, user_id, notes, category, date FROM transact
                 </form>
                 <br>
                 <br>
-                <br>
+                <hr>
 
 
                 <!-- This will be submitted and handled in the next assignment, but for this week, checkboxes are dynamically created based upon what is in the database.  -->
