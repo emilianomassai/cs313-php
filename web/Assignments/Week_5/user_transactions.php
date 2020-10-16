@@ -80,9 +80,11 @@ foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budg
     ];
     $_SESSION['transactions'] = $transactions_array;
 
+    $totalAmount = 0;
     if (($_POST["user_transaction"] == $transactions_array[$transaction_count]['user_id'])) {?>
                 <tr>
                     <td><?php echo $transactions_array[$transaction_count]['amount'] ?>
+                        <?php $totalAmount += $transactions_array[$transaction_count]['amount'];?>
                     </td>
                     <td><?php echo $transactions_array[$transaction_count]['notes'] ?>
                     </td>
@@ -96,6 +98,7 @@ foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budg
             </tbody>
         </table>
     </div>
+    <h2>The total amount of all the transactions is: <?php '$' . $totalAmount?></h2>
     <br>
 
 
