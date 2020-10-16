@@ -49,9 +49,14 @@ foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budg
     ];
     $_SESSION['users'] = $users_array;
 
-    echo 'Users: ' . $users_array[$count]['display_name'] . ' ';
-    echo 'Users ID: ' . $users_array[$count]['user_id'] . '<br>';
+    if ($_POST["name_user"] == $users_array[$count]['user_id']) {
 
+        echo 'Welcome ' . $users_array[$count]['display_name'] . '!';
+        echo '<br>';
+        echo 'Your user id is: ' . $users_array[$count]['user_id'] . '. <br>';
+        echo 'Your username is: ' . $users_array[$count]['user_name'] . '. <br>';
+
+    }
     $count++;
 }
 echo '<br>';
@@ -62,12 +67,7 @@ echo 'Prova:';
 echo '<br>';
 
 // Storing Selected User In Variable
-$post_user_id = $_POST["name_user"];
-
-if ($post_user_id == $users_array[$count]['user_id']) {
-    echo 'Welcome ' . $users_array[$count]['display_name'] . '!';
-}
-?><br>
+echo 'Welcome ' . $_POST["name_user"];?><br>
 
 
 
