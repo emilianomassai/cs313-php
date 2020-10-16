@@ -78,9 +78,7 @@ foreach ($db->query('SELECT amount, user_id, notes, category, date FROM transact
         <table class="table table-bordered">
             <thead>
                 <tr>
-                    <th>User ID</th>
                     <th>Name</th>
-                    <th>Username</th>
                 </tr>
             </thead>
             <tbody>
@@ -88,9 +86,12 @@ foreach ($db->query('SELECT amount, user_id, notes, category, date FROM transact
                 <?php $name = htmlspecialchars($user['display_name']);?>
 
                 <tr>
+                    <form action="user_list.php" method="post">
+                        <input type="checkbox" name="name_user" value="<?php $name?>">
+                        <label for="name_user"><?php echo $name ?> </label><br>
+                        <input type="submit" name="See user details" />
+                    </form>
 
-                    <td><?php echo "<a href='../Week_5/users_list.php'> $name </a>" ?>
-                    </td>
 
                     <?php endforeach;?>
             </tbody>
