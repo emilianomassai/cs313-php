@@ -22,13 +22,14 @@ session_start();
     <h2>List of users:</h2>
     <?php
 
+$count = 0;
+
 // loop through the session array with foreach
-foreach ($_SESSION['users'] as $user['display_name']): ?>
+foreach ($_SESSION['users'] as $key => $user['display_name']): ?>
 
     <?php
 // and print out the values
-echo 'The user of $_SESSION
- is ' . "'" . htmlspecialchars($user['display_name']); ?>
+echo 'The value of $_SESSION[' . "'" . $key . "'" . '] is ' . "'" . $user[$count]['display_name'] . "'" . ' <br />'; ?>
     <?php endforeach;?>
 
 
