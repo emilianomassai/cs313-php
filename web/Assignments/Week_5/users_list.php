@@ -19,6 +19,26 @@ session_start();
 
 <body>
 
+    <h2>List of users:</h2>
+    <?php
+
+// loop through the session array with foreach
+foreach ($_SESSION['users'] as $key => $value) {
+    // and print out the values
+    echo 'The user of $_SESSION[' . "'" . $key . "'" . '] is ' . "'" . $value . "'" . ' <br />';
+}
+?>
+
+    <h2>List of transactions:</h2>
+    <?php
+
+// loop through the session array with foreach
+foreach ($_SESSION['transactions'] as $key => $value) {
+    // and print out the values
+    echo 'The transaction of $_SESSION[' . "'" . $key . "'" . '] is ' . "'" . $value . "'" . ' <br />';
+}
+?>
+
     <footer>
         <p style="text-align: center;">
             Copyright © 2020 emiDev Inc. All rights reserved.

@@ -63,6 +63,9 @@ foreach ($db->query('SELECT amount, user_id, notes, category, date FROM transact
 
 }
 
+$_SESSION['users'] = $users_array;
+$_SESSION['transactions'] = $transactions_array;
+
 ?>
 
     <h1>Project Title: Budget App </h1>
@@ -148,16 +151,7 @@ foreach ($db->query('SELECT amount, user_id, notes, category, date FROM transact
                     <td><?php echo htmlspecialchars($transaction['category']) ?>
                     </td>
                 </tr>
-                <?php endforeach;
-// free memory
-
-pg_free_result($result);
-
-// close connection
-
-pg_close($dbh);
-
-?>
+                <?php endforeach;?>
             </tbody>
         </table>
     </div>
