@@ -2,9 +2,6 @@
 // start session
 session_start();
 
-$post_user_ID = $_POST['name_user'];
-// $first_name = $_POST['first_name'];
-// $last_name = $_POST['last_name'];
 ?>
 
 <head>
@@ -65,7 +62,8 @@ echo 'Prova:';
 echo '<br>';
 
 // Storing Selected User In Variable
-echo $post_user_ID; // Displaying Selected User
+$name = $_POST['name_user'];
+echo $name; // Displaying Selected User
 
 ?>
 
