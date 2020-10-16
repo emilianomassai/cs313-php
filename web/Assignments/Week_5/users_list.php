@@ -70,7 +70,7 @@ foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budg
 
 
     <div>
-        <a style="text-align: center;" \href="../Week_5/budgetApp.php" id="budget_app_home_btn_id">
+        <a href="../Week_5/budgetApp.php" id="budget_app_home_btn_id" style="text-align: center;">
             Go back to the budget app home page
         </a>
     </div>
