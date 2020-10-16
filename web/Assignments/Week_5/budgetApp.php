@@ -154,33 +154,6 @@ foreach ($db->query('SELECT amount, user_id, notes, category, date FROM transact
                 <h2>New user form:</h2>
                 <br>
 
-                <div class="container">
-                    <h2>Transactions List:</h2>
-                    <table class="table table-bordered">
-                        <thead>
-                            <tr>
-                                <th>User ID</th>
-                                <th>Amount</th>
-                                <th>Notes</th>
-                                <th>Category</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <?php foreach ($transactions_array as $transaction): ?>
-                            <tr>
-                                <td><?php echo htmlspecialchars($transaction['user_id']) ?>
-                                </td>
-                                <td><?php echo htmlspecialchars($transaction['amount']) ?>
-                                </td>
-                                <td><?php echo htmlspecialchars($transaction['notes']) ?>
-                                </td>
-                                <td><?php echo htmlspecialchars($transaction['category']) ?>
-                                </td>
-                            </tr>
-                            <?php endforeach;?>
-                        </tbody>
-                    </table>
-                </div>
 
                 <footer>
                     <p style="text-align: center;">
