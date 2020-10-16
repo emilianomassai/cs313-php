@@ -21,12 +21,19 @@ session_start();
 
     <h2>List of users:</h2>
     <?php
+$count = 0;
+foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budgetUser') as $row) {
 
-foreach ($_SESSION['users'] as $key => $value) {
+    $users_array[] = [
+        'display_name' => $row['display_name'],
+        'user_name' => $row['user_name'],
+        'user_id' => $row['user_id'],
+        'password' => $row['password'],
+    ];
+    $_SESSION['users'] = $users_array;
+    echo 'USERS ARRAY: ' . $users_array[$count]['display_name'];
+    $count++;
 }
-
-// loop through the session array with foreach
-echo 'USERS ARRAY: ' . $users_array[$key][$value];
 ?>
 
 
