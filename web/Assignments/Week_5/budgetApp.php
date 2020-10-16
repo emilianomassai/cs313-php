@@ -108,12 +108,12 @@ foreach ($db->query('SELECT amount, user_id, notes, category, date FROM transact
 
     <!-- A simple form that allows for a last name to be entered, then the user list will be shown for all users that match the last name.  -->
     <h2>User search:</h2>
-    <form class="userSearch" name="userSearch" action="../Week_5/user_search.php" method="post">
+    <form class="userSearch" name="userSearch" action="../Week_5/user_search.php" method="post"
+        onsubmit="return validateForm()">
 
         <h4>Please enter the name of the user you are looking for:</h4>
 
-        <input placeholder="e.g.: Emiliano Massai" type="text" name="name_user" id="nameUser"
-            onsubmit="return validateForm()">
+        <input placeholder="e.g.: Emiliano Massai" type="text" name="name_user" id="nameUser">
         <br />
         <div class="bottomBar">
             <button type="submit" name="search" id="searchUser">Search</button>
