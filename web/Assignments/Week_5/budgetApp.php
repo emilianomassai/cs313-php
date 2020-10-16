@@ -82,7 +82,7 @@ foreach ($db->query('SELECT amount, user_id, notes, category, date FROM transact
 
                 <tr>
                     <form action="users_list.php" method="post">
-                        <select name="name_user">
+                        <select name="userID">
                             <?php foreach ($users_array as $user): ?>
                             <?php $name = htmlspecialchars($user['display_name']);?>
                             <?php $user_id = htmlspecialchars($user['user_id']);?>
@@ -110,7 +110,6 @@ foreach ($db->query('SELECT amount, user_id, notes, category, date FROM transact
     <form class="userSearch" name="userSearch" action="../Week_5/user_search.php" method="post">
 
         <h4>Please enter the name of the user you are looking for:</h4>
-        <span class="required-field"></span>
 
         <input placeholder="e.g.: Emiliano Massai" type="text" name="user_name" id="userName">
         <br />
