@@ -62,7 +62,12 @@ echo 'Prova:';
 echo '<br>';
 
 // Storing Selected User In Variable
-echo 'Welcome ' . $_POST["name_user"];?><br>
+$post_user_id = $_POST["name_user"];
+
+if ($post_user_id == $users_array[$count]['user_id']) {
+    echo 'Welcome ' . $users_array[$count]['display_name'] . '!';
+}
+?><br>
 
 
 
