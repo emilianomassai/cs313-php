@@ -57,6 +57,8 @@ foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budg
 
         echo '<br>';
 
+    } else {
+        echo 'Sorry, we cant find any user with that name. Please try again!';
     }
     $count++;
 }
