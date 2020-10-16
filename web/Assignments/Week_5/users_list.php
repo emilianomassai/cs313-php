@@ -19,64 +19,16 @@ session_start();
 
 <body>
 
-    <div class="container">
+    <h2>List of users:</h2>
+    <?php
 
-        <h2>List of users:</h2>
-        <table class="table table-bordered">
-            <thead>
-                <tr>
-                    <th>User ID</th>
-                    <th>Name</th>
-                    <th>Username</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php foreach ($_SESSION['users_array'] as $user): ?>
-                <?php $name = htmlspecialchars($user['display_name']);?>
+// loop through the session array with foreach
+foreach ($_SESSION['users'] as $key => $user['display_name']) {
+    // and print out the values
+    echo 'The user of $_SESSION[' . "'" . $key . "'" . '] is ' . "'" . $user['display_name'] . "'" . ' <br />';
+}
+?>
 
-                <tr>
-                    <td><?php echo htmlspecialchars($user['user_id']) ?>
-                    </td>
-                    <td><?php echo "<a href='../Week_5/users_list.php'> $name </a>" ?>
-                    </td>
-                    <td><?php echo htmlspecialchars($user['user_name']) ?>
-                    </td>
-                </tr>
-                <?php endforeach;?>
-            </tbody>
-        </table>
-    </div>
-
-    <br>
-
-    <div class="container">
-
-        <h2>List of transactions:</h2>
-        <table class="table table-bordered">
-            <thead>
-                <tr>
-                    <th>User ID</th>
-                    <th>Amount</th>
-                    <th>Notes</th>
-                    <th>Category</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php foreach ($_SESSION['transactions_array'] as $transaction): ?>
-                <tr>
-                    <td><?php echo htmlspecialchars($transaction['user_id']) ?>
-                    </td>
-                    <td><?php echo htmlspecialchars($transaction['amount']) ?>
-                    </td>
-                    <td><?php echo htmlspecialchars($transaction['notes']) ?>
-                    </td>
-                    <td><?php echo htmlspecialchars($transaction['category']) ?>
-                    </td>
-                </tr>
-                <?php endforeach;?>
-            </tbody>
-        </table>
-    </div>
 
     <footer>
         <p style="text-align: center;">
