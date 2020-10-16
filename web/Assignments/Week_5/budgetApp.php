@@ -148,7 +148,16 @@ foreach ($db->query('SELECT amount, user_id, notes, category, date FROM transact
                     <td><?php echo htmlspecialchars($transaction['category']) ?>
                     </td>
                 </tr>
-                <?php endforeach;?>
+                <?php endforeach;
+// free memory
+
+pg_free_result($result);
+
+// close connection
+
+pg_close($dbh);
+
+?>
             </tbody>
         </table>
     </div>
