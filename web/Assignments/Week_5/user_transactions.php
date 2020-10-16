@@ -56,6 +56,8 @@ foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budg
 
     <div class="container">
         <h2>Transactions List:</h2>
+        <?php $totalAmount = 0;?>
+
         <table border="1" class="table table-bordered">
             <thead>
                 <tr>
@@ -80,7 +82,6 @@ foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budg
     ];
     $_SESSION['transactions'] = $transactions_array;
 
-    $totalAmount = 0;
     if (($_POST["user_transaction"] == $transactions_array[$transaction_count]['user_id'])) {?>
                 <tr>
                     <td><?php echo $transactions_array[$transaction_count]['amount'] ?>
