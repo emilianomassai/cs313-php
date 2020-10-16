@@ -59,7 +59,7 @@ foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budg
         echo '<br>';
         echo 'Username: ' . $users_array[$count]['user_name'] . ';';
         echo '<br>';
-        echo 'Password: ' . $users_array[$count]['password'] . ';';
+        echo 'Password: ' . $users_array[$count]['password'] . '.';
         echo '<br>';
 
     }
@@ -70,7 +70,7 @@ foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budg
 
 
     <div>
-        <a href="../Week_5/budgetApp.php" id="budget_app_home_btn_id">
+        <a style="text-align: center;" href="../Week_5/budgetApp.php" id="budget_app_home_btn_id">
             Go back to the budget app home page
         </a>
     </div>
