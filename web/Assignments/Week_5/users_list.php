@@ -50,7 +50,9 @@ foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budg
         'password' => $row['password'],
     ];
     $_SESSION['users'] = $users_array;
-    echo 'USERS ARRAY: ' . $users_array[$count]['display_name'];
+    echo 'Users: ' . $users_array[$count]['display_name'] . ' ';
+    echo 'Users ID: ' . $users_array[$count]['user_id'] . '<br>';
+
     $count++;
 }
 ?>
