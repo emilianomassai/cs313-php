@@ -17,8 +17,6 @@ session_start();
 
 <body>
     <h1>User search </h1>
-    <p>The users matching the last name you entered are: </p>
-
     <?php
 try
 {
