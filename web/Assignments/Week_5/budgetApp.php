@@ -78,17 +78,20 @@ foreach ($db->query('SELECT amount, user_id, notes, category, date FROM transact
         <table class="table table-bordered">
 
             <tbody>
-                <?php foreach ($users_array as $user): ?>
-                <?php $name = htmlspecialchars($user['display_name']);?>
-                <?php $user_id = htmlspecialchars($user['user_id']);?>
 
 
                 <tr>
                     <form action="users_list.php" method="post">
-                        <input type="radio" name="name_user" value="<?php $user_id?>">
-                        <label for="name_user"><?php echo $name ?> </label><br>
-                        <?php endforeach;?>
-                        <input type="submit" name="submit" />
+                        <select name="name_user">
+                            <option value="">Select an user:</option>
+                            <?php foreach ($users_array as $user): ?>
+                            <?php $name = htmlspecialchars($user['display_name']);?>
+                            <?php $user_id = htmlspecialchars($user['user_id']);?>
+
+                            <option value="<?php $user_id?>"><?php echo $name ?></option>
+                            <br>
+                            <?php endforeach;?>
+                            <input type="submit" name="submit" />
 
                     </form>
 

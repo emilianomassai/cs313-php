@@ -1,7 +1,7 @@
 <?php
 // start session
 session_start();
-$user_id = $_POST['name_user'];
+// $address = $_POST['address'];
 // $first_name = $_POST['first_name'];
 // $last_name = $_POST['last_name'];
 ?>
@@ -20,56 +20,42 @@ $user_id = $_POST['name_user'];
 <body>
 
     <?php
-    try
-    {
-        $dbUrl = getenv('DATABASE_URL');
-    
-        $dbOpts = parse_url($dbUrl);
-    
-        $dbHost = $dbOpts["host"];
-        $dbPort = $dbOpts["port"];
-        $dbUser = $dbOpts["user"];
-        $dbPassword = $dbOpts["pass"];
-        $dbName = ltrim($dbOpts["path"], '/');
-    
-        $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
-    
-        $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    } catch (PDOException $ex) {
-        echo 'Error!: ' . $ex->getMessage();
-        die();
-    }
-    
-    $count = 0;
-    foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budgetUser') as $row) {
-    
-        $users_array[] = [
-            'display_name' => $row['display_name'],
-            'user_name' => $row['user_name'],
-            'user_id' => $row['user_id'],
-            'password' => $row['password'],
-        ];
-        $_SESSION['users'] = $users_array;
-    
-        
-        echo 'Users: ' . $users_array[$count]['display_name'] . ' ';
-        echo 'Users ID: ' . $users_array[$count]['user_id'] . '<br>';
-    
-        $count++;
-    }
-// Check if the form is submitted
-echo '<br>';
-echo '<br>';
-echo 'Prova prova:';
+try
+{
+    $dbUrl = getenv('DATABASE_URL');
 
-if ( isset( $user_id ) ) {
-    $user_id = $_REQUEST['value'];
-    if ($POST_user_id == $users_array[$count]['user_id']){
-        echo 'Users: ' . $users_array[$count]['display_name'] . ' ';
-        echo 'Users ID: ' . $users_array[$count]['user_id'] . '<br>';
-    }
+    $dbOpts = parse_url($dbUrl);
 
+    $dbHost = $dbOpts["host"];
+    $dbPort = $dbOpts["port"];
+    $dbUser = $dbOpts["user"];
+    $dbPassword = $dbOpts["pass"];
+    $dbName = ltrim($dbOpts["path"], '/');
 
+    $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
+
+    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $ex) {
+    echo 'Error!: ' . $ex->getMessage();
+    die();
+}
+
+$count = 0;
+foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budgetUser') as $row) {
+
+    $users_array[] = [
+        'display_name' => $row['display_name'],
+        'user_name' => $row['user_name'],
+        'user_id' => $row['user_id'],
+        'password' => $row['password'],
+    ];
+    $_SESSION['users'] = $users_array;
+
+    echo 'Users: ' . $users_array[$count]['display_name'] . ' ';
+    echo 'Users ID: ' . $users_array[$count]['user_id'] . '<br>';
+
+    $count++;
+}
 ?>
 
 
