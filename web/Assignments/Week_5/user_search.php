@@ -16,8 +16,7 @@ session_start();
 </head>
 
 <body>
-    <h1>User details </h1>
-    <p>The following is the list of all the details of the selected user:</p>
+    <h1>User list </h1>
 
     <?php
 try
@@ -51,7 +50,7 @@ foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budg
 
     if ($_POST["name_user"] == $users_array[$count]['display_name']) {
 
-        echo 'Name: ' . $users_array[$count]['display_name'] . ';';
+        echo 'We found one user in our database corresponding to ' . $users_array[$count]['display_name'] . '.';
 
         echo '<br>';
 
