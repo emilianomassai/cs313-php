@@ -39,30 +39,18 @@ try
 }
 
 $count = 0;
-if (isset($_POST["name_user"])) {
-    echo "Variable 'a' is set.<br>";
 
-    foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budgetUser') as $row) {
+foreach ($db->query('SELECT display_name FROM budgetUser') as $row) {
 
-        $users_array[] = [
-            'display_name' => $row['display_name'],
-            'user_name' => $row['user_name'],
-            'user_id' => $row['user_id'],
-            'password' => $row['password'],
-        ];
-        $_SESSION['users'] = $users_array;
+    if ($_POST["name_user"] == $users_array[$count]['display_name']) {
 
-        if ($_POST["name_user"] == $users_array[$count]['display_name']) {
+        echo 'We have found ' . $users_array[$count]['display_name'] . ' in our database!';
 
-            echo 'We have found ' . $users_array[$count]['display_name'] . ' in our database!';
+        echo '<br>';
 
-            echo '<br>';
-
-        } else {
-            echo 'Sorry, we cant find any user with that name. Please try again!';
-        }
-        $count++;
     }
+
+    $count++;
 }
 ?>
     <br>
