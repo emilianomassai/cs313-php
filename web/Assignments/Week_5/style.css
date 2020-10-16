@@ -19,6 +19,10 @@ body {
   box-shadow: -3px 15px 10px black;
 }
 
+#budgetAppPicture {
+  border-radius: 500px;
+}
+
 h1 {
   color: rgba(255, 255, 255, 0.808);
   font-family: "Helvetica";

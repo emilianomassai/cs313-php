@@ -65,6 +65,10 @@ foreach ($db->query('SELECT amount, user_id, notes, category, date FROM transact
 
 ?>
 
+    <div>
+        <img src="../Home_Page/images/me.jpg" alt="budget App Picture" id="budgetAppPicture " />
+    </div>
+
     <h1>Project Title: Budget App </h1>
     <p>Welcome to this budget app! In this page you can see different ways to retrieve information from our database
         about our users. Please choose one option and read the description for more details:</p>
