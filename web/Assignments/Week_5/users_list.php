@@ -19,8 +19,27 @@ session_start();
 
 <body>
 
-    <h2>List of users:</h2>
     <?php
+try
+{
+    $dbUrl = getenv('DATABASE_URL');
+
+    $dbOpts = parse_url($dbUrl);
+
+    $dbHost = $dbOpts["host"];
+    $dbPort = $dbOpts["port"];
+    $dbUser = $dbOpts["user"];
+    $dbPassword = $dbOpts["pass"];
+    $dbName = ltrim($dbOpts["path"], '/');
+
+    $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
+
+    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $ex) {
+    echo 'Error!: ' . $ex->getMessage();
+    die();
+}
+
 $count = 0;
 foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budgetUser') as $row) {
 
