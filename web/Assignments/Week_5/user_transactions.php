@@ -39,7 +39,6 @@ try
     echo 'Error!: ' . $ex->getMessage();
     die();
 }
-
 $count = 0;
 foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budgetUser') as $row) {
 
@@ -50,22 +49,55 @@ foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budg
         'password' => $row['password'],
     ];
     $_SESSION['users'] = $users_array;
-
-    if ($_POST["user_transaction"] == $users_array[$count]['user_id']) {
-
-        echo 'Name: ' . $users_array[$count]['display_name'] . ';';
-        echo '<br>';
-        echo 'User ID: ' . $users_array[$count]['user_id'] . ';';
-        echo '<br>';
-        echo 'Username: ' . $users_array[$count]['user_name'] . ';';
-        echo '<br>';
-        echo 'Password: ' . $users_array[$count]['password'] . '.';
-        echo '<br>';
-
-    }
     $count++;
 }
+
+$transaction_count = 0;
+
+foreach ($db->query('SELECT amount, user_id, notes, category, date FROM transaction') as $row) {
+    $transactions_array[] = [
+        'amount' => $row['amount'],
+        'user_id' => $row['user_id'],
+        'notes' => $row['notes'],
+        'category' => $row['category'],
+        'date' => $row['date'],
+    ];
+    $_SESSION['transactions'] = $transactions_array;
+    $transaction_count++;
+}
+
 ?>
+
+    <div class="container">
+        <h2>Transactions List:</h2>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Amount</th>
+                    <th>Notes</th>
+                    <th>Category</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <?php foreach ($transactions_array as $transaction): ?>
+                <?php if (($_POST["user_transaction"] == $transactions_array[$transaction_count]['user_id'])) {?>
+                <tr>
+                    <td><?php echo htmlspecialchars($transaction['date']) ?>
+
+                    <td><?php echo htmlspecialchars($transaction['amount']) ?>
+                    </td>
+                    <td><?php echo htmlspecialchars($transaction['notes']) ?>
+                    </td>
+                    <td><?php echo htmlspecialchars($transaction['category']) ?>
+                    </td>
+                    <?php }?>
+                </tr>
+                <?php endforeach;?>
+            </tbody>
+        </table>
+    </div>
     <br>
 
 
