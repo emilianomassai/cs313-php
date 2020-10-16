@@ -67,7 +67,8 @@ foreach ($db->query('SELECT amount, user_id, notes, category, date FROM transact
 ?>
 
     <h1>Project Title: Budget App </h1>
-    <p>Welcome to this budget app! Please read between the different options from the following list:</p>
+    <p>Welcome to this budget app! In this page you can see different ways to retrieve information from our database
+        about our users. Please choose one option and read the description for more details:</p>
     <div class="container">
 
         <!-- A list of all users in the system, each one is a link that leads to a user details page.  -->
