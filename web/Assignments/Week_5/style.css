@@ -20,7 +20,8 @@ body {
 }
 
 #budgetAppPicture {
-  border-radius: 500px;
+  width: 150px;
+  height: 150px;
 }
 
 h1 {

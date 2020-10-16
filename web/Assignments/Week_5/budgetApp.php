@@ -67,8 +67,7 @@ foreach ($db->query('SELECT amount, user_id, notes, category, date FROM transact
 
 ?>
     <div>
-        <img style="width: 50%;" src="../Week_5/BudgetAppImages/budgetAppIcon.png" alt="budget App Picture"
-            id="budgetAppPicture " />
+        <img src="../Week_5/BudgetAppImages/budgetAppIcon.png" alt="budget App Picture" id="budgetAppPicture " />
     </div>
     <h1>Budget Your Life </h1>
 
