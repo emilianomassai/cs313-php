@@ -80,10 +80,12 @@ foreach ($db->query('SELECT amount, user_id, notes, category, date FROM transact
             <tbody>
                 <?php foreach ($users_array as $user): ?>
                 <?php $name = htmlspecialchars($user['display_name']);?>
+                <?php $user_id = htmlspecialchars($user['user_id']);?>
+
 
                 <tr>
                     <form action="user_list.php" method="post">
-                        <input type="radio" name="name_user" value="<?php $name?>">
+                        <input type="radio" name="name_user" value="<?php $user_id?>">
                         <label for="name_user"><?php echo $name ?> </label><br>
                         <?php endforeach;?>
                         <input type="submit" name="submit" />

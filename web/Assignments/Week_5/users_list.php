@@ -1,7 +1,7 @@
 <?php
 // start session
 session_start();
-// $address = $_POST['address'];
+$user_id = $_POST['name_user'];
 // $first_name = $_POST['first_name'];
 // $last_name = $_POST['last_name'];
 ?>
@@ -62,8 +62,8 @@ echo '<br>';
 echo '<br>';
 echo 'Prova prova:';
 
-if ( isset( $_POST['submit'] ) ) {
-    $POST_user_id = $_REQUEST['value'];
+if ( isset( $user_id ) ) {
+    $user_id = $_REQUEST['value'];
     if ($POST_user_id == $users_array[$count]['user_id']){
         echo 'Users: ' . $users_array[$count]['display_name'] . ' ';
         echo 'Users ID: ' . $users_array[$count]['user_id'] . '<br>';
