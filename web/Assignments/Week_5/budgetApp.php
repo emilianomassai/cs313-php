@@ -18,8 +18,6 @@ session_start();
     <!-- heading of the web page -->
 </head>
 
-
-
 <body>
 
     <?php
@@ -150,13 +148,39 @@ foreach ($db->query('SELECT amount, user_id, notes, category, date FROM transact
                 </form>
                 <br>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                 <!-- This will be submitted and handled in the next assignment, but for this week, checkboxes are dynamically created based upon what is in the database.  -->
                 <h2>New user form:</h2>
+
+                <?php $select = $db->query('SELECT * FROM budgetUser');
+$total_column = $select->columnCount();
+var_dump($total_column);
+
+for ($counter = 0; $counter < $total_column; $counter++) {
+    $meta = $select->getColumnMeta($counter);
+    $column[] = $meta['name'];
+}
+print_r($column);
+?>
+
+
                 <form class="userForm" name="userForm" action="#" method="post">
 
                     <h4>Enter all the data for the new user:</h4>
 
-                    Prova:
                     <label for="fname">First name: </label>
                     <input type="text" id="fname" name="fname"><br><br>
                     <div class="bottomBar">
@@ -164,6 +188,18 @@ foreach ($db->query('SELECT amount, user_id, notes, category, date FROM transact
                     </div>
                     </section>
                 </form>
+
+
+
+
+
+
+
+
+
+
+
+
 
                 <br>
 
