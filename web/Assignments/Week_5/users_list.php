@@ -19,25 +19,64 @@ session_start();
 
 <body>
 
-    <h2>List of users:</h2>
-    <?php
+    <div class="container">
 
-// loop through the session array with foreach
-foreach ($_SESSION['users'] as $key => $value) {
-    // and print out the values
-    echo 'The user of $_SESSION[' . "'" . $key . "'" . '] is ' . "'" . $value . "'" . ' <br />';
-}
-?>
+        <h2>List of users:</h2>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>User ID</th>
+                    <th>Name</th>
+                    <th>Username</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php foreach ($_SESSION['users_array'] as $user): ?>
+                <?php $name = htmlspecialchars($user['display_name']);?>
 
-    <h2>List of transactions:</h2>
-    <?php
+                <tr>
+                    <td><?php echo htmlspecialchars($user['user_id']) ?>
+                    </td>
+                    <td><?php echo "<a href='../Week_5/users_list.php'> $name </a>" ?>
+                    </td>
+                    <td><?php echo htmlspecialchars($user['user_name']) ?>
+                    </td>
+                </tr>
+                <?php endforeach;?>
+            </tbody>
+        </table>
+    </div>
 
-// loop through the session array with foreach
-foreach ($_SESSION['transactions'] as $key => $value) {
-    // and print out the values
-    echo 'The transaction of $_SESSION[' . "'" . $key . "'" . '] is ' . "'" . $value . "'" . ' <br />';
-}
-?>
+    <br>
+
+    <div class="container">
+
+        <h2>List of transactions:</h2>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>User ID</th>
+                    <th>Amount</th>
+                    <th>Notes</th>
+                    <th>Category</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php foreach ($_SESSION['transactions_array'] as $transaction): ?>
+                <tr>
+                    <td><?php echo htmlspecialchars($transaction['user_id']) ?>
+                    </td>
+                    <td><?php echo htmlspecialchars($transaction['amount']) ?>
+                    </td>
+                    <td><?php echo htmlspecialchars($transaction['notes']) ?>
+                    </td>
+                    <td><?php echo htmlspecialchars($transaction['category']) ?>
+                    </td>
+                </tr>
+                <?php endforeach;?>
+            </tbody>
+        </table>
+    </div>
 
     <footer>
         <p style="text-align: center;">
