@@ -11,6 +11,7 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="style.css" />
+    <script src="../Week_5/javaScript.js"></script>
 
     <!--Title in the browser title bar.-->
     <title>CS:313 - Week 5</title>
@@ -111,7 +112,8 @@ foreach ($db->query('SELECT amount, user_id, notes, category, date FROM transact
 
         <h4>Please enter the name of the user you are looking for:</h4>
 
-        <input placeholder="e.g.: Emiliano Massai" type="text" name="name_user" id="nameUser">
+        <input placeholder="e.g.: Emiliano Massai" type="text" name="name_user" id="nameUser"
+            onsubmit="return validateForm()">
         <br />
         <div class="bottomBar">
             <button type="submit" name="search" id="searchUser">Search</button>

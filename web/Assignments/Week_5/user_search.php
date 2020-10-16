@@ -64,8 +64,12 @@ foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budg
 
     }
     $count++;
+
 }
+
 ?>
+
+
     <br>
 
 
