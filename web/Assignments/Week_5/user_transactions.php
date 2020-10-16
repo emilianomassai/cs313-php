@@ -94,15 +94,14 @@ foreach ($db->query('SELECT amount, user_id, notes, category, date FROM transact
 
     if (($_POST["user_transaction"] == $transactions_array[$transaction_count]['user_id'])) {?>
                 <tr>
-                    <td><?php echo $transactions_array[$transaction_count]['date'] ?>
-
                     <td><?php echo $transactions_array[$transaction_count]['amount'] ?>
                     </td>
                     <td><?php echo $transactions_array[$transaction_count]['notes'] ?>
                     </td>
                     <td><?php echo $transactions_array[$transaction_count]['category'] ?>
                     </td>
-                    <?php }?>
+                    <td><?php echo $transactions_array[$transaction_count]['date'] ?>
+                        <?php }?>
                 </tr>
                 <?php $transaction_count++;
 }?>
