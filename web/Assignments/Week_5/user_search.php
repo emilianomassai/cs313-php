@@ -40,18 +40,30 @@ try
 
 $count = 0;
 
-foreach ($db->query('SELECT display_name FROM budgetUser') as $row) {
+foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budgetUser') as $row) {
 
-    if ($_POST["name_user"] == $users_array[$count]['display_name']) {
-
-        echo 'We have found ' . $users_array[$count]['display_name'] . ' in our database!';
-
-        echo '<br>';
-
-    }
+    $users_array[] = [
+        'display_name' => $row['display_name'],
+        'user_name' => $row['user_name'],
+        'user_id' => $row['user_id'],
+        'password' => $row['password'],
+    ];
+    $_SESSION['users'] = $users_array;
 
     $count++;
 }
+
+if ($_POST["name_user"] == $users_array[$count]['display_name']) {
+
+    echo 'We have found ' . $users_array[$count]['display_name'] . ' in our database!';
+
+    echo '<br>';
+
+} else {
+    echo "We haven't found anyone with that name in our database. Please try again!";
+
+}
+
 ?>
     <br>
 
