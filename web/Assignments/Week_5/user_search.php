@@ -54,6 +54,8 @@ foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budg
         echo 'We found one user in our database corresponding to ' . $users_array[$count]['display_name'] . '.';
         $isUser = true;
         echo '<br>';
+        echo '<br>';
+        echo '<br>';
 
     }
     $count++;
@@ -62,6 +64,10 @@ foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budg
 
 if ($isUser == false) {
     echo 'No user found in our database. Please try again!';
+    echo '<br>';
+    echo '<br>';
+    echo '<br>';
+
 }
 ?>
 
