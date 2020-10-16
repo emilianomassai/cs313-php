@@ -19,7 +19,8 @@ session_start();
     <h1>User details </h1>
     <p>The following is the list of all the details of the selected user:</p>
 
-    <?php
+    <h3>
+        <?php
 try
 {
     $dbUrl = getenv('DATABASE_URL');
@@ -66,6 +67,7 @@ foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budg
     $count++;
 }
 ?>
+    </h3>
     <br>
 
 
