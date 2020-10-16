@@ -11,7 +11,7 @@ session_start();
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" type="image/ico" href="./BudgetAppImages/budgetAppIcon.png">
     <!--Title in the browser title bar.-->
-    <title>CS:313 - Week 5</title>
+    <title>Budget Your Life</title>
     <!-- heading of the web page -->
 </head>
 
