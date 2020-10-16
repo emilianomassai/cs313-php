@@ -62,7 +62,7 @@ echo 'Prova:';
 echo '<br>';
 
 // Storing Selected User In Variable
-echo 'Welcome ' . $_POST["value"];?><br>
+echo 'Welcome ' . $_POST["name_user"];?><br>
 
 
 

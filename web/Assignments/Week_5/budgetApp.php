@@ -87,7 +87,8 @@ foreach ($db->query('SELECT amount, user_id, notes, category, date FROM transact
                             <?php $name = htmlspecialchars($user['display_name']);?>
                             <?php $user_id = htmlspecialchars($user['user_id']);?>
 
-                            <option value="<?php $user_id?>"><?php echo 'USER ' . $name . ' ID ' . $user_id ?></option>
+                            <option value="<?php echo $user_id ?>"><?php echo 'USER ' . $name . ' ID ' . $user_id ?>
+                            </option>
                             <?php endforeach;?>
                             <br>
                             <br>
