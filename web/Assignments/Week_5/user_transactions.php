@@ -1,10 +1,8 @@
 <?php
 // start session
 session_start();
-?>
 
-<!DOCTYPE html>
-<html lang="en-US">
+?>
 
 <head>
     <meta charset="UTF-8" />
@@ -18,7 +16,8 @@ session_start();
 </head>
 
 <body>
-
+    <h1>User transactions </h1>
+    <p>The following is the list of all the transactions of the selected user:</p>
 
     <?php
 try
@@ -74,34 +73,6 @@ foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budg
         <a href="../Week_5/budgetApp.php" id="budget_app_home_btn_id">
             Go back to the budget app home page
         </a>
-    </div>
-    <h1>. </h1>
-    <div class="container">
-        <h2>Transactions List:</h2>
-        <table class="table table-bordered">
-            <thead>
-                <tr>
-                    <th>User ID</th>
-                    <th>Amount</th>
-                    <th>Notes</th>
-                    <th>Category</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php foreach ($transactions_array as $transaction): ?>
-                <tr>
-                    <td><?php echo htmlspecialchars($transaction['user_id']) ?>
-                    </td>
-                    <td><?php echo htmlspecialchars($transaction['amount']) ?>
-                    </td>
-                    <td><?php echo htmlspecialchars($transaction['notes']) ?>
-                    </td>
-                    <td><?php echo htmlspecialchars($transaction['category']) ?>
-                    </td>
-                </tr>
-                <?php endforeach;?>
-            </tbody>
-        </table>
     </div>
 
     <footer>

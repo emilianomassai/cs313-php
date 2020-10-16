@@ -132,7 +132,7 @@ foreach ($db->query('SELECT amount, user_id, notes, category, date FROM transact
 
 
             <tr>
-                <form action="user_details.php" method="post">
+                <form action="user_transactions.php" method="post">
                     <select name="">
                         <?php foreach ($users_array as $user): ?>
                         <?php $name = htmlspecialchars($user['display_name']);?>
