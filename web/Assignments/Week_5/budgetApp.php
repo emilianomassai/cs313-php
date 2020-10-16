@@ -43,7 +43,7 @@ try
 }
 
 foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budgetUser') as $row) {
-
+    $count = 0;
     $users_array[] = [
         'display_name' => $row['display_name'],
         'user_name' => $row['user_name'],
@@ -51,7 +51,8 @@ foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budg
         'password' => $row['password'],
     ];
     $_SESSION['users'] = $users_array;
-    echo 'USERS ARRAY: ' . $users_array['display_name'];
+    echo 'USERS ARRAY: ' . $users_array[$count]['display_name'];
+    $count++;
 }
 
 foreach ($db->query('SELECT amount, user_id, notes, category, date FROM transaction') as $row) {
