@@ -56,7 +56,7 @@ foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budg
 
     <div class="container">
         <h2>Transactions List:</h2>
-        <table class="table table-bordered">
+        <table border="1" class="table table-bordered">
             <thead>
                 <tr>
                     <th>Date</th>
@@ -68,19 +68,7 @@ foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budg
             </thead>
             <tbody>
 
-                <!-- $transaction_count = 0;
 
-foreach ($db->query('SELECT amount, user_id, notes, category, date FROM transaction') as $row) {
-    $transactions_array[] = [
-        'amount' => $row['amount'],
-        'user_id' => $row['user_id'],
-        'notes' => $row['notes'],
-        'category' => $row['category'],
-        'date' => $row['date'],
-    ];
-    $_SESSION['transactions'] = $transactions_array;
-    $transaction_count++;
-} -->
                 <?php $transaction_count = 0;?>
                 <?php foreach ($db->query('SELECT amount, user_id, notes, category, date FROM transaction') as $row) {
     $transactions_array[] = [
