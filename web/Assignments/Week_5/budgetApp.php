@@ -81,7 +81,7 @@ foreach ($db->query('SELECT amount, user_id, notes, category, date FROM transact
 
 
                 <tr>
-                    <form action="users_list.php" method="post">
+                    <form action="#" method="post">
                         <select name="name_user">
                             <?php foreach ($users_array as $user): ?>
                             <?php $name = htmlspecialchars($user['display_name']);?>
@@ -96,6 +96,10 @@ foreach ($db->query('SELECT amount, user_id, notes, category, date FROM transact
                             <input type="submit" name="submit" />
 
                     </form>
+
+                    <?php
+$name = $_POST['name_user'];
+echo $name;?>
 
 
             </tbody>
