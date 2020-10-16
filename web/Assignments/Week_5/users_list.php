@@ -1,7 +1,8 @@
 <?php
 // start session
 session_start();
-// $address = $_POST['address'];
+
+$post_user_ID = $_POST['name_user'];
 // $first_name = $_POST['first_name'];
 // $last_name = $_POST['last_name'];
 ?>
@@ -55,6 +56,17 @@ foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budg
     echo 'Users ID: ' . $users_array[$count]['user_id'] . '<br>';
 
     $count++;
+}
+echo '<br>';
+echo '<br>';
+echo '<br>';
+
+echo 'Prova:';
+echo '<br>';
+
+if (isset($_POST['submit'])) {
+    $selected_user = $_POST['name_user']; // Storing Selected User In Variable
+    echo "You have selected :" . $selected_user; // Displaying Selected User
 }
 ?>
 
