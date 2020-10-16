@@ -170,15 +170,15 @@ foreach ($db->query('SELECT amount, user_id, notes, category, date FROM transact
                     <h4>Enter all the data for the new user:</h4>
                     <?php $select = $db->query('SELECT * FROM budgetUser');
 $total_column = $select->columnCount();
-var_dump($total_column);
 
 for ($counter = 0; $counter < $total_column; $counter++) {
     $meta = $select->getColumnMeta($counter);
     $column[] = $meta['name'];?>
 
-                    <label for="<?php $column?>"> <?php echo $column[$counter] ?></label>
-                    <input type="text" id="<?php echo $column ?>" name="<?php echo $column ?>">
+                    <label for="<?php echo $column[$counter] ?>"> <?php echo $column[$counter] ?></label>
+                    <input type="text" id="<?php echo $column[$counter] ?>" name="<?php echo $column[$counter] ?>"> <br>
                     <?php }?>
+
 
                     <div class="bottomBar">
                         <button type="submit" name="search" id="searchUser">Add User</button>
