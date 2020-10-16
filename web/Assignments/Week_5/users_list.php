@@ -64,10 +64,9 @@ echo '<br>';
 echo 'Prova:';
 echo '<br>';
 
-if (isset($_POST['submit'])) {
-    $selected_user = $_POST['name_user']; // Storing Selected User In Variable
-    echo "You have selected :" . $selected_user; // Displaying Selected User
-}
+// Storing Selected User In Variable
+echo "You have selected :" . $post_user_ID; // Displaying Selected User
+
 ?>
 
 
