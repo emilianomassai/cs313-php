@@ -81,13 +81,13 @@ foreach ($db->query('SELECT amount, user_id, notes, category, date FROM transact
 
 
                 <tr>
-                    <form action="#" method="post">
+                    <form action="users_list.php" method="post">
                         <select name="name_user">
                             <?php foreach ($users_array as $user): ?>
                             <?php $name = htmlspecialchars($user['display_name']);?>
                             <?php $user_id = htmlspecialchars($user['user_id']);?>
 
-                            <option value="<?php $user_id?>"><?php echo $name ?></option>
+                            <option value="<?php $user_id?>"><?php echo 'USER ' . $name . 'ID ' . $user_id ?></option>
                             <?php endforeach;?>
                             <br>
                             <br>
@@ -96,11 +96,6 @@ foreach ($db->query('SELECT amount, user_id, notes, category, date FROM transact
                             <input type="submit" name="submit" />
 
                     </form>
-
-                    <?php
-$name = $_POST['name_user'];
-echo $name;?>
-
 
             </tbody>
         </table>
