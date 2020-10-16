@@ -52,20 +52,6 @@ foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budg
     $count++;
 }
 
-$transaction_count = 0;
-
-foreach ($db->query('SELECT amount, user_id, notes, category, date FROM transaction') as $row) {
-    $transactions_array[] = [
-        'amount' => $row['amount'],
-        'user_id' => $row['user_id'],
-        'notes' => $row['notes'],
-        'category' => $row['category'],
-        'date' => $row['date'],
-    ];
-    $_SESSION['transactions'] = $transactions_array;
-    $transaction_count++;
-}
-
 ?>
 
     <div class="container">
@@ -81,20 +67,45 @@ foreach ($db->query('SELECT amount, user_id, notes, category, date FROM transact
                 </tr>
             </thead>
             <tbody>
-                <?php foreach ($transactions_array as $transaction): ?>
-                <?php if (($_POST["user_transaction"] == $transactions_array[$transaction_count]['user_id'])) {?>
-                <tr>
-                    <td><?php echo htmlspecialchars($transaction['date']) ?>
 
-                    <td><?php echo htmlspecialchars($transaction['amount']) ?>
+                <!-- $transaction_count = 0;
+
+foreach ($db->query('SELECT amount, user_id, notes, category, date FROM transaction') as $row) {
+    $transactions_array[] = [
+        'amount' => $row['amount'],
+        'user_id' => $row['user_id'],
+        'notes' => $row['notes'],
+        'category' => $row['category'],
+        'date' => $row['date'],
+    ];
+    $_SESSION['transactions'] = $transactions_array;
+    $transaction_count++;
+} -->
+                <?php $transaction_count = 0;?>
+                <?php foreach ($db->query('SELECT amount, user_id, notes, category, date FROM transaction') as $row) {
+    $transactions_array[] = [
+        'amount' => $row['amount'],
+        'user_id' => $row['user_id'],
+        'notes' => $row['notes'],
+        'category' => $row['category'],
+        'date' => $row['date'],
+    ];
+    $_SESSION['transactions'] = $transactions_array;
+
+    if (($_POST["user_transaction"] == $transactions_array[$transaction_count]['user_id'])) {?>
+                <tr>
+                    <td><?php echo $transactions_array[$transaction_count]['date'] ?>
+
+                    <td><?php echo $transactions_array[$transaction_count]['amount'] ?>
                     </td>
-                    <td><?php echo htmlspecialchars($transaction['notes']) ?>
+                    <td><?php echo $transactions_array[$transaction_count]['notes'] ?>
                     </td>
-                    <td><?php echo htmlspecialchars($transaction['category']) ?>
+                    <td><?php echo $transactions_array[$transaction_count]['category'] ?>
                     </td>
                     <?php }?>
                 </tr>
-                <?php endforeach;?>
+                <?php $transaction_count++;
+}?>
             </tbody>
         </table>
     </div>
