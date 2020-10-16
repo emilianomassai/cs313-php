@@ -108,7 +108,7 @@ foreach ($db->query('SELECT amount, user_id, notes, category, date FROM transact
 
     <!-- A simple form that allows for a last name to be entered, then the user list will be shown for all users that match the last name.  -->
     <h2>User search:</h2>
-    <form class="userSearch" name="userSearch" action="../Week_5/user_search.php" method="post"
+    <form class="userSearch" name="userSearch" action="../Week_5/user_search.php" method="post" \
         onsubmit="return validateForm()">
 
         <h4>Please enter the name of the user you are looking for:</h4>
@@ -124,45 +124,69 @@ foreach ($db->query('SELECT amount, user_id, notes, category, date FROM transact
 
     <!-- A view of a single user, showing all the  income, expenses, notes, category of the transaction, date of the transaction etc.  -->
     <h2>User details:</h2>
-    <br>
+    <h4>Choose one user from the database and click the submit button to see all the recorded transactions of the user.
+    </h4>
+    <table class="table table-bordered">
 
-    <!-- This will be submitted and handled in the next assignment, but for this week, checkboxes are dynamically created based upon what is in the database.  -->
-    <h2>New user form:</h2>
-    <br>
+        <tbody>
 
-    <div class="container">
-        <h2>Transactions List:</h2>
-        <table class="table table-bordered">
-            <thead>
-                <tr>
-                    <th>User ID</th>
-                    <th>Amount</th>
-                    <th>Notes</th>
-                    <th>Category</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php foreach ($transactions_array as $transaction): ?>
-                <tr>
-                    <td><?php echo htmlspecialchars($transaction['user_id']) ?>
-                    </td>
-                    <td><?php echo htmlspecialchars($transaction['amount']) ?>
-                    </td>
-                    <td><?php echo htmlspecialchars($transaction['notes']) ?>
-                    </td>
-                    <td><?php echo htmlspecialchars($transaction['category']) ?>
-                    </td>
-                </tr>
-                <?php endforeach;?>
-            </tbody>
-        </table>
-    </div>
 
-    <footer>
-        <p style="text-align: center;">
-            Copyright © 2020 emiDev Inc. All rights reserved.
-        </p>
-    </footer>
+            <tr>
+                <form action="user_details.php" method="post">
+                    <select name="">
+                        <?php foreach ($users_array as $user): ?>
+                        <?php $name = htmlspecialchars($user['display_name']);?>
+                        <?php $user_id = htmlspecialchars($user['user_id']);?>
+
+                        <option value="<?php echo $user_id ?>"><?php echo $name ?>
+                        </option>
+                        <?php endforeach;?>
+                        <br>
+                        <br>
+                        <br>
+
+                        <input type="submit" name="Submit" />
+
+                </form>
+                <br>
+
+                <!-- This will be submitted and handled in the next assignment, but for this week, checkboxes are dynamically created based upon what is in the database.  -->
+                <h2>New user form:</h2>
+                <br>
+
+                <div class="container">
+                    <h2>Transactions List:</h2>
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>User ID</th>
+                                <th>Amount</th>
+                                <th>Notes</th>
+                                <th>Category</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php foreach ($transactions_array as $transaction): ?>
+                            <tr>
+                                <td><?php echo htmlspecialchars($transaction['user_id']) ?>
+                                </td>
+                                <td><?php echo htmlspecialchars($transaction['amount']) ?>
+                                </td>
+                                <td><?php echo htmlspecialchars($transaction['notes']) ?>
+                                </td>
+                                <td><?php echo htmlspecialchars($transaction['category']) ?>
+                                </td>
+                            </tr>
+                            <?php endforeach;?>
+                        </tbody>
+                    </table>
+                </div>
+
+                <footer>
+                    <p style="text-align: center;">
+                        Copyright © 2020 emiDev Inc. All rights reserved.
+                    </p>
+                </footer>
 </body>
 
 </html>
