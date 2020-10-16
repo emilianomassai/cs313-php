@@ -23,9 +23,12 @@ session_start();
     <?php
 
 // loop through the session array with foreach
-foreach ($_SESSION['users'] as $key => $user['display_name']): ?>
-    // and print out the values
-    <?php echo 'The user of $_SESSION[' . "'" . $key . "'" . '] is ' . "'" . htmlspecialchars($user['display_name']); ?>
+foreach ($_SESSION['users'] as $user['display_name']): ?>
+
+    <?php
+// and print out the values
+echo 'The user of $_SESSION
+ is ' . "'" . htmlspecialchars($user['display_name']); ?>
     <?php endforeach;?>
 
 
