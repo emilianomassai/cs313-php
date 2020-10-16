@@ -16,7 +16,7 @@ session_start();
     <script src="../Week_5/javaScript.js"></script>
 
     <!--Title in the browser title bar.-->
-    <title>CS:313 - Week 5</title>
+    <title>Budget Your Life</title>
     <!-- heading of the web page -->
 </head>
 
@@ -67,7 +67,7 @@ foreach ($db->query('SELECT amount, user_id, notes, category, date FROM transact
 
 ?>
 
-    <h1>Project Title: Budget App </h1>
+    <h1>Budget Your Life </h1>
     <div>
         <img src="../Home_Page/images/me.jpg" alt="budget App Picture" id="budgetAppPicture " />
     </div>
