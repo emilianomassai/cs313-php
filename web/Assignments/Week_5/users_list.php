@@ -65,7 +65,7 @@ echo 'Prova:';
 echo '<br>';
 
 // Storing Selected User In Variable
-echo "You have selected :" . $post_user_ID; // Displaying Selected User
+echo $post_user_ID; // Displaying Selected User
 
 ?>
 
