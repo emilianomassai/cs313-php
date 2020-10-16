@@ -44,26 +44,21 @@ $count = 0;
 foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budgetUser') as $row) {
 
     $users_array[] = [
-        'display_name' => $row['display_name'],
-
-    ];
-    $_SESSION['users'] = $users_array;
+        'display_name' => $row['display_name']];
 
     $count++;
+    if ($_POST["name_user"] == $users_array[$count]['display_name']) {
 
-}
+        echo 'Name: ' . $users_array[$count]['display_name'] . ';';
 
-if ($_POST["name_user"] == $users_array[$count]['display_name']) {
+        echo '<br>';
 
-    echo 'Name: ' . $users_array[$count]['display_name'] . ';';
+    } else {
+        echo 'No user found with that name. Try again!';
 
-    echo '<br>';
+        echo '<br>';
 
-} else {
-    echo 'No user found with that name. Try again!';
-
-    echo '<br>';
-
+    }
 }
 
 ?>
