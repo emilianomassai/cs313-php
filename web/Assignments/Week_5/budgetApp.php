@@ -88,14 +88,11 @@ foreach ($db->query('SELECT amount, user_id, notes, category, date FROM transact
                 <?php $name = htmlspecialchars($user['display_name']);?>
 
                 <tr>
-                    <td><?php echo htmlspecialchars($user['user_id']) ?>
-                    </td>
+
                     <td><?php echo "<a href='../Week_5/users_list.php'> $name </a>" ?>
                     </td>
-                    <td><?php echo htmlspecialchars($user['user_name']) ?>
-                    </td>
-                </tr>
-                <?php endforeach;?>
+
+                    <?php endforeach;?>
             </tbody>
         </table>
     </div>
