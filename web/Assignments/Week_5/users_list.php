@@ -1,8 +1,6 @@
 <?php
 // start session
 session_start();
-// Temporarily in $_POST structure.
-$name_user = $_POST['name_user'];
 
 ?>
 
@@ -64,9 +62,8 @@ echo 'Prova:';
 echo '<br>';
 
 // Storing Selected User In Variable
-echo $name_user; // Displaying Selected User
-
-?>
+echo 'Welcome ' . $_POST["name_user"];?><br>
+    ?>
 
 
 
