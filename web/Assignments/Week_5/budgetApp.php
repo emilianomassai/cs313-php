@@ -123,7 +123,7 @@ foreach ($db->query('SELECT amount, user_id, notes, category, date FROM transact
     <br>
 
     <!-- A view of a single user, showing all the  income, expenses, notes, category of the transaction, date of the transaction etc.  -->
-    <h2>User details:</h2>
+    <h2>User transactions:</h2>
     <h4>Choose one user from the database and click the submit button to see all the recorded transactions of the user.
     </h4>
     <table class="table table-bordered">
@@ -133,7 +133,7 @@ foreach ($db->query('SELECT amount, user_id, notes, category, date FROM transact
 
             <tr>
                 <form action="user_transactions.php" method="post">
-                    <select name="">
+                    <select name="user_transaction">
                         <?php foreach ($users_array as $user): ?>
                         <?php $name = htmlspecialchars($user['display_name']);?>
                         <?php $user_id = htmlspecialchars($user['user_id']);?>

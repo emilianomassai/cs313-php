@@ -51,7 +51,7 @@ foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budg
     ];
     $_SESSION['users'] = $users_array;
 
-    if ($_POST["userID"] == $users_array[$count]['user_id']) {
+    if ($_POST["user_transaction"] == $users_array[$count]['user_id']) {
 
         echo 'Name: ' . $users_array[$count]['display_name'] . ';';
         echo '<br>';
