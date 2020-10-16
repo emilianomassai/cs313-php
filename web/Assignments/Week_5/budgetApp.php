@@ -187,7 +187,7 @@ for ($counter = 0; $counter < $total_column; $counter++) {
                 <br>
                 <br>
                 <br>
-                <br>
+                <hr>
 
                 <div>
                     <a href="../Home_Page/assignments.php" id="CS313_assignments_btn_id">
