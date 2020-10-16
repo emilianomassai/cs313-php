@@ -180,6 +180,11 @@ for ($counter = 0; $counter < $total_column; $counter++) {
 
                 <br>
 
+                <div>
+                    <a href="../Home_Page/assignments.php" id="CS313_assignments_btn_id">
+                        Go to the CS313 Assignment's page
+                    </a>
+                </div>
 
                 <footer>
                     <p style="text-align: center;">
