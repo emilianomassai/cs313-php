@@ -51,7 +51,7 @@ foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budg
         'password' => $row['password'],
     ];
     $_SESSION['users'] = $users_array;
-
+    echo 'USERS ARRAY: ' . $users_array[display_name];
 }
 
 foreach ($db->query('SELECT amount, user_id, notes, category, date FROM transaction') as $row) {
@@ -62,7 +62,6 @@ foreach ($db->query('SELECT amount, user_id, notes, category, date FROM transact
         'category' => $row['category'],
     ];
     $_SESSION['transactions'] = $transactions_array;
-
 }
 
 ?>
