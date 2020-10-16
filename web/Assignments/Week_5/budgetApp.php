@@ -44,27 +44,26 @@ try
 
 foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budgetUser') as $row) {
 
-    $users[] = [
+    $users_array[] = [
         'display_name' => $row['display_name'],
         'user_name' => $row['user_name'],
         'user_id' => $row['user_id'],
         'password' => $row['password'],
     ];
+    $_SESSION['users'] = $users_array;
 
 }
 
 foreach ($db->query('SELECT amount, user_id, notes, category, date FROM transaction') as $row) {
-    $transactions[] = [
+    $transactions_array[] = [
         'amount' => $row['amount'],
         'user_id' => $row['user_id'],
         'notes' => $row['notes'],
         'category' => $row['category'],
     ];
+    $_SESSION['transactions'] = $transactions_array;
 
 }
-
-$_SESSION['users'] = $users_array;
-$_SESSION['transactions'] = $transactions_array;
 
 ?>
 
@@ -85,7 +84,7 @@ $_SESSION['transactions'] = $transactions_array;
                 </tr>
             </thead>
             <tbody>
-                <?php foreach ($users as $user): ?>
+                <?php foreach ($users_array as $user): ?>
                 <?php $name = htmlspecialchars($user['display_name']);?>
 
                 <tr>
@@ -140,7 +139,7 @@ $_SESSION['transactions'] = $transactions_array;
                 </tr>
             </thead>
             <tbody>
-                <?php foreach ($transactions as $transaction): ?>
+                <?php foreach ($transactions_array as $transaction): ?>
                 <tr>
                     <td><?php echo htmlspecialchars($transaction['user_id']) ?>
                     </td>
