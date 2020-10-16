@@ -16,7 +16,9 @@ session_start();
 </head>
 
 <body>
-    <h1>User search </h1>
+    <h1>User details </h1>
+    <p>The following is the list of all the details of the selected user:</p>
+
     <?php
 try
 {
@@ -39,7 +41,6 @@ try
 }
 
 $count = 0;
-
 foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budgetUser') as $row) {
 
     $users_array[] = [
@@ -50,20 +51,20 @@ foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budg
     ];
     $_SESSION['users'] = $users_array;
 
+    if ($_POST["name_user"] == $users_array[$count]['display_name']) {
+
+        echo 'Name: ' . $users_array[$count]['display_name'] . ';';
+        echo '<br>';
+        echo 'User ID: ' . $users_array[$count]['user_id'] . ';';
+        echo '<br>';
+        echo 'Username: ' . $users_array[$count]['user_name'] . ';';
+        echo '<br>';
+        echo 'Password: ' . $users_array[$count]['password'] . '.';
+        echo '<br>';
+
+    }
     $count++;
 }
-
-if ($_POST["name_user"] == $users_array[$count]['display_name']) {
-
-    echo 'We have found ' . $users_array[$count]['display_name'] . ' in our database!';
-
-    echo '<br>';
-
-} else {
-    echo "We haven't found anyone with that name in our database. Please try again!";
-
-}
-
 ?>
     <br>
 
