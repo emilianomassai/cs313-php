@@ -165,38 +165,25 @@ foreach ($db->query('SELECT amount, user_id, notes, category, date FROM transact
                 <!-- This will be submitted and handled in the next assignment, but for this week, checkboxes are dynamically created based upon what is in the database.  -->
                 <h2>New user form:</h2>
 
-                <?php $select = $db->query('SELECT * FROM budgetUser');
+                <form class="userForm" name="userForm" action="#" method="post">
+
+                    <h4>Enter all the data for the new user:</h4>
+                    <?php $select = $db->query('SELECT * FROM budgetUser');
 $total_column = $select->columnCount();
 var_dump($total_column);
 
 for ($counter = 0; $counter < $total_column; $counter++) {
     $meta = $select->getColumnMeta($counter);
-    $column[] = $meta['name'];
-}
-print_r($column);
-?>
+    $column[] = $meta['name'];?>
 
+                    <label for="<?php $column?>"> <?php echo $column ?></label>
+                    <input type="text" id="<?php echo $column ?>" name="<?php echo $column ?>">
+                    <?php }?>
 
-                <form class="userForm" name="userForm" action="#" method="post">
-
-                    <h4>Enter all the data for the new user:</h4>
-
-                    <label for="fname">First name: </label>
-                    <input type="text" id="fname" name="fname"><br><br>
                     <div class="bottomBar">
                         <button type="submit" name="search" id="searchUser">Add User</button>
                     </div>
-                    </section>
                 </form>
-
-
-
-
-
-
-
-
-
 
 
 
