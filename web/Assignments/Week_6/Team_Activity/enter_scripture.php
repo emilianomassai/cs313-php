@@ -34,7 +34,7 @@ if (isset($_POST['s'])) {
 
     </form>
     <div>
-        <a href="../web/Assignments/Home_Page/assignments.php" id="CS313_assignments_btn_id">
+        <a href="../../Home_Page/assignments.php" id="CS313_assignments_btn_id">
             Go to the CS313 Assignment's page
         </a>
     </div>
