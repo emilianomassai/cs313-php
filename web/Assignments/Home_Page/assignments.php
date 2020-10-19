@@ -43,6 +43,12 @@ header("refresh: 30;");
     <a href="../Week_5/budgetApp.php" id="Budget_App_btn_id">
         Week 5: BETA: Budget App
     </a>
+
+    </a>
+    <a href="../Week_6/Team_Activity/enter_scripture.php" id="enterScriptures_btn_id">
+        Week 6: Team activity - Enter a scripture
+    </a>
+
     <br>
     <div>
         <a href="../Home_Page/Emiliano_Home_Page.php" id="Emiliano_Home_Page_btn_id">
