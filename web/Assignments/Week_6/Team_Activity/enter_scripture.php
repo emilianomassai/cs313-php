@@ -10,8 +10,31 @@
 
 <body>
 
+    <form action="" method="post">
+        Book:
+        <input type=text name="Book">
+        <br>
+        Chapter:
+        <input type=text name="Chapter">
+        <br>
+        Verse:
+        <input type=text name="Verse">
+        <br>
+        Content:
+        <input type=text name="Verse">
+        <br>
+        <br>
+        <input type=submit name="Add S">
+        <?php
+if (isset($_POST['s'])) {
+    $a = $_POST['t1']; //accessing value from the text field
+    echo "The name of the person is:-" . $a; //displaying result
+}
+?>
+
+    </form>
     <div>
-        <a href="../Home_Page/assignments.php" id="CS313_assignments_btn_id">
+        <a href="../../Home_Page/assignments.php" id="CS313_assignments_btn_id">
             Go to the CS313 Assignment's page
         </a>
     </div>
