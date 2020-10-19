@@ -22,7 +22,7 @@
         <br>
         Content:
         <br>
-        <textarea type=textarea name="Content" rows="4" cols="50">
+        <textarea type=text name="Content" rows="4" cols="50"></textarea>
         <br>
         <br>
         <input type=submit name="Add S">
