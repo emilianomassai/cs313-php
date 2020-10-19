@@ -21,7 +21,7 @@
         <input type=text name="Verse">
         <br>
         Content:
-        <input type=text name="Verse">
+        <input type=textarea name="Verse" rows="4" cols="50">
         <br>
         <br>
         <input type=submit name="Add S">
