@@ -50,3 +50,8 @@ CREATE TABLE scriptures_topic_link (
         scriptures_id INT NOT NULL REFERENCES scriptures (scriptures_id),
         topic_id INT NOT NULL REFERENCES topic (topic_id)
 );
+-- Create a user that can access this table
+CREATE USER ta_user WITH PASSWORD 'ta_pass';
+GRANT SELECT,
+        INSERT,
+        UPDATE ON scriptures TO ta_user;

@@ -10,22 +10,23 @@
 
 <body>
 
-    <form action="" method="post">
-        Book:
-        <input type=text name="Book">
-        <br>
-        Chapter:
-        <input type=text name="Chapter">
-        <br>
-        Verse:
-        <input type=text name="Verse">
-        <br>
-        Content:
-        <br>
-        <textarea type=text name="Content" rows="4" cols="50"></textarea>
-        <br>
-        <br>
-        <input type=submit name="Add S">
+    <form action="insertTopic.php" method="post">
+        <input type="text" id="txtBook" name="txtBook"></input>
+        <label for="txtBooK">Book</label>
+        <br /><br />
+
+        <input type="text" id="txtChapter" name="txtChapter"></input>
+        <label for="txtChapter">Chapter</label>
+        <br /><br />
+
+        <input type="text" id="txtVerse" name="txtVerse"></input>
+        <label for="txtVerse">Verse</label>
+        <br /><br />
+
+        <label for="txtContent">Content:</label><br />
+        <textarea id="txtContent" name="txtContent" rows="4" cols="50"></textarea>
+        <br /><br />
+
         <?php
 if (isset($_POST['s'])) {
     $a = $_POST['t1']; //accessing value from the text field
