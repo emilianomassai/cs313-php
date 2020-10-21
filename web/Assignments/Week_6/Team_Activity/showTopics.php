@@ -37,7 +37,7 @@ try
     //    . ' INNER JOIN topic t ON st.topicId = t.id');
 
     // prepare the statement
-    $statement = $db->prepare('SELECT id, book, chapter, verse, content FROM scripture');
+    $statement = $db->prepare('SELECT scriptures_id, book, chapter, verse, content FROM scripture');
     $statement->execute();
 
     // Go through each result

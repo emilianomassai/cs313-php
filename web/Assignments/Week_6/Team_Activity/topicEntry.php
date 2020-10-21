@@ -61,23 +61,23 @@ try
     // to only bring back the fields that you need.
 
     // prepare the statement
-    $statement = $db->prepare('SELECT id, name FROM topic');
+    $statement = $db->prepare('SELECT topic_id, name FROM topic');
     $statement->execute();
 
     // Go through each result
     while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-        $id = $row['id'];
+        $topic_id = $row['topic_id'];
         $name = $row['name'];
 
         // Notice that we want the value of the checkbox to be the id of the label
-        echo "<input type='checkbox' name='chkTopics[]' id='chkTopics$id' value='$id'>";
+        echo "<input type='checkbox' name='chkTopics[]' id='chkTopics$topic_id' value='$topic_id'>";
 
         // Also, so they can click on the label, and have it select the checkbox,
         // we need to use a label tag, and have it point to the id of the input element.
         // The trick here is that we need a unique id for each one. In this case,
         // we use "chkTopics" followed by the id, so that it becomes something like
         // "chkTopics1" and "chkTopics2", etc.
-        echo "<label for='chkTopics$id'>$name</label><br />";
+        echo "<label for='chkTopics$topic_id'>$name</label><br />";
 
         // put a newline out there just to make our "view source" experience better
         echo "\n";
