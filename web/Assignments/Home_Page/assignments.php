@@ -45,8 +45,8 @@ header("refresh: 30;");
     </a>
 
     </a>
-    <a href="../Week_6/Team_Activity/enter_scripture.php" id="enterScriptures_btn_id">
-        Week 6: Team activity - Enter a scripture
+    <a href="../Week_6/Team_Activity/topicEntry.php" id="enterScriptures_btn_id">
+        Week 6: Team activity - Topic Entry
     </a>
 
     <br>
