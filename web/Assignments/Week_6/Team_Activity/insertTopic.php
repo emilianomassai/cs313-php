@@ -50,18 +50,18 @@ try
     $statement->execute();
 
     // get the new id
-    $scriptures_id = $db->lastInsertId("scripture_id_seq");
+    // $scriptures_id = $db->lastInsertId("scripture_id_seq");
 
     // Now go through each topic id in the list from the user's checkboxes
     foreach ($topic_ids as $topic_id) {
-        echo "ScriptureId: $scriptures_id, topicId: $topic_id";
+        // echo "ScriptureId: $scriptures_id, topicId: $topic_id";
 
         // Again, first prepare the statement
         $statement = $db->prepare('INSERT INTO scripture_topic(scriptures_id, topic_id) VALUES(:scriptures_id, :topic_id)');
 
         // Then, bind the values
-        $statement->bindValue(':scriptureId', $scriptures_id);
-        $statement->bindValue(':topicId', $topic_id);
+        // $statement->bindValue(':scriptureId', $scriptures_id);
+        // $statement->bindValue(':topicId', $topic_id);
 
         $statement->execute();
     }
