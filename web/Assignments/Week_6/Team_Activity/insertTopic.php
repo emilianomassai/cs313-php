@@ -50,7 +50,7 @@ try
     $statement->execute();
 
     // get the new id
-    // $scriptures_id = $db->lastInsertId("scripture_id_seq");
+    $scriptures_id = $db->lastInsertId("scripture_id_seq");
 
     // Now go through each topic id in the list from the user's checkboxes
     foreach ($topic_ids as $topic_id) {
