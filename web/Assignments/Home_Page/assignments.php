@@ -49,6 +49,11 @@ header("refresh: 30;");
         Week 6: Team activity - Topic Entry
     </a>
 
+    </a>
+    <a href="../Week_6/Project_Budget_your_life/budgetApp.php" id="enterScriptures_btn_id">
+        Week 6: Team activity - Topic Entry
+    </a>
+
     <br>
     <div>
         <a href="../Home_Page/Emiliano_Home_Page.php" id="Emiliano_Home_Page_btn_id">
