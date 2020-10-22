@@ -41,7 +41,7 @@ header("refresh: 30;");
         Week 3: Shopping Cart
     </a>
     <a href="../Week_5/budgetApp.php" id="Budget_App_btn_id">
-        Week 5: BETA: Budget App
+        Week 5: Budget Your Life - BETA 1.0 Project
     </a>
 
     </a>
@@ -51,7 +51,7 @@ header("refresh: 30;");
 
     </a>
     <a href="../Week_6/Project_Budget_your_life/budgetApp.php" id="enterScriptures_btn_id">
-        Week 6: Team activity - Topic Entry
+        Week 6: Budget Your Life - BETA 2.0 Project
     </a>
 
     <br>
