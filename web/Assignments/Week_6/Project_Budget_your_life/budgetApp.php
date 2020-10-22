@@ -171,7 +171,7 @@ foreach ($db->query('SELECT amount, user_id, notes, category, date FROM transact
 
 // here I mixed php scripts into HTML to get dynamic names for the input fields. The names are created based upon what is the name of each column in my database.
 
-$select = $db->query('SELECT * FROM budgetUser');
+$select = $db->query('SELECT display_name, user_name, password FROM budgetUser');
 $total_column = $select->columnCount();
 for ($counter = 0; $counter < $total_column; $counter++) {
     $meta = $select->getColumnMeta($counter);
