@@ -40,7 +40,7 @@ header("refresh: 30;");
     <a href="../Week_3/Shopping_cart/Browse_Items.php" id="Shopping_cart_btn_id">
         Week 3: Shopping Cart
     </a>
-    <a href="../Week_5/budgetApp.php" id="Budget_App_btn_id">
+    <a href="../Week_5/budgetApp.php" id="Budget_App_1.0_btn_id">
         Week 5: Budget Your Life - BETA 1.0 Project
     </a>
 
@@ -50,7 +50,8 @@ header("refresh: 30;");
     </a>
 
     </a>
-    <a href="../Week_6/Project_Budget_your_life/budgetApp.php" id="enterScriptures_btn_id">
+    /Assignments/Week_6/Team_Activity/topicEntry.php
+    <a href="/web/Assignments/Week_6/Project_Budget_your_life/budgetApp.php" id="Budget_App_2.0_btn_id">
         Week 6: Budget Your Life - BETA 2.0 Project
     </a>
 
