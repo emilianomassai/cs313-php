@@ -81,7 +81,7 @@ foreach ($db->query('SELECT amount, user_id, notes, category, date FROM transact
 
 
                 <tr>
-                    <form action="add_transaction.php" method="post">
+                    <form action="create_transaction.php" method="post">
                         <!-- <form action="users_list.php" method="post"> -->
                         <select name="userID">
                             <?php foreach ($users_array as $user): ?>
