@@ -182,7 +182,7 @@ for ($counter = 0; $counter < $total_column; $counter++) {
                     <br>
 
                     <div class="bottomBar">
-                        <button type="submit" name="search" id="searchUser">Add User</button>
+                        <button type="submit" name="Add User" id="addUser">Add User</button>
                     </div>
                 </form>
 
