@@ -60,13 +60,18 @@ foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budg
     // category
     // date (try to add dynamic date with PHP)
 
-    if ($_POST["userID"] == $users_array[$count]['user_id']) {?>
+    if ($_POST["userID"] == $users_array[$count]['user_id']) {
+        $_SESSION['actual_user_id_name'] = $actual_user_id_value;
+        ?>
+
+
 
     <h1>Ready to add a transaction, <?php echo $users_array[$count]['display_name'] ?>?</h1>
     <p>Please add all the following details:</p>
 
     <!-- use POST to link the current user to the new transaction and add it to the database -->
     <form action="add_transaction.php">
+
         Amount: <input type="text" name="input_amount">
         Notes: <input type="text" name="input_notes">
         Category: <select name="category">
