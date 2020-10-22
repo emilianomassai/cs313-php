@@ -92,7 +92,9 @@ foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budg
         </select>
         Date: <input type="text" name="input_date">
 
-        <button type="submit" name="Add Transaction">
+        <div class="bottomBar">
+            <button type="submit" name="Add Transaction" id="addUser">Add Transaction</button>
+        </div>
     </form>
 
     <h3>Thank you <?php echo $users_array[$count]['display_name'] ?>, your transaction will be recorded.</h3>
