@@ -66,7 +66,7 @@ foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budg
     <p>Please add all the following details:</p>
 
     <!-- use POST to link the current user to the new transaction and add it to the database -->
-    <form action="<?php echo $_SERVER['PHP_SELF']; ?>">
+    <form action="add_transaction.php">
         Amount: <input type="text" name="input_amount">
         Notes: <input type="text" name="input_notes">
         Category: <select name="category">
@@ -91,8 +91,7 @@ foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budg
     </form>
 
 
-    <h3>Thank you <?php echo $users_array[$count]['display_name'] ?>, your transaction will be recorded.
-        <?php echo $users_array[$count]['user_id'] ?></h3>
+    <h3>Thank you <?php echo $users_array[$count]['display_name'] ?>, your transaction will be recorded.</h3>
 
     <?php
 
