@@ -50,10 +50,10 @@ try
 
         // get the topics now for this scripture
         $stmtTopics = $db->prepare('SELECT name FROM topic t'
-            . ' INNER JOIN scriptures_topic_link st ON st.scriptures_topic_link = t.topic_id'
+            . ' INNER JOIN scriptures_topic_link st ON st.topic_id = t.topic_id'
             . ' WHERE st.scriptures_id = :scriptures_id');
 
-        $stmtTopics->bindValue(':scriptures_id', $row['topic_id']);
+        $stmtTopics->bindValue(':scriptures_id', $row['scriptures_id']);
         $stmtTopics->execute();
 
         // Go through each topic in the result
