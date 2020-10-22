@@ -76,14 +76,14 @@ if ($isUser == false) {
 
 
     <div>
-        <a href="../Week_5/budgetApp.php" id="budget_app_home_btn_id">
-            Go back to the budget app home page
+        <a href="../../Home_Page/assignments.php" id="CS313_assignments_btn_id">
+            Go to the CS313 Assignment's page
         </a>
     </div>
 
     <footer>
         <p style="text-align: center;">
-            Copyright © 2020 emiDev Inc. All rights reserved.
+            Copyright © <?php echo $today = date("Y"); ?> emiDev Inc. All rights reserved.
         </p>
     </footer>
 </body>
