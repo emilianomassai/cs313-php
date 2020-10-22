@@ -71,7 +71,7 @@ foreach ($db->query('SELECT amount, user_id, notes, category, date FROM transact
         about our users. Please choose one option and read the description for more details:</p>
     <div class="container">
 
-        <!-- A list of all users in the system, each one is a link that leads to a user details page.  -->
+        <!-- A list of all users in the database, each one is a link that leads to a user details page.  -->
 
         <h2>User List</h2>
         <h4>Choose one user from the database and click the submit button to see more details about him or her.</h4>
@@ -81,7 +81,8 @@ foreach ($db->query('SELECT amount, user_id, notes, category, date FROM transact
 
 
                 <tr>
-                    <form action="users_list.php" method="post">
+                    <form action="add_transaction.php" method="post">
+                        <!-- <form action="users_list.php" method="post"> -->
                         <select name="userID">
                             <?php foreach ($users_array as $user): ?>
                             <?php $name = htmlspecialchars($user['display_name']);?>
@@ -94,7 +95,7 @@ foreach ($db->query('SELECT amount, user_id, notes, category, date FROM transact
                             <br>
                             <br>
 
-                            <input type="submit" name="Submit" />
+                            <input type="submit" name="Add transaction" />
 
                     </form>
 

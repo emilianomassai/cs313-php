@@ -7,7 +7,6 @@
  *   This file enters a new user into the database
  *   along with its associated full name, username and password.
  *
- *   This file does NOT do any rendering at all.
  ***********************************************************/
 
 // get data from the POST of budgetApp.php new user form
