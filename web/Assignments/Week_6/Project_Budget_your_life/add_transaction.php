@@ -87,10 +87,10 @@ $actualUserId = $users_array[$count]['user_id'];
 // Now we bind the values to the placeholders. This does some nice things
         // including sanitizing the input with regard to sql commands.
         $statement->bindValue(':user_id', $actualUserId);
-        $statement->bindValue(':amount', $amount);
-        $statement->bindValue(':notes', $notes);
-        $statement->bindValue(':category', $category);
-        $statement->bindValue(':date', $date);
+        $statement->bindValue(':amount', '200');
+        $statement->bindValue(':notes', 'prova');
+        $statement->bindValue(':category', 'food');
+        $statement->bindValue(':date', '2019-10-31');
 
         $statement->execute();
 
