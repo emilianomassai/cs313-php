@@ -14,6 +14,7 @@ session_start();
 require "../Project_Budget_your_life/connectAppDB.php";
 $db = get_db();
 
+$count = 0;
 foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budgetUser') as $row) {
 
     $users_array[] = [
