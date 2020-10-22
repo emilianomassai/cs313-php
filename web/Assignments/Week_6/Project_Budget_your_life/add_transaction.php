@@ -13,15 +13,37 @@
 session_start();
 require "../Project_Budget_your_life/connectAppDB.php";
 $db = get_db();
-// get data from the POST of budgetApp.php new user form
-// used to display a customized message
-$display_name = $_POST['display_name'];
-// used to link the transaction to the correct user
-$user_id = $_POST['user_id'];
-// STRETCH CHALLENGE - used to add the transaction only if the user enter a correct password
-$password = $_POST['password'];
-?>
 
+foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budgetUser') as $row) {
+
+    $users_array[] = [
+        // used to display a customized message
+        'display_name' => $row['display_name'],
+        'user_name' => $row['user_name'],
+        // used to link the transaction to the correct user
+
+        'user_id' => $row['user_id'],
+        // STRETCH CHALLENGE - used to add the transaction only if the user enter a correct password
+
+        'password' => $row['password'],
+    ];
+    $_SESSION['users'] = $users_array;
+
+    if ($_POST["userID"] == $users_array[$count]['user_id']) {
+
+        echo 'Name: ' . $users_array[$count]['display_name'] . ';';
+        echo '<br>';
+        echo 'User ID: ' . $users_array[$count]['user_id'] . ';';
+        echo '<br>';
+        echo 'Username: ' . $users_array[$count]['user_name'] . ';';
+        echo '<br>';
+        echo 'Password: ' . $users_array[$count]['password'] . '.';
+        echo '<br>';
+
+    }
+    $count++;
+}
+?>
 
 <head>
     <meta charset="UTF-8" />
