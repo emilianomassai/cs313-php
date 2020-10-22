@@ -76,8 +76,8 @@ if ($isUser == false) {
 
 
     <div>
-        <a href="../../Home_Page/assignments.php" id="CS313_assignments_btn_id">
-            Go to the CS313 Assignment's page
+        <a href="../Project_Budget_your_life/budgetApp.php" id="CS313_assignments_btn_id">
+            Go back to the App Homepage
         </a>
     </div>
 
