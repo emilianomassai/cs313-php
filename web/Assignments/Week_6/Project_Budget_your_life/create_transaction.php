@@ -84,9 +84,10 @@ foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budg
             <option value="Education">Education</option>
             <option value="Pets">Pets</option>
             <option value="Health">Health</option>
-            Date: <input type="text" name="input_date">
+        </select>
+        Date: <input type="text" name="input_date">
 
-            <input type="submit" name="Add Transaction">
+        <input type="submit" name="Add Transaction">
     </form>
 
 
