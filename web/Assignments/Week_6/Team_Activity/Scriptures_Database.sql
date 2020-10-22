@@ -46,7 +46,7 @@ VALUES ('Faith'),
 -- Create another table to link scriptures to topics. (This is a many-to-many relationship, so it requires another table for the linking). Make sure to include foreign keys constraints.
 --  The following table has only one purpose, and that is to create a "Many to Many" relationship between a scripture and its topic.
 CREATE TABLE scriptures_topic_link (
-        scriptures_topic_link SERIAL PRIMARY KEY,
+        scriptures_topic_link_id SERIAL PRIMARY KEY,
         scriptures_id INT NOT NULL REFERENCES scriptures (scriptures_id),
         topic_id INT NOT NULL REFERENCES topic (topic_id)
 );
