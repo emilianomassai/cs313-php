@@ -203,7 +203,7 @@ for ($counter = 0; $counter < $total_column; $counter++) {
 
                 <footer>
                     <p style="text-align: center;">
-                        Copyright © 2020 emiDev Inc. All rights reserved.
+                        Copyright © <?php echo $today = date("Y"); ?> emiDev Inc. All rights reserved.
                     </p>
                 </footer>
 </body>

@@ -57,7 +57,7 @@ header("refresh: 30;");
     </div>
     <!-- footer of the web page -->
 
-    <footer>Copyright © <?php echo $today = date(" Y"); ?> emiDev Inc. All rights reserved.</footer>
+    <footer>Copyright © <?php echo $today = date("Y"); ?> emiDev Inc. All rights reserved.</footer>
 </body>
 
 </html>
