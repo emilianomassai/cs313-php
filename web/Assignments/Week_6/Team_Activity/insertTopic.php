@@ -50,6 +50,7 @@ try
     $statement->execute();
 
     // get the new id
+    // the lastInsertId method needs the 'table_name' + 'column_name' + 'seq' to work!
     $scriptures_id = $db->lastInsertId("scriptures_scriptures_id_seq");
 
     // Now go through each topic id in the list from the user's checkboxes
