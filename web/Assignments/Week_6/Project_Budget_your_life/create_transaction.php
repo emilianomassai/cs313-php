@@ -60,9 +60,7 @@ foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budg
     // category
     // date (try to add dynamic date with PHP)
 
-    if ($_POST["userID"] == $users_array[$count]['user_id']) {
-        $_SESSION['actual_user_id_name'] = $actual_user_id_value;
-        ?>
+    if ($_POST["userID"] == $users_array[$count]['user_id']) {?>
 
 
 
@@ -71,6 +69,7 @@ foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budg
 
     <!-- use POST to link the current user to the new transaction and add it to the database -->
     <form action="add_transaction.php">
+        <input type="hidden" name="actual_user_id" value="<?php $users_array[$count]['user_id']?>">
 
         Amount: <input type="text" name="input_amount">
         Notes: <input type="text" name="input_notes">
@@ -96,47 +95,7 @@ foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budg
     </form>
 
 
-    <h3>Thank you <?php echo $users_array[$count]['display_name'] ?>, your transaction will be recorded.</h3>
 
-    <?php
-
-        $actualUserId = $users_array[$count]['user_id'];
-        $category = $_POST['category'];
-        $amount = $_POST['input_amount'];
-        $notes = $_POST['input_notes'];
-        $date = $_POST['input_date'];
-
-        echo 'User ID: ' . $actualUserId . ';';
-        echo 'category: ' . $category . ';';
-        echo 'amount: ' . $amount . ';';
-        echo 'notes: ' . $notes . ';';
-        echo 'date: ' . $date . ';';
-
-// echo 'Name: ' . $users_array[$count]['display_name'] . ';';
-        // echo '<br>';
-        // echo 'User ID: ' . $users_array[$count]['user_id'] . ';';
-        // echo '<br>';
-        // echo 'Username: ' . $users_array[$count]['user_name'] . ';';
-        // echo '<br>';
-        // echo 'Password: ' . $users_array[$count]['password'] . '.';
-        // echo '<br>';
-        $query = 'INSERT INTO public.transaction(user_id, amount, notes, category, date) VALUES(:user_id, :amount, :notes, :category, :date)';
-        $statement = $db->prepare($query);
-
-// Now we bind the values to the placeholders. This does some nice things
-        // including sanitizing the input with regard to sql commands.
-        $statement->bindValue(':user_id', $actualUserId);
-        $statement->bindValue(':amount', $amount);
-        $statement->bindValue(':notes', $notes);
-        $statement->bindValue(':category', $category);
-        $statement->bindValue(':date', $date);
-
-        $statement->execute();
-
-    }
-    $count++;
-}
-?>
 
 
 
@@ -154,56 +113,3 @@ foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budg
 </body>
 
 </html>
-
-
-<?php
-// require "../Project_Budget_your_life/connectAppDB.php";
-// $db = get_db();
-// try
-// {
-//     // Add the user
-
-//     // We do this by preparing the query with placeholder values
-//     $query = 'INSERT INTO public.budgetUser(display_name, user_name, password) VALUES(:display_name, :user_name, :password)';
-//     $statement = $db->prepare($query);
-
-//     // Now we bind the values to the placeholders. This does some nice things
-//     // including sanitizing the input with regard to sql commands.
-//     $statement->bindValue(':display_name', $display_name);
-//     $statement->bindValue(':user_name', $user_name);
-//     $statement->bindValue(':password', $password);
-
-//     $statement->execute();
-
-//     // // get the new id
-//     // $scriptureId = $db->lastInsertId("public.budgetUser_user_id_seq");
-
-//     // // Now go through each topic id in the list from the user's checkboxes
-//     // foreach ($topicIds as $topicId) {
-//     //     echo "ScriptureId: $scriptureId, topicId: $topicId";
-
-//     //     // Again, first prepare the statement
-//     //     $statement = $db->prepare('INSERT INTO scripture_topic(scriptureId, topicId) VALUES(:scriptureId, :topicId)');
-
-//     //     // Then, bind the values
-//     //     $statement->bindValue(':scriptureId', $scriptureId);
-//     //     $statement->bindValue(':topicId', $topicId);
-
-//     //     $statement->execute();
-//     // }
-// } catch (Exception $ex) {
-//     // Please be aware that you don't want to output the Exception message in
-//     // a production environment
-//     echo "Error with DB. Details: $ex";
-//     die();
-// }
-
-// // finally, redirect them to a new page to actually show the topics
-// // header("Location: showTopics.php");
-
-// die(); // we always include a die after redirects. In this case, there would be no
-// // harm if the user got the rest of the page, because there is nothing else
-// // but in general, there could be things after here that we don't want them
-// // to see.
-
-?>
