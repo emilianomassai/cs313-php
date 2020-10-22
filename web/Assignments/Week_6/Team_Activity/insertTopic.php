@@ -58,11 +58,11 @@ try
         echo "ScriptureId: $scriptures_id, topicId: $topic_id";
 
         // Again, first prepare the statement
-        $statement = $db->prepare('INSERT INTO scriptures_topic_link(scriptures_id, topic_id) VALUES(scriptures.scriptures_id, topic.topic_id)');
+        $statement = $db->prepare('INSERT INTO scriptures_topic_link(scriptures_id, topic_id) VALUES(:scriptures_id, :topic_id)');
 
         // Then, bind the values
-        $statement->bindValue(':scriptureId', $scriptures_id);
-        $statement->bindValue(':topicId', $topic_id);
+        $statement->bindValue(':scriptures_id', $scriptures_id);
+        $statement->bindValue(':topic_id', $topic_id);
 
         $statement->execute();
     }
