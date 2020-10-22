@@ -33,7 +33,7 @@ $password = $_POST['password'];
 
 <body>
 
-    <h1>Welcome, <?php $display_name?>!</h1>
+    <h1>Welcome, <?php echo $display_name ?>!</h1>
     <p>Please select an option to create your budget:</p>
 
     <div>
