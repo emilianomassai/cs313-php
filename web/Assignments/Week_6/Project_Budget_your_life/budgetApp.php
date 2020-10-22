@@ -73,8 +73,8 @@ foreach ($db->query('SELECT amount, user_id, notes, category, date FROM transact
 
         <!-- A list of all users in the database, each one is a link that leads to a user details page.  -->
 
-        <h2>User List</h2>
-        <h4>Choose one user from the database and click the submit button to see more details about him or her.</h4>
+        <h2>Add a transaction</h2>
+        <h4>Choose one user from the database and click the button to add a new transaction for that user</h4>
         <table class="table table-bordered">
 
             <tbody>

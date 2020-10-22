@@ -102,6 +102,12 @@ foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budg
         $notes = $_POST['input_notes'];
         $date = $_POST['input_date'];
 
+        echo 'User ID: ' . $actualUserId . ';';
+        echo 'category: ' . $category . ';';
+        echo 'amount: ' . $amount . ';';
+        echo 'notes: ' . $notes . ';';
+        echo 'date: ' . $date . ';';
+
 // echo 'Name: ' . $users_array[$count]['display_name'] . ';';
         // echo '<br>';
         // echo 'User ID: ' . $users_array[$count]['user_id'] . ';';
