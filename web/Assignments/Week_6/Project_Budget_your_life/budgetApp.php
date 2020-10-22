@@ -1,6 +1,18 @@
 <?php
+/**********************************************************
+ * File: budgetApp.php
+ * Author: Emiliano Massai
+ *
+ * Description: This is the PHP file that the user starts with.
+ *   It has different sections which are useful to check different
+ *   information. Each section is linked to another page.
+ ***********************************************************/
+
 // start session
 session_start();
+
+// The DB connection logic is in another file so it can be included
+// in each of our different PHP files.
 require "../Project_Budget_your_life/connectAppDB.php";
 $db = get_db();
 ?>
@@ -147,7 +159,7 @@ foreach ($db->query('SELECT amount, user_id, notes, category, date FROM transact
 
                 <h2>New user form:</h2>
 
-                <form class="userForm" name="userForm" action="#" method="post">
+                <form class="userForm" name="userForm" action="add_user.php" method="post">
 
                     <h4>Enter all the data for the new user:</h4>
                     <?php
@@ -155,6 +167,7 @@ foreach ($db->query('SELECT amount, user_id, notes, category, date FROM transact
 // here I mixed php scripts into HTML to get dynamic names for the input fields. The names are created based upon what is the name of each column in my database.
 
 $select = $db->query('SELECT display_name, user_name, password FROM budgetUser');
+
 $total_column = $select->columnCount();
 for ($counter = 0; $counter < $total_column; $counter++) {
     $meta = $select->getColumnMeta($counter);
