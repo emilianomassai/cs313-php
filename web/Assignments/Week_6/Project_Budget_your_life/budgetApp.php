@@ -159,7 +159,7 @@ foreach ($db->query('SELECT amount, user_id, notes, category, date FROM transact
 
                 <h2>New user form:</h2>
 
-                <form class="userForm" name="userForm" action="add_user.php" method="post">
+                <form class="userForm" name="userForm" action="../Project_Budget_your_life/add_user.php" method="post">
 
                     <h4>Enter all the data for the new user:</h4>
                     <?php
