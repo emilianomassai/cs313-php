@@ -49,9 +49,9 @@ try
         echo 'Topics: ';
 
         // get the topics now for this scripture
-        $stmtTopics = $db->prepare('SELECT name FROM topic t'
-            . ' INNER JOIN scriptures_topic_link st ON st.topic_id = t.topic_id'
-            . ' WHERE st.scriptures_id = :scriptures_id');
+        $stmtTopics = $db->prepare('SELECT name FROM topic'
+            . ' INNER JOIN scriptures_topic_link st ON scriptures_topic_link.topic_id = topic.topic_id'
+            . ' WHERE scriptures_topic_link.scriptures_id = :scriptures_id');
 
         $stmtTopics->bindValue(':scriptures_id', $row['scriptures_id']);
         $stmtTopics->execute();
