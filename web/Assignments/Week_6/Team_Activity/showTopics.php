@@ -37,7 +37,7 @@ try
     //    . ' INNER JOIN topic t ON st.topicId = t.id');
 
     // prepare the statement
-    $statement = $db->prepare('SELECT scriptures_id, book, chapter, verse, content FROM scriptures');
+    $statement = $db->prepare('SELECT id, book, chapter, verse, content FROM scripture');
     $statement->execute();
 
     // Go through each result
@@ -50,10 +50,10 @@ try
 
         // get the topics now for this scripture
         $stmtTopics = $db->prepare('SELECT name FROM topic t'
-            . ' INNER JOIN scriptures_topic_link st ON st.topic_id = t.topic_id'
-            . ' WHERE st.scriptures_id = :scriptures_id');
+            . ' INNER JOIN scripture_topic st ON st.topicId = t.id'
+            . ' WHERE st.scriptureId = :scriptureId');
 
-        $stmtTopics->bindValue(':scriptures_id', $row['scriptures_id']);
+        $stmtTopics->bindValue(':scriptureId', $row['id']);
         $stmtTopics->execute();
 
         // Go through each topic in the result
@@ -72,17 +72,7 @@ try
 ?>
 
     </div>
-    <div>
-        <a href="../../Home_Page/assignments.php" id="CS313_assignments_btn_id">
-            Go to the CS313 Assignment's page
-        </a>
-    </div>
 
-    <footer>
-        <p style="text-align: center;">
-            Copyright © 2020 emiDev Inc. All rights reserved.
-        </p>
-    </footer>
 </body>
 
 </html>

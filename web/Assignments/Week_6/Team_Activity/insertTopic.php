@@ -37,7 +37,7 @@ try
     // Add the Scripture
 
     // We do this by preparing the query with placeholder values
-    $query = 'INSERT INTO scriptures(book, chapter, verse, content) VALUES(:book, :chapter, :verse, :content)';
+    $query = 'INSERT INTO scripture(book, chapter, verse, content) VALUES(:book, :chapter, :verse, :content)';
     $statement = $db->prepare($query);
 
     // Now we bind the values to the placeholders. This does some nice things
@@ -50,19 +50,18 @@ try
     $statement->execute();
 
     // get the new id
-    // the lastInsertId method needs the 'table_name' + 'column_name' + 'seq' to work!
-    $scriptures_id = $db->lastInsertId("scriptures_scriptures_id_seq");
+    $scriptureId = $db->lastInsertId("scripture_id_seq");
 
     // Now go through each topic id in the list from the user's checkboxes
-    foreach ($topic_ids as $topic_id) {
-        echo "ScriptureId: $scriptures_id, topicId: $topic_id";
+    foreach ($topicIds as $topicId) {
+        echo "ScriptureId: $scriptureId, topicId: $topicId";
 
         // Again, first prepare the statement
-        $statement = $db->prepare('INSERT INTO scriptures_topic_link(scriptures_id, topic_id) VALUES(:scriptures_id, :topic_id)');
+        $statement = $db->prepare('INSERT INTO scripture_topic(scriptureId, topicId) VALUES(:scriptureId, :topicId)');
 
         // Then, bind the values
-        $statement->bindValue(':scriptures_id', $scriptures_id);
-        $statement->bindValue(':topic_id', $topic_id);
+        $statement->bindValue(':scriptureId', $scriptureId);
+        $statement->bindValue(':topicId', $topicId);
 
         $statement->execute();
     }
@@ -74,10 +73,9 @@ try
 }
 
 // finally, redirect them to a new page to actually show the topics
-header("../Team_Activity/showTopics.php");
+header("Location: showTopics.php");
 
-die();
-// we always include a die after redirects. In this case, there would be no
+die(); // we always include a die after redirects. In this case, there would be no
 // harm if the user got the rest of the page, because there is nothing else
 // but in general, there could be things after here that we don't want them
 // to see.
