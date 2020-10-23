@@ -11,6 +11,7 @@ $db = get_db();
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" type="image/ico" href="./BudgetAppImages/budgetAppIcon.png">
+    <script src="../Project_Budget_your_life/javaScript.js"></script>
 
     <!--Title in the browser title bar.-->
     <title>Budget Your Life</title>
@@ -80,11 +81,12 @@ foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budg
                     </td>
                     <td style="padding:10px"><?php echo $transactions_array[$transaction_count]['date'] ?>
                     </td>
-
-                    <td style="text-align: center"> <input type="radio" id="edit" name="edit"
-                            value="<?php echo $transactions_array[$transaction_count]['transaction_id'] ?>">
-                    </td>
-                    <?php }?>
+                    <form class="editTransactionForm" name="editTransactionForm" action="modify_transaction.php"
+                        method="post" \ onsubmit="return isSelected()">
+                        <td style="text-align: center"> <input type="radio" id="edit" name="edit"
+                                value="<?php echo $transactions_array[$transaction_count]['transaction_id'] ?>">
+                        </td>
+                        <?php }?>
 
                 </tr>
                 <?php $transaction_count++;
@@ -102,6 +104,10 @@ foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budg
     <div class="container">
         <h2>Transactions List:</h2>
 
+        <div class="bottomBar">
+            <button type="submit" name="Add Transaction" id="addTransaction">Modify Selected Transaction</button>
+        </div>
+        </form>
 
         <div>
             <a href="../Project_Budget_your_life/budgetApp.php" id="CS313_assignments_btn_id">

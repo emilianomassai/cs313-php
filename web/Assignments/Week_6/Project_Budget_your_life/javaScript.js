@@ -60,3 +60,15 @@ function validateNewTransactionForm() {
     return true;
   }
 }
+
+function isSelected() {
+  var isToEdit = document.forms["editTransactionForm"]["edit"].value;
+
+  if (isToEdit == "") {
+    alert("Please select a transaction to edit!");
+
+    return false;
+  } else {
+    return true;
+  }
+}
