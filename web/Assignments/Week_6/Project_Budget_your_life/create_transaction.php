@@ -119,6 +119,10 @@ foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budg
     $count++;
 }
 ?>
+    <p>NOTE: If you are using Safari, you will need to enter manually the date but if you use a Chromium based browser
+        or Firefox, a date picker will be shown instead. The Safari doesn't support the date input yet.
+
+    </p>
 
 
     <div>
