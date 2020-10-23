@@ -18,14 +18,19 @@ $_SESSION['transactions'] = $sessionTransactions;
 echo 'Edit transaction number: ' . $editTransaction;
 
 $transaction_count = 0;
-foreach ($db->query("SELECT transaction_id, amount, user_id, notes, category, date FROM transaction WHERE transaction_id='$editTransaction'") as $row) {
 
-    echo 'Transaction number: ' . $editTransaction;
-    echo 'Amount: ' . $sessionTransactions[$transaction_count]['amount'];
-    echo 'User ID: ' . $sessionTransactions[$transaction_count]['user_id'];
-    echo 'Notes: ' . $sessionTransactions[$transaction_count]['notes'];
-    echo 'Category: ' . $sessionTransactions[$transaction_count]['category'];
-    echo 'Date: ' . $sessionTransactions[$transaction_count]['date'];
-    $transaction_count++;
-
+for ($i = 0; $i < count($sessionTransactions); $i++) {
+    echo '<td>' . $_SESSION['transactions']['amount'] . '</td>';
 }
+
+// foreach ($db->query("SELECT transaction_id, amount, user_id, notes, category, date FROM transaction WHERE transaction_id='.$editTransaction'") as $row) {
+
+//     echo 'Transaction number: ' . $editTransaction;
+//     echo 'Amount: ' . $sessionTransactions[$transaction_count]['amount'];
+//     echo 'User ID: ' . $sessionTransactions[$transaction_count]['user_id'];
+//     echo 'Notes: ' . $sessionTransactions[$transaction_count]['notes'];
+//     echo 'Category: ' . $sessionTransactions[$transaction_count]['category'];
+//     echo 'Date: ' . $sessionTransactions[$transaction_count]['date'];
+//     $transaction_count++;
+
+// }
