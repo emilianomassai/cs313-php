@@ -85,7 +85,7 @@ foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budg
             <option value="Income">Income</option>
         </select>
         Is Expense: <script>
-        isExpense()
+        print(isExpense())
         </script>
         Amount: <input type="text" name="input_amount">
         Notes: <input type="text" name="input_notes">
