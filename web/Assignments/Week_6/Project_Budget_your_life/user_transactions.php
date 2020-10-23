@@ -44,7 +44,6 @@ foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budg
         <table border="1" style="margin-left:auto;margin-right:auto" class="table table-bordered">
             <thead>
                 <tr>
-                    <th style="padding:10px">Transaction ID:</th>
                     <th style="padding:10px">Amount</th>
                     <th style="padding:10px">Notes</th>
                     <th style="padding:10px">Category</th>
@@ -56,9 +55,8 @@ foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budg
 
 
                 <?php $transaction_count = 0;?>
-                <?php foreach ($db->query('SELECT transaction_id, amount, user_id, notes, category, date FROM transaction') as $row) {
+                <?php foreach ($db->query('SELECT amount, user_id, notes, category, date FROM transaction') as $row) {
     $transactions_array[] = [
-        'transaction_id' => $row['transaction_id'],
         'amount' => $row['amount'],
         'user_id' => $row['user_id'],
         'notes' => $row['notes'],
@@ -69,18 +67,13 @@ foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budg
 
     if (($_POST["user_transaction"] == $transactions_array[$transaction_count]['user_id'])) {?>
                 <tr>
-                    <td style="padding:10px"><?php echo $transactions_array[$transaction_count]['transaction_id'] ?>
+                    <td style="padding:10px"><?php echo $transactions_array[$transaction_count]['amount'] ?>
+                        <?php $totalAmount += $transactions_array[$transaction_count]['amount'];?>
                     </td>
-
-                    <?php $totalAmount += $transactions_array[$transaction_count]['amount'];?>
-                    </td>
-
                     <td style="padding:10px"><?php echo $transactions_array[$transaction_count]['notes'] ?>
                     </td>
-
                     <td style="padding:10px"><?php echo $transactions_array[$transaction_count]['category'] ?>
                     </td>
-
                     <td style="padding:10px"><?php echo $transactions_array[$transaction_count]['date'] ?>
                         <?php }?>
                 </tr>
@@ -97,7 +90,7 @@ foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budg
     <br>
 
     <div class="container">
-        <h2>Manage your transactions:</h2>
+        <h2>Transactions List:</h2>
 
 
         <div>
