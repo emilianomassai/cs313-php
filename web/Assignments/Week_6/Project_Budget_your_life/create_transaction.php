@@ -70,8 +70,6 @@ foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budg
 
     <!-- use POST to link the current user to the new transaction and add it to the database -->
     <form action="add_transaction.php" method="post">
-        <input type="hidden" name="actual_user_id" value="<?php $users_array[$count]['user_id']?>">
-
         Amount: <input type="text" name="input_amount">
         Notes: <input type="text" name="input_notes">
         Category: <select name="category">
