@@ -20,7 +20,8 @@ $db = get_db();
 
 <body>
     <h1>User transactions </h1>
-    <p>The following is the list of all the transactions of the selected user:</p>
+    <p>In this page you can see the list of all the transactions for the current user. If you want to edit or delete one
+        transaction, select one from the table and click the "Modify Selected Transaction" button.</p>
 
     <?php
 
