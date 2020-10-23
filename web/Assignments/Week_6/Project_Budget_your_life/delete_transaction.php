@@ -77,7 +77,8 @@ foreach ($db->query('SELECT transaction_id, amount, user_id, notes, category, da
                     </td>
                     </td>
                     <?php }?>
-
+                    <?php $transaction_count++;
+}?>
                 </tr>
 
                 <br>
@@ -95,8 +96,7 @@ foreach ($db->query('SELECT transaction_id, amount, user_id, notes, category, da
 
 
                 </tr>
-                <?php $transaction_count++;
-}?>
+
 
     </form>
 
