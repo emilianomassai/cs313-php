@@ -83,6 +83,7 @@ foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budg
         Notes: <input type="text" name="input_notes">
         Category: <select name="category">
             <option value="Salary">Salary</option>
+            <option value="Extra Income">Extra Income</option>
             <option value="Groceries">Groceries</option>
             <option value="Eating Out">Eating Out</option>
             <option value="Kids">Kids</option>
