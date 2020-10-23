@@ -34,8 +34,6 @@ function validateNewUserForm() {
 }
 
 function validateNewTransactionForm() {
-  var regexDateValidation = /^\d{4}-\d{2}-\d{2}$/;
-
   var amountValidation =
     document.forms["newTransactionForm"]["input_amount"].value;
   var notesValidation =
@@ -49,11 +47,6 @@ function validateNewTransactionForm() {
 
   if (notesValidation == "") {
     alert("Please enter some notes to add more details to the transaction!");
-    return false;
-  }
-
-  if (dateValidation == "" || !dateValidation.match(regexDateValidation)) {
-    alert("Please enter a date in the format 'YYYY-MM-DD'");
     return false;
   } else {
     return true;
