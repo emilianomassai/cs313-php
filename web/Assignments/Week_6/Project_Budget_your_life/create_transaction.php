@@ -71,7 +71,6 @@ foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budg
         echo 'amount: ' . $amount . ';';
         echo 'notes: ' . $notes . ';';
         echo 'date: ' . $date . ';';
-        echo 'transaction type: ' . $transactionType . ';';
 
         ?>
 
@@ -109,49 +108,16 @@ foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budg
         </select>
         Date: <input type="text" name="input_date">
 
+
         <div class="bottomBar">
-            <button type="submit" name="Add Transaction" id="addUser">Add Transaction</button>
+            <button type="submit" name="Add Transaction" id="addTransaction">Add Transaction</button>
         </div>
     </form>
 
 
 
     <?php
-
-        // $actualUserId = $users_array[$count]['user_id'];
-        // $category = $_POST['category'];
-        // $amount = $_POST['input_amount'];
-        // $notes = $_POST['input_notes'];
-        // $date = $_POST['input_date'];
-
-        // echo 'User ID: ' . $actualUserId . ';';
-        // echo 'category: ' . $category . ';';
-        // echo 'amount: ' . $amount . ';';
-        // echo 'notes: ' . $notes . ';';
-        // echo 'date: ' . $date . ';';
-
-// echo 'Name: ' . $users_array[$count]['display_name'] . ';';
-        // echo '<br>';
-        // echo 'User ID: ' . $users_array[$count]['user_id'] . ';';
-        // echo '<br>';
-        // echo 'Username: ' . $users_array[$count]['user_name'] . ';';
-        // echo '<br>';
-        // echo 'Password: ' . $users_array[$count]['password'] . '.';
-        // echo '<br>';
-        // $query = 'INSERT INTO public.transaction(user_id, amount, notes, category, date) VALUES(:user_id, :amount, :notes, :category, :date)';
-        // $statement = $db->prepare($query);
-
-// Now we bind the values to the placeholders. This does some nice things
-        // including sanitizing the input with regard to sql commands.
-        // $statement->bindValue(':user_id', $actualUserId);
-        // $statement->bindValue(':amount', $amount);
-        // $statement->bindValue(':notes', $notes);
-        // $statement->bindValue(':category', $category);
-        // $statement->bindValue(':date', $date);
-
-        // $statement->execute();
-
-    }
+}
     $count++;
 }
 ?>
