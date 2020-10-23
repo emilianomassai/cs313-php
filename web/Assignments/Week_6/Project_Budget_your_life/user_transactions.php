@@ -81,7 +81,7 @@ foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budg
                     <td style="padding:10px"><?php echo $transactions_array[$transaction_count]['date'] ?>
                     </td>
 
-                    <td style="padding:10px"> <input style="text-align: center" type="radio" id="edit" name="edit"
+                    <td style="padding:10px, text-align: center"> <input type="radio" id="edit" name="edit"
                             value="<?php echo $transactions_array[$transaction_count]['transaction_id'] ?>">
                     </td>
                     <?php }?>
