@@ -17,26 +17,25 @@ $editTransaction = $_POST['edit'];
 echo 'Edit transaction number: ' . $editTransaction;
 
 $transaction_count = 0;
-foreach ($db->query('SELECT transaction_id, amount, user_id, notes, category, date FROM transaction') as $row) {
-    $transactions_array[] = [
-        'transaction_id' => $row['transaction_id'],
-        'amount' => $row['amount'],
-        'user_id' => $row['user_id'],
-        'notes' => $row['notes'],
-        'category' => $row['category'],
-        'date' => $row['date'],
-    ];
+foreach ($db->query('SELECT transaction_id, amount, user_id, notes, category, date FROM transaction WHERE transaction_id = "<?php $editTransaction ?>"')
+as $row) {
+$transactions_array[] = [
+'transaction_id' => $row['transaction_id'],
+'amount' => $row['amount'],
+'user_id' => $row['user_id'],
+'notes' => $row['notes'],
+'category' => $row['category'],
+'date' => $row['date'],
+];
 
-    $transaction_count++;
-    $_SESSION['transactions'] = $transactions_array;
+$transaction_count++;
+$_SESSION['transactions'] = $transactions_array;
 
-    if (($editTransaction == $transactions_array[$transaction_count]['transaction_id'])) {
-        echo 'Transaction number: ' . $editTransaction;
-        echo 'Amount: ' . $transactions_array[$transaction_count]['amount'];
-        echo 'User ID: ' . $transactions_array[$transaction_count]['user_id'];
-        echo 'Notes: ' . $transactions_array[$transaction_count]['notes'];
-        echo 'Category: ' . $transactions_array[$transaction_count]['category'];
-        echo 'Date: ' . $transactions_array[$transaction_count]['date'];
+echo 'Transaction number: ' . $editTransaction;
+echo 'Amount: ' . $transactions_array[$transaction_count]['amount'];
+echo 'User ID: ' . $transactions_array[$transaction_count]['user_id'];
+echo 'Notes: ' . $transactions_array[$transaction_count]['notes'];
+echo 'Category: ' . $transactions_array[$transaction_count]['category'];
+echo 'Date: ' . $transactions_array[$transaction_count]['date'];
 
-    }
 }
