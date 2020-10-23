@@ -51,13 +51,13 @@ $transactionType = $_POST['type'];
     <?php
 $editTransaction = $_SESSION['editTransactionSession'];
 
-echo 'User ID: ' . $actualUserId . ';';
-echo 'category: ' . $category . ';';
-echo 'amount: ' . $amount . ';';
-echo 'notes: ' . $notes . ';';
-echo 'transaction type: ' . $transactionType;
-echo 'date: ' . $date . ';';
-echo 'editTransaction: ' . $editTransaction . ';';
+// echo 'User ID: ' . $actualUserId . ';';
+// echo 'category: ' . $category . ';';
+// echo 'amount: ' . $amount . ';';
+// echo 'notes: ' . $notes . ';';
+// echo 'transaction type: ' . $transactionType;
+// echo 'date: ' . $date . ';';
+// echo 'editTransaction: ' . $editTransaction . ';';
 
 $query = "DELETE FROM transaction WHERE transaction_id = $editTransaction";
 // $query = "UPDATE public.transaction SET(amount = $amount, notes = $notes, category = $category, date = $date)  WHERE transaction_id='$editTransaction'";
