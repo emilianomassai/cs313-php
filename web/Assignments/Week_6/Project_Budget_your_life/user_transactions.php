@@ -44,10 +44,10 @@ foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budg
         <table border="1" style="margin-left:auto;margin-right:auto" class="table table-bordered">
             <thead>
                 <tr>
-                    <th style="padding:10px">Date</th>
                     <th style="padding:10px">Amount</th>
                     <th style="padding:10px">Notes</th>
                     <th style="padding:10px">Category</th>
+                    <th style="padding:10px">Date</th>
 
                 </tr>
             </thead>
