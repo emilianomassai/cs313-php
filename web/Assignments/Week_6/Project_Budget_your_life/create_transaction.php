@@ -80,13 +80,10 @@ foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budg
     <form class="newTransactionForm" action="add_transaction.php" method="post" \
         onsubmit="return validateNewTransactionForm()">
         <input type="hidden" name="input_user_id" value="<?php $_POST["userID"]?>">
-        Transaction Type: <select name="transaction_type" onchange="isExpense()">
+        Transaction Type: <select name="transaction_type">
             <option value="Expense">Expense</option>
             <option value="Income">Income</option>
         </select>
-        Is Expense: <script>
-        print(isExpense())
-        </script>
         Amount: <input type="text" name="input_amount">
         Notes: <input type="text" name="input_notes">
         Category: <select name="category">

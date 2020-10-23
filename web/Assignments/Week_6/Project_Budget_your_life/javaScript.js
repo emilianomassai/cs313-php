@@ -50,11 +50,3 @@ function validateNewTransactionForm() {
     return false;
   }
 }
-
-function isExpense() {
-  var transactionType =
-    document.forms["newTransactionForm"]["transaction_type"].value;
-  if (transactionType == "Expense") {
-    return true;
-  } else return false;
-}
