@@ -37,23 +37,7 @@ $_SESSION['editTransactionSession'] = $_POST['edit'];
 
 $editTransaction = $_POST['edit'];
 $_SESSION['transactions'] = $sessionTransactions;
-
-foreach ($db->query('SELECT transaction_id, amount, user_id, notes, category, date FROM transaction') as $row) {
-    $transactions_array[] = [
-        'transaction_id' => $row['transaction_id'],
-        'amount' => $row['amount'],
-        'user_id' => $row['user_id'],
-        'notes' => $row['notes'],
-        'category' => $row['category'],
-        'date' => $row['date'],
-    ];
-    $_SESSION['transactions'] = $transactions_array;
-
-    if (($_POST["edit"] == $transactions_array[$transaction_count]['transaction_id'])) {?>
-
-        <p> The following transaction will be deleted from the database:
-        </p>
-
+?>
         <table border="1" style="margin-left:auto;margin-right:auto" class="table table-bordered">
             <thead>
                 <tr>
@@ -66,6 +50,22 @@ foreach ($db->query('SELECT transaction_id, amount, user_id, notes, category, da
                 </tr>
             </thead>
             <tbody>
+                <?php
+foreach ($db->query('SELECT transaction_id, amount, user_id, notes, category, date FROM transaction') as
+    $row) {
+    $transactions_array[] = [
+        'transaction_id' => $row['transaction_id'],
+        'amount' => $row['amount'],
+        'user_id' => $row['user_id'],
+        'notes' => $row['notes'],
+        'category' => $row['category'],
+        'date' => $row['date'],
+    ];
+    $_SESSION['transactions'] = $transactions_array;
+
+    if (($_POST["edit"] == $transactions_array[$transaction_count]['transaction_id'])) {?>
+
+
                 <tr>
                     <td style="padding:10px"><?php echo $transactions_array[$transaction_count]['amount'] ?>
                     </td>
@@ -75,7 +75,7 @@ foreach ($db->query('SELECT transaction_id, amount, user_id, notes, category, da
                     </td>
                     <td style="padding:10px"><?php echo $transactions_array[$transaction_count]['date'] ?>
                     </td>
-                    </td>
+
                     <?php }?>
                     <?php $transaction_count++;
 }?>
