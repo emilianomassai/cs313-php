@@ -61,11 +61,11 @@ $statement = $db->prepare($query);
 // Now we bind the values to the placeholders. This does some nice things
 // including sanitizing the input with regard to sql commands.
 $statement->bindValue(':user_id', $actualUserId);
-// if ($transactionType == "Expense") {
-$statement->bindValue(':amount', '-' . $amount);
-// } else {
-//     $statement->bindValue(':amount', $amount);
-// }
+if ($transactionType == "Expense") {
+    $statement->bindValue(':amount', '-' . $amount);
+} else {
+    $statement->bindValue(':amount', $amount);
+}
 
 $statement->bindValue(':notes', $notes);
 $statement->bindValue(':category', $category);
