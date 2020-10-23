@@ -70,7 +70,10 @@ foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budg
         echo 'category: ' . $category . ';';
         echo 'amount: ' . $amount . ';';
         echo 'notes: ' . $notes . ';';
-        echo 'date: ' . $date . ';'; ?>
+        echo 'date: ' . $date . ';';
+        echo 'transaction type: ' . $transactionType . ';';
+
+        ?>
 
 
     <h1>Ready to add a transaction, <?php echo $users_array[$count]['display_name'] ?>?</h1>

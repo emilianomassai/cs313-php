@@ -52,7 +52,7 @@ echo 'User ID: ' . $actualUserId . ';';
 echo 'category: ' . $category . ';';
 echo 'amount: ' . $amount . ';';
 echo 'notes: ' . $notes . ';';
-echo 'transaction type: ' . $transactionType;
+echo 'transaction type: ' . $transactionType . ';';
 echo 'date: ' . $date . ';';
 
 $query = 'INSERT INTO public.transaction(user_id, amount, notes, category, date) VALUES(:user_id, :amount, :notes, :category, :date)';
