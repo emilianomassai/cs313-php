@@ -25,6 +25,7 @@ foreach ($db->query('SELECT transaction_id, amount, user_id, notes, category, da
         'category' => $row['category'],
         'date' => $row['date'],
     ];
+    $_SESSION['transactions'] = $transactions_array;
 
     echo 'Transaction number: ' . $editTransaction;
     echo 'Amount: ' . $transactions_array[$transaction_count]['amount'];
