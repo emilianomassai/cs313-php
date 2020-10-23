@@ -46,7 +46,7 @@ $date = $_POST['dateTransaction'];
 $transactionType = $_POST['type'];
 ?>
 
-    <h3>Thank you <?php echo $actualUserDisplayName ?>, your transaction will be recorded.</h3>
+    <h3>Thank you <?php echo $actualUserDisplayName ?>, your transaction has been deleted.</h3>
 
     <?php
 $editTransaction = $_SESSION['editTransactionSession'];

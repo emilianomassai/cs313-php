@@ -30,7 +30,8 @@ $db = get_db();
     <h1>Delete Transaction </h1>
     <p>In this page you can delete the selected transaction.</p>
 
-    <?php
+    <form class="deleteTransaction" name="deleteTransaction" action="removed_transaction.php" method="post">
+        <?php
 $_SESSION['editTransactionSession'] = $_POST['edit'];
 
 $editTransaction = $_POST['edit'];
@@ -51,28 +52,28 @@ foreach ($db->query('SELECT transaction_id, amount, user_id, notes, category, da
 
     if (($_POST["edit"] == $transactions_array[$transaction_count]['transaction_id'])) {?>
 
-    The following transaction will be deleted from the database:
-    Amount: <?php echo $transactions_array[$transaction_count]['amount'] ?>
-    Notes: <?php echo $transactions_array[$transaction_count]['notes'] ?>
-    Date: <?php echo $transactions_array[$transaction_count]['date'] ?>
-    Category: <?php echo $transactions_array[$transaction_count]['category'] ?>
-    <br>
-    <br>
-    <p>NOTE: The transaction will be removed PERMANENTLY from the database </p>
-    <br>
+        The following transaction will be deleted from the database:
+        Amount: <?php echo $transactions_array[$transaction_count]['amount'] ?>
+        Notes: <?php echo $transactions_array[$transaction_count]['notes'] ?>
+        Date: <?php echo $transactions_array[$transaction_count]['date'] ?>
+        Category: <?php echo $transactions_array[$transaction_count]['category'] ?>
+        <br>
+        <br>
+        <p>NOTE: The transaction will be removed PERMANENTLY from the database </p>
+        <br>
 
-    <div class="bottomBar">
-        <button type="submit" name="Add Transaction" id="addTransaction">Delete Transaction</button>
-    </div>
+        <div class="bottomBar">
+            <button type="submit" name="Delete Transaction" id="deleteTransaction">Delete Transaction</button>
+        </div>
 
 
-    <?php }?>
+        <?php }?>
 
-    </tr>
-    <?php $transaction_count++;
+        </tr>
+        <?php $transaction_count++;
 }?>
 
-
+    </form>
 
     <div>
         <a href="../Project_Budget_your_life/budgetApp.php" id="CS313_assignments_btn_id">
