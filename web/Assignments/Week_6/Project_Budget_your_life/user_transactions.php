@@ -48,8 +48,6 @@ foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budg
                     <th style="padding:10px">Notes</th>
                     <th style="padding:10px">Category</th>
                     <th style="padding:10px">Date</th>
-                    <th style="padding:10px">Edit transaction</th>
-
 
                 </tr>
             </thead>
@@ -80,10 +78,6 @@ foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budg
                     </td>
                     <td style="padding:10px"><?php echo $transactions_array[$transaction_count]['date'] ?>
                         <?php }?>
-                    </td>
-                    <td style="padding:10px"> <input type="radio" id="Edit" name="Edit"
-                            value="<?php echo $transactions_array[$transaction_count]['transaction_id'] ?>">
-                    </td>
                 </tr>
                 <?php $transaction_count++;
 }?>
