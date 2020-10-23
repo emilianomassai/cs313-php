@@ -17,7 +17,7 @@ $editTransaction = $_POST['edit'];
 echo 'Edit transaction number: ' . $editTransaction;
 
 $transaction_count = 0;
-foreach ($db->query("SELECT transaction_id, amount, user_id, notes, category, date FROM transaction WHERE transaction_id= 'echo $editTransaction'") as $row) {
+foreach ($db->query("SELECT transaction_id, amount, user_id, notes, category, date FROM transaction WHERE transaction_id='$editTransaction'") as $row) {
     $transactions_array[] = [
         'transaction_id' => $row['transaction_id'],
         'amount' => $row['amount'],
