@@ -36,9 +36,6 @@ function validateNewUserForm() {
 function validateNewTransactionForm() {
   var amountValidation =
     document.forms["newTransactionForm"]["input_amount"].value;
-  var notesValidation =
-    document.forms["newTransactionForm"]["input_notes"].value;
-  var dateValidation = document.forms["newTransactionForm"]["input_date"].value;
 
   if (amountValidation == "" || isNaN(amountValidation)) {
     alert("Please enter a valid amount!");
