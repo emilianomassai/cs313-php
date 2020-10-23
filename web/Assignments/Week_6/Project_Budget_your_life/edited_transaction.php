@@ -54,7 +54,7 @@ echo 'transaction type: ' . $transactionType;
 echo 'date: ' . $date . ';';
 $editTransaction = $_SESSION['editTransactionSession'];
 
-$query = "UPDATE public.transaction( amount, notes, category, date) SET( :amount, :notes, :category, :date)  WHERE transaction_id='$editTransaction'";
+$query = "UPDATE public.transaction( user_id, amount, notes, category, date) SET( :user_id, :amount, :notes, :category, :date)  WHERE transaction_id='$editTransaction'";
 $statement = $db->prepare($query);
 
 // Now we bind the values to the placeholders. This does some nice things
