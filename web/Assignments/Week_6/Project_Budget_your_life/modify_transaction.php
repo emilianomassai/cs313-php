@@ -31,6 +31,8 @@ $db = get_db();
     <p>In this page you can update the information of the selected transaction.</p>
 
     <?php
+$_SESSION['editTransactionSession'] = $_POST['edit'];
+
 $editTransaction = $_POST['edit'];
 $_SESSION['transactions'] = $sessionTransactions;
 
@@ -49,7 +51,7 @@ foreach ($db->query('SELECT transaction_id, amount, user_id, notes, category, da
 
     if (($_POST["edit"] == $transactions_array[$transaction_count]['transaction_id'])) {?>
 
-    <form class="newTransactionForm" name="newTransactionForm" action="add_transaction.php" method="post" \
+    <form class="newTransactionForm" name="newTransactionForm" action="edited_transaction.php" method="post" \
         onsubmit="return validateNewTransactionForm()">
 
         Transaction Type: <select name="type">
