@@ -45,6 +45,11 @@ function validateNewTransactionForm() {
     return false;
   }
 
+  if (dateValidation == "") {
+    alert("Please enter a valid date!");
+    return false;
+  }
+
   if (notesValidation == "") {
     alert("Please enter some notes to add more details to the transaction!");
     return false;
