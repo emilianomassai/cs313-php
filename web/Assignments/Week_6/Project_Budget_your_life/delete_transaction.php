@@ -51,21 +51,21 @@ foreach ($db->query('SELECT transaction_id, amount, user_id, notes, category, da
 
     if (($_POST["edit"] == $transactions_array[$transaction_count]['transaction_id'])) {?>
 
-        <p>The following transaction will be deleted from the database:
-            <br>
-            Amount: <?php echo $transactions_array[$transaction_count]['amount'] ?>;
-            <br>
-            Notes: <?php echo $transactions_array[$transaction_count]['notes'] ?>;
-            <br>
-            Date: <?php echo $transactions_array[$transaction_count]['date'] ?>;
-            <br>
-            Category: <?php echo $transactions_array[$transaction_count]['category'] ?>;
-            <br>
-            <br>
-            <br>
-            NOTE: The transaction will be removed PERMANENTLY from the database.
-        <p>
-            <br>
+        The following transaction will be deleted from the database:
+        <br>
+        Amount: <?php echo $transactions_array[$transaction_count]['amount'] ?>;
+        <br>
+        Notes: <?php echo $transactions_array[$transaction_count]['notes'] ?>;
+        <br>
+        Date: <?php echo $transactions_array[$transaction_count]['date'] ?>;
+        <br>
+        Category: <?php echo $transactions_array[$transaction_count]['category'] ?>;
+        <br>
+        <br>
+        <br>
+        <p>NOTE: The transaction will be removed PERMANENTLY from the database.
+        </p>
+        <br>
 
         <div class="bottomBar">
             <button type="submit" name="Delete Transaction" id="deleteTransaction">Delete Transaction</button>
