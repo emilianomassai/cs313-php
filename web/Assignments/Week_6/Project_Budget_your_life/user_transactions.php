@@ -72,9 +72,6 @@ foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budg
                     <td style="padding:10px"><?php echo $transactions_array[$transaction_count]['transaction_id'] ?>
                     </td>
 
-                    <td style="padding:10px"><?php echo $transactions_array[$transaction_count]['notes'] ?>
-                    </td>
-
                     <?php $totalAmount += $transactions_array[$transaction_count]['amount'];?>
                     </td>
 
@@ -100,7 +97,7 @@ foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budg
     <br>
 
     <div class="container">
-        <h2>Transactions List:</h2>
+        <h2>Manage your transactions:</h2>
 
 
         <div>
