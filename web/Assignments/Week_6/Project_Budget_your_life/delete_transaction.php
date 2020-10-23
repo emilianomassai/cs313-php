@@ -28,7 +28,9 @@ $db = get_db();
 
 <body>
     <h1>Delete Transaction </h1>
-    <p>In this page you can delete the selected transaction.</p>
+    <p>In this page you can review the selected transaction and then delete it. NOTE: The transaction will be removed
+        PERMANENTLY from the database.
+    </p>
 
 
     <form class="deleteTransaction" name="deleteTransaction" action="removed_transaction.php" method="post">
@@ -38,6 +40,8 @@ $_SESSION['editTransactionSession'] = $_POST['edit'];
 $editTransaction = $_POST['edit'];
 $_SESSION['transactions'] = $sessionTransactions;
 ?>
+        <h2>The following transaction will be deleted:</h2>
+
         <div class="container">
             <table border="1" style="margin-left:auto;margin-right:auto" class="table table-bordered">
                 <thead>
@@ -82,8 +86,6 @@ $_SESSION['transactions'] = $sessionTransactions;
                 </tbody>
             </table>
 
-            <p>NOTE: The transaction will be removed PERMANENTLY from the database.
-            </p>
             <br>
 
             <div class="bottomBar">
