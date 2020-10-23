@@ -64,3 +64,20 @@ a:hover {
   box-shadow: -3px 15px 10px rgba(0, 0, 0, 0.5);
   transition: 0.3s; /* Add transition on hover */
 }
+
+#bottomBar {
+  display: block;
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  line-height: 40px;
+  font-family: "Lucida Sans Unicode", Verdana, sans-serif;
+  padding: 11px;
+}
+
+#bottomBar:hover {
+  color: #0076b6;
+  background-color: white;
+  box-shadow: -3px 15px 10px rgba(0, 0, 0, 0.5);
+  transition: 0.3s; /* Add transition on hover */
+}
