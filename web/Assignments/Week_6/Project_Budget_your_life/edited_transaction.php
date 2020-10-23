@@ -60,6 +60,9 @@ echo 'date: ' . $date . ';';
 echo 'editTransaction: ' . $editTransaction . ';';
 
 $query = "DELETE FROM public.transaction WHERE transaction_id='" . $editTransaction . "'";
+// $query = "UPDATE public.transaction SET(amount = $amount, notes = $notes, category = $category, date = $date)  WHERE transaction_id='$editTransaction'";
+// $statement = $db->prepare($query);
+// $statement->execute();
 
 // // Now we bind the values to the placeholders. This does some nice things
 // // including sanitizing the input with regard to sql commands.
