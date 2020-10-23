@@ -82,7 +82,7 @@ foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budg
                     </td>
                     <td style="padding:10px"><?php echo $transactions_array[$transaction_count]['date'] ?>
                     </td>
-                    <form class="editTransactionForm" name="editTransactionForm" action="modify_transaction.php"
+                    <form class="editTransactionForm" name="editTransactionForm" action="delete_transaction.php"
                         method="post" \ onsubmit="return isSelected()">
                         <td style="text-align: center"> <input type="radio" id="edit" name="edit"
                                 value="<?php echo $transactions_array[$transaction_count]['transaction_id'] ?>">
@@ -105,7 +105,7 @@ foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budg
 
 
     <div class="bottomBar">
-        <button type="submit" name="Add Transaction" id="addTransaction">Modify Selected Transaction</button>
+        <button type="submit" name="Delete Transaction" id="deleteTransaction">Delete Transaction </button>
     </div>
     </form>
 
