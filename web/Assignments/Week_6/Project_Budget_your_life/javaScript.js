@@ -65,7 +65,7 @@ function isSelected() {
   var isToEdit = document.forms["editTransactionForm"]["edit"].value;
 
   if (isToEdit == "") {
-    alert("Please select a transaction to edit!");
+    alert("Please select a transaction to edit or delete!");
 
     return false;
   } else {

@@ -30,14 +30,13 @@ $db = get_db();
     <h1>Delete Transaction </h1>
     <p>In this page you can delete the selected transaction.</p>
 
+    <p>
     <form class="deleteTransaction" name="deleteTransaction" action="removed_transaction.php" method="post">
         <?php
 $_SESSION['editTransactionSession'] = $_POST['edit'];
 
 $editTransaction = $_POST['edit'];
 $_SESSION['transactions'] = $sessionTransactions;
-
-echo 'Edit transaction number: ' . $editTransaction;
 
 foreach ($db->query('SELECT transaction_id, amount, user_id, notes, category, date FROM transaction') as $row) {
     $transactions_array[] = [
@@ -53,13 +52,17 @@ foreach ($db->query('SELECT transaction_id, amount, user_id, notes, category, da
     if (($_POST["edit"] == $transactions_array[$transaction_count]['transaction_id'])) {?>
 
         The following transaction will be deleted from the database:
-        Amount: <?php echo $transactions_array[$transaction_count]['amount'] ?>
-        Notes: <?php echo $transactions_array[$transaction_count]['notes'] ?>
-        Date: <?php echo $transactions_array[$transaction_count]['date'] ?>
-        Category: <?php echo $transactions_array[$transaction_count]['category'] ?>
+        Amount: <?php echo $transactions_array[$transaction_count]['amount'] ?>;
+        <br>
+        Notes: <?php echo $transactions_array[$transaction_count]['notes'] ?>;
+        <br>
+        Date: <?php echo $transactions_array[$transaction_count]['date'] ?>;
+        <br>
+        Category: <?php echo $transactions_array[$transaction_count]['category'] ?>;
         <br>
         <br>
-        <p>NOTE: The transaction will be removed PERMANENTLY from the database </p>
+        <br>
+        NOTE: The transaction will be removed PERMANENTLY from the database. </p>
         <br>
 
         <div class="bottomBar">
