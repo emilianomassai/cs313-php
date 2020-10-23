@@ -45,15 +45,60 @@ $date = $_POST['dateTransaction'];
 $transactionType = $_POST['type'];
 ?>
 
-    <h3>Thank you <?php echo $actualUserDisplayName ?>, your transaction will be recorded.</h3>
+    <h1>Thank you <?php echo $actualUserDisplayName ?>!</h1>
 
-    <?php
-echo 'User ID: ' . $actualUserId . ';';
-echo 'category: ' . $category . ';';
-echo 'amount: ' . $amount . ';';
-echo 'notes: ' . $notes . ';';
-echo 'transaction type: ' . $transactionType;
-echo 'date: ' . $date . ';';
+    <h2>The following transaction has been recorded:</h2>
+
+    <div class="container">
+        <table border="1" style="margin-left:auto;margin-right:auto" class="table table-bordered">
+            <thead>
+                <tr>
+                    <th style="padding:10px">Amount</th>
+                    <th style="padding:10px">Notes</th>
+                    <th style="padding:10px">Category</th>
+                    <th style="padding:10px">Date</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <?php foreach ($db->query('SELECT transaction_id, amount, user_id, notes, category, date FROM transaction') as
+    $row) {
+    $transactions_array[] = [
+        'transaction_id' => $row['transaction_id'],
+        'amount' => $row['amount'],
+        'user_id' => $row['user_id'],
+        'notes' => $row['notes'],
+        'category' => $row['category'],
+        'date' => $row['date'],
+    ];
+    $_SESSION['transactions'] = $transactions_array;
+
+    if (($_POST["edit"] == $transactions_array[$transaction_count]['transaction_id'])) {?>
+
+
+                <tr>
+                    <td style="padding:10px"><?php echo $transactions_array[$transaction_count]['amount'] ?>
+                    </td>
+                    <td style="padding:10px"><?php echo $transactions_array[$transaction_count]['notes'] ?>
+                    </td>
+                    <td style="padding:10px"><?php echo $transactions_array[$transaction_count]['category'] ?>
+                    </td>
+                    <td style="padding:10px"><?php echo $transactions_array[$transaction_count]['date'] ?>
+                    </td>
+
+                    <?php }?>
+                </tr>
+                <?php $transaction_count++;
+}?>
+            </tbody>
+        </table>
+        <?php
+// echo 'User ID: ' . $actualUserId . ';';
+// echo 'category: ' . $category . ';';
+// echo 'amount: ' . $amount . ';';
+// echo 'notes: ' . $notes . ';';
+// echo 'transaction type: ' . $transactionType;
+// echo 'date: ' . $date . ';';
 
 $query = 'INSERT INTO public.transaction(user_id, amount, notes, category, date) VALUES(:user_id, :amount, :notes, :category, :date)';
 $statement = $db->prepare($query);
@@ -75,17 +120,17 @@ $statement->execute();
 
 ?>
 
-    <div>
-        <a href="../Project_Budget_your_life/budgetApp.php" id="CS313_assignments_btn_id">
-            Go back to the App Homepage
-        </a>
-    </div>
+        <div>
+            <a href="../Project_Budget_your_life/budgetApp.php" id="CS313_assignments_btn_id">
+                Go back to the App Homepage
+            </a>
+        </div>
 
-    <footer>
-        <p style="text-align: center;">
-            Copyright © <?php echo $today = date("Y"); ?> emiDev Inc. All rights reserved.
-        </p>
-    </footer>
+        <footer>
+            <p style="text-align: center;">
+                Copyright © <?php echo $today = date("Y"); ?> emiDev Inc. All rights reserved.
+            </p>
+        </footer>
 </body>
 
 </html>
