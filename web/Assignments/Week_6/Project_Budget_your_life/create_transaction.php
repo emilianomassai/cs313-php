@@ -61,7 +61,9 @@ foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budg
     // date (try to add dynamic date with PHP)
 
     if ($_POST["userID"] == $users_array[$count]['user_id']) {
-        $_SESSION["sessionUserID"] = $_POST["userID"];?>
+        $_SESSION["sessionUserID"] = $_POST["userID"];
+        $_SESSION["sessionUserDisplayName"] = $users_array[$count] . ['display_name'];?>
+
 
     <?php echo 'User ID: ' . $_SESSION["sessionUserID"] . ';';
         echo 'category: ' . $category . ';';
@@ -102,7 +104,7 @@ foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budg
         </div>
     </form>
 
-    <h3>Thank you <?php echo $users_array[$count]['display_name'] ?>, your transaction will be recorded.</h3>
+
 
     <?php
 
