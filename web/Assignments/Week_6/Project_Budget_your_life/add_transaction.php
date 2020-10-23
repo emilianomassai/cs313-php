@@ -6,7 +6,7 @@ require "../Project_Budget_your_life/connectAppDB.php";
 $db = get_db();
 //Here I should have the user ID, transaction information passed with session
 
-$actualUserId = $_POST["userID"];
+$actualUserId = $_POST["input_user_id"];
 $category = $_POST['category'];
 $amount = $_POST['input_amount'];
 $notes = $_POST['input_notes'];
