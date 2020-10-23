@@ -42,7 +42,7 @@ $category = $_POST['category'];
 $amount = $_POST['input_amount'];
 $notes = $_POST['input_notes'];
 $date = $_POST['input_date'];
-// $transactionType = $POST['transaction_type'];
+$transactionType = $_POST['type'];
 ?>
 
     <h3>Thank you <?php echo $actualUserDisplayName ?>, your transaction will be recorded.</h3>
@@ -52,7 +52,7 @@ echo 'User ID: ' . $actualUserId . ';';
 echo 'category: ' . $category . ';';
 echo 'amount: ' . $amount . ';';
 echo 'notes: ' . $notes . ';';
-// echo 'transaction type: ' . $transactionType;
+echo 'transaction type: ' . $transactionType;
 echo 'date: ' . $date . ';';
 
 $query = 'INSERT INTO public.transaction(user_id, amount, notes, category, date) VALUES(:user_id, :amount, :notes, :category, :date)';
