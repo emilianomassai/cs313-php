@@ -19,7 +19,7 @@ echo 'Edit transaction number: ' . $editTransaction;
 
 $transaction_count = 0;
 
-foreach ($db->query("SELECT transaction_id, amount, user_id, notes, category, date FROM transaction WHERE transaction_id='.$editTransaction'") as $row) {
+foreach ($db->query("SELECT transaction_id, amount, user_id, notes, category, date FROM transaction WHERE transaction_id='$editTransaction'") as $row) {
 
     echo 'Transaction number: ' . $sessionTransactions[$transaction_count]['transaction_id'];
     echo 'Amount: ' . $sessionTransactions[$transaction_count]['amount'];
