@@ -46,13 +46,15 @@ $transactionType = $_POST['type'];
     <h3>Thank you <?php echo $actualUserDisplayName ?>, your transaction will be recorded.</h3>
 
     <?php
+$editTransaction = $_SESSION['editTransactionSession'];
+
 echo 'User ID: ' . $actualUserId . ';';
 echo 'category: ' . $category . ';';
 echo 'amount: ' . $amount . ';';
 echo 'notes: ' . $notes . ';';
 echo 'transaction type: ' . $transactionType;
 echo 'date: ' . $date . ';';
-$editTransaction = $_SESSION['editTransactionSession'];
+echo 'editTransaction: ' . $editTransaction . ';';
 
 $query = "UPDATE public.transaction( user_id, amount, notes, category, date) SET( :user_id, :amount, :notes, :category, :date)  WHERE transaction_id='$editTransaction'";
 $statement = $db->prepare($query);
