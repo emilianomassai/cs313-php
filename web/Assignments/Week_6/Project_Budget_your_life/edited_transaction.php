@@ -59,23 +59,24 @@ echo 'transaction type: ' . $transactionType;
 echo 'date: ' . $date . ';';
 echo 'editTransaction: ' . $editTransaction . ';';
 
-$query = "UPDATE public.transaction( user_id, amount, notes, category, date) SET( :user_id, :amount, :notes, :category, :date)  WHERE transaction_id='$editTransaction'";
+$query = "UPDATE public.transaction SET(amount = $amount, notes = $notes, category = $category, date = $date)  WHERE transaction_id='$editTransaction'";
 $statement = $db->prepare($query);
-
-// Now we bind the values to the placeholders. This does some nice things
-// including sanitizing the input with regard to sql commands.
-$statement->bindValue(':user_id', $actualUserId);
-if ($transactionType == "Expense" && (!strstr($amount, '-'))) {
-    $statement->bindValue(':amount', '-' . $amount);
-} else {
-    $statement->bindValue(':amount', $amount);
-}
-
-$statement->bindValue(':notes', $notes);
-$statement->bindValue(':category', $category);
-$statement->bindValue(':date', $date);
-
 $statement->execute();
+
+// // Now we bind the values to the placeholders. This does some nice things
+// // including sanitizing the input with regard to sql commands.
+// $statement->bindValue(':user_id', $actualUserId);
+// if ($transactionType == "Expense" && (!strstr($amount, '-'))) {
+//     $statement->bindValue(':amount', '-' . $amount);
+// } else {
+//     $statement->bindValue(':amount', $amount);
+// }
+
+// $statement->bindValue(':notes', $notes);
+// $statement->bindValue(':category', $category);
+// $statement->bindValue(':date', $date);
+
+// $statement->execute();
 
 ?>
 
