@@ -13,28 +13,19 @@ require "../Project_Budget_your_life/connectAppDB.php";
 $db = get_db();
 
 $editTransaction = $_POST['edit'];
+$_SESSION['transactions'] = $sessionTransactions;
 
 echo 'Edit transaction number: ' . $editTransaction;
 
 $transaction_count = 0;
 foreach ($db->query("SELECT transaction_id, amount, user_id, notes, category, date FROM transaction WHERE transaction_id='$editTransaction'") as $row) {
-    $transactions_array[] = [
-        'transaction_id' => $row['transaction_id'],
-        'amount' => $row['amount'],
-        'user_id' => $row['user_id'],
-        'notes' => $row['notes'],
-        'category' => $row['category'],
-        'date' => $row['date'],
-    ];
-
-    $transaction_count++;
-    $_SESSION['transactions'] = $transactions_array;
 
     echo 'Transaction number: ' . $editTransaction;
-    echo 'Amount: ' . $transactions_array[$transaction_count]['amount'];
-    echo 'User ID: ' . $transactions_array[$transaction_count]['user_id'];
-    echo 'Notes: ' . $transactions_array[$transaction_count]['notes'];
-    echo 'Category: ' . $transactions_array[$transaction_count]['category'];
-    echo 'Date: ' . $transactions_array[$transaction_count]['date'];
+    echo 'Amount: ' . $sessionTransactions[$transaction_count]['amount'];
+    echo 'User ID: ' . $sessionTransactions[$transaction_count]['user_id'];
+    echo 'Notes: ' . $sessionTransactions[$transaction_count]['notes'];
+    echo 'Category: ' . $sessionTransactions[$transaction_count]['category'];
+    echo 'Date: ' . $sessionTransactions[$transaction_count]['date'];
+    $transaction_count++;
 
 }
