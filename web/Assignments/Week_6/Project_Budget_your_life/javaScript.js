@@ -40,13 +40,10 @@ function validateNewTransactionForm() {
     document.forms["newTransactionForm"]["input_notes"].value;
   var dateValidation = document.forms["newTransactionForm"]["input_date"].value;
 
-  if (amountValidation == "") {
-    alert("Please enter a name!");
+  if (amountValidation == "" || isNaN(amountValidation)) {
+    alert("Please enter a valid amount!");
     return false;
-  }
-
-  if (isNaN(amountValidation)) {
-    alert("Please enter only numbers!");
-    return false;
+  } else {
+    return true;
   }
 }
