@@ -18,15 +18,18 @@ $_SESSION['transactions'] = $sessionTransactions;
 echo 'Edit transaction number: ' . $editTransaction;
 
 $transaction_count = 0;
+$sql = "UPDATE transaction SET amount=:'1', notes=:'UPDATE!', category=:'UPDATE!' WHERE transaction_id='$editTransaction'";
+$stmt = $pdo->prepare($sql);
+$stmt->execute($data);
 
-foreach ($db->query("SELECT transaction_id, amount, user_id, notes, category, date FROM transaction WHERE transaction_id='$editTransaction'") as $row) {
+// foreach ($db->query("SELECT transaction_id, amount, user_id, notes, category, date FROM transaction WHERE transaction_id='$editTransaction'") as $row) {
 
-    echo 'Transaction number: ' . $sessionTransactions[$transaction_count]['transaction_id'];
-    echo 'Amount: ' . $sessionTransactions[$transaction_count]['amount'];
-    echo 'User ID: ' . $sessionTransactions[$transaction_count]['user_id'];
-    echo 'Notes: ' . $sessionTransactions[$transaction_count]['notes'];
-    echo 'Category: ' . $sessionTransactions[$transaction_count]['category'];
-    echo 'Date: ' . $sessionTransactions[$transaction_count]['date'];
-    $transaction_count++;
+//     echo 'Transaction number: ' . $sessionTransactions[$transaction_count]['transaction_id'];
+//     echo 'Amount: ' . $sessionTransactions[$transaction_count]['amount'];
+//     echo 'User ID: ' . $sessionTransactions[$transaction_count]['user_id'];
+//     echo 'Notes: ' . $sessionTransactions[$transaction_count]['notes'];
+//     echo 'Category: ' . $sessionTransactions[$transaction_count]['category'];
+//     echo 'Date: ' . $sessionTransactions[$transaction_count]['date'];
+//     $transaction_count++;
 
-}
+// }
