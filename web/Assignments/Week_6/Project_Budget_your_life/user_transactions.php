@@ -102,25 +102,24 @@ foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budg
     <h2>The total amount of all the transactions is: <?php echo '<br>' ?> <?php echo '$' . $totalAmount ?></h2>
     <br>
 
-    <div class="container">
-        <h2>Transactions List:</h2>
 
-        <div class="bottomBar">
-            <button type="submit" name="Add Transaction" id="addTransaction">Modify Selected Transaction</button>
-        </div>
-        </form>
 
-        <div>
-            <a href="../Project_Budget_your_life/budgetApp.php" id="CS313_assignments_btn_id">
-                Go back to the App Homepage
-            </a>
-        </div>
+    <div class="bottomBar">
+        <button type="submit" name="Add Transaction" id="addTransaction">Modify Selected Transaction</button>
+    </div>
+    </form>
 
-        <footer>
-            <p style="text-align: center;">
-                Copyright © <?php echo $today = date("Y"); ?> emiDev Inc. All rights reserved.
-            </p>
-        </footer>
+    <div>
+        <a href="../Project_Budget_your_life/budgetApp.php" id="CS313_assignments_btn_id">
+            Go back to the App Homepage
+        </a>
+    </div>
+
+    <footer>
+        <p style="text-align: center;">
+            Copyright © <?php echo $today = date("Y"); ?> emiDev Inc. All rights reserved.
+        </p>
+    </footer>
 </body>
 
 </html>
