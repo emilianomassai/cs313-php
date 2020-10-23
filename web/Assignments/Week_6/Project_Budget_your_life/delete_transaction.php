@@ -93,7 +93,6 @@ foreach ($db->query('SELECT transaction_id, amount, user_id, notes, category, da
                 </div>
 
 
-                <?php }?>
 
                 </tr>
                 <?php $transaction_count++;
