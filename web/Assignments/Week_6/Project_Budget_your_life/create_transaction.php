@@ -63,6 +63,8 @@ foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budg
     if ($_POST["userID"] == $users_array[$count]['user_id']) {
         ?>
 
+    <?php echo 'POST id: ' . $_POST["userID"] ?>
+    <?php echo 'users_array count user_id: ' . $users_array[$count]['user_id'] ?>
 
 
     <h1>Ready to add a transaction, <?php echo $users_array[$count]['display_name'] ?>?</h1>
