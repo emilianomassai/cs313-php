@@ -55,7 +55,8 @@ foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budg
 
 
                 <?php $transaction_count = 0;?>
-                <?php foreach ($db->query('SELECT transaction_id, amount, user_id, notes, category, date FROM transaction') as $row) {
+                <?php foreach ($db->query('SELECT transaction_id, amount, user_id, notes, category, date FROM transaction ORDER BY
+	date ASC;') as $row) {
     $transactions_array[] = [
         'transaction_id' => $row['transaction_id'],
         'amount' => $row['amount'],
