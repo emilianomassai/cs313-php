@@ -59,7 +59,7 @@ echo 'transaction type: ' . $transactionType;
 echo 'date: ' . $date . ';';
 echo 'editTransaction: ' . $editTransaction . ';';
 
-$query = "DELETE FROM public.transaction WHERE transaction_id='" . $editTransaction . "'";
+$query = "DELETE FROM public.transaction WHERE transaction_id='$editTransaction'";
 // $query = "UPDATE public.transaction SET(amount = $amount, notes = $notes, category = $category, date = $date)  WHERE transaction_id='$editTransaction'";
 // $statement = $db->prepare($query);
 // $statement->execute();
