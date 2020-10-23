@@ -106,7 +106,8 @@ foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budg
             <option value="Pets">Pets</option>
             <option value="Health">Health</option>
         </select>
-        Date: <input type="date" name="input_date">
+        <label for="dateTransaction">Date:</label>
+        <input type="date" id="dateTransaction" name="dateTransaction">
 
 
         <div class="bottomBar">

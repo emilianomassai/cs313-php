@@ -41,7 +41,7 @@ $actualUserDisplayName = $_SESSION["sessionUserDisplayName"];
 $category = $_POST['category'];
 $amount = $_POST['input_amount'];
 $notes = $_POST['input_notes'];
-$date = $_POST['input_date'];
+$date = $_POST['dateTransaction'];
 $transactionType = $_POST['type'];
 ?>
 
