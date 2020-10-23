@@ -38,20 +38,19 @@ $_SESSION['editTransactionSession'] = $_POST['edit'];
 $editTransaction = $_POST['edit'];
 $_SESSION['transactions'] = $sessionTransactions;
 ?>
-        <table border="1" style="margin-left:auto;margin-right:auto" class="table table-bordered">
-            <thead>
-                <tr>
-                    <th style="padding:10px">Amount</th>
-                    <th style="padding:10px">Notes</th>
-                    <th style="padding:10px">Category</th>
-                    <th style="padding:10px">Date</th>
+        <div class="container">
+            <table border="1" style="margin-left:auto;margin-right:auto" class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th style="padding:10px">Amount</th>
+                        <th style="padding:10px">Notes</th>
+                        <th style="padding:10px">Category</th>
+                        <th style="padding:10px">Date</th>
+                    </tr>
+                </thead>
+                <tbody>
 
-
-                </tr>
-            </thead>
-            <tbody>
-                <?php
-foreach ($db->query('SELECT transaction_id, amount, user_id, notes, category, date FROM transaction') as
+                    <?php foreach ($db->query('SELECT transaction_id, amount, user_id, notes, category, date FROM transaction') as
     $row) {
     $transactions_array[] = [
         'transaction_id' => $row['transaction_id'],
@@ -66,35 +65,31 @@ foreach ($db->query('SELECT transaction_id, amount, user_id, notes, category, da
     if (($_POST["edit"] == $transactions_array[$transaction_count]['transaction_id'])) {?>
 
 
-                <tr>
-                    <td style="padding:10px"><?php echo $transactions_array[$transaction_count]['amount'] ?>
-                    </td>
-                    <td style="padding:10px"><?php echo $transactions_array[$transaction_count]['notes'] ?>
-                    </td>
-                    <td style="padding:10px"><?php echo $transactions_array[$transaction_count]['category'] ?>
-                    </td>
-                    <td style="padding:10px"><?php echo $transactions_array[$transaction_count]['date'] ?>
-                    </td>
+                    <tr>
+                        <td style="padding:10px"><?php echo $transactions_array[$transaction_count]['amount'] ?>
+                        </td>
+                        <td style="padding:10px"><?php echo $transactions_array[$transaction_count]['notes'] ?>
+                        </td>
+                        <td style="padding:10px"><?php echo $transactions_array[$transaction_count]['category'] ?>
+                        </td>
+                        <td style="padding:10px"><?php echo $transactions_array[$transaction_count]['date'] ?>
+                        </td>
 
-                    <?php }?>
+                        <?php }?>
+                    </tr>
                     <?php $transaction_count++;
 }?>
-                </tr>
+                </tbody>
+            </table>
 
-                </tr>
+            <p>NOTE: The transaction will be removed PERMANENTLY from the database.
+            </p>
+            <br>
 
-                <br>
-                <br>
-                <br>
-
-                <p>NOTE: The transaction will be removed PERMANENTLY from the database.
-                </p>
-                <br>
-
-                <div class="bottomBar">
-                    <button type="submit" name="Delete Transaction" id="deleteTransaction">Delete Transaction</button>
-                </div>
-
+            <div class="bottomBar">
+                <button type="submit" name="Delete Transaction" id="deleteTransaction">Delete
+                    Transaction</button>
+            </div>
 
     </form>
 
