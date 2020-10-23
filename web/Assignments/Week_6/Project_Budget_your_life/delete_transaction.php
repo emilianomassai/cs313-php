@@ -81,6 +81,8 @@ foreach ($db->query('SELECT transaction_id, amount, user_id, notes, category, da
 }?>
                 </tr>
 
+                </tr>
+
                 <br>
                 <br>
                 <br>
@@ -92,10 +94,6 @@ foreach ($db->query('SELECT transaction_id, amount, user_id, notes, category, da
                 <div class="bottomBar">
                     <button type="submit" name="Delete Transaction" id="deleteTransaction">Delete Transaction</button>
                 </div>
-
-
-
-                </tr>
 
 
     </form>
