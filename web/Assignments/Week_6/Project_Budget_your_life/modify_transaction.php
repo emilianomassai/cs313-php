@@ -37,10 +37,10 @@ foreach ($db->query('SELECT transaction_id, amount, user_id, notes, category, da
     </td>
     <td style="padding:10px"><?php echo $transactions_array[$transaction_count]['category'] ?>
     </td>
-    < style="padding:10px"><?php echo $transactions_array[$transaction_count]['date'] ?>
+    <td style="padding:10px"><?php echo $transactions_array[$transaction_count]['date'] ?>
 
-        </td>
-        <?php }?>
+    </td>
+    <?php }?>
 
 </tr>
 <?php $transaction_count++;
