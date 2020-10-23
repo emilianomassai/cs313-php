@@ -25,13 +25,12 @@ foreach ($db->query('SELECT transaction_id, amount, user_id, notes, category, da
         'category' => $row['category'],
         'date' => $row['date'],
     ];
-    if (($editTransaction == $transactions_array[$transaction_count]['transaction_id'])) {
-        echo 'Transaction number: ' . $editTransaction;
-        echo 'Amount: ' . $transactions_array[$transaction_count]['amount'];
-        echo 'User ID: ' . $transactions_array[$transaction_count]['user_id'];
-        echo 'Notes: ' . $transactions_array[$transaction_count]['notes'];
-        echo 'Category: ' . $transactions_array[$transaction_count]['category'];
-        echo 'Date: ' . $transactions_array[$transaction_count]['date'];
 
-    }
+    echo 'Transaction number: ' . $editTransaction;
+    echo 'Amount: ' . $transactions_array[$transaction_count]['amount'];
+    echo 'User ID: ' . $transactions_array[$transaction_count]['user_id'];
+    echo 'Notes: ' . $transactions_array[$transaction_count]['notes'];
+    echo 'Category: ' . $transactions_array[$transaction_count]['category'];
+    echo 'Date: ' . $transactions_array[$transaction_count]['date'];
+
 }
