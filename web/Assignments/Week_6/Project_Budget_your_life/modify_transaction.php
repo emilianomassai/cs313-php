@@ -48,18 +48,64 @@ foreach ($db->query('SELECT transaction_id, amount, user_id, notes, category, da
     $_SESSION['transactions'] = $transactions_array;
 
     if (($_POST["edit"] == $transactions_array[$transaction_count]['transaction_id'])) {?>
-    <tr>
-        <td style="padding:10px"><?php echo $transactions_array[$transaction_count]['amount'] ?>
 
-        </td>
-        <td style="padding:10px"><?php echo $transactions_array[$transaction_count]['notes'] ?>
-        </td>
-        <td style="padding:10px"><?php echo $transactions_array[$transaction_count]['category'] ?>
-        </td>
-        <td style="padding:10px"><?php echo $transactions_array[$transaction_count]['date'] ?>
+    <form class="newTransactionForm" name="newTransactionForm" action="add_transaction.php" method="post" \
+        onsubmit="return validateNewTransactionForm()">
 
-        </td>
-        <?php }?>
+        Transaction Type: <select name="type">
+            <option value="Expense">Expense</option>
+            <option value="Income">Income</option>
+        </select>
+        Amount: <input type="text" name="input_amount"
+            value="<?php echo $transactions_array[$transaction_count]['amount'] ?>">
+        Notes: <input type="text" name="input_notes"
+            value="<?php echo $transactions_array[$transaction_count]['notes'] ?>">
+        Category: <select name="category" value="<?php echo $transactions_array[$transaction_count]['category'] ?>">
+            <option value="Salary">Salary</option>
+            <option value="Extra Income">Extra Income</option>
+            <option value="Groceries">Groceries</option>
+            <option value="Eating Out">Eating Out</option>
+            <option value="Movies">Movies</option>
+            <option value="Kids">Kids</option>
+            <option value="Car">Car</option>
+            <option value="Petrol">Petrol</option>
+            <option value="Shopping">Shopping</option>
+            <option value="Business">Business</option>
+            <option value="Investments">Investments</option>
+            <option value="Fitness">Fitness</option>
+            <option value="Holidays">Holidays</option>
+            <option value="Bills">Bills</option>
+            <option value="Home">Home</option>
+            <option value="Education">Education</option>
+            <option value="Pets">Pets</option>
+            <option value="Health">Health</option>
+        </select>
+        Date: <input type="date" name="dateTransaction"
+            value="<?php echo $transactions_array[$transaction_count]['date'] ?>">
+
+        <br>
+        <br>
+        <p>NOTE: If you are using Safari, you will need to enter manually the date but if you use a Chromium based
+            browser
+            or Firefox, a date picker will be shown instead. The Safari doesn't support the date input yet.
+
+        </p>
+
+        <div class="bottomBar">
+            <button type="submit" name="Add Transaction" id="addTransaction">Add Transaction</button>
+        </div>
+    </form>
+    <?php echo $transactions_array[$transaction_count]['amount'] ?>
+
+    </td>
+    <td style="padding:10px"><?php echo $transactions_array[$transaction_count]['notes'] ?>
+    </td>
+    <td style="padding:10px"><?php echo $transactions_array[$transaction_count]['category'] ?>
+    </td>
+    <td style="padding:10px"><?php echo $transactions_array[$transaction_count]['date'] ?>
+
+    </td>
+    <?php }?>
 
     </tr>
     <?php $transaction_count++;
