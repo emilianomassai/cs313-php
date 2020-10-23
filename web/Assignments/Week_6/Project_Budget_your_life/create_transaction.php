@@ -90,6 +90,8 @@ foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budg
             <option value="Car">Car</option>
             <option value="Petrol">Petrol</option>
             <option value="Shopping">Shopping</option>
+            <option value="Business">Business</option>
+            <option value="Investments">Investments</option>
             <option value="Fitness">Fitness</option>
             <option value="Holidays">Holidays</option>
             <option value="Bills">Bills</option>
