@@ -5,6 +5,9 @@
  *
  * Description: Modify an existing transaction with the new information.
  * It uses the transaction ID to find which transaction has to be modified.
+ *
+ *
+ * TODO // MISSING THE CORRECT PART TO MODIFY THE NEW VALUES TO THE DATABASE!!
  ***********************************************************/
 ?>
 
