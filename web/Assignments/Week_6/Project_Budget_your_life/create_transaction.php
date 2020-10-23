@@ -54,12 +54,6 @@ foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budg
 
     // Here I should have a form with all the transaction information such as:
 
-// user_id
-    // amount
-    // notes
-    // category
-    // date (try to add dynamic date with PHP)
-
     if ($_POST["userID"] == $users_array[$count]['user_id']) {
         $_SESSION["sessionUserID"] = $_POST["userID"];
         $_SESSION["sessionUserDisplayName"] =
