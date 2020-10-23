@@ -61,9 +61,9 @@ foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budg
     // date (try to add dynamic date with PHP)
 
     if ($_POST["userID"] == $users_array[$count]['user_id']) {
-        ?>
+        $_SESSION["sessionUserID"] = $_POST["userID"];?>
 
-    <?php echo 'User ID: ' . $_POST["userID"] . ';';
+    <?php echo 'User ID: ' . $_SESSION["sessionUserID"] . ';';
         echo 'category: ' . $category . ';';
         echo 'amount: ' . $amount . ';';
         echo 'notes: ' . $notes . ';';
