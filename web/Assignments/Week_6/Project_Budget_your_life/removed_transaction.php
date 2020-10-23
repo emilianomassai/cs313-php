@@ -46,38 +46,15 @@ $date = $_POST['dateTransaction'];
 $transactionType = $_POST['type'];
 ?>
 
-    <h3>Thank you <?php echo $actualUserDisplayName ?>, your transaction has been deleted.</h3>
+    <h1>Your transaction has been deleted.</h1>
 
     <?php
 $editTransaction = $_SESSION['editTransactionSession'];
-
-// echo 'User ID: ' . $actualUserId . ';';
-// echo 'category: ' . $category . ';';
-// echo 'amount: ' . $amount . ';';
-// echo 'notes: ' . $notes . ';';
-// echo 'transaction type: ' . $transactionType;
-// echo 'date: ' . $date . ';';
-// echo 'editTransaction: ' . $editTransaction . ';';
 
 $query = "DELETE FROM transaction WHERE transaction_id = $editTransaction";
 // $query = "UPDATE public.transaction SET(amount = $amount, notes = $notes, category = $category, date = $date)  WHERE transaction_id='$editTransaction'";
 $statement = $db->prepare($query);
 $statement->execute();
-
-// // Now we bind the values to the placeholders. This does some nice things
-// // including sanitizing the input with regard to sql commands.
-// $statement->bindValue(':user_id', $actualUserId);
-// if ($transactionType == "Expense" && (!strstr($amount, '-'))) {
-//     $statement->bindValue(':amount', '-' . $amount);
-// } else {
-//     $statement->bindValue(':amount', $amount);
-// }
-
-// $statement->bindValue(':notes', $notes);
-// $statement->bindValue(':category', $category);
-// $statement->bindValue(':date', $date);
-
-// $statement->execute();
 
 ?>
 
