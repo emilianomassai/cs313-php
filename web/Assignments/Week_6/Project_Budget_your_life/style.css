@@ -67,7 +67,7 @@ a:hover {
 
 button {
   text-align: center;
-
+  display: block;
   color: white;
   text-decoration: none;
   font-size: 15px;
@@ -78,7 +78,6 @@ button {
 
 button:hover {
   text-align: center;
-
   color: #0076b6;
   background-color: white;
   box-shadow: -3px 15px 10px rgba(0, 0, 0, 0.5);
