@@ -16,10 +16,7 @@ $editTransaction = $_POST['edit'];
 $_SESSION['transactions'] = $sessionTransactions;
 
 echo 'Edit transaction number: ' . $editTransaction;
-
-$sql = "UPDATE transaction SET amount='1', notes='UPDATED!', category='Car' WHERE transaction_id='$editTransaction'";
-$stmt = $pdo->prepare($sql);
-$stmt->execute([$amount, $notes, $category]);
+echo 'sessionTransactions: ' . $sessionTransactions;
 
 // foreach ($db->query("SELECT transaction_id, amount, user_id, notes, category, date FROM transaction WHERE transaction_id='$editTransaction'") as $row) {
 
