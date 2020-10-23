@@ -36,9 +36,25 @@ function validateNewUserForm() {
 function validateNewTransactionForm() {
   var amountValidation =
     document.forms["newTransactionForm"]["input_amount"].value;
+  var notesValidation =
+    document.forms["newTransactionForm"]["input_notes"].value;
+  var dateValidation = document.forms["newTransactionForm"]["input_date"].value;
 
   if (amountValidation == "" || isNaN(amountValidation)) {
     alert("Please enter a valid amount!");
+    return false;
+  }
+
+  if (notesValidation == "") {
+    alert("Please enter some notes to add more details to the transaction!");
+    return false;
+  }
+
+  if (
+    dateValidation == "" ||
+    /^\d{4}[\/\-](0?[1-9]|1[012])[\/\-](0?[1-9]|[12][0-9]|3[01])$/
+  ) {
+    alert("Please enter a date in the format 'YYYY-MM-DD'");
     return false;
   } else {
     return true;
