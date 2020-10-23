@@ -51,31 +51,52 @@ foreach ($db->query('SELECT transaction_id, amount, user_id, notes, category, da
 
     if (($_POST["edit"] == $transactions_array[$transaction_count]['transaction_id'])) {?>
 
-        The following transaction will be deleted from the database:
-        <br>
-        Amount: <?php echo $transactions_array[$transaction_count]['amount'] ?>;
-        <br>
-        Notes: <?php echo $transactions_array[$transaction_count]['notes'] ?>;
-        <br>
-        Date: <?php echo $transactions_array[$transaction_count]['date'] ?>;
-        <br>
-        Category: <?php echo $transactions_array[$transaction_count]['category'] ?>;
-        <br>
-        <br>
-        <br>
-        <p>NOTE: The transaction will be removed PERMANENTLY from the database.
+        <p> The following transaction will be deleted from the database:
         </p>
-        <br>
 
-        <div class="bottomBar">
-            <button type="submit" name="Delete Transaction" id="deleteTransaction">Delete Transaction</button>
-        </div>
+        <table border="1" style="margin-left:auto;margin-right:auto" class="table table-bordered">
+            <thead>
+                <tr>
+                    <th style="padding:10px">Amount</th>
+                    <th style="padding:10px">Notes</th>
+                    <th style="padding:10px">Category</th>
+                    <th style="padding:10px">Date</th>
 
 
-        <?php }?>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="padding:10px"><?php echo $transactions_array[$transaction_count]['amount'] ?>
+                    </td>
+                    <td style="padding:10px"><?php echo $transactions_array[$transaction_count]['notes'] ?>
+                    </td>
+                    <td style="padding:10px"><?php echo $transactions_array[$transaction_count]['category'] ?>
+                    </td>
+                    <td style="padding:10px"><?php echo $transactions_array[$transaction_count]['date'] ?>
+                    </td>
+                    </td>
+                    <?php }?>
 
-        </tr>
-        <?php $transaction_count++;
+                </tr>
+
+                <br>
+                <br>
+                <br>
+
+                <p>NOTE: The transaction will be removed PERMANENTLY from the database.
+                </p>
+                <br>
+
+                <div class="bottomBar">
+                    <button type="submit" name="Delete Transaction" id="deleteTransaction">Delete Transaction</button>
+                </div>
+
+
+                <?php }?>
+
+                </tr>
+                <?php $transaction_count++;
 }?>
 
     </form>

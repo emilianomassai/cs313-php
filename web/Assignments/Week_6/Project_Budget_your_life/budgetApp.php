@@ -118,7 +118,7 @@ foreach ($db->query('SELECT amount, user_id, notes, category, date FROM transact
         <div class="bottomBar">
             <button type="submit" name="search" id="searchUser">Search</button>
         </div>
-        </section>
+
     </form>
     <br>
     <hr>
