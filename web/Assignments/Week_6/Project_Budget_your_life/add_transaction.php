@@ -77,13 +77,13 @@ $transactionType = $_POST['type'];
 
 
                 <tr>
-                    <td style="padding:10px"><?php echo $transactions_array[$transaction_count]['amount'] ?>
+                    <td style="padding:10px"><?php echo $amount ?>
                     </td>
-                    <td style="padding:10px"><?php echo $transactions_array[$transaction_count]['notes'] ?>
+                    <td style="padding:10px"><?php echo $notes ?>
                     </td>
-                    <td style="padding:10px"><?php echo $transactions_array[$transaction_count]['category'] ?>
+                    <td style="padding:10px"><?php echo $category ?>
                     </td>
-                    <td style="padding:10px"><?php echo $transactions_array[$transaction_count]['date'] ?>
+                    <td style="padding:10px"><?php echo $date ?>
                     </td>
 
                     <?php }?>
