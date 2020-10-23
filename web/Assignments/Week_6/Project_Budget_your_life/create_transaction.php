@@ -66,14 +66,6 @@ foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budg
             $users_array[$count]["display_name"];?>
 
 
-    <?php echo 'User ID: ' . $_SESSION["sessionUserID"] . ';';
-        echo 'category: ' . $category . ';';
-        echo 'amount: ' . $amount . ';';
-        echo 'notes: ' . $notes . ';';
-        echo 'date: ' . $date . ';';
-
-        ?>
-
 
     <h1>Ready to add a transaction, <?php echo $users_array[$count]['display_name'] ?>?</h1>
     <p>Please add all the following details:</p>
@@ -108,6 +100,13 @@ foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budg
         </select>
         Date: <input type="date" name="dateTransaction">
 
+        <br>
+        <br>
+        <p>NOTE: If you are using Safari, you will need to enter manually the date but if you use a Chromium based
+            browser
+            or Firefox, a date picker will be shown instead. The Safari doesn't support the date input yet.
+
+        </p>
 
         <div class="bottomBar">
             <button type="submit" name="Add Transaction" id="addTransaction">Add Transaction</button>
@@ -119,10 +118,7 @@ foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budg
     $count++;
 }
 ?>
-    <p>NOTE: If you are using Safari, you will need to enter manually the date but if you use a Chromium based browser
-        or Firefox, a date picker will be shown instead. The Safari doesn't support the date input yet.
 
-    </p>
 
 
     <div>
