@@ -32,3 +32,29 @@ function validateNewUserForm() {
     return false;
   }
 }
+
+function validateNewTransactionForm() {
+  var amountValidation =
+    document.forms["newTransactionForm"]["input_amount"].value;
+  var notesValidation =
+    document.forms["newTransactionForm"]["input_notes"].value;
+  var dateValidation = document.forms["newTransactionForm"]["input_date"].value;
+
+  if (amountValidation == "") {
+    alert("Please enter a name!");
+    return false;
+  }
+
+  if (isNaN(amountValidation)) {
+    alert("Please enter only numbers!");
+    return false;
+  }
+}
+
+function isExpense() {
+  var transactionType =
+    document.forms["newTransactionForm"]["transaction_type"].value;
+  if (transactionType == "Expense") {
+    return true;
+  } else return false;
+}

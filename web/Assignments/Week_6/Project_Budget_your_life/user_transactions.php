@@ -11,6 +11,7 @@ $db = get_db();
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" type="image/ico" href="./BudgetAppImages/budgetAppIcon.png">
+
     <!--Title in the browser title bar.-->
     <title>Budget Your Life</title>
     <!-- heading of the web page -->

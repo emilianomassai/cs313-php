@@ -77,9 +77,16 @@ foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budg
     <p>Please add all the following details:</p>
 
     <!-- use POST to link the current user to the new transaction and add it to the database -->
-    <form action="add_transaction.php" method="post">
+    <form class="newTransactionForm" action="add_transaction.php" method="post" \
+        onsubmit="return validateNewTransactionForm()">
         <input type="hidden" name="input_user_id" value="<?php $_POST["userID"]?>">
-
+        Transaction Type: <select name="transaction_type" onchange="isExpense()">
+            <option value="Expense">Expense</option>
+            <option value="Income">Income</option>
+        </select>
+        Is Expense: <script>
+        isExpense()
+        </script>
         Amount: <input type="text" name="input_amount">
         Notes: <input type="text" name="input_notes">
         Category: <select name="category">
@@ -87,6 +94,7 @@ foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budg
             <option value="Extra Income">Extra Income</option>
             <option value="Groceries">Groceries</option>
             <option value="Eating Out">Eating Out</option>
+            <option value="Movies">Movies</option>
             <option value="Kids">Kids</option>
             <option value="Car">Car</option>
             <option value="Petrol">Petrol</option>

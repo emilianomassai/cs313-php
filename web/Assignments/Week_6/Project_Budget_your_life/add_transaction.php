@@ -20,7 +20,6 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" type="image/ico" href="../Project_Budget_your_life/BudgetAppImages/budgetAppIcon.png">
 
-    <script src="../Project_Budget_your_life/javaScript.js"></script>
 
     <!--Title in the browser title bar.-->
     <title>Budget Your Life</title>
