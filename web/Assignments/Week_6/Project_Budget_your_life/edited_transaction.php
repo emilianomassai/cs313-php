@@ -1,10 +1,10 @@
 <?php
 /**********************************************************
- * File: removed_transaction.php
+ * File: edited_transaction.php
  * Author: Emiliano Massai
  *
- * Description: Remove an existing transaction from the database.
- * It uses the transaction ID to find which transaction has to be deleted.
+ * Description: Modify an existing transaction with the new information.
+ * It uses the transaction ID to find which transaction has to be modified.
  * ***********************************************************/
 ?>
 
@@ -43,15 +43,15 @@ $date = $_POST['dateTransaction'];
 $transactionType = $_POST['type'];
 ?>
 
-    <h1>Your transaction has been deleted.</h1>
+    <h1>Your transaction has been edited.</h1>
 
     <?php
 $editTransaction = $_SESSION['editTransactionSession'];
 
-$query = "DELETE FROM transaction WHERE transaction_id = $editTransaction";
-// $query = "UPDATE public.transaction SET(amount = $amount, notes = $notes, category = $category, date = $date)  WHERE transaction_id='$editTransaction'";
-$statement = $db->prepare($query);
-$statement->execute();
+// $query = "DELETE FROM transaction WHERE transaction_id = $editTransaction";
+// // $query = "UPDATE public.transaction SET(amount = $amount, notes = $notes, category = $category, date = $date)  WHERE transaction_id='$editTransaction'";
+// $statement = $db->prepare($query);
+// $statement->execute();
 
 ?>
 
