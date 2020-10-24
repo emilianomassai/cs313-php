@@ -94,7 +94,7 @@ foreach ($db->query('SELECT transaction_id, amount, user_id, notes, category, da
         </p>
 
         <div class="bottomBar">
-            <button type="submit" name="Add Transaction" id="addTransaction">Add Transaction</button>
+            <button type="submit" name="Add Transaction" id="addTransaction">Update Transaction</button>
         </div>
     </form>
 
