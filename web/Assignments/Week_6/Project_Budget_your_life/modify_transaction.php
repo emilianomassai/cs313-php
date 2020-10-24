@@ -36,7 +36,7 @@ $_SESSION['editTransactionSession'] = $_POST['edit'];
 $editTransaction = $_POST['edit'];
 $_SESSION['transactions'] = $sessionTransactions;
 
-echo 'Edit transaction number: ' . $editTransaction;
+// echo 'Edit transaction number: ' . $editTransaction;
 
 foreach ($db->query('SELECT transaction_id, amount, user_id, notes, category, date FROM transaction') as $row) {
     $transactions_array[] = [
@@ -97,19 +97,9 @@ foreach ($db->query('SELECT transaction_id, amount, user_id, notes, category, da
             <button type="submit" name="Add Transaction" id="addTransaction">Add Transaction</button>
         </div>
     </form>
-    <?php echo $transactions_array[$transaction_count]['amount'] ?>
 
-    </td>
-    <td style="padding:10px"><?php echo $transactions_array[$transaction_count]['notes'] ?>
-    </td>
-    <td style="padding:10px"><?php echo $transactions_array[$transaction_count]['category'] ?>
-    </td>
-    <td style="padding:10px"><?php echo $transactions_array[$transaction_count]['date'] ?>
-
-    </td>
     <?php }?>
 
-    </tr>
     <?php $transaction_count++;
 }?>
 
