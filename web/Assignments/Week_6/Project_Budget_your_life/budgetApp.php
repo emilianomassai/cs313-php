@@ -154,7 +154,7 @@ foreach ($db->query('SELECT amount, user_id, notes, category, date FROM transact
                 <hr>
 
 
-                <!-- This will be submitted and handled in the next assignment, but for this week, checkboxes are dynamically created based upon what is in the database.  -->
+                <!-- A new user can be added to the database from here -->
 
 
                 <h2>New user form:</h2>

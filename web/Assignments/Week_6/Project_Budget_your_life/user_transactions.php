@@ -104,7 +104,11 @@ foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budg
 
     <div class="bottomBar">
         <button type="submit" name="Delete Transaction" id="deleteTransaction">Delete Transaction </button>
+
+        <button type="submit" name="Modify Transaction" id="modifyTransaction"
+            formaction="modify_transaction.php">Modify Transaction </button>
     </div>
+
     </form>
 
     <div>
