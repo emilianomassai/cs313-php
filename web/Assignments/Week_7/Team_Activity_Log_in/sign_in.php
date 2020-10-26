@@ -1,6 +1,6 @@
 <?php
 /**********************************************************
- * File: sign-in.php
+ * File: sign_in.php
  * Author: Emiliano Massai
  *
  * Description: Takes input posted from sign-up.php
@@ -69,7 +69,7 @@ die(); // we always include a die after redirects. In this case, there would be 
 
 
     <div>
-        <a href="../../Week_7/Team_Activity_Log_in/sign-up.php" id="Sign-up">
+        <a href="../../Week_7/Team_Activity_Log_in/sign_up.php" id="Sign-up">
             Add another user to the database
         </a>
     </div>

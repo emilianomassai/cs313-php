@@ -28,7 +28,7 @@
     <br>
 
 
-    <form class="newUserForm" name="newUserForm" action="sign-in.php" method="post"></form>
+    <form class="newUserForm" name="newUserForm" action="sign_in.php" method="post"></form>
 
     <h4>Username: </h4>
     <input type="text" id="username" name="username">
