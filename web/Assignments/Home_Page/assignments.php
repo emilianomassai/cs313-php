@@ -54,7 +54,7 @@ header("refresh: 30;");
         Week 6: Budget Your Life - BETA 2.0 Project
     </a>
 
-    <a href="../Week_7/Team_Activity_Log_in/sign-up.php" id="sign-in/log-in_btn_id">
+    <a href="../Week_7/Team_Activity_Log_in/sign_up.php" id="sign_in/log_in_btn_id">
         Week 7: Team activity - Sign in/Log-in
     </a>
 
