@@ -37,8 +37,12 @@
     <input type="text" id="password" name="password">
 
 
+    <br>
+    <br>
 
-
+    <div class="bottomBar">
+        <button type="submit" name="Add User" id="addUser">Add User</button>
+    </div>
 
     </form>
 
