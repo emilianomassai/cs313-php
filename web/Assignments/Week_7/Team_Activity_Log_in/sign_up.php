@@ -33,7 +33,7 @@
     <h4>Username: </h4>
     <input type="text" id="username" name="username">
     <h4>Password: </h4>
-    <input type="password" id="password" name="password">
+    <input type="text" id="password" name="password">
 
 
 
