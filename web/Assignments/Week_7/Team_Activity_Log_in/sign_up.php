@@ -30,9 +30,10 @@
 
     <form class="newUserForm" name="newUserForm" action="sign_in.php" method="post"></form>
 
-    <h4>Username: </h4>
+    <h4><label for="username_txt"> Username:</label> </h4>
     <input type="text" id="username" name="username">
-    <h4>Password: </h4>
+
+    <h4><label for="password_txt"> Password:</label> </h4>
     <input type="text" id="password" name="password">
 
 
