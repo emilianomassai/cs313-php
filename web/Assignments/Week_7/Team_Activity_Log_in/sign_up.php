@@ -39,9 +39,7 @@
 
 
 
-    <div class="bottomBar">
-        <button type="submit" name="Add User" id="addUser">Add User</button>
-    </div>
+
     </form>
 
     <div>
