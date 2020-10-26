@@ -27,16 +27,16 @@
     <h1>Please enter the following information:</h1>
     <br>
 
-    <div>
-        <form class="newUserForm" name="newUserForm" action="sign-in.php" method="post"></form>
 
-        <h4>Username: </h4>
-        <input type="text" id="username" name="username">
-        <h4>Password: </h4>
-        <input type="password" id="password" name="password">
+    <form class="newUserForm" name="newUserForm" action="sign-in.php" method="post"></form>
+
+    <h4>Username: </h4>
+    <input type="text" id="username" name="username">
+    <h4>Password: </h4>
+    <input type="password" id="password" name="password">
 
 
-    </div>
+
 
     <div class="bottomBar">
         <button type="submit" name="Add User" id="addUser">Add User</button>
