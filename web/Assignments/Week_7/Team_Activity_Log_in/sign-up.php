@@ -27,8 +27,9 @@
     <h1>Please enter the following information:</h1>
     <br>
 
+    <?php //onsubmit="#"?>
     <div>
-        <form action="../Team_Activity_Log_in/sign-in.php" method="post" onsubmit="#"></form>
+        <form action="../Team_Activity_Log_in/sign-in.php" method="post"></form>
 
         <h4>Username: </h4>
         <input type="text" id="username" name="username">
