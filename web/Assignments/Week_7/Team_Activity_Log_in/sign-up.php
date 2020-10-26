@@ -28,7 +28,7 @@
     <br>
 
     <div>
-        <form class="newUserForm" name="newUserForm" action="../Team_Activity_Log_in/sign-in.php" method="post"></form>
+        <form class="newUserForm" name="newUserForm" action="sign-in.php" method="post"></form>
 
         <h4>Username: </h4>
         <input type="text" id="username" name="username">
@@ -43,11 +43,6 @@
     </div>
     </form>
 
-    <div>
-        <a href="../Team_Activity_Log_in/sign-in.php" id="CS313_assignments_btn_id">
-            Go to the CS313 Assignment's page
-        </a>
-    </div>
     <div>
         <a href="../../Home_Page/assignments.php" id="CS313_assignments_btn_id">
             Go to the CS313 Assignment's page
