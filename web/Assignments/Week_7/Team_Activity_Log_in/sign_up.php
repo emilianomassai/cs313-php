@@ -34,14 +34,14 @@
     <input type="text" id="username" name="username">
 
     <h4><label for="password_txt"> Password:</label> </h4>
-    <input type="text" id="password" name="password">
+    <input type="password" id="password" name="password">
 
 
     <br>
     <br>
 
     <div class="bottomBar">
-        <button type="submit" name="Add User" id="addUser">Add User</button>
+        <input type="submit" name="Add User" id="addUser">Add User</input>
     </div>
 
     </form>
