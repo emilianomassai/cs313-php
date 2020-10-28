@@ -26,6 +26,10 @@
 
         <form id="mainForm" action="createAccount.php" method="POST">
 
+            <input type="text" id="display_name" name="display_name" placeholder="Full Name">
+            <label for="display_name">Full Name</label>
+            <br /><br />
+
             <input type="text" id="txtUser" name="txtUser" placeholder="Username">
             <label for="txtUser">Username</label>
             <br /><br />
