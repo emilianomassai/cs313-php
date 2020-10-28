@@ -53,13 +53,13 @@
                 <h4> Username</h4>
             </label>
             <input type="text" id="txtUser" name="txtUser" placeholder="Username">
-            <br /><br />
+            <br />
 
             <label for="txtPassword">
                 <h4> Password </h4>
             </label>
             <input type="password" id="txtPassword" name="txtPassword" placeholder="Password"></input>
-            <br /><br />
+            <br />
 
             <input type="submit" value="Create Account" />
 
