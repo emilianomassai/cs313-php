@@ -31,6 +31,11 @@
 
 <body>
     <div>
+        <img src="../BudgetAppImages/budgetAppIcon.png" alt="budget App Picture" id="budgetAppPicture" width="300"
+            height="300" />
+    </div>
+
+    <div>
 
         <h1>Sign up for new account</h1>
 
