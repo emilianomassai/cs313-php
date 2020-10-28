@@ -25,7 +25,7 @@ if (!isset($user_name) || $user_name == ""
 }
 
 // Let's not allow HTML in our user_names. It would be best to also detect this before
-// submitting the form and preven the submission.
+// submitting the form and prevent the submission.
 $user_name = htmlspecialchars($user_name);
 
 // Get the hashed password.
@@ -35,7 +35,7 @@ $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 require "connectAppDB.php";
 $db = get_db();
 
-$query = 'INSERT INTO budgetUser (user_name, password) VALUES(:user_name, :password)';
+$query = 'INSERT INTO public.budgetUser (user_name, password) VALUES(:user_name, :password)';
 $statement = $db->prepare($query);
 $statement->bindValue(':user_name', $user_name);
 

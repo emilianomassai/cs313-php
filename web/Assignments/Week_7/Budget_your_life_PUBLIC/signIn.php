@@ -77,8 +77,8 @@ if ($badLogin) {
 
         <form id="mainForm" action="signIn.php" method="POST">
 
-            <input type="text" id="txtUser" name="txtUser" placeholder="user_name">
-            <label for="txtUser">user_name</label>
+            <input type="text" id="txtUser" name="txtUser" placeholder="Username">
+            <label for="txtUser">Username</label>
             <br /><br />
 
             <input type="password" id="txtPassword" name="txtPassword" placeholder="Password">
