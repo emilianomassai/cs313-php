@@ -5,7 +5,7 @@
  *
  * Description: Takes input posted from sign-up.php
  *   This file enters a new user into the database
- *   along with its associated username and password.
+ *   along with its associated user_name and password.
  *   The password is passed through password_hash()
  *   function to generate a hash of it, and sent that
  *   into the database.
@@ -19,18 +19,18 @@ $badLogin = false;
 // continue on as always.
 
 if (isset($_POST['txtUser']) && isset($_POST['txtPassword'])) {
-    // they have submitted a username and password for us to check
-    $username = $_POST['txtUser'];
+    // they have submitted a user_name and password for us to check
+    $user_name = $_POST['txtUser'];
     $password = $_POST['txtPassword'];
 
     // Connect to the DB
     require "connectAppDB.php";
     $db = get_db();
 
-    $query = 'SELECT password FROM budgetUser WHERE username=:username';
+    $query = 'SELECT password FROM budgetUser WHERE user_name=:user_name';
 
     $statement = $db->prepare($query);
-    $statement->bindValue(':username', $username);
+    $statement->bindValue(':user_name', $user_name);
 
     $result = $statement->execute();
 
@@ -41,7 +41,7 @@ if (isset($_POST['txtUser']) && isset($_POST['txtPassword'])) {
         // now check to see if the hashed password matches
         if (password_verify($password, $hashedPasswordFromDB)) {
             // password was correct, put the user on the session, and redirect to home
-            $_SESSION['username'] = $username;
+            $_SESSION['user_name'] = $user_name;
             header("Location: budgetAppDB.php");
             die(); // we always include a die after redirects.
         } else {
@@ -69,7 +69,7 @@ if (isset($_POST['txtUser']) && isset($_POST['txtPassword'])) {
 
         <?php
 if ($badLogin) {
-    echo "Incorrect username or password!<br /><br />\n";
+    echo "Incorrect user_name or password!<br /><br />\n";
 }
 ?>
 
@@ -77,8 +77,8 @@ if ($badLogin) {
 
         <form id="mainForm" action="signIn.php" method="POST">
 
-            <input type="text" id="txtUser" name="txtUser" placeholder="Username">
-            <label for="txtUser">Username</label>
+            <input type="text" id="txtUser" name="txtUser" placeholder="user_name">
+            <label for="txtUser">user_name</label>
             <br /><br />
 
             <input type="password" id="txtPassword" name="txtPassword" placeholder="Password">

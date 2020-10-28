@@ -3,7 +3,7 @@
  * File: createAccount.php
  * Author: Br. Burton
  *
- * Description: Accepts a new username and password on the
+ * Description: Accepts a new user_name and password on the
  *    POST variable, and creates it in the DB.
  *
  * The user is then redirected to the signIn.php page.
@@ -15,18 +15,18 @@
 //require("password.php");
 
 // get the data from the POST
-$username = $_POST['txtUser'];
+$user_name = $_POST['txtUser'];
 $password = $_POST['txtPassword'];
 
-if (!isset($username) || $username == ""
+if (!isset($user_name) || $user_name == ""
     || !isset($password) || $password == "") {
     header("Location: signUp.php");
     die(); // we always include a die after redirects.
 }
 
-// Let's not allow HTML in our usernames. It would be best to also detect this before
+// Let's not allow HTML in our user_names. It would be best to also detect this before
 // submitting the form and preven the submission.
-$username = htmlspecialchars($username);
+$user_name = htmlspecialchars($user_name);
 
 // Get the hashed password.
 $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
@@ -35,9 +35,9 @@ $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 require "connectAppDB.php";
 $db = get_db();
 
-$query = 'INSERT INTO budgetUser (username, password) VALUES(:username, :password)';
+$query = 'INSERT INTO budgetUser (user_name, password) VALUES(:user_name, :password)';
 $statement = $db->prepare($query);
-$statement->bindValue(':username', $username);
+$statement->bindValue(':user_name', $user_name);
 
 // **********************************************
 // NOTICE: We are submitting the hashed password!
