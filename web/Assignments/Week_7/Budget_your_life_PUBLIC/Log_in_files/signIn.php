@@ -88,13 +88,13 @@ if (isset($_POST['txtUser']) && isset($_POST['txtPassword'])) {
 
 
             <label for="txtUser">
-                <h2> Username</h2>
+                <h4> Username</h4>
             </label>
             <input type="text" id="txtUser" name="txtUser" placeholder="Username">
             <br /><br />
 
             <label for="txtPassword">
-                <h2>Password</h2>
+                <h4>Password</h4>
             </label>
             <input type="password" id="txtPassword" name="txtPassword" placeholder="Password">
             <br /><br />
