@@ -87,11 +87,15 @@ if (isset($_POST['txtUser']) && isset($_POST['txtPassword'])) {
         <form id="mainForm" action="signIn.php" method="POST">
 
 
-            <label for="txtUser">Username</label>
+            <label for="txtUser">
+                <h2> Username</h2>
+            </label>
             <input type="text" id="txtUser" name="txtUser" placeholder="Username">
             <br /><br />
 
-            <label for="txtPassword">Password</label>
+            <label for="txtPassword">
+                <h2>Password</h2>
+            </label>
             <input type="password" id="txtPassword" name="txtPassword" placeholder="Password">
             <br /><br />
 
