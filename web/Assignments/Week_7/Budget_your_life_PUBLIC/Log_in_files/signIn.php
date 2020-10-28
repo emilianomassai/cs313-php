@@ -42,7 +42,7 @@ if (isset($_POST['txtUser']) && isset($_POST['txtPassword'])) {
         if (password_verify($password, $hashedPasswordFromDB)) {
             // password was correct, put the user on the session, and redirect to home
             $_SESSION['user_name'] = $user_name;
-            header("Location: budgetApp.php");
+            header("Location: ../budgetApp.php");
             die(); // we always include a die after redirects.
         } else {
             $badLogin = true;
@@ -97,7 +97,7 @@ if ($badLogin) {
 
 
     <div>
-        <a href="../../Home_Page/assignments.php" id="CS313_assignments_btn_id">
+        <a href="../../../Home_Page/assignments.php" id="CS313_assignments_btn_id">
             Go to the CS313 Assignment's page
         </a>
     </div>
