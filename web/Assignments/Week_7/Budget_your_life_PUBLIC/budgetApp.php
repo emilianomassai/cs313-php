@@ -13,7 +13,7 @@ session_start();
 
 // The DB connection logic is in another file so it can be included
 // in each of our different PHP files.
-require "../Project_Budget_your_life/connectAppDB.php";
+require "../Budget_your_life_PUBLIC/connectAppDB.php";
 $db = get_db();
 ?>
 
@@ -25,9 +25,9 @@ $db = get_db();
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="icon" type="image/ico" href="../Project_Budget_your_life/BudgetAppImages/budgetAppIcon.png">
+    <link rel="icon" type="image/ico" href="../Budget_your_life_PUBLIC/BudgetAppImages/budgetAppIcon.png">
 
-    <script src="../Project_Budget_your_life/javaScript.js"></script>
+    <script src="../Budget_your_life_PUBLIC/javaScript.js"></script>
 
     <!--Title in the browser title bar.-->
     <title>Budget Your Life</title>
@@ -62,7 +62,7 @@ foreach ($db->query('SELECT amount, user_id, notes, category, date FROM transact
 
 ?>
     <div>
-        <img src="../Project_Budget_your_life/BudgetAppImages/budgetAppIcon.png" alt="budget App Picture"
+        <img src="../Budget_your_life_PUBLIC/BudgetAppImages/budgetAppIcon.png" alt="budget App Picture"
             id="budgetAppPicture" width="300" height="300" />
     </div>
     <h1>Budget Your Life </h1>
