@@ -58,7 +58,7 @@ header("refresh: 30;");
         Week 7: Team activity - Sign in
     </a>
 
-    <a href="../Week_7/Budget_your_life_PUBLIC/signIn.php" id="sign_in_btn_id">
+    <a href="../Week_7/Budget_your_life_PUBLIC/Log_in_files/signIn.php" id="sign_in_btn_id">
         Week 7: Budget Your Life - PUBLIC RELEASE Project
     </a>
 
