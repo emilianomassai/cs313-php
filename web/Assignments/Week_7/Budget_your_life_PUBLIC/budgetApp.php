@@ -154,44 +154,6 @@ foreach ($db->query('SELECT amount, user_id, notes, category, date FROM transact
                 <hr>
 
 
-                <!-- A new user can be added to the database from here -->
-
-
-                <h2>New user form:</h2>
-
-                <form class="newUserForm" name="newUserForm" action="../Project_Budget_your_life/add_user.php"
-                    method="post" \ onsubmit="return validateNewUserForm()">
-
-                    <h4>Enter all the data for the new user:</h4>
-                    <?php
-
-// here I mixed php scripts into HTML to get dynamic names for the input fields. The names are created based upon what is the name of each column in my database.
-
-$select = $db->query('SELECT display_name, user_name, password FROM budgetUser');
-
-$total_column = $select->columnCount();
-for ($counter = 0; $counter < $total_column; $counter++) {
-    $meta = $select->getColumnMeta($counter);
-    $column[] = $meta['name'];?>
-                    <h4><label for=" <?php echo $column[$counter] ?>"> <?php echo $column[$counter] ?></label> </h4>
-
-                    <input type="text" id="<?php echo $column[$counter] ?>" name="<?php echo $column[$counter] ?>">
-                    <?php }?>
-
-                    <br>
-                    <br>
-
-                    <div class="bottomBar">
-                        <button type="submit" name="Add User" id="addUser">Add User</button>
-                    </div>
-                </form>
-
-
-                <br>
-                <br>
-                <br>
-                <hr>
-
                 <div>
                     <a href="../../Home_Page/assignments.php" id="CS313_assignments_btn_id">
                         Go to the CS313 Assignment's page
