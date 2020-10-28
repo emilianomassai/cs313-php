@@ -24,7 +24,7 @@ if (isset($_POST['txtUser']) && isset($_POST['txtPassword'])) {
     $password = $_POST['txtPassword'];
 
     // Connect to the DB
-    require "connectAppDB.php";
+    require "../connectAppDB.php";
     $db = get_db();
 
     $query = 'SELECT password FROM budgetUser WHERE user_name=:user_name';
