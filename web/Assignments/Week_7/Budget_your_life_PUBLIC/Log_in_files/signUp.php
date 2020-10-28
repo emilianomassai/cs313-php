@@ -41,16 +41,22 @@
 
         <form id="mainForm" action="createAccount.php" method="POST">
 
-            <input type="text" id="display_name" name="display_name" placeholder="Full Name">
             <label for="display_name">Full Name</label>
+
+            <input type="text" id="display_name" name="display_name" placeholder="Full Name">
             <br /><br />
 
+
+            <label for="txtUser">
+                <h4> Username</h4>
+            </label>
             <input type="text" id="txtUser" name="txtUser" placeholder="Username">
-            <label for="txtUser">Username</label>
             <br /><br />
 
             <input type="password" id="txtPassword" name="txtPassword" placeholder="Password"></input>
-            <label for="txtPassword">Password</label>
+            <label for="txtPassword">
+                <h4> Password </h4>
+            </label>
             <br /><br />
 
             <input type="submit" value="Create Account" />
