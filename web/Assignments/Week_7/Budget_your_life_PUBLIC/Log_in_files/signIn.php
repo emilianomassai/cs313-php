@@ -84,6 +84,12 @@ if (isset($_POST['txtUser']) && isset($_POST['txtPassword'])) {
 
         <h1>Please sign in below:</h1>
 
+        <?php
+if ($badLogin) {
+    echo "<h4>Incorrect Username or password!</h4><br /><br />\n";
+}
+?>
+
         <form id="mainForm" action="signIn.php" method="POST">
 
 
@@ -103,11 +109,7 @@ if (isset($_POST['txtUser']) && isset($_POST['txtPassword'])) {
 
         </form>
 
-        <?php
-if ($badLogin) {
-    echo "Incorrect Username or password!<br /><br />\n";
-}
-?>
+
         <br /><br />
 
         Or <a href="signUp.php">Sign up</a> for a new account.
