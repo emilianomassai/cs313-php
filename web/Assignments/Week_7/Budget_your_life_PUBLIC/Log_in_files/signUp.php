@@ -46,19 +46,18 @@
             </label>
 
             <input type="text" id="display_name" name="display_name" placeholder="Full Name">
-            <br /><br />
-
 
             <label for="txtUser">
                 <h4> Username</h4>
             </label>
             <input type="text" id="txtUser" name="txtUser" placeholder="Username">
-            <br />
 
             <label for="txtPassword">
                 <h4> Password </h4>
             </label>
             <input type="password" id="txtPassword" name="txtPassword" placeholder="Password"></input>
+            <br />
+            <br />
             <br />
 
             <input type="submit" value="Create Account" />
