@@ -31,7 +31,6 @@ $db = get_db();
 
     <!--Title in the browser title bar.-->
     <title>Budget Your Life</title>
-    <!-- heading of the web page -->
 </head>
 
 <body>

@@ -58,20 +58,27 @@ if (isset($_POST['txtUser']) && isset($_POST['txtPassword'])) {
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
 
 <head>
-    <title>Sign In</title>
-</head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="../javaScript.js" />
+    <link rel="icon" type="image/ico" href="../BudgetAppImages/budgetAppIcon.png">
+    <html>
+
+    <head>
+        <title>Budget Your Life - Sign In</title>
+    </head>
 
 <body>
     <div>
+        <img src="../BudgetAppImages/budgetAppIcon.png" alt="budget App Picture" id="budgetAppPicture" width="300"
+            height="300" />
+    </div>
+    <div>
 
-        <?php
-if ($badLogin) {
-    echo "Incorrect Username or password!<br /><br />\n";
-}
-?>
 
         <h1>Please sign in below:</h1>
 
@@ -89,6 +96,11 @@ if ($badLogin) {
 
         </form>
 
+        <?php
+if ($badLogin) {
+    echo "Incorrect Username or password!<br /><br />\n";
+}
+?>
         <br /><br />
 
         Or <a href="signUp.php">Sign up</a> for a new account.
