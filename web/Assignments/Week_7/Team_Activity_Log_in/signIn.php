@@ -96,12 +96,6 @@ if ($badLogin) {
     </div>
 
 
-
-    <div>
-        <a href="../../Week_7/Team_Activity_Log_in/sign_up.php" id="Sign-up">
-            Add another user to the database
-        </a>
-    </div>
     <div>
         <a href="../../Home_Page/assignments.php" id="CS313_assignments_btn_id">
             Go to the CS313 Assignment's page
