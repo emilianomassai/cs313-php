@@ -84,19 +84,20 @@ $db = get_db();
 
     <a href="../Budget_your_life_PUBLIC/Transactions/user_transactions.php">
         <h2>🏝 Check your balance 🏝</h2>
+    </a>
 
 
-        <div>
-            <a href="../../Home_Page/assignments.php" id="CS313_assignments_btn_id">
-                Go to the CS313 Assignment's page
-            </a>
-        </div>
+    <div>
+        <a href="../../Home_Page/assignments.php" id="CS313_assignments_btn_id">
+            Go to the CS313 Assignment's page
+        </a>
+    </div>
 
-        <footer>
-            <p style="text-align: center;">
-                Copyright © <?php echo $today = date("Y"); ?> emiDev Inc. All rights reserved.
-            </p>
-        </footer>
+    <footer>
+        <p style="text-align: center;">
+            Copyright © <?php echo $today = date("Y"); ?> emiDev Inc. All rights reserved.
+        </p>
+    </footer>
 </body>
 
 </html>
