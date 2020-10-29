@@ -80,7 +80,7 @@ $db = get_db();
     <hr> -->
 
     <!-- A view of a single user, showing all the  income, expenses, notes, category of the transaction, date of the transaction etc.  -->
-    <h4>Are you thinking about your next car or going on holiday? Make sure you have enough founds for that!</h4>
+    <h4>Thinking about your next car or going on holiday? Make sure you have enough founds!</h4>
 
     <a href="#">
         <h2>🏝 Check your balance 🏝</h2>
