@@ -110,8 +110,6 @@ if ($badLogin) {
         </form>
 
 
-        <br /><br />
-
         <a href="signUp.php">Sign up - New Account</a>
     </div>
 
