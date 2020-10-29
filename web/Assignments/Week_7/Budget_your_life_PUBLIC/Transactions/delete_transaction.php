@@ -103,6 +103,12 @@ $_SESSION['transactions'] = $sessionTransactions;
     </form>
 
     <div>
+        <a href="../Transactions/user_transactions.php" id="CS313_assignments_btn_id">
+            ⬅ Back to your balance
+        </a>
+    </div>
+
+    <div>
         <a href="../budgetApp.php" id="CS313_assignments_btn_id">
             Go back to the App Homepage
         </a>
