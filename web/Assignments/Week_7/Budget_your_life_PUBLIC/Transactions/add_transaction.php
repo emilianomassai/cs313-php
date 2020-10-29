@@ -53,6 +53,12 @@ $transactionType = $_POST['type'];
 
     <h1>Thank you <?php echo $currentDisplayName ?>!</h1>
 
+    <?php if ($transactionType == "Expense") {?>
+    <h1 style="font-size:80px;">💸</h1>
+    <?php } else if ($transactionType == "Income") {?>
+    <h1 style="font-size:80px;">🕺🏻</h1>
+    <?php }?>
+
     <h2>The following transaction has been recorded:</h2>
 
     <div class="container">
