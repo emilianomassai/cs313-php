@@ -9,7 +9,7 @@
  ***********************************************************/
 // start session
 session_start();
-require "../Project_Budget_your_life/connectAppDB.php";
+require "../connectAppDB.php";
 $db = get_db();
 ?>
 
@@ -17,9 +17,9 @@ $db = get_db();
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="icon" type="image/ico" href="./BudgetAppImages/budgetAppIcon.png">
-    <script src="../Project_Budget_your_life/javaScript.js"></script>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" type="image/ico" href="../BudgetAppImages/budgetAppIcon.png">
+    <script src="../javaScript.js"></script>
 
     <!--Title in the browser title bar.-->
     <title>Budget Your Life</title>
@@ -36,8 +36,6 @@ $_SESSION['editTransactionSession'] = $_POST['edit'];
 $editTransaction = $_POST['edit'];
 $_SESSION['transactions'] = $sessionTransactions;
 
-// echo 'Edit transaction number: ' . $editTransaction;
-
 foreach ($db->query('SELECT transaction_id, amount, user_id, notes, category, date FROM transaction') as $row) {
     $transactions_array[] = [
         'transaction_id' => $row['transaction_id'],
@@ -51,7 +49,7 @@ foreach ($db->query('SELECT transaction_id, amount, user_id, notes, category, da
 
     if (($_POST["edit"] == $transactions_array[$transaction_count]['transaction_id'])) {?>
 
-    <form class="newTransactionForm" name="newTransactionForm" action="edited_transaction.php" method="post" \
+    <form class="newTransactionForm" name="newTransactionForm" action="#" method="post" \
         onsubmit="return validateNewTransactionForm()">
 
         Transaction Type: <select name="type">
@@ -106,7 +104,7 @@ foreach ($db->query('SELECT transaction_id, amount, user_id, notes, category, da
 
 
     <div>
-        <a href="../Project_Budget_your_life/budgetApp.php" id="CS313_assignments_btn_id">
+        <a href="../budgetApp.php" id="CS313_assignments_btn_id">
             Go back to the App Homepage
         </a>
     </div>
