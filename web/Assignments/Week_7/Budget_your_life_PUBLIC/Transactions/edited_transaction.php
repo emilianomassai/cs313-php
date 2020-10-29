@@ -53,13 +53,11 @@ $transactionType = $_POST['type'];
         Your transaction has been edited.
     </h1>
 
-    <br>
+
     <h1 style="font-size:80px;">😎</h1>
 
     <?php
 $editTransaction = $_SESSION['editTransactionSession'];
-
-//$query = "DELETE FROM transaction WHERE transaction_id = $editTransaction";
 
 $query = "UPDATE transaction SET amount = '$amount', notes = '$notes', category = '$category', date = '$date' WHERE transaction_id = $editTransaction";
 $statement = $db->prepare($query);
