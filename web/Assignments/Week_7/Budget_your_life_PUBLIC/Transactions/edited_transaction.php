@@ -44,7 +44,10 @@ $date = $_POST['dateTransaction'];
 $transactionType = $_POST['type'];
 ?>
 
-    <h1>Thank you <?php echo $currentDisplayName ?>, your transaction has been edited.</h1>
+    <h1>Thank you <?php echo $currentDisplayName ?>! <br>
+        Your transaction has been edited.
+        <br> 😎
+    </h1>
 
     <?php
 $editTransaction = $_SESSION['editTransactionSession'];
@@ -59,7 +62,7 @@ $statement->execute();
 
     <div>
         <a href="../Transactions/user_transactions.php" id="CS313_assignments_btn_id">
-            See your transactions
+            See your balance again
         </a>
     </div>
 
