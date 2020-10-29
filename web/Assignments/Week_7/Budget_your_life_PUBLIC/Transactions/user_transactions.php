@@ -80,7 +80,7 @@ $transaction_count = 0;
                     <td style="padding:10px"><?php echo $transactions_array[$transaction_count]['date'] ?>
                     </td>
                     <form class="editTransactionForm" name="editTransactionForm"
-                        action="../Transactions/delete_transaction.php" method="post" \ onsubmit="return isSelected()">
+                        action="../Transactions/delete_transaction.php" method="post" \ onclick="return isSelected()">
                         <td style="text-align: center"> <input type="radio" id="edit" name="edit"
                                 value="<?php echo $transactions_array[$transaction_count]['transaction_id'] ?>">
                         </td>
