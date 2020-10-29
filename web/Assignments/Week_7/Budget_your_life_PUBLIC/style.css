@@ -70,12 +70,12 @@ button {
   text-decoration: none;
   background-color: #0076b6;
   padding: 4px;
-  width: 170px;
+  width: 160px;
   border-radius: 4px;
   font-size: 13px;
   cursor: pointer;
   font-size: 15px;
-  line-height: 30px;
+  line-height: 25px;
   font-family: "Lucida Sans Unicode", Verdana, sans-serif;
   padding: 11px;
 }
