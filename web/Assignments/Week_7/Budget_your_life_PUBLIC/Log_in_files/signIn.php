@@ -53,13 +53,11 @@ if (isset($_POST['txtUser']) && isset($_POST['txtPassword'])) {
             die(); // we always include a die after redirects.
         } else {
             $badLogin = true;
-            header("Location: ../signIn.php");
 
         }
 
     } else {
         $badLogin = true;
-        header("Location: ../signIn.php");
     }
 }
 
