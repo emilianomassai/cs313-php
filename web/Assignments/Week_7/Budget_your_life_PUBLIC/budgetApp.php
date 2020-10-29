@@ -80,47 +80,23 @@ $db = get_db();
     <hr> -->
 
     <!-- A view of a single user, showing all the  income, expenses, notes, category of the transaction, date of the transaction etc.  -->
-    <h2>User transactions:</h2>
-    <h4>Choose one user from the database and click the submit button to see all the recorded transactions of the user.
-    </h4>
-    <table class="table table-bordered">
+    <h4>Are you thinking about your next car or going on holiday? Make sure you have enough founds for that!</h4>
 
-        <tbody>
+    <a href="#">
+        <h2>🏝 Check your balance 🏝</h2>
 
 
-            <tr>
-                <form action="user_transactions.php" method="post">
-                    <select name="user_transaction">
-                        <?php foreach ($users_array as $user): ?>
-                        <?php $name = htmlspecialchars($user['display_name']);?>
-                        <?php $user_id = htmlspecialchars($user['user_id']);?>
+        <div>
+            <a href="../../Home_Page/assignments.php" id="CS313_assignments_btn_id">
+                Go to the CS313 Assignment's page
+            </a>
+        </div>
 
-                        <option value="<?php echo $user_id ?>"><?php echo $name ?>
-                        </option>
-                        <?php endforeach;?>
-                        <br>
-                        <br>
-                        <br>
-
-                        <input type="submit" name="Submit" />
-
-                </form>
-                <br>
-                <br>
-                <hr>
-
-
-                <div>
-                    <a href="../../Home_Page/assignments.php" id="CS313_assignments_btn_id">
-                        Go to the CS313 Assignment's page
-                    </a>
-                </div>
-
-                <footer>
-                    <p style="text-align: center;">
-                        Copyright © <?php echo $today = date("Y"); ?> emiDev Inc. All rights reserved.
-                    </p>
-                </footer>
+        <footer>
+            <p style="text-align: center;">
+                Copyright © <?php echo $today = date("Y"); ?> emiDev Inc. All rights reserved.
+            </p>
+        </footer>
 </body>
 
 </html>
