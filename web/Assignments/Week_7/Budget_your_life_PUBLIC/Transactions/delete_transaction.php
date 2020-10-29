@@ -9,7 +9,7 @@
  ***********************************************************/
 // start session
 session_start();
-require "../Project_Budget_your_life/connectAppDB.php";
+require "../connectAppDB.php";
 $db = get_db();
 ?>
 
@@ -17,9 +17,9 @@ $db = get_db();
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="icon" type="image/ico" href="./BudgetAppImages/budgetAppIcon.png">
-    <script src="../Project_Budget_your_life/javaScript.js"></script>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" type="image/ico" href="../BudgetAppImages/budgetAppIcon.png">
+    <script src="../javaScript.js"></script>
 
     <!--Title in the browser title bar.-->
     <title>Budget Your Life</title>
@@ -33,7 +33,7 @@ $db = get_db();
     </p>
 
 
-    <form class="deleteTransaction" name="deleteTransaction" action="removed_transaction.php" method="post">
+    <form class="deleteTransaction" name="deleteTransaction" action="#" method="post">
         <?php
 $_SESSION['editTransactionSession'] = $_POST['edit'];
 
@@ -96,7 +96,7 @@ $_SESSION['transactions'] = $sessionTransactions;
     </form>
 
     <div>
-        <a href="../Project_Budget_your_life/budgetApp.php" id="CS313_assignments_btn_id">
+        <a href="../budgetApp.php" id="CS313_assignments_btn_id">
             Go back to the App Homepage
         </a>
     </div>
