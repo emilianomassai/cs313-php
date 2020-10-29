@@ -49,8 +49,8 @@ foreach ($db->query('SELECT transaction_id, amount, user_id, notes, category, da
 
     if (($_POST["edit"] == $transactions_array[$transaction_count]['transaction_id'])) {?>
 
-    <form class="newTransactionForm" name="newTransactionForm" action="#" method="post" \
-        onsubmit="return validateNewTransactionForm()">
+    <form class="newTransactionForm" name="newTransactionForm" action="../Transactions/edited_transaction.php"
+        method="post" \ onsubmit="return validateNewTransactionForm()">
 
         Transaction Type: <select name="type">
             <option value="Expense">Expense</option>
