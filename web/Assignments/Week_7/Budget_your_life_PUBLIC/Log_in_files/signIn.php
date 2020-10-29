@@ -83,7 +83,7 @@ if (isset($_POST['txtUser']) && isset($_POST['txtPassword'])) {
 
 
         <h1>Please sign in below:</h1>
-
+        <br>
         <?php
 if ($badLogin) {
     echo "<h4 style='color:rgba(250, 98, 98, 0.713)'>Incorrect Username or password!</h4>\n";
