@@ -46,6 +46,7 @@ $transactionType = $_POST['type'];
 
     <h1>Thank you <?php echo $currentDisplayName ?>! <br>
         Your transaction has been edited.
+        <br>
         <br> 😎
     </h1>
 
