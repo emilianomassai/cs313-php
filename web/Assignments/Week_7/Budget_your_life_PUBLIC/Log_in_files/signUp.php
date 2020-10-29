@@ -60,7 +60,7 @@
             <br />
             <br />
 
-            <input type="submit" value="Create Account" />
+            <button type="submit"> Create Account </button>
 
         </form>
 
