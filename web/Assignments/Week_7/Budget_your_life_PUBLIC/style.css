@@ -68,6 +68,8 @@ a:hover {
 button {
   color: white;
   text-decoration: none;
+  background-color: #0076b6;
+
   font-size: 15px;
   line-height: 40px;
   font-family: "Lucida Sans Unicode", Verdana, sans-serif;
