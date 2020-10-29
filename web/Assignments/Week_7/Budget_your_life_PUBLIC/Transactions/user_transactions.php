@@ -34,21 +34,6 @@ $currentDisplayName = $_SESSION['current_display_name'];
 
     <?php
 
-// $query = 'SELECT user_id, display_name FROM budgetUser WHERE user_id=:currentUserId';
-
-// $count = 0;
-// foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budgetUser') as $row) {
-
-//     $users_array[] = [
-//         'display_name' => $row['display_name'],
-//         'user_name' => $row['user_name'],
-//         'user_id' => $row['user_id'],
-//         'password' => $row['password'],
-//     ];
-//     $_SESSION['users'] = $users_array;
-//     $count++;
-// }
-
 ?>
 
     <div class="container">

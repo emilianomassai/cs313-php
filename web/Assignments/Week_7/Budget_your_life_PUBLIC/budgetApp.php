@@ -66,23 +66,6 @@ $db = get_db();
     <hr>
 
 
-    <!-- A simple form that allows for a last name to be entered, then the user list will be shown for all users that match the last name.
-    <h2>User search:</h2>
-    <form class="userSearch" name="userSearch" action="../Project_Budget_your_life/user_search.php" method="post" \
-        onsubmit="return validateForm()">
-
-        <h4>Please enter the name of the user you are looking for:</h4>
-
-        <input placeholder="e.g.: Emiliano Massai" type="text" name="name_user" id="nameUser">
-        <br />
-        <div class="bottomBar">
-            <button type="submit" name="search" id="searchUser">Search</button>
-        </div>
-
-    </form>
-    <br>
-    <hr> -->
-
     <!-- A view of a single user, showing all the  income, expenses, notes, category of the transaction, date of the transaction etc.  -->
     <h4>Thinking about your next car or going on holiday? Make sure you have enough founds!</h4>
 
@@ -90,6 +73,7 @@ $db = get_db();
         <h2>🏝 Check your balance 🏝</h2>
     </a>
 
+    <a href="../Budget_your_life_PUBLIC/Log_in_files/signOut.php">Sign Out</a>
 
     <div>
         <a href="../../Home_Page/assignments.php" id="CS313_assignments_btn_id">
