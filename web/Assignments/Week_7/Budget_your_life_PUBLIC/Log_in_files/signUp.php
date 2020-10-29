@@ -40,6 +40,7 @@
         <h1>Sign up for new account</h1>
         <br>
 
+        <h1>👤</h1>
         <form id="mainForm" action="createAccount.php" method="POST">
 
             <label for="display_name">
