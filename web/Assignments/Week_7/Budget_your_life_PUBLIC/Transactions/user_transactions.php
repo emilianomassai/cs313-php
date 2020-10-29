@@ -81,7 +81,8 @@ $currentDisplayName = $_SESSION['current_display_name'];
                     <form class="editTransactionForm" name="editTransactionForm"
                         action="../Transactions/delete_transaction.php" method="post" \ onsubmit="return isSelected()">
                         <td style="text-align: center"> <input type="radio" id="edit" name="edit"
-                                value="<?php echo $transactions_array[$transaction_count]['transaction_id'] ?>">
+                                value="<?php echo $transactions_array[$transaction_count]['transaction_id'] ?>"
+                                checked="false">
                         </td>
                         <?php }?>
 
