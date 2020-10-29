@@ -102,10 +102,11 @@ $currentDisplayName = $_SESSION['current_display_name'];
 
 
     <div class="bottomBar">
-        <button type="submit" name="Delete Transaction" id="deleteTransaction">Delete Transaction </button>
+        <button style="width: 200px" type="submit" name="Delete Transaction" id="deleteTransaction">Delete Transaction
+        </button>
         <br>
         <br>
-        <button type="submit" name="Modify Transaction" id="modifyTransaction"
+        <button style="width: 200px" type="submit" name="Modify Transaction" id="modifyTransaction"
             formaction="../Transactions/modify_transaction.php">Modify Transaction </button>
     </div>
 
