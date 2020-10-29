@@ -59,11 +59,11 @@ $transactionType = $_POST['type'];
     <?php
 $editTransaction = $_SESSION['editTransactionSession'];
 if ($transactionType == "Expense") {
-    $statement->bindValue(':amount', '-' . $amount);
+    $realAmount = "-" . $amount;
 } else {
-    $statement->bindValue(':amount', $amount);
+    $realAmount = $amount;
 }
-$query = "UPDATE transaction SET amount = '$amount', notes = '$notes', category = '$category', date = '$date' WHERE transaction_id = $editTransaction";
+$query = "UPDATE transaction SET amount = '$realAmount', notes = '$notes', category = '$category', date = '$date' WHERE transaction_id = $editTransaction";
 
 $statement = $db->prepare($query);
 $statement->execute();
