@@ -12,7 +12,7 @@
 session_start();
 if ($_SESSION['current_user_id'] == "") {
     session_unset();
-    header("Location: ../signIn.php");
+    header("Location: ../Budget_your_life_PUBLIC/Log_in_files/signIn.php");
 
 }
 // The DB connection logic is in another file so it can be included
