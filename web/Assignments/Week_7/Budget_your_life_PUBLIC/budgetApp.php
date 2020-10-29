@@ -31,6 +31,7 @@ $db = get_db();
 
     <!--Title in the browser title bar.-->
     <title>Budget Your Life</title>
+    <?php echo $_SESSION['user_id']; ?>
 </head>
 
 <body>

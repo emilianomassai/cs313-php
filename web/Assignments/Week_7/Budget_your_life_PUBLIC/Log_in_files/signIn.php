@@ -42,6 +42,7 @@ if (isset($_POST['txtUser']) && isset($_POST['txtPassword'])) {
         if (password_verify($password, $hashedPasswordFromDB)) {
             // password was correct, put the user on the session, and redirect to home
             $_SESSION['user_name'] = $user_name;
+            $_SESSION['user_id'] = $user_id;
             header("Location: ../budgetApp.php");
             die(); // we always include a die after redirects.
         } else {
