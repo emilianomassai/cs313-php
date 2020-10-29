@@ -63,6 +63,34 @@ $transactionType = $_POST['type'];
 
     <h2>The following transaction has been recorded:</h2>
 
+    <?php
+// echo 'User ID: ' . $actualUserId . ';';
+// echo 'category: ' . $category . ';';
+// echo 'amount: ' . $amount . ';';
+// echo 'notes: ' . $notes . ';';
+// echo 'transaction type: ' . $transactionType;
+// echo 'date: ' . $date . ';';
+
+$query = 'INSERT INTO public.transaction(user_id, amount, notes, category, date) VALUES(:user_id, :amount, :notes, :category, :date)';
+$statement = $db->prepare($query);
+
+// Now we bind the values to the placeholders. This does some nice things
+// including sanitizing the input with regard to sql commands.
+$statement->bindValue(':user_id', $currentUserId);
+if ($transactionType == "Expense") {
+    $statement->bindValue(':amount', '-' . $amount);
+} else {
+    $statement->bindValue(':amount', $amount);
+}
+
+$statement->bindValue(':notes', $notes);
+$statement->bindValue(':category', $category);
+$statement->bindValue(':date', $date);
+
+$statement->execute();
+
+?>
+
     <div class="container">
         <table border="1" style="margin-left:auto;margin-right:auto" class="table table-bordered">
             <thead>
@@ -106,33 +134,7 @@ $transactionType = $_POST['type'];
 }?>
             </tbody>
         </table>
-        <?php
-// echo 'User ID: ' . $actualUserId . ';';
-// echo 'category: ' . $category . ';';
-// echo 'amount: ' . $amount . ';';
-// echo 'notes: ' . $notes . ';';
-// echo 'transaction type: ' . $transactionType;
-// echo 'date: ' . $date . ';';
 
-$query = 'INSERT INTO public.transaction(user_id, amount, notes, category, date) VALUES(:user_id, :amount, :notes, :category, :date)';
-$statement = $db->prepare($query);
-
-// Now we bind the values to the placeholders. This does some nice things
-// including sanitizing the input with regard to sql commands.
-$statement->bindValue(':user_id', $currentUserId);
-if ($transactionType == "Expense") {
-    $statement->bindValue(':amount', '-' . $amount);
-} else {
-    $statement->bindValue(':amount', $amount);
-}
-
-$statement->bindValue(':notes', $notes);
-$statement->bindValue(':category', $category);
-$statement->bindValue(':date', $date);
-
-$statement->execute();
-
-?>
 
         <br>
         <br>
