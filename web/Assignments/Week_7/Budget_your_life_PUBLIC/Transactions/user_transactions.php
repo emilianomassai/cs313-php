@@ -3,7 +3,7 @@
 session_start();
 if ($_SESSION['current_user_id'] == "") {
     session_unset();
-    header("Location: ../Budget_your_life_PUBLIC/Log_in_files/signIn.php");
+    header("Location: ../Log_in_files/signIn.php");
 
 }
 require "../connectAppDB.php";
