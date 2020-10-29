@@ -37,7 +37,7 @@
 
     <div>
 
-        <h1>Sign up for new account</h1>
+        <h1 style="font-size:46px;">Sign up for new account</h1>
         <br>
 
         <h1>👤</h1>
