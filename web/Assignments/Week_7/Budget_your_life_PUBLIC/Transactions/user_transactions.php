@@ -104,13 +104,12 @@ $currentDisplayName = $_SESSION['current_display_name'];
         <button style="width: 200px" type="submit" name="Delete Transaction" id="deleteTransaction">Delete Transaction
         </button>
         <br>
-        <br>
         <button style="width: 200px" type="submit" name="Modify Transaction" id="modifyTransaction"
             formaction="../Transactions/modify_transaction.php">Modify Transaction </button>
     </div>
 
     </form>
-
+    <br>
     <div>
         <a href="../budgetApp.php">
             Go back to the App Homepage
