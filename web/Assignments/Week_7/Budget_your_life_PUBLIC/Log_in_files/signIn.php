@@ -27,7 +27,7 @@ if (isset($_POST['txtUser']) && isset($_POST['txtPassword'])) {
     require "../connectAppDB.php";
     $db = get_db();
 
-    $query = 'SELECT password, user_id FROM budgetUser WHERE user_name=:user_name';
+    $query = 'SELECT password, user_id, display_name FROM budgetUser WHERE user_name=:user_name';
 
     $statement = $db->prepare($query);
     $statement->bindValue(':user_name', $user_name);
@@ -42,8 +42,12 @@ if (isset($_POST['txtUser']) && isset($_POST['txtPassword'])) {
         if (password_verify($password, $hashedPasswordFromDB)) {
             // password was correct, put the user on the session, and redirect to home
             $_SESSION['user_name'] = $user_name;
+
             $user_id = $row['user_id'];
             $_SESSION['current_user_id'] = $user_id;
+
+            $display_name = $row['display_name'];
+            $_SESSION['current_display_name'] = $display_name;
 
             header("Location: ../budgetApp.php");
             die(); // we always include a die after redirects.

@@ -36,6 +36,8 @@ session_start();
 require "../Budget_your_life_PUBLIC/connectAppDB.php";
 $db = get_db();
 $currentUserId = $_SESSION['current_user_id'];
+$currentDisplayName = $_SESSION['current_display_name'];
+
 $query = "SELECT display_name, user_name, password FROM budgetUser WHERE user_id=$currentUserId";
 
 // $count = 0;
@@ -63,7 +65,7 @@ $query = "SELECT display_name, user_name, password FROM budgetUser WHERE user_id
 
 
 
-    <h1>Ready to add a transaction, <?php echo $users_array[$count]['display_name'] ?>?</h1>
+    <h1>Ready to add a transaction, <?php echo $currentDisplayName ?>?</h1>
     <p>Please add all the following details:</p>
 
     <!-- use POST to link the current user to the new transaction and add it to the database -->
