@@ -33,7 +33,8 @@ $db = get_db();
     </p>
 
 
-    <form class="deleteTransaction" name="deleteTransaction" action="#" method="post">
+    <form class="deleteTransaction" name="deleteTransaction" action="../Transactions/removed_transaction.php"
+        method="post">
         <?php
 $_SESSION['editTransactionSession'] = $_POST['edit'];
 
