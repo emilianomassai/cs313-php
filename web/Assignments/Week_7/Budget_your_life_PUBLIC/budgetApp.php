@@ -49,15 +49,11 @@ $db = get_db();
 
         <!-- A list of all users in the database, each one is a link that leads to a user details page.  -->
 
-        <h2>💰 Add a transaction 💰</h2>
         <h4>Spent some money? Got some cash? Record you transaction here!</h4>
 
-        <form action="../Budget_your_life_PUBLIC/create_transaction.php" method="post">
-
-
-            <button type="submit"> Add Transaction </button>
-
-        </form>
+        <a href="../Budget_your_life_PUBLIC/create_transaction.php">
+            <h2>💰 Add a transaction 💰</h2>
+        </a>
 
 
     </div>
