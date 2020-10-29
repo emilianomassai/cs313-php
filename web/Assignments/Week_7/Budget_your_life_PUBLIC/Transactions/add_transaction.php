@@ -122,6 +122,12 @@ $statement->execute();
 ?>
 
         <div>
+            <a href="../Transactions/user_transactions.php" id="CS313_assignments_btn_id">
+                See your balance again
+            </a>
+        </div>
+
+        <div>
             <a href="../budgetApp.php" id="CS313_assignments_btn_id">
                 Go back to the App Homepage
             </a>
