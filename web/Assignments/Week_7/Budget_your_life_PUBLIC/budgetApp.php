@@ -13,12 +13,12 @@ session_start();
 if ($badLogin = true) {
     session_unset();
     header("Location: ../Budget_your_life_PUBLIC/Log_in_files/signIn.php");
-}
+} else {
 // The DB connection logic is in another file so it can be included
-// in each of our different PHP files.
-require "../Budget_your_life_PUBLIC/connectAppDB.php";
-$db = get_db();
-?>
+    // in each of our different PHP files.
+    require "../Budget_your_life_PUBLIC/connectAppDB.php";
+    $db = get_db();
+    ?>
 
 <!DOCTYPE html>
 <html lang="en-US">
@@ -104,3 +104,5 @@ $db = get_db();
 </body>
 
 </html>
+
+<?php }?>
