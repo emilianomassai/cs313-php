@@ -49,12 +49,6 @@ $transactionType = $_POST['type'];
     <?php
 $editTransaction = $_SESSION['editTransactionSession'];
 
-echo $category;
-echo $amount;
-echo $notes;
-echo $date;
-echo $editTransaction;
-
 //$query = "DELETE FROM transaction WHERE transaction_id = $editTransaction";
 
 $query = "UPDATE transaction SET amount = '$amount', notes = '$notes', category = '$category', date = '$date' WHERE transaction_id = $editTransaction";
@@ -64,7 +58,13 @@ $statement->execute();
 ?>
 
     <div>
-        <a href="../Project_Budget_your_life/budgetApp.php" id="CS313_assignments_btn_id">
+        <a href="../Transactions/user_transactions.php" id="CS313_assignments_btn_id">
+            See your transactions
+        </a>
+    </div>
+
+    <div>
+        <a href="../budgetApp.php" id="CS313_assignments_btn_id">
             Go back to the App Homepage
         </a>
     </div>
