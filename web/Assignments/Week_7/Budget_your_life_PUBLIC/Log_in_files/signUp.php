@@ -40,7 +40,7 @@
         <h1>Sign up for new account</h1>
         <br>
 
-        <h1 style="font-size:46px;">👤</h1>
+        <h1 style="font-size:80px;">👤</h1>
         <form id="mainForm" action="createAccount.php" method="POST">
 
             <label for="display_name">
