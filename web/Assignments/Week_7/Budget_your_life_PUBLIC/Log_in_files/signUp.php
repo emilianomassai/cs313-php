@@ -70,7 +70,7 @@
 
     <div>
         <a href="../Log_in_files/signIn.php" id="CS313_assignments_btn_id">
-            Go back to Sign In page
+            ⬅ Back to Sign In page
         </a>
     </div>
 
