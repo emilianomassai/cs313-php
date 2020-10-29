@@ -64,7 +64,7 @@ $statement->execute();
 ?>
 
     <a href="../Transactions/delete_transaction.php">
-        <h2>Delete another transaction</h2>
+        Delete another transaction
     </a>
 
     <div>

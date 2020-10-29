@@ -136,7 +136,7 @@ $statement->execute();
 
 
         <a href="../Transactions/add_transaction.php">
-            <h2>Add another transaction</h2>
+            Add another transaction
         </a>
 
         <div>
