@@ -11,6 +11,7 @@
 // start session
 session_start();
 if ($badLogin = true) {
+    session_unset();
     header("Location: ../signIn.php");
 }
 // The DB connection logic is in another file so it can be included
