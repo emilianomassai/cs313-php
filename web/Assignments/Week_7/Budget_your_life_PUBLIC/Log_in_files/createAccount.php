@@ -35,7 +35,7 @@ $user_name = htmlspecialchars($user_name);
 $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
 // Connect to the database
-require "connectAppDB.php";
+require "../connectAppDB.php";
 $db = get_db();
 
 $query = 'INSERT INTO public.budgetUser (user_name, password, display_name) VALUES(:user_name, :password, :display_name)';
