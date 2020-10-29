@@ -107,6 +107,11 @@ foreach ($db->query('SELECT transaction_id, amount, user_id, notes, category, da
 }?>
 
 
+    <div>
+        <a href="../Transactions/user_transactions.php" id="CS313_assignments_btn_id">
+            ⬅ Back to your balance
+        </a>
+    </div>
 
     <div>
         <a href="../budgetApp.php" id="CS313_assignments_btn_id">
