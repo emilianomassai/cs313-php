@@ -75,7 +75,7 @@ button {
   padding: 11px;
 }
 
-button {
+button:hover {
   color: #0076b6;
   background-color: white;
   box-shadow: -3px 15px 10px rgba(0, 0, 0, 0.5);
