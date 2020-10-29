@@ -93,12 +93,12 @@ $currentDisplayName = $_SESSION['current_display_name'];
         </table>
     </div>
     <br>
-    <br>
-    <br>
+
 
     <h2>The total amount of all the transactions is: <?php echo '<br>' ?> <?php echo '$' . $totalAmount ?></h2>
     <br>
-
+    <br>
+    <br>
 
 
     <div class="bottomBar">
