@@ -48,7 +48,6 @@ $transactionType = $_POST['type'];
     </h1>
     <h4>Hopefully you deleted it on purpose!</h4>
     <br>
-    <br>
     <h1>🙈 🙉 🙊</h1>
     <?php
 $editTransaction = $_SESSION['editTransactionSession'];
@@ -59,6 +58,12 @@ $statement = $db->prepare($query);
 $statement->execute();
 
 ?>
+
+    <div>
+        <a href="../Transactions/user_transactions.php" id="CS313_assignments_btn_id">
+            See your balance again
+        </a>
+    </div>
 
     <div>
         <a href="../budgetApp.php" id="CS313_assignments_btn_id">
