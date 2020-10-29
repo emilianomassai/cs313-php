@@ -52,7 +52,7 @@ $db = get_db();
         <h2>💰 Add a transaction 💰</h2>
         <h4>Spent some money? Got some cash? Record you transaction here!</h4>
 
-        <form action="create_transaction.php" method="post">
+        <form action="../Budget_your_life_PUBLIC/create_transaction.php" method="post">
 
 
             <button type="submit"> Add Transaction </button>
