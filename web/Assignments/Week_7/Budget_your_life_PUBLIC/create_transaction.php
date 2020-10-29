@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="../Budget_your_life_PUBLIC/style.css" />
     <link rel="icon" type="image/ico" href="../Budget_your_life_PUBLIC/BudgetAppImages/budgetAppIcon.png">
 
-    <script src="../Project_Budget_your_life/javaScript.js"></script>
+    <script src="../Budget_your_life_PUBLIC/javaScript.js"></script>
 
     <!--Title in the browser title bar.-->
     <title>Budget Your Life</title>
@@ -71,7 +71,7 @@ $query = "SELECT display_name, user_name, password FROM budgetUser WHERE user_id
     <!-- use POST to link the current user to the new transaction and add it to the database -->
     <form class="newTransactionForm" name="newTransactionForm" action="add_transaction.php" method="post" \
         onsubmit="return validateNewTransactionForm()">
-        <input type="hidden" name="input_user_id" value="<?php $_POST["userID"]?>">
+
         Transaction Type: <select name="type">
             <option value="Expense">Expense</option>
             <option value="Income">Income</option>
