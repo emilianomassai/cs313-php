@@ -62,6 +62,7 @@ function validateNewTransactionForm() {
 }
 
 function isSelected() {
+  isSelected() = false;
   var isToEdit = document.forms["editTransactionForm"]["edit"].value;
 
   if (isToEdit == "") {

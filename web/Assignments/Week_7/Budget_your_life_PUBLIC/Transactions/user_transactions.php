@@ -4,7 +4,6 @@ session_start();
 if ($_SESSION['current_user_id'] == "") {
     session_unset();
     header("Location: ../Log_in_files/signIn.php");
-    isSelected() == false;
 }
 require "../connectAppDB.php";
 $db = get_db();
