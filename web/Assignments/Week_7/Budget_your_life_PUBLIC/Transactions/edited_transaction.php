@@ -54,7 +54,7 @@ $transactionType = $_POST['type'];
     </h1>
 
 
-    <h1 style="font-size:80px;">😎</h1>
+    <h1 style="font-size:80px;">🧉</h1>
 
     <?php
 $editTransaction = $_SESSION['editTransactionSession'];
