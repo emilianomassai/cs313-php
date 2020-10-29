@@ -67,9 +67,9 @@ $query = "SELECT display_name, user_name, password FROM budgetUser WHERE user_id
     <p>Please add all the following details:</p>
 
     <!-- use POST to link the current user to the new transaction and add it to the database -->
-    <form class="newTransactionForm" name="newTransactionForm" action="#" method="post" \
+    <form class="newTransactionForm" name="newTransactionForm" action="add_transaction.php" method="post" \
         onsubmit="return validateNewTransactionForm()">
-
+        <input type="hidden" name="input_user_id" value="<?php $_POST["userID"]?>">
         Transaction Type: <select name="type">
             <option value="Expense">Expense</option>
             <option value="Income">Income</option>
@@ -112,9 +112,8 @@ $query = "SELECT display_name, user_name, password FROM budgetUser WHERE user_id
     </form>
 
     <?php
-}
-    $count++;
-}
+
+$count++;
 ?>
 
 
