@@ -31,7 +31,6 @@ $db = get_db();
 
     <!--Title in the browser title bar.-->
     <title>Budget Your Life</title>
-    <?php echo $_SESSION['user_id']; ?>
 </head>
 
 <body>
@@ -66,6 +65,7 @@ foreach ($db->query('SELECT amount, user_id, notes, category, date FROM transact
             id="budgetAppPicture" width="300" height="300" />
     </div>
     <h1>Budget Your Life </h1>
+    <?php echo "This is the current user's ID: " . $_SESSION['user_id']; ?>
 
     <p>Welcome to this budget app! In this page you can see different ways to retrieve information from our database
         about our users. Please choose one option and read the description for more details:</p>
