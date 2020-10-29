@@ -61,8 +61,9 @@ $editTransaction = $_SESSION['editTransactionSession'];
 if ($transactionType == "Expense") {
     $realAmount = "-" . $amount;
 } else {
-    strtr($amount, "-", "+");
     $realAmount = $amount;
+    strtr($realAmount, "-", "+");
+
 }
 $query = "UPDATE transaction SET amount = '$realAmount', notes = '$notes', category = '$category', date = '$date' WHERE transaction_id = $editTransaction";
 
