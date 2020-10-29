@@ -65,7 +65,7 @@ a:hover {
   transition: 0.3s; /* Add transition on hover */
 }
 
-button {
+input[type="submit"] {
   display: block;
   color: white;
   text-decoration: none;
@@ -75,7 +75,7 @@ button {
   padding: 11px;
 }
 
-button:hover {
+input[type="submit"]:hover {
   color: #0076b6;
   background-color: white;
   box-shadow: -3px 15px 10px rgba(0, 0, 0, 0.5);
