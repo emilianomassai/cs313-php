@@ -38,6 +38,7 @@
     <div>
 
         <h1>Sign up for new account</h1>
+        <br>
 
         <form id="mainForm" action="createAccount.php" method="POST">
 
