@@ -1,7 +1,7 @@
 <?php
 // start session
 session_start();
-require "../Budget_your_life_PUBLIC/connectAppDB.php";
+require "../connectAppDB.php";
 $db = get_db();
 
 $currentUserId = $_SESSION['current_user_id'];
@@ -123,7 +123,7 @@ $currentDisplayName = $_SESSION['current_display_name'];
     </form>
 
     <div>
-        <a href="../Budget_your_life_PUBLIC/budgetApp.php">
+        <a href="../budgetApp.php">
             Go back to the App Homepage
         </a>
     </div>
