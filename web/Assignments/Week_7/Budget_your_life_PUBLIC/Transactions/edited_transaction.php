@@ -62,7 +62,7 @@ if ($transactionType == "Expense") {
     $realAmount = "-" . $amount;
 } else if ($transactionType == "Income") {
     if (substr($amount, 0) === '-') {
-        strtr($amount, "-", "+");
+        substr($amount, 1);
     }
     // $realAmount = "+" . $amount;
 }
