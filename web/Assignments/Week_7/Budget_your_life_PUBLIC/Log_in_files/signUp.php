@@ -58,7 +58,7 @@
             <input type="password" id="txtPassword" name="txtPassword" placeholder="Password"></input>
             <br />
             <br />
-            <br />
+
 
             <button type="submit"> Create Account </button>
 
@@ -66,7 +66,8 @@
 
 
     </div>
-
+    <br />
+    <br />
 
     <div>
         <a href="../../../Home_Page/assignments.php" id="CS313_assignments_btn_id">
