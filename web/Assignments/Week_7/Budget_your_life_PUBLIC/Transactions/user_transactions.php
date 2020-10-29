@@ -12,9 +12,9 @@ $currentDisplayName = $_SESSION['current_display_name'];
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="icon" type="image/ico" href="../Budget_your_life_PUBLIC/BudgetAppImages/budgetAppIcon.png">
-    <script src="../Budget_your_life_PUBLIC/javaScript.js"></script>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" type="image/ico" href="../BudgetAppImages/budgetAppIcon.png">
+    <script src="../javaScript.js"></script>
 
     <!--Title in the browser title bar.-->
     <title>Budget Your Life</title>
