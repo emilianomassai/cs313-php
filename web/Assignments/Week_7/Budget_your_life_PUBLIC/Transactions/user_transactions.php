@@ -102,7 +102,7 @@ $currentDisplayName = $_SESSION['current_display_name'];
     <?php } else if ($totalAmount < 0) {?>
     <h4>Remember not to spend more than you can earn!</h4>
     <?php } else if ($totalAmount > 0) {?>
-    <h4>Well done, you are starting save some money!</h4>
+    <h4>Well done, you have some money earned!</h4>
     <?php }?>
 
     <div class="bottomBar">
