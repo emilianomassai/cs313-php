@@ -17,8 +17,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="icon" type="image/ico" href="../Project_Budget_your_life/BudgetAppImages/budgetAppIcon.png">
+    <link rel="stylesheet" href="../Budget_your_life_PUBLIC/style.css" />
+    <link rel="icon" type="image/ico" href="../Budget_your_life_PUBLIC/BudgetAppImages/budgetAppIcon.png">
 
     <script src="../Project_Budget_your_life/javaScript.js"></script>
 
@@ -36,7 +36,7 @@ session_start();
 require "../Budget_your_life_PUBLIC/connectAppDB.php";
 $db = get_db();
 $currentUserId = $_SESSION['current_user_id'];
-$query = "SELECT display_name, user_name, user_id, password FROM budgetUser WHERE user_id=$currentUserId";
+$query = "SELECT display_name, user_name, password FROM budgetUser WHERE user_id=$currentUserId";
 
 // $count = 0;
 // foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budgetUser') as $row) {
@@ -67,9 +67,9 @@ $query = "SELECT display_name, user_name, user_id, password FROM budgetUser WHER
     <p>Please add all the following details:</p>
 
     <!-- use POST to link the current user to the new transaction and add it to the database -->
-    <form class="newTransactionForm" name="newTransactionForm" action="add_transaction.php" method="post" \
+    <form class="newTransactionForm" name="newTransactionForm" action="#" method="post" \
         onsubmit="return validateNewTransactionForm()">
-        <input type="hidden" name="input_user_id" value="<?php $_POST["userID"]?>">
+
         Transaction Type: <select name="type">
             <option value="Expense">Expense</option>
             <option value="Income">Income</option>
