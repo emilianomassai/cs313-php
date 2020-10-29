@@ -43,8 +43,13 @@ $date = $_POST['dateTransaction'];
 $transactionType = $_POST['type'];
 ?>
 
-    <h1>Your transaction has been deleted.</h1>
-
+    <h1>Thank you!<br>
+        Your transaction has been deleted.
+    </h1>
+    <h4>Hopefully you deleted it on purpose!</h4>
+    <br>
+    <br>
+    <h1>🙈 🙉 🙊</h1>
     <?php
 $editTransaction = $_SESSION['editTransactionSession'];
 
