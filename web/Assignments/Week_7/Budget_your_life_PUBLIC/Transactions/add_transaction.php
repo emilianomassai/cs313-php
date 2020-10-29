@@ -64,12 +64,6 @@ $transactionType = $_POST['type'];
     <h2>The following transaction has been recorded:</h2>
 
     <?php
-// echo 'User ID: ' . $actualUserId . ';';
-// echo 'category: ' . $category . ';';
-// echo 'amount: ' . $amount . ';';
-// echo 'notes: ' . $notes . ';';
-// echo 'transaction type: ' . $transactionType;
-// echo 'date: ' . $date . ';';
 
 $query = 'INSERT INTO public.transaction(user_id, amount, notes, category, date) VALUES(:user_id, :amount, :notes, :category, :date)';
 $statement = $db->prepare($query);
