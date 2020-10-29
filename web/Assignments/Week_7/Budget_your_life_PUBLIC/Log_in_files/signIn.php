@@ -50,7 +50,8 @@ if (isset($_POST['txtUser']) && isset($_POST['txtPassword'])) {
             $_SESSION['current_display_name'] = $display_name;
 
             header("Location: ../budgetApp.php");
-            die(); // we always include a die after redirects.
+            // die(); // we always include a die after redirects.
+            die("Redirecting to signIn.php");
         } else {
             $badLogin = true;
         }
