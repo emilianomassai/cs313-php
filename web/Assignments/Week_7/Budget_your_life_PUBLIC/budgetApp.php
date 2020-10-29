@@ -74,7 +74,7 @@ foreach ($db->query('SELECT amount, user_id, notes, category, date FROM transact
         <!-- A list of all users in the database, each one is a link that leads to a user details page.  -->
 
         <h2>Add a transaction</h2>
-        <h4>Choose one user from the database and click the button to add a new transaction for that user</h4>
+        <h4>💰 Spent some money? Got some cash? Record you transaction here!</h4>
         <table class="table table-bordered">
 
             <tbody>
@@ -82,19 +82,9 @@ foreach ($db->query('SELECT amount, user_id, notes, category, date FROM transact
 
                 <tr>
                     <form action="create_transaction.php" method="post">
-                        <select name="userID">
-                            <?php foreach ($users_array as $user): ?>
-                            <?php $name = htmlspecialchars($user['display_name']);?>
-                            <?php $user_id = htmlspecialchars($user['user_id']);?>
 
-                            <option value="<?php echo $user_id ?>"><?php echo $name ?>
-                            </option>
-                            <?php endforeach;?>
-                            <br>
-                            <br>
-                            <br>
 
-                            <input type="submit" name="Select User" />
+                        <button type="submit"> Add Transaction </button>
 
                     </form>
 
@@ -106,7 +96,7 @@ foreach ($db->query('SELECT amount, user_id, notes, category, date FROM transact
     <hr>
 
 
-    <!-- A simple form that allows for a last name to be entered, then the user list will be shown for all users that match the last name.  -->
+    <!-- A simple form that allows for a last name to be entered, then the user list will be shown for all users that match the last name.
     <h2>User search:</h2>
     <form class="userSearch" name="userSearch" action="../Project_Budget_your_life/user_search.php" method="post" \
         onsubmit="return validateForm()">
@@ -121,7 +111,7 @@ foreach ($db->query('SELECT amount, user_id, notes, category, date FROM transact
 
     </form>
     <br>
-    <hr>
+    <hr> -->
 
     <!-- A view of a single user, showing all the  income, expenses, notes, category of the transaction, date of the transaction etc.  -->
     <h2>User transactions:</h2>
