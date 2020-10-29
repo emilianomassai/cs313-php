@@ -59,8 +59,7 @@ $db = get_db();
 
         </form>
 
-        </tbody>
-        </table>
+
     </div>
 
     <br>
