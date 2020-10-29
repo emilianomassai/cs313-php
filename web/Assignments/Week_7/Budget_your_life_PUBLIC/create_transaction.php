@@ -39,38 +39,14 @@ $currentUserId = $_SESSION['current_user_id'];
 $currentDisplayName = $_SESSION['current_display_name'];
 
 $query = "SELECT display_name, user_name, password FROM budgetUser WHERE user_id=$currentUserId";
-
-// $count = 0;
-// foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budgetUser') as $row) {
-
-//     $users_array[] = [
-//         // used to display a customized message
-//         'display_name' => $row['display_name'],
-//         'user_name' => $row['user_name'],
-//         // used to link the transaction to the correct user
-
-//         'user_id' => $row['user_id'],
-//         // STRETCH CHALLENGE - used to add the transaction only if the user enter a correct password
-
-//         'password' => $row['password'],
-//     ];
-//     $_SESSION['users'] = $users_array;
-
-//     // Here I should have a form with all the transaction information such as:
-
-//     if ($_POST["userID"] == $users_array[$count]['user_id']) {
-//         $_SESSION["sessionUserID"] = $_POST["userID"];
-//         $_SESSION["sessionUserDisplayName"] =
-//             $users_array[$count]["display_name"];?>
-
-
+?>
 
     <h1>Ready to add a transaction, <?php echo $currentDisplayName ?>?</h1>
     <p>Please add all the following details:</p>
 
     <!-- use POST to link the current user to the new transaction and add it to the database -->
-    <form class="newTransactionForm" name="newTransactionForm" action="add_transaction.php" method="post" \
-        onsubmit="return validateNewTransactionForm()">
+    <form class="newTransactionForm" name="newTransactionForm" action="../Budget_your_life_PUBLIC/add_transaction.php"
+        method="post" \ onsubmit="return validateNewTransactionForm()">
 
         Transaction Type: <select name="type">
             <option value="Expense">Expense</option>
