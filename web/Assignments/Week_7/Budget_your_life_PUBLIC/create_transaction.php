@@ -121,7 +121,7 @@ $count++;
 
 
     <div>
-        <a href="../Project_Budget_your_life/budgetApp.php" id="CS313_assignments_btn_id">
+        <a href="../Budget_your_life_PUBLIC/budgetApp.php" id="CS313_assignments_btn_id">
             Go back to the App Homepage
         </a>
     </div>
