@@ -27,7 +27,7 @@ if (isset($_POST['txtUser']) && isset($_POST['txtPassword'])) {
     require "../connectAppDB.php";
     $db = get_db();
 
-    $query = 'SELECT password FROM budgetUser WHERE user_name=:user_name';
+    $query = 'SELECT password, user_id FROM budgetUser WHERE user_name=:user_name';
 
     $statement = $db->prepare($query);
     $statement->bindValue(':user_name', $user_name);
