@@ -32,7 +32,7 @@
     <?php
 // start session
 session_start();
-require "../Budget_your_life_PUBLIC/connectAppDB.php";
+require "../connectAppDB.php";
 $db = get_db();
 //Here I should have the user ID, transaction information passed with session
 
@@ -122,7 +122,7 @@ $statement->execute();
 ?>
 
         <div>
-            <a href="../Budget_your_life_PUBLIC/budgetApp.php" id="CS313_assignments_btn_id">
+            <a href="../budgetApp.php" id="CS313_assignments_btn_id">
                 Go back to the App Homepage
             </a>
         </div>
