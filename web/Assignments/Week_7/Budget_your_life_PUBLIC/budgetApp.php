@@ -10,7 +10,7 @@
 
 // start session
 session_start();
-if ($_SESSION['current_user_id'] = '') {
+if ($_SESSION['current_user_id'] == "") {
     session_unset();
     header("Location: ../signIn.php");
 
