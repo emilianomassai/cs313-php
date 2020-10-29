@@ -69,7 +69,7 @@
     </div>
 
     <div>
-        <a href="../../../Home_Page/assignments.php" id="CS313_assignments_btn_id">
+        <a href="../Log_in_files/signIn.php" id="CS313_assignments_btn_id">
             Go back to Sign In page
         </a>
     </div>
