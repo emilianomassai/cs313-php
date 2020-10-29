@@ -38,6 +38,7 @@ function validateNewTransactionForm() {
 
   var amountValidation =
     document.forms["newTransactionForm"]["input_amount"].value;
+  var minValidation = amountValidation.charAt(0);
   var notesValidation =
     document.forms["newTransactionForm"]["input_notes"].value;
   var dateValidation =
@@ -46,7 +47,7 @@ function validateNewTransactionForm() {
   if (
     amountValidation == "" ||
     isNaN(amountValidation) ||
-    !amountValidation.charAt(0) == "-"
+    minValidation == "-"
   ) {
     alert(
       "Please enter a valid amount! Use '.' instead of ',' for decimals. Not use '-' in this field."
