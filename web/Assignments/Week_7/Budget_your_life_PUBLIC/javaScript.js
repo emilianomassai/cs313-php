@@ -44,7 +44,7 @@ function validateNewTransactionForm() {
     document.forms["newTransactionForm"]["dateTransaction"].value;
 
   if (amountValidation == "" || isNaN(amountValidation)) {
-    alert("Please enter a valid amount!");
+    alert("Please enter a valid amount! Use '.' instead of ',' for decimals.");
     return false;
   }
 

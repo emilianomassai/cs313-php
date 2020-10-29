@@ -51,7 +51,7 @@ $db = get_db();
 
         <h4>Spent some money? Got some cash? Record you transaction here!</h4>
 
-        <a href="../Budget_your_life_PUBLIC/create_transaction.php">
+        <a href="../Budget_your_life_PUBLIC/Transactions/create_transaction.php">
             <h2>💰 Add a transaction 💰</h2>
         </a>
 
@@ -82,7 +82,7 @@ $db = get_db();
     <!-- A view of a single user, showing all the  income, expenses, notes, category of the transaction, date of the transaction etc.  -->
     <h4>Thinking about your next car or going on holiday? Make sure you have enough founds!</h4>
 
-    <a href="../Budget_your_life_PUBLIC/user_transactions.php">
+    <a href="../Budget_your_life_PUBLIC/Transactions/user_transactions.php">
         <h2>🏝 Check your balance 🏝</h2>
 
 
