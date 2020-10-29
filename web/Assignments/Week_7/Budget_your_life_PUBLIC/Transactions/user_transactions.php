@@ -53,7 +53,7 @@ $currentDisplayName = $_SESSION['current_display_name'];
 
 
                 <?php
-// $transaction_count = 0;
+$transaction_count = 0;
 
 ?>
                 <?php foreach ($db->query('SELECT transaction_id, amount, user_id, notes, category, date FROM transaction ORDER BY
