@@ -105,7 +105,7 @@ if ($badLogin) {
             <br />
             <br />
             <br />
-            <input type="submit" value="Sign In" />
+            <button type="submit" value="Sign In">
 
         </form>
 
