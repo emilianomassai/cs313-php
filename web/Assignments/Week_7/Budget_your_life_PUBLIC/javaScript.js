@@ -43,8 +43,14 @@ function validateNewTransactionForm() {
   var dateValidation =
     document.forms["newTransactionForm"]["dateTransaction"].value;
 
-  if (amountValidation == "" || isNaN(amountValidation)) {
-    alert("Please enter a valid amount! Use '.' instead of ',' for decimals.");
+  if (
+    amountValidation == "" ||
+    isNaN(amountValidation) ||
+    !amountValidation.charAt(0) == "-"
+  ) {
+    alert(
+      "Please enter a valid amount! Use '.' instead of ',' for decimals. Not use '-' in this field."
+    );
     return false;
   }
 
