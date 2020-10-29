@@ -98,10 +98,13 @@ $currentDisplayName = $_SESSION['current_display_name'];
     <h2>The total amount of all the transactions is: <?php echo '<br>' ?> <?php echo '$' . $totalAmount ?></h2>
     <br>
     <?php if ($totalAmount == 0) {?>
+    <h1 style="font-size:80px;">🧘🏼</h1>
     <h4>Your balance is quite flat!</h4>
     <?php } else if ($totalAmount < 0) {?>
+    <h1 style="font-size:80px;">😰</h1>
     <h4>Remember not to spend more than you can earn!</h4>
     <?php } else if ($totalAmount > 0) {?>
+    <h1 style="font-size:80px;">🎉</h1>
     <h4>Well done, you have some money earned!</h4>
     <?php }?>
 
