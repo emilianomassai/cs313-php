@@ -72,8 +72,11 @@ $db = get_db();
     <a href="../Budget_your_life_PUBLIC/Transactions/user_transactions.php">
         <h2>🏝 Check your balance 🏝</h2>
     </a>
-
-    <a href="../Budget_your_life_PUBLIC/Log_in_files/signOut.php">Sign Out</a>
+    <br>
+    <hr>
+    <a href="../Budget_your_life_PUBLIC/Log_in_files/signOut.php">
+        <h2>👋🏻 Sign Out 👋🏻</h2>
+    </a>
 
     <div>
         <a href="../../Home_Page/assignments.php" id="CS313_assignments_btn_id">
