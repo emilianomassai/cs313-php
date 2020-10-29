@@ -96,7 +96,7 @@ $_SESSION['transactions'] = $sessionTransactions;
             <br>
 
             <div class="bottomBar">
-                <button type="submit" name="Delete Transaction" id="deleteTransaction">Delete
+                <button tyle="width: 200px" type="submit" name="Delete Transaction" id="deleteTransaction">Delete
                     Transaction</button>
             </div>
 
