@@ -74,6 +74,7 @@ $db = get_db();
     </a>
     <br>
     <hr>
+    <h4>Have you already recorded all your transactions and checked your balance? Why you are still here? </h4>
     <a href="../Budget_your_life_PUBLIC/Log_in_files/signOut.php">
         <h2>👋🏻 Sign Out 👋🏻</h2>
     </a>
