@@ -112,8 +112,7 @@ if ($badLogin) {
 
         <br /><br />
 
-        Or <a href="signUp.php">Sign up</a> for a new account.
-
+        <a href="signUp.php">Sign up - New Account</a>
     </div>
 
 
