@@ -35,31 +35,7 @@ $db = get_db();
 
 <body>
 
-    <?php
-$count = 0;
-foreach ($db->query('SELECT display_name, user_name, user_id, password FROM budgetUser') as $row) {
 
-    $users_array[] = [
-        'display_name' => $row['display_name'],
-        'user_name' => $row['user_name'],
-        'user_id' => $row['user_id'],
-        'password' => $row['password'],
-    ];
-    $_SESSION['users'] = $users_array;
-    $count++;
-}
-
-foreach ($db->query('SELECT amount, user_id, notes, category, date FROM transaction') as $row) {
-    $transactions_array[] = [
-        'amount' => $row['amount'],
-        'user_id' => $row['user_id'],
-        'notes' => $row['notes'],
-        'category' => $row['category'],
-    ];
-    $_SESSION['transactions'] = $transactions_array;
-}
-
-?>
     <div>
         <img src="../Budget_your_life_PUBLIC/BudgetAppImages/budgetAppIcon.png" alt="budget App Picture"
             id="budgetAppPicture" width="300" height="300" />
@@ -73,22 +49,17 @@ foreach ($db->query('SELECT amount, user_id, notes, category, date FROM transact
 
         <!-- A list of all users in the database, each one is a link that leads to a user details page.  -->
 
-        <h2>Add a transaction</h2>
-        <h4>💰 Spent some money? Got some cash? Record you transaction here!</h4>
-        <table class="table table-bordered">
+        <h2>💰 Add a transaction 💰</h2>
+        <h4>Spent some money? Got some cash? Record you transaction here!</h4>
 
-            <tbody>
-
-
-                <tr>
-                    <form action="create_transaction.php" method="post">
+        <form action="create_transaction.php" method="post">
 
 
-                        <button type="submit"> Add Transaction </button>
+            <button type="submit"> Add Transaction </button>
 
-                    </form>
+        </form>
 
-            </tbody>
+        </tbody>
         </table>
     </div>
 
