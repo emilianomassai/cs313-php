@@ -63,6 +63,10 @@ $statement->execute();
 
 ?>
 
+    <a href="../Transactions/delete_transaction.php">
+        <h2>Delete another transaction</h2>
+    </a>
+
     <div>
         <a href="../Transactions/user_transactions.php" id="CS313_assignments_btn_id">
             See your balance again

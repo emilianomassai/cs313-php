@@ -134,6 +134,11 @@ $statement->execute();
 
 ?>
 
+
+        <a href="../Transactions/add_transaction.php">
+            <h2>Add another transaction</h2>
+        </a>
+
         <div>
             <a href="../Transactions/user_transactions.php" id="CS313_assignments_btn_id">
                 See your balance again
