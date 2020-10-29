@@ -10,7 +10,11 @@
 
 // start session
 session_start();
+if ($_SESSION['current_user_id'] = '') {
+    session_unset();
+    header("Location: ../signIn.php");
 
+}
 // The DB connection logic is in another file so it can be included
 // in each of our different PHP files.
 require "../Budget_your_life_PUBLIC/connectAppDB.php";
