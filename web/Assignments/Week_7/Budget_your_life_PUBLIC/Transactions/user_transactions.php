@@ -90,8 +90,7 @@ $currentDisplayName = $_SESSION['current_display_name'];
                     <td style="padding:10px"><?php echo $transactions_array[$transaction_count]['date'] ?>
                     </td>
                     <form class="editTransactionForm" name="editTransactionForm"
-                        action="../Budget_your_life_PUBLIC/Transactions/delete_transaction.php" method="post" \
-                        onsubmit="return isSelected()">
+                        action="../Transactions/delete_transaction.php" method="post" \ onsubmit="return isSelected()">
                         <td style="text-align: center"> <input type="radio" id="edit" name="edit"
                                 value="<?php echo $transactions_array[$transaction_count]['transaction_id'] ?>">
                         </td>
@@ -117,7 +116,7 @@ $currentDisplayName = $_SESSION['current_display_name'];
         <br>
         <br>
         <button type="submit" name="Modify Transaction" id="modifyTransaction"
-            formaction="../Budget_your_life_PUBLIC/Transactions/modify_transaction.php">Modify Transaction </button>
+            formaction="../Transactions/modify_transaction.php">Modify Transaction </button>
     </div>
 
     </form>
