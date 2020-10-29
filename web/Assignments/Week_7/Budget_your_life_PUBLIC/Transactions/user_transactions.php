@@ -30,6 +30,9 @@ $currentDisplayName = $_SESSION['current_display_name'];
     <p><?php echo $currentDisplayName ?>, in this page you can see the list of all your transactions. If you
         want to edit or delete one
         transaction, select one from the table and click the "Modify Selected Transaction" button.</p>
+    <script>
+    document.getElementById('edit').checked = false;
+    </script>
 
     <?php
 
