@@ -38,7 +38,6 @@
     <div>
 
         <h1>Sign up for new account</h1>
-        <br>
 
         <h1 style="font-size:80px;">👤</h1>
         <form id="mainForm" action="createAccount.php" method="POST">

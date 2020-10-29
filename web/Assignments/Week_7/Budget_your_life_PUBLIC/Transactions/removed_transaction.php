@@ -52,7 +52,7 @@ $transactionType = $_POST['type'];
         Your transaction has been deleted.
     </h1>
     <h4>Hopefully you deleted it on purpose!</h4>
-    <h1>🙈 🙉 🙊</h1>
+    <h1 style="font-size:80px;">🙈 🙉 🙊</h1>
     <?php
 $editTransaction = $_SESSION['editTransactionSession'];
 
