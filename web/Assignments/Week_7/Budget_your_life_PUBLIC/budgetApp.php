@@ -15,6 +15,7 @@ if ($_SESSION['current_user_id'] == "") {
     header("Location: ../Budget_your_life_PUBLIC/Log_in_files/signIn.php");
 
 }
+
 // The DB connection logic is in another file so it can be included
 // in each of our different PHP files.
 require "../Budget_your_life_PUBLIC/connectAppDB.php";
@@ -46,8 +47,6 @@ $db = get_db();
     </div>
     <h1>Budget Your Life </h1>
 
-    <?php $currentAmount = $_SESSION['total_amount'];?>
-    <h2>Your actual balance is: <?php echo '<br>' ?> <?php echo '$' . $currentAmount ?></h2>
 
     <p>Welcome to this budget app! In this page you can see different ways to retrieve information from our database
         about our users. Please choose one option and read the description for more details:</p>
