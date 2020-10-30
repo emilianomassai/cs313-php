@@ -48,8 +48,8 @@ $db = get_db();
     <h1>Budget Your Life </h1>
 
 
-    <p>Welcome to this budget app! In this page you can see different ways to retrieve information from our database
-        about our users. Please choose one option and read the description for more details:</p>
+    <p>Welcome! This application keeps track of your expenses and income. Hopefully, it will help you to build good
+        financial habits towards your final goal of self-reliance! Please select one of the options below:</p>
     <div class="container">
 
         <!-- A list of all users in the database, each one is a link that leads to a user details page.  -->
