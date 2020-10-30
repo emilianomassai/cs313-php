@@ -85,10 +85,7 @@ $transaction_count = 0;
                                 value="<?php echo $transactions_array[$transaction_count]['transaction_id'] ?>">
                         </td>
                         <?php }?>
-                        <script>
-                        var isSelected = document.forms["editTransactionForm"]["edit"].value;
-                        print(isSelected);
-                        </script>
+
 
                 </tr>
                 <?php $transaction_count++;
