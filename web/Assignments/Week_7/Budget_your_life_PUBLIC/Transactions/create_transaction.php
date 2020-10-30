@@ -47,7 +47,8 @@ $query = "SELECT display_name, user_name, password FROM budgetUser WHERE user_id
 ?>
 
     <h1>Ready to add a transaction, <?php echo $currentDisplayName ?>?</h1>
-    <p>Please add all the following details:</p>
+    <p>Here you can add your income or expenses. Please fill all the information before submit the form. And remember,
+        money doesn't grow on trees.</p>
 
     <!-- use POST to link the current user to the new transaction and add it to the database -->
     <form class="newTransactionForm" name="newTransactionForm" action="../Transactions/add_transaction.php"
