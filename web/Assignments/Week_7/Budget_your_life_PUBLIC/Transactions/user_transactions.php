@@ -108,8 +108,20 @@ $transaction_count = 0;
     <?php }?>
 
     <div class="bottomBar">
-        <input style="width: 200px" type="submit" name="Delete Transaction" id="deleteTransaction"
-            value="Delete Transaction">
+        <input style="
+        width: 200px,
+        color: white,
+        border: none,
+        text-decoration: none,
+        background-color: #0076b6,
+        padding: 4px,
+        border-radius: 4px,
+        font-size: 13px,
+        cursor: pointer,
+        font-size: 15px,
+        line-height: 25px,
+        font-family: 'Lucida Sans Unicode', Verdana, sans-serif; padding: 11px" type="submit" name="Delete Transaction"
+            id="deleteTransaction" value="Delete Transaction">
         </input>
         <br>
         <input style="width: 200px" type="submit" name="Modify Transaction" value="Modify Transaction"
