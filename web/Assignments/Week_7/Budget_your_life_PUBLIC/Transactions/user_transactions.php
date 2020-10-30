@@ -27,9 +27,8 @@ $currentDisplayName = $_SESSION['current_display_name'];
 
 <body>
     <h1>📊 Transactions 📊</h1>
-    <p><?php echo $currentDisplayName ?>, in this page you can see the list of all your transactions. If you
-        want to edit or delete one
-        transaction, select one from the table and click the "Modify Selected Transaction" button.</p>
+    <p><?php echo $currentDisplayName ?>, in this page you can see the list of all your transactions. Select one of them
+        from the table below and click the "Modify Transaction" or "Delete Transaction" button.</p>
 
 
     <?php
@@ -83,7 +82,7 @@ $transaction_count = 0;
                         action="../Transactions/delete_transaction.php" method="post" \ onsubmit="return isSelected()">
                         <td style="text-align: center"> <input type="radio" id="edit" name="edit"
                                 value="<?php echo $transactions_array[$transaction_count]['transaction_id'] ?>">
-                            <?php echo $transactions_array[$transaction_count]['transaction_id'] ?>
+
                         </td>
                         <?php }?>
 
@@ -94,7 +93,7 @@ $transaction_count = 0;
             </tbody>
         </table>
     </div>
-
+    <br>
     <h2>The total amount of all the transactions is: <?php echo '<br>' ?> <?php echo '$' . $totalAmount ?></h2>
 
 
