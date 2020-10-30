@@ -53,10 +53,10 @@ $currentDisplayName = $_SESSION['current_display_name'];
 
                 <?php
 $transaction_count = 0;
-
+// ORDER BY
+//     date DESC
 ?>
-                <?php foreach ($db->query('SELECT transaction_id, amount, user_id, notes, category, date FROM transaction ORDER BY
-	date DESC') as $row) {
+                <?php foreach ($db->query('SELECT transaction_id, amount, user_id, notes, category, date FROM transaction ') as $row) {
     $transactions_array[] = [
         'transaction_id' => $row['transaction_id'],
         'amount' => $row['amount'],
