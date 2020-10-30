@@ -83,6 +83,8 @@ $query = "SELECT display_name, user_name, password FROM budgetUser WHERE user_id
 
         <h4>Date:</h4> <input type="date" name="dateTransaction">
         <br>
+        <br>
+        <br>
         <p>NOTE: If you are using Safari, you will need to enter manually the date but if you use a Chromium based
             browser
             or Firefox, a date picker will be shown instead. The Safari doesn't support the date input yet.
