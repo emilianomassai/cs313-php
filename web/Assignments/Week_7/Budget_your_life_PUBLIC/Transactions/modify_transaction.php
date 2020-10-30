@@ -65,7 +65,7 @@ foreach ($db->query('SELECT transaction_id, amount, user_id, notes, category, da
             value="<?php echo $transactions_array[$transaction_count]['amount'] ?>">
         <h4>Notes: </h4> <input type="text" name="input_notes"
             value="<?php echo $transactions_array[$transaction_count]['notes'] ?>">
-        <h4>Category:</h4> <select name="category">
+        <h4>Category:</h4> <select name="category" >
             <option value="Salary">Salary</option>
             <option value="Extra Income">Extra Income</option>
             <option value="Groceries">Groceries</option>
