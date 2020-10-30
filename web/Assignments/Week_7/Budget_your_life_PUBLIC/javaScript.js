@@ -71,7 +71,7 @@ function validateNewTransactionForm() {
 function isSelected() {
   var isToEdit = document.forms["editTransactionForm"]["edit"].value;
   // var isToEdit = document.getElementById("edit").checked;
-  if (isToEdit == "") {
+  if (isToEdit == "0") {
     alert("Please select a transaction to edit or delete!");
     return false;
   } else {
