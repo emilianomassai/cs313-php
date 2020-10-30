@@ -108,11 +108,12 @@ $transaction_count = 0;
     <?php }?>
 
     <div class="bottomBar">
-        <input style="width: 200px" type="submit" name="Delete Transaction" id="deleteTransaction">Delete Transaction
+        <input style="width: 200px" type="submit" name="Delete Transaction" id="deleteTransaction"
+            value="Delete Transaction">
         </input>
         <br>
-        <input style="width: 200px" type="submit" name="Modify Transaction" id="modifyTransaction"
-            formaction="../Transactions/modify_transaction.php">Modify Transaction </input>
+        <input style="width: 200px" type="submit" name="Modify Transaction" value="Modify Transaction"
+            id="modifyTransaction" formaction="../Transactions/modify_transaction.php"> </input>
     </div>
 
     </form>
