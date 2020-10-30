@@ -76,7 +76,8 @@ function isSelected() {
     // alert("Please select a transaction to edit or delete!");
     return false;
   } else {
-    return true;
     alert(isToEdit);
+
+    return true;
   }
 }
