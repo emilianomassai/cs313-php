@@ -54,18 +54,17 @@ foreach ($db->query('SELECT transaction_id, amount, user_id, notes, category, da
 
     if (($_POST["edit"] == $transactions_array[$transaction_count]['transaction_id'])) {?>
 
-    <form class="newTransactionForm" name="newTransactionForm" action="../Transactions/edited_transaction.php"
+    <form class="newTransactionForm" name="newTransactionForm" action="../Transactions/add_transaction.php"
         method="post" \ onsubmit="return validateNewTransactionForm()">
 
-        Transaction Type: <select name="type">
+        <h4>Transaction Type:</h4> <select name="type">
             <option value="Expense">Expense</option>
             <option value="Income">Income</option>
         </select>
-        Amount: <input type="text" name="input_amount"
-            value="<?php echo $transactions_array[$transaction_count]['amount'] ?>">
-        Notes: <input type="text" name="input_notes"
-            value="<?php echo $transactions_array[$transaction_count]['notes'] ?>">
-        Category: <select name="category">
+
+        <h4> Amount: </h4><input type="text" name="input_amount">
+        <h4>Notes: </h4><input type="text" name="input_notes">
+        <h4>Category:</h4> <select name="category">
             <option value="Salary">Salary</option>
             <option value="Extra Income">Extra Income</option>
             <option value="Groceries">Groceries</option>
@@ -85,9 +84,9 @@ foreach ($db->query('SELECT transaction_id, amount, user_id, notes, category, da
             <option value="Pets">Pets</option>
             <option value="Health">Health</option>
         </select>
-        Date: <input type="date" name="dateTransaction"
-            value="<?php echo $transactions_array[$transaction_count]['date'] ?>">
 
+        <h4>Date:</h4> <input type="date" name="dateTransaction">
+        <br>
         <br>
         <br>
         <p>NOTE: If you are using Safari, you will need to enter manually the date but if you use a Chromium based
