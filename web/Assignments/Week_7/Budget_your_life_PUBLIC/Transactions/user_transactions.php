@@ -82,7 +82,7 @@ $transaction_count = 0;
                         action="../Transactions/delete_transaction.php" method="post" \ onsubmit="return isSelected()">
                         <td style="text-align: center">
 
-                            <input type="radio" id="edit" name="edit"
+                            <input type="radio" checked="false" id="edit" name="edit"
                                 value="<?php echo $transactions_array[$transaction_count]['transaction_id'] ?>">
 
                         </td>
