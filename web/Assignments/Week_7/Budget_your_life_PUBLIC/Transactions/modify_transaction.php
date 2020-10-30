@@ -61,9 +61,10 @@ foreach ($db->query('SELECT transaction_id, amount, user_id, notes, category, da
             <option value="Expense">Expense</option>
             <option value="Income">Income</option>
         </select>
-
-        <h4> Amount: </h4><input type="text" name="input_amount">
-        <h4>Notes: </h4><input type="text" name="input_notes">
+        <h4> Amount: </h4> <input type="text" name="input_amount"
+            value="<?php echo $transactions_array[$transaction_count]['amount'] ?>">
+        <h4>Notes: </h4> <input type="text" name="input_notes"
+            value="<?php echo $transactions_array[$transaction_count]['notes'] ?>">
         <h4>Category:</h4> <select name="category">
             <option value="Salary">Salary</option>
             <option value="Extra Income">Extra Income</option>
@@ -84,9 +85,9 @@ foreach ($db->query('SELECT transaction_id, amount, user_id, notes, category, da
             <option value="Pets">Pets</option>
             <option value="Health">Health</option>
         </select>
+        <h4>Date:</h4> <input type="date" name="dateTransaction"
+            value="<?php echo $transactions_array[$transaction_count]['date'] ?>">
 
-        <h4>Date:</h4> <input type="date" name="dateTransaction">
-        <br>
         <br>
         <br>
         <p>NOTE: If you are using Safari, you will need to enter manually the date but if you use a Chromium based
