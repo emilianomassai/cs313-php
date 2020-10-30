@@ -53,7 +53,7 @@ $query = "SELECT display_name, user_name, password FROM budgetUser WHERE user_id
     <form class="newTransactionForm" name="newTransactionForm" action="../Transactions/add_transaction.php"
         method="post" \ onsubmit="return validateNewTransactionForm()">
 
-        <h4>Transaction Type: <select name="type">
+        <h5>Transaction Type: <select name="type">
                 <option value="Expense">Expense</option>
                 <option value="Income">Income</option>
             </select>
@@ -80,7 +80,7 @@ $query = "SELECT display_name, user_name, password FROM budgetUser WHERE user_id
                 <option value="Health">Health</option>
             </select>
             Date: <input type="date" name="dateTransaction">
-        </h4>
+        </h5>
         <br>
         <br>
         <p>NOTE: If you are using Safari, you will need to enter manually the date but if you use a Chromium based
