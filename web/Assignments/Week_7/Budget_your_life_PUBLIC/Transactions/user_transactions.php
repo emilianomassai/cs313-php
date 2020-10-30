@@ -39,7 +39,7 @@ $currentDisplayName = $_SESSION['current_display_name'];
     <div class="container">
         <h2>Transactions List:</h2>
         <?php $totalAmount = 0;?>
-        <table border="1" style="margin-left:auto;margin-right:auto" class="table table-bordered">
+        <table border="1" color="white" style="margin-left:auto;margin-right:auto" class="table table-bordered">
             <thead>
                 <tr>
                     <th style="padding:10px">Amount</th>
