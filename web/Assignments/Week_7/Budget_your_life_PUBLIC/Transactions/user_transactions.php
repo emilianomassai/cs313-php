@@ -42,11 +42,21 @@ $currentDisplayName = $_SESSION['current_display_name'];
         <table border="1" style="margin-left:auto;margin-right:auto" class="table table-bordered">
             <thead>
                 <tr>
-                    <th style="padding:10px">Amount</th>
-                    <th style="padding:10px">Notes</th>
-                    <th style="padding:10px">Category</th>
-                    <th style="padding:10px">Date</th>
-                    <th style="padding:10px">Select to edit</th>
+                    <th style="padding:10px">
+                        <h4>Amount</h4>
+                    </th>
+                    <th style="padding:10px">
+                        <h4>Notes</h4>
+                    </th>
+                    <th style="padding:10px">
+                        <h4>Category</h4>
+                    </th>
+                    <th style="padding:10px">
+                        <h4>Date</h4>
+                    </th>
+                    <th style="padding:10px">
+                        <h4>Select to edit</h4>
+                    </th>
                 </tr>
             </thead>
             <tbody>
