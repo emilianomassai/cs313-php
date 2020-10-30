@@ -53,7 +53,7 @@ $query = "SELECT display_name, user_name, password FROM budgetUser WHERE user_id
     <form class="newTransactionForm" name="newTransactionForm" action="../Transactions/add_transaction.php"
         method="post" \ onsubmit="return validateNewTransactionForm()">
 
-        Transaction Type: <select name="type">
+        <h4>Transaction Type: </h4><select name="type">
             <option value="Expense">Expense</option>
             <option value="Income">Income</option>
         </select>
