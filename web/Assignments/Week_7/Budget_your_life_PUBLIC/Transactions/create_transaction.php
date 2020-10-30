@@ -60,25 +60,25 @@ $query = "SELECT display_name, user_name, password FROM budgetUser WHERE user_id
 
         <h4> Amount: </h4><input type="text" name="input_amount">
         <h4>Notes: </h4><input type="text" name="input_notes">
-        <h4>Category: <select name="category"></h4>
-        <option value="Salary">Salary</option>
-        <option value="Extra Income">Extra Income</option>
-        <option value="Groceries">Groceries</option>
-        <option value="Eating Out">Eating Out</option>
-        <option value="Movies">Movies</option>
-        <option value="Kids">Kids</option>
-        <option value="Car">Car</option>
-        <option value="Petrol">Petrol</option>
-        <option value="Shopping">Shopping</option>
-        <option value="Business">Business</option>
-        <option value="Investments">Investments</option>
-        <option value="Fitness">Fitness</option>
-        <option value="Holidays">Holidays</option>
-        <option value="Bills">Bills</option>
-        <option value="Home">Home</option>
-        <option value="Education">Education</option>
-        <option value="Pets">Pets</option>
-        <option value="Health">Health</option>
+        <h4>Category:</h4> <select name="category">
+            <option value="Salary">Salary</option>
+            <option value="Extra Income">Extra Income</option>
+            <option value="Groceries">Groceries</option>
+            <option value="Eating Out">Eating Out</option>
+            <option value="Movies">Movies</option>
+            <option value="Kids">Kids</option>
+            <option value="Car">Car</option>
+            <option value="Petrol">Petrol</option>
+            <option value="Shopping">Shopping</option>
+            <option value="Business">Business</option>
+            <option value="Investments">Investments</option>
+            <option value="Fitness">Fitness</option>
+            <option value="Holidays">Holidays</option>
+            <option value="Bills">Bills</option>
+            <option value="Home">Home</option>
+            <option value="Education">Education</option>
+            <option value="Pets">Pets</option>
+            <option value="Health">Health</option>
         </select>
 
         <h4>Date:</h4> <input type="date" name="dateTransaction">

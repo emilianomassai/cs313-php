@@ -66,6 +66,10 @@ table {
   text-shadow: black 0.1em 0.1em 0.2em;
 }
 
+select {
+  width: 155px;
+}
+
 button {
   color: white;
   border: none;
