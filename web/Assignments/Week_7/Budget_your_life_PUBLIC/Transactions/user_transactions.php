@@ -97,6 +97,8 @@ $transaction_count = 0;
 
     <h2>The total amount of all the transactions is: <?php echo '<br>' ?> <?php echo '$' . $totalAmount ?></h2>
 
+    <?php $_SESSION['total_amount'] = $totalAmount?>
+
     <?php if ($totalAmount == 0) {?>
     <h1 style="font-size:80px;">🧘🏼</h1>
     <h4>Your balance is quite flat!</h4>
