@@ -65,6 +65,10 @@ a:hover {
   transition: 0.3s; /* Add transition on hover */
 }
 
+table {
+  color: white;
+}
+
 button {
   color: white;
   border: none;
