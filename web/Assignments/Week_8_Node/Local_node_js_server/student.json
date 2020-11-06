@@ -7,13 +7,24 @@
     "class": "CS313",
     "car": "Peugeot 5008" },
     
-    { "name": "Pippo Camillo",
-        "profession" : "post man",
-        "age": 30,
+    { "name": "Bill Gates",
+        "profession" : "entrepreneur",
+        "age": 65,
         "gender": "Male",
-        "city": "Pisa",
+        "city": "Seattle",
         "major": "Computer Science",
         "class": "CS313",
-        "car": "Peugeot 206" }
+        "car": "Ford" }
+
+            
+    { "name": "Steve Jobs",
+        "profession" : "entrepreneur",
+        "age": 56,
+        "gender": "Male",
+        "city": "Palo Alto",
+        "major": "Computer Science",
+        "class": "CS313",
+        "car": "Tesla" }
 
 ]
+
