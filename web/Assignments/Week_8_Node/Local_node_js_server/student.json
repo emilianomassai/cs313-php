@@ -1,0 +1,5 @@
+{ name: 'Emiliano Massai',
+    age: 36,
+    gender: 'Male',
+    class: 'cs313',
+    car: 'Peugeot 5008' }
