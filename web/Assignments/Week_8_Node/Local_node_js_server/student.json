@@ -14,17 +14,15 @@
         "city": "Seattle",
         "major": "Computer Science",
         "class": "CS313",
-        "car": "Ford" }
+        "car": "Ford" },
 
             
-    { "name": "Steve Jobs",
-        "profession" : "entrepreneur",
-        "age": 56,
-        "gender": "Male",
-        "city": "Palo Alto",
-        "major": "Computer Science",
-        "class": "CS313",
-        "car": "Tesla" }
-
-]
+        { "name": "Steve Jobs",
+            "profession" : "entrepreneur",
+            "age": 56,
+            "gender": "Male",
+            "city": "Palo Alto",
+            "major": "Computer Science",
+            "class": "CS313",
+            "car": "Tesla" }]
 
