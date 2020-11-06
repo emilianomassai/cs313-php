@@ -1,5 +1,19 @@
-{ name: 'Emiliano Massai',
-    age: 36,
-    gender: 'Male',
-    class: 'cs313',
-    car: 'Peugeot 5008' }
+[{ "name": "Emiliano Massai",
+    "profession" : "chef",
+    "age": 36,
+    "gender": "Male",
+    "city": "Newton Abbot",
+    "major": "Software Engineering",
+    "class": "CS313",
+    "car": "Peugeot 5008" },
+    
+    { "name": "Pippo Camillo",
+        "profession" : "post man",
+        "age": 30,
+        "gender": "Male",
+        "city": "Pisa",
+        "major": "Computer Science",
+        "class": "CS313",
+        "car": "Peugeot 206" }
+
+]
