@@ -64,5 +64,4 @@ var server = http.createServer(sayHello);
 // .. and wait to someone connecting to the server at port 5000
 server.listen(5000);
 
-// github from Sublime text
 console.log("The server is now listening on port 5000...");
