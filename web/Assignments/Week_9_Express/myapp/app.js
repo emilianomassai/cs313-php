@@ -27,8 +27,16 @@ app.delete("/user", function (req, res) {
   res.send("Got a DELETE request at /user");
 });
 
+// To serve static files such as images, CSS files, and JavaScript files, use
+// the express.static built -in middleware function in Express.
 app.use(express.static("web/Assignments/Week_9_Express/myapp/public"));
 
+// Customized 404 message
+app.use(function (req, res, next) {
+  res.status(404).send("The page you are looking for is not responding!");
+});
+
+// Send terminal log if the connection starts
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
 });
