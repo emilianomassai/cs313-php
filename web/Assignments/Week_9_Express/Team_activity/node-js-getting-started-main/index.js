@@ -68,8 +68,5 @@ function computeOperation(response, op, left, right) {
 
   // Render the response, using the EJS page "result.ejs" in the pages directory
   // Makes sure to pass it the parameters we need.
-  response.render(
-    "/web/Assignments/Week_9_Express/Team_activity/node-js-getting-started-main/views/pages/result.ejs",
-    params
-  );
+  response.render("pages/result", params);
 }
