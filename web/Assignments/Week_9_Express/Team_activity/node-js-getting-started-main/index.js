@@ -1,6 +1,6 @@
 const express = require("express");
-const path = require("path");
-const PORT = process.env.PORT || 5000;
+const app = express();
+const port = process.env.PORT || 5000;
 
 express()
   // tell it to use the public directory as one where static files live
