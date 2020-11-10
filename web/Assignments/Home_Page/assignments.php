@@ -63,7 +63,8 @@ header("refresh: 30;");
     </a>
 
     <a href="http://localhost:5000/form.html" id="express_btn_id">
-        Week 9: Team Activity: Express.js Math operations
+        Week 9: Team Activity: Express.js Math operations <br>
+        (NOTE: node index.js - Node app is running on port 5000)
     </a>
 
     <br>
