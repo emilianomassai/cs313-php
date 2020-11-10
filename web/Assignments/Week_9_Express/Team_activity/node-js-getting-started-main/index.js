@@ -3,7 +3,8 @@ const app = express();
 const port = process.env.PORT || 5000;
 
 // tell it to use the public directory as one where static files live
-app.use(express.static(__dirname + "/public"));
+// app.use(express.static(__dirname + "/public"));
+app.use(express.static("public"));
 
 // views is directory for all template files
 app.set("views", __dirname + "/views");
@@ -17,17 +18,6 @@ app.get("/math", handleMath);
 app.listen(port, function () {
   console.log("Node app is running on port", port);
 });
-
-// express()
-// tell it to use the public directory as one where static files live
-// .use(express.static(path.join(__dirname, "public")))
-
-// views is directory for all template files
-// .set("views", path.join(__dirname, "views"))
-// .set("view engine", "ejs");
-
-// .get("/", (req, res) => res.render("pages/index"))
-// .listen(PORT, () => console.log(`Listening on ${PORT}`));
 
 /**********************************************************************
  * Ideally the functions below here would go into a different file
