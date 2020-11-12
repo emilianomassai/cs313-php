@@ -14,8 +14,6 @@ app.set("view engine", "ejs");
 // handleMath function below
 app.get("/math", handleMath);
 
-app.get("/zoneNum", handleZone);
-
 // start the server listening
 app.listen(port, function () {
   console.log("Node app is running on port", port);
