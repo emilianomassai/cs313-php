@@ -67,7 +67,8 @@ header("refresh: 30;");
         (NOTE: node index.js - Node app is running on port 5000)
     </a>
 
-    <a href="https://github.com/heroku/node-js-getting-started/blob/main/public/form.html" id="postal_rate_btn_id">
+    <a href="web/Assignments/Week_9_Express/Postal_Rate_Calculator/node-js-getting-started/public/form.html"
+        id="postal_rate_btn_id">
         Week 9: Postal Rate Calculator
     </a>
 
